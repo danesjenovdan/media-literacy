@@ -1,0 +1,488 @@
+{
+  "isTranslation": false,
+  "isMaster": false,
+  "childStories": [],
+  "geo": [16.829776271163926, 45.36687761736444],
+  "hasTimeLimit": false,
+  "deleted": false,
+  "public": false,
+  "featured": false,
+  "status": "NOT_PUBLISHED",
+  "translations": [],
+  "duration": {
+    "_id": "61c31d6dfb3f79442dd8909c",
+    "hours": 0,
+    "minutes": 45,
+    "seconds": 0
+  },
+  "threads": [],
+  "chats": [
+    {
+      "isLocked": false,
+      "isHidden": false,
+      "isLocationLocked": false,
+      "isPreview": false,
+      "actors": [],
+      "threads": [
+        {
+          "nextStoryThreadMessageIndex": 0,
+          "awaitingResponse": false,
+          "messages": [
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "61c31df2fb3f79442dd8931c",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "61c31df2fb3f79442dd8931d",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "61c31df2fb3f79442dd8931e",
+                  "dateTime": "2021-12-22T12:45:38.349Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2021-12-22T12:45:38.349Z",
+              "_id": "61c31df2fb3f79442dd8931b",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Tukaj začnemo.",
+              "actor": "NARRATOR"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "61d0ab81fb3f79442d3e9d71",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "61d0ab81fb3f79442d3e9d72",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "61d0ab81fb3f79442d3e9d73",
+                  "dateTime": "2022-01-01T19:29:05.548Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2022-01-01T19:29:05.548Z",
+              "_id": "61d0ab81fb3f79442d3e9d70",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "#variable protest +1",
+              "actor": "NARRATOR",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "61c31e0afb3f79442dd8943e",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "61c31e0afb3f79442dd8943f",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "61c31e0afb3f79442dd89440",
+                  "dateTime": "2021-12-22T12:46:02.541Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2021-12-22T12:46:02.541Z",
+              "_id": "61c31e0afb3f79442dd8943d",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Zdaj pa se uporabnik odloči kaj želi:",
+              "actor": "NARRATOR"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "61c31e3afb3f79442dd89517",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "61c31e3afb3f79442dd8951a",
+                    "buttonText": "+1 KNOWLEDGE",
+                    "text": "#variable knowledge +1",
+                    "thread": "61c31d6dfb3f79442dd8909f",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "61c31e3afb3f79442dd89519",
+                    "buttonText": "+1 ORGANIZATION",
+                    "text": "#variable organization +1",
+                    "thread": "61c31d6dfb3f79442dd8909f",
+                    "hideResponseToChat": false
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "61c31e3afb3f79442dd8951b",
+                    "thread": "61c31d6dfb3f79442dd8909f"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "61c31e3afb3f79442dd89518",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "61c31e3afb3f79442dd8951c",
+                  "dateTime": "2021-12-22T12:46:50.664Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 45.36687761736444,
+                  "lng": 16.829776271163926
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2021-12-22T12:46:50.664Z",
+              "_id": "61c31e3afb3f79442dd89516",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "",
+              "actor": "NARRATOR"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "61c31e66fb3f79442dd8963e",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "61c31e66fb3f79442dd8963f",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "61c31e66fb3f79442dd89640",
+                  "dateTime": "2021-12-22T12:47:34.038Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2021-12-22T12:47:34.038Z",
+              "_id": "61c31e66fb3f79442dd8963d",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "#split \nknowledge > 1  = \"Knowledge thread\"\norganization > 1  = \"Organization thread\"",
+              "actor": "NARRATOR"
+            }
+          ],
+          "writingStatusList": [],
+          "_id": "61c31d6dfb3f79442dd8909f",
+          "name": "Main thread"
+        },
+        {
+          "nextStoryThreadMessageIndex": 0,
+          "awaitingResponse": false,
+          "messages": [
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "61c31e83fb3f79442dd8977b",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "61c31e83fb3f79442dd8977c",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "61c31e83fb3f79442dd8977d",
+                  "dateTime": "2021-12-22T12:48:03.595Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2021-12-22T12:48:03.595Z",
+              "_id": "61c31e83fb3f79442dd8977a",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Sem te vržemo ker si izbral Knowledge.",
+              "actor": "NARRATOR"
+            }
+          ],
+          "writingStatusList": [],
+          "_id": "61c31e71fb3f79442dd89775",
+          "name": "Knowledge thread"
+        },
+        {
+          "nextStoryThreadMessageIndex": 0,
+          "awaitingResponse": false,
+          "messages": [
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "61c31e98fb3f79442dd89816",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "61c31e98fb3f79442dd89817",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "61c31e98fb3f79442dd89818",
+                  "dateTime": "2021-12-22T12:48:24.879Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2021-12-22T12:48:24.879Z",
+              "_id": "61c31e98fb3f79442dd89815",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Sem te vržemo ker si izbral Organization.",
+              "actor": "NARRATOR"
+            }
+          ],
+          "writingStatusList": [],
+          "_id": "61c31e78fb3f79442dd89777",
+          "name": "Organization thread"
+        }
+      ],
+      "_id": "61c31d6dfb3f79442dd8909d",
+      "isMainChat": true,
+      "title": "Prologue quest",
+      "location": {
+        "_id": "61c31d6dfb3f79442dd8909e",
+        "dateTime": "2021-12-22T12:43:25.760Z",
+        "lat": 45.36687761736444,
+        "lng": 16.829776271163926,
+        "zoom": 2
+      },
+      "poster": {
+        "timeCreated": "2021-12-22T12:44:02.480Z",
+        "_id": "61c31d92fb3f79442dd8930e",
+        "width": 1152,
+        "height": 788,
+        "url": "https://loco-us.s3.us-west-1.amazonaws.com/d5ba7041-5814-474c-bfe0-01710312a1f3.jpg",
+        "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-d5ba7041-5814-474c-bfe0-01710312a1f3.jpg",
+        "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-d5ba7041-5814-474c-bfe0-01710312a1f3.jpg",
+        "remote": "d5ba7041-5814-474c-bfe0-01710312a1f3.jpg",
+        "thumbRemote": "thumb-d5ba7041-5814-474c-bfe0-01710312a1f3.jpg",
+        "miniThumbRemote": "mini-thumb-d5ba7041-5814-474c-bfe0-01710312a1f3.jpg",
+        "type": "IMAGE",
+        "size": 136989,
+        "__v": 0
+      }
+    },
+    {
+      "isLocked": false,
+      "isHidden": false,
+      "isLocationLocked": false,
+      "isPreview": false,
+      "actors": [],
+      "threads": [
+        {
+          "nextStoryThreadMessageIndex": 0,
+          "awaitingResponse": false,
+          "messages": [],
+          "writingStatusList": [],
+          "_id": "61c33515fb3f79442dd8bc91",
+          "name": "Main thread"
+        }
+      ],
+      "_id": "61c33515fb3f79442dd8bc92",
+      "title": "New quest",
+      "location": {
+        "_id": "61c31d6dfb3f79442dd8909b",
+        "dateTime": "2021-12-22T12:43:25.759Z",
+        "lat": 45.36687761736444,
+        "lng": 16.829776271163926,
+        "zoom": 2
+      }
+    }
+  ],
+  "actors": [],
+  "pathPoints": [],
+  "achievements": [],
+  "presetTeamNames": [],
+  "presetTeamAvatars": [],
+  "_id": "61c31d6dfb3f79442dd89099",
+  "name": "Branch testing",
+  "options": {
+    "showAvatars": true,
+    "selfGuided": false,
+    "isForSale": false,
+    "_id": "61c31d6dfb3f79442dd8909a",
+    "location": {
+      "_id": "61c31d6dfb3f79442dd8909b",
+      "dateTime": "2021-12-22T12:43:25.759Z",
+      "lat": 45.36687761736444,
+      "lng": 16.829776271163926,
+      "zoom": 2
+    }
+  },
+  "team": "60866b9f8da3c7319440c24f",
+  "__v": 2,
+  "poster": {
+    "timeCreated": "2021-12-22T12:49:00.791Z",
+    "_id": "61c31ebcfb3f79442dd89ef0",
+    "width": 1152,
+    "height": 788,
+    "url": "https://loco-us.s3.us-west-1.amazonaws.com/ef9211d4-a7a5-4e48-9443-c38ab4c66341.jpg",
+    "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-ef9211d4-a7a5-4e48-9443-c38ab4c66341.jpg",
+    "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-ef9211d4-a7a5-4e48-9443-c38ab4c66341.jpg",
+    "remote": "ef9211d4-a7a5-4e48-9443-c38ab4c66341.jpg",
+    "thumbRemote": "thumb-ef9211d4-a7a5-4e48-9443-c38ab4c66341.jpg",
+    "miniThumbRemote": "mini-thumb-ef9211d4-a7a5-4e48-9443-c38ab4c66341.jpg",
+    "type": "IMAGE",
+    "size": 136989,
+    "__v": 0
+  },
+  "timeCreated": "2022-03-09T12:08:50.378Z"
+}
