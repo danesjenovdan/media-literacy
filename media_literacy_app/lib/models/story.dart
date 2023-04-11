@@ -100,8 +100,7 @@ class Message {
   final String text;
   final String actor;
   final RemoteImageDefinition? image;
-  // TODO
-  final Map<String, dynamic> response;
+  final MessageResponse response;
 
   Thread? thread;
 
@@ -111,9 +110,49 @@ class Message {
         text = json['text'] ?? '',
         actor = json['actor'] ?? '',
         image = json['file'] != null ? RemoteImageDefinition.fromJson(json['file']) : null,
-        response = json['response'];
+        response = MessageResponse.fromJson(json['response']) {
+    response.message = this;
+  }
 
   static List<Message> fromJsonList(List<dynamic> json) {
     return json.map((j) => Message.fromJson(j)).toList();
+  }
+}
+
+class MessageResponse {
+  final String id;
+  final String type;
+  final String text;
+  final List<MessageResponseOption> options;
+
+  Message? message;
+
+  MessageResponse.fromJson(Map<String, dynamic> json)
+      : id = json['_id'],
+        type = json['type'],
+        text = json['confirmText'] ?? '',
+        options = MessageResponseOption.fromJsonList(json['options']) {
+    for (var option in options) {
+      option.response = this;
+    }
+  }
+}
+
+class MessageResponseOption {
+  final String id;
+  final String text;
+  final String buttonText;
+  final String thread;
+
+  MessageResponse? response;
+
+  MessageResponseOption.fromJson(Map<String, dynamic> json)
+      : id = json['_id'],
+        text = json['text'] ?? '',
+        buttonText = json['buttonText'] ?? '',
+        thread = json['thread'] ?? '';
+
+  static List<MessageResponseOption> fromJsonList(List<dynamic> json) {
+    return json.map((j) => MessageResponseOption.fromJson(j)).toList();
   }
 }

@@ -10,8 +10,12 @@ Actor getActor(Message message) {
 }
 
 Widget buildMessage(BuildContext context, Message message) {
+  if (message.type.startsWith('ACTION')) {
+    return Text('UNIMPLEMENTED ACTION MESSAGE: id="${message.id}" type="${message.type}"');
+  }
+
   if (message.actor.isEmpty) {
-    return const Text('MESSAGE: EMPTY ACTOR!');
+    return Text('MESSAGE HAS NO ACTOR! id="${message.id}" type="${message.type}"');
   }
 
   if (message.actor == 'NARRATOR') {
@@ -53,10 +57,9 @@ Widget buildMessage(BuildContext context, Message message) {
       );
     }
 
-    return Text('NARRATOR MESSAGE: TYPE ${message.type}!');
+    return Text('UNIMPLEMENTED NARRATOR MESSAGE: id="${message.id}" type="${message.type}"');
   } else {
     // Non-NARRATOR actor messages:
-
     if (message.type == 'TEXT') {
       return Container(
         padding: const EdgeInsets.all(16),
@@ -115,9 +118,7 @@ Widget buildMessage(BuildContext context, Message message) {
       );
     }
 
-    // IMAGE
-
-    return Text('MESSAGE: TYPE ${message.type}!');
+    return Text('UNIMPLEMENTED REGULAR MESSAGE: id="${message.id}" type="${message.type}"');
   }
 }
 

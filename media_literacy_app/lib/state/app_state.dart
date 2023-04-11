@@ -1,15 +1,16 @@
 import 'dart:convert';
 
-import 'package:media_literacy_app/screens/chat.dart';
-import 'package:media_literacy_app/models/story.dart';
 import 'package:flutter/material.dart';
-import 'package:media_literacy_app/screens/chat_select.dart';
 import 'package:flutter/services.dart';
+import 'package:media_literacy_app/models/story.dart';
+import 'package:media_literacy_app/screens/chat_select.dart';
+import 'package:media_literacy_app/screens/chat.dart';
 
 class AppState extends ChangeNotifier {
   String appTitle = 'Media Literacy App';
 
   List<String> storyIds = [];
+  Map<String, Story> stories = {};
 
   Future<bool> initAppState() async {
     final Map<String, dynamic> assets = jsonDecode(await rootBundle.loadString('AssetManifest.json'));
@@ -40,8 +41,12 @@ class AppState extends ChangeNotifier {
       ),
     );
 
-    String data = await DefaultAssetBundle.of(context).loadString("assets/stories/story-$storyId.json");
-    selectedStory = Story.fromJson(jsonDecode(data));
+    if (stories[storyId] == null) {
+      String data = await DefaultAssetBundle.of(context).loadString("assets/stories/story-$storyId.json");
+      stories[storyId] = Story.fromJson(jsonDecode(data));
+    }
+
+    selectedStory = stories[storyId];
     notifyListeners();
   }
 
