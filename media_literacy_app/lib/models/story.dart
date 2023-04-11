@@ -156,3 +156,25 @@ class MessageResponseOption {
     return json.map((j) => MessageResponseOption.fromJson(j)).toList();
   }
 }
+
+enum DisplayedMessageType {
+  message,
+  response,
+}
+
+class DisplayedMessage {
+  final DisplayedMessageType type;
+  final String threadId;
+  final String messageId;
+  final String? text;
+
+  Message? message;
+
+  DisplayedMessage.fromMessage(this.message)
+      : type = DisplayedMessageType.message,
+        threadId = message!.thread!.id,
+        messageId = message.id,
+        text = null;
+
+  DisplayedMessage.fromResponse(this.threadId, this.messageId, this.text) : type = DisplayedMessageType.response;
+}

@@ -54,7 +54,7 @@
                   "minutes": 0,
                   "seconds": 0
                 },
-                "type": "CONFIRMATION",
+                "type": "NO_RESPONSE",
                 "confirmText": "Continue",
                 "location": {
                   "_id": "61c31df2fb3f79442dd8931e",

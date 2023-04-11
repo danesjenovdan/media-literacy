@@ -12,6 +12,9 @@ class AppState extends ChangeNotifier {
   List<String> storyIds = [];
   Map<String, Story> stories = {};
 
+  // list of already displayed messages for each chat id
+  Map<String, List<DisplayedMessage>> displayedChatMessages = {};
+
   Future<bool> initAppState() async {
     final Map<String, dynamic> assets = jsonDecode(await rootBundle.loadString('AssetManifest.json'));
 
@@ -55,7 +58,7 @@ class AppState extends ChangeNotifier {
 
   selectChat(String chatId, BuildContext context) async {
     selectedChatId = chatId;
-    selectedChat = null;
+    selectedChat = selectedStory!.chats.firstWhere((chat) => chat.id == chatId);
     notifyListeners();
 
     Navigator.of(context).push(
@@ -63,8 +66,15 @@ class AppState extends ChangeNotifier {
         builder: (context) => const ChatScreen(),
       ),
     );
+  }
 
-    selectedChat = selectedStory!.chats.firstWhere((chat) => chat.id == chatId);
+  List<DisplayedMessage> getDisplayedMessages() {
+    return displayedChatMessages.putIfAbsent(selectedChatId!, () => []);
+  }
+
+  addDisplayedMessage(DisplayedMessage displayedMessage) {
+    var list = getDisplayedMessages();
+    list.add(displayedMessage);
     notifyListeners();
   }
 }
