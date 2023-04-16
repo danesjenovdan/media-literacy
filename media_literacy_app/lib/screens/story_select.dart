@@ -22,7 +22,7 @@ class StorySelectScreen extends StatelessWidget {
               children: [
                 Expanded(
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
                         padding: const EdgeInsets.only(bottom: 16),
@@ -34,22 +34,27 @@ class StorySelectScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      ...appState.storyIds.map(
-                        (storyId) => Container(
-                          padding: const EdgeInsets.only(bottom: 16),
-                          child: GestureDetector(
-                            onTap: () {
-                              appState.selectStory(storyId, context);
-                            },
-                            child: Text(
-                              storyId,
-                              style: const TextStyle(
-                                fontSize: 24,
-                                color: Colors.blue,
+                      ...appState.stories.values.map(
+                        (story) => story.id == '643599d047eb967304f115db'
+                            ? Container(
+                                padding: const EdgeInsets.only(bottom: 16),
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    appState.selectStory(story.id, context);
+                                  },
+                                  style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
+                                  child: Text(story.name),
+                                ),
+                              )
+                            : Container(
+                                padding: const EdgeInsets.only(bottom: 16),
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    appState.selectStory(story.id, context);
+                                  },
+                                  child: Text(story.name),
+                                ),
                               ),
-                            ),
-                          ),
-                        ),
                       ),
                     ],
                   ),

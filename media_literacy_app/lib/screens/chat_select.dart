@@ -30,16 +30,15 @@ class ChatSelectScreen extends StatelessWidget {
         ...story.chats.map(
           (chat) => Container(
             padding: const EdgeInsets.only(bottom: 16),
-            child: GestureDetector(
-              onTap: () {
+            child: ElevatedButton(
+              onPressed: () {
                 appState.selectChat(chat.id, context);
               },
               child: Text(
                 chat.title,
                 style: TextStyle(
                   fontWeight: chat.isMainChat ? FontWeight.bold : FontWeight.normal,
-                  fontSize: 24,
-                  color: Colors.blue,
+                  fontSize: 20,
                 ),
               ),
             ),
@@ -61,7 +60,7 @@ class ChatSelectScreen extends StatelessWidget {
               children: [
                 Expanded(
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: content,
                   ),
                 ),

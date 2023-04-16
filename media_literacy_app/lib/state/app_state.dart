@@ -9,7 +9,6 @@ import 'package:media_literacy_app/screens/chat.dart';
 class AppState extends ChangeNotifier {
   String appTitle = 'Media Literacy App';
 
-  List<String> storyIds = [];
   Map<String, Story> stories = {};
 
   // list of already displayed messages for each chat id
@@ -18,14 +17,17 @@ class AppState extends ChangeNotifier {
   Future<bool> initAppState() async {
     final Map<String, dynamic> assets = jsonDecode(await rootBundle.loadString('AssetManifest.json'));
 
-    storyIds = assets.keys
-        .where((String key) => key.contains('stories/') && key.endsWith('.json'))
-        .map((key) {
-          var regex = RegExp(r'story-([0-9a-f]+)\.json$');
-          return regex.firstMatch(key)?.group(1) ?? '';
-        })
-        .where((key) => key.isNotEmpty)
-        .toList();
+    var storyIds = assets.keys.where((String key) => key.contains('stories/') && key.endsWith('.json')).map((key) {
+      var regex = RegExp(r'story-([0-9a-f]+)\.json$');
+      return regex.firstMatch(key)?.group(1) ?? '';
+    }).where((key) => key.isNotEmpty);
+
+    for (var storyId in storyIds) {
+      String data = await rootBundle.loadString("assets/stories/story-$storyId.json");
+      stories[storyId] = Story.fromJson(jsonDecode(data));
+    }
+
+    stories = Map.fromEntries(stories.entries.toList()..sort((e1, e2) => e1.value.name.compareTo(e2.value.name)));
 
     return true;
   }

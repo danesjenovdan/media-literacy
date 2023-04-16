@@ -1,0 +1,663 @@
+{
+  "isTranslation": false,
+  "isMaster": false,
+  "childStories": [],
+  "geo": [18.49611361639408, 43.87142962389218],
+  "hasTimeLimit": false,
+  "deleted": false,
+  "public": false,
+  "featured": false,
+  "status": "NOT_PUBLISHED",
+  "_id": "643599d047eb967304f115db",
+  "name": "Media Literacy project",
+  "options": {
+    "showAvatars": true,
+    "selfGuided": false,
+    "isForSale": false,
+    "nextoTour": false,
+    "_id": "643599d047eb967304f115dc",
+    "location": {
+      "_id": "643599d047eb967304f115dd",
+      "dateTime": "2023-04-11T17:33:04.743Z",
+      "lat": 43.87142962389218,
+      "lng": 18.49611361639408,
+      "zoom": 6
+    }
+  },
+  "team": "643599b047eb967304f10aff",
+  "translations": [],
+  "duration": {
+    "_id": "643599d047eb967304f115de",
+    "hours": 0,
+    "minutes": 45,
+    "seconds": 0
+  },
+  "threads": [],
+  "chats": [
+    {
+      "isLocked": false,
+      "isHidden": false,
+      "isLocationLocked": false,
+      "isPreview": false,
+      "actors": [],
+      "threads": [
+        {
+          "nextStoryThreadMessageIndex": 0,
+          "awaitingResponse": false,
+          "messages": [
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64359a0b47eb967304f1160a",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64359a0b47eb967304f1160b",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "64359a0b47eb967304f1160c",
+                  "dateTime": "2023-04-11T17:34:03.215Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-04-11T17:34:03.215Z",
+              "_id": "64359a0b47eb967304f11609",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  😀\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 👌",
+              "actor": "64359a3047eb967304f11655"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64359a4847eb967304f116f9",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64359a4847eb967304f116fa",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "64359a4847eb967304f116fb",
+                  "dateTime": "2023-04-11T17:35:04.159Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-04-11T17:35:04.159Z",
+              "_id": "64359a4847eb967304f116f8",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+              "actor": "64359a3047eb967304f11655"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64359a5847eb967304f1174f",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64359a5847eb967304f11750",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "64359a5847eb967304f11751",
+                  "dateTime": "2023-04-11T17:35:20.984Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Continue"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-04-11T17:35:20.985Z",
+              "_id": "64359a5847eb967304f1174e",
+              "type": "IMAGE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "NARRATOR",
+              "file": {
+                "_id": "64359a5147eb967304f1174c",
+                "timeCreated": "2023-04-11T17:35:13.016Z",
+                "width": 540,
+                "height": 317,
+                "url": "https://loco-us.s3.us-west-1.amazonaws.com/146125ad-d05c-4fed-a1db-e03b16ded34a.jpg",
+                "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-146125ad-d05c-4fed-a1db-e03b16ded34a.jpg",
+                "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-146125ad-d05c-4fed-a1db-e03b16ded34a.jpg",
+                "remote": "146125ad-d05c-4fed-a1db-e03b16ded34a.jpg",
+                "thumbRemote": "thumb-146125ad-d05c-4fed-a1db-e03b16ded34a.jpg",
+                "miniThumbRemote": "mini-thumb-146125ad-d05c-4fed-a1db-e03b16ded34a.jpg",
+                "type": "IMAGE",
+                "size": 397867,
+                "__v": 0
+              }
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6436683347eb967304f35315",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6436683347eb967304f35316",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "NO_RESPONSE",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "6436683347eb967304f35317",
+                  "dateTime": "2023-04-12T08:13:39.391Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-04-12T08:13:39.392Z",
+              "_id": "6436683347eb967304f35314",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "This is a video",
+              "actor": "64359a3047eb967304f11655"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6436687147eb967304f35392",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6436687147eb967304f35393",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "6436687147eb967304f35394",
+                  "dateTime": "2023-04-12T08:14:41.986Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Continue"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-04-12T08:14:41.987Z",
+              "_id": "6436687147eb967304f35391",
+              "type": "YOUTUBE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "NARRATOR",
+              "youtubeId": "EjEzYIv0RSU",
+              "youtubeThumbUrl": "https://i.ytimg.com/vi/EjEzYIv0RSU/mqdefault.jpg",
+              "youtubeTitle": "Autonomous AI: Are We Creating Westworld?"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6436689647eb967304f35663",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6436689647eb967304f35664",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "NO_RESPONSE",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "6436689647eb967304f35665",
+                  "dateTime": "2023-04-12T08:15:18.037Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-04-12T08:15:18.037Z",
+              "_id": "6436689647eb967304f35662",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "This is a quiz",
+              "actor": "64359a3047eb967304f11655"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "643668c947eb967304f357e4",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "643668c947eb967304f357e9",
+                    "buttonText": "Correct answer",
+                    "isCorrect": true,
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "643668c947eb967304f357e8",
+                    "buttonText": "Wrong answer 1",
+                    "isCorrect": false,
+                    "penaltySeconds": 10,
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "643668c947eb967304f357e7",
+                    "buttonText": "Wrong answer 2",
+                    "text": ""
+                  },
+                  {
+                    "votes": [],
+                    "_id": "643668c947eb967304f357e6",
+                    "buttonText": "Wrong answer 3",
+                    "text": ""
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "643668c947eb967304f357ea",
+                    "thread": "643599d047eb967304f115e1"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "643668c947eb967304f357e5",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "QUIZ",
+                "confirmText": "Answer question",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "643668c947eb967304f357eb",
+                  "dateTime": "2023-04-12T08:16:09.351Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-04-12T08:16:09.352Z",
+              "_id": "643668c947eb967304f357e3",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "",
+              "actor": "64359a3047eb967304f11655"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "643668d747eb967304f358ca",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "643668d747eb967304f358cb",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "643668d747eb967304f358cc",
+                  "dateTime": "2023-04-12T08:16:23.420Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-04-12T08:16:23.420Z",
+              "_id": "643668d747eb967304f358c9",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Ok moving on.",
+              "actor": "64359a3047eb967304f11655"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "643668ed47eb967304f35997",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "643668ed47eb967304f35998",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "643668ed47eb967304f35999",
+                  "dateTime": "2023-04-12T08:16:45.945Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-04-12T08:16:45.945Z",
+              "_id": "643668ed47eb967304f35996",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Chapter ends. New one is suggested.",
+              "actor": "64359a3047eb967304f11655"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": false,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "643668f647eb967304f35a76",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "type": "NO_RESPONSE"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-04-12T08:16:54.971Z",
+              "_id": "643668f647eb967304f35a77",
+              "type": "ACTION_QUEST_END",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actionOptions": {
+                "_id": "643668f647eb967304f35a78",
+                "triggerChatId": "643599dc47eb967304f115f4"
+              }
+            }
+          ],
+          "writingStatusList": [],
+          "_id": "643599d047eb967304f115e1",
+          "name": "Main thread"
+        }
+      ],
+      "_id": "643599d047eb967304f115df",
+      "isMainChat": true,
+      "title": "Chapter 1",
+      "location": {
+        "_id": "643599d047eb967304f115e0",
+        "dateTime": "2023-04-11T17:33:04.744Z",
+        "lat": 43.87142962389218,
+        "lng": 18.49611361639408,
+        "zoom": 6
+      }
+    },
+    {
+      "isLocked": false,
+      "isHidden": false,
+      "isLocationLocked": false,
+      "isPreview": false,
+      "actors": [],
+      "threads": [
+        {
+          "nextStoryThreadMessageIndex": 0,
+          "awaitingResponse": false,
+          "messages": [],
+          "writingStatusList": [],
+          "_id": "643599dc47eb967304f115f3",
+          "name": "Main thread"
+        }
+      ],
+      "_id": "643599dc47eb967304f115f4",
+      "title": "Chapter 2",
+      "location": {
+        "_id": "643599d047eb967304f115dd",
+        "dateTime": "2023-04-11T17:33:04.743Z",
+        "lat": 43.87142962389218,
+        "lng": 18.49611361639408,
+        "zoom": 6
+      }
+    },
+    {
+      "isLocked": false,
+      "isHidden": false,
+      "isLocationLocked": false,
+      "isPreview": false,
+      "actors": [],
+      "threads": [
+        {
+          "nextStoryThreadMessageIndex": 0,
+          "awaitingResponse": false,
+          "messages": [],
+          "writingStatusList": [],
+          "_id": "643599e147eb967304f115fa",
+          "name": "Main thread"
+        }
+      ],
+      "_id": "643599e147eb967304f115fb",
+      "title": "Chapter 3",
+      "location": {
+        "_id": "643599d047eb967304f115dd",
+        "dateTime": "2023-04-11T17:33:04.743Z",
+        "lat": 43.87142962389218,
+        "lng": 18.49611361639408,
+        "zoom": 6
+      }
+    },
+    {
+      "isLocked": false,
+      "isHidden": false,
+      "isLocationLocked": false,
+      "isPreview": false,
+      "actors": [],
+      "threads": [
+        {
+          "nextStoryThreadMessageIndex": 0,
+          "awaitingResponse": false,
+          "messages": [],
+          "writingStatusList": [],
+          "_id": "643599e647eb967304f11601",
+          "name": "Main thread"
+        }
+      ],
+      "_id": "643599e647eb967304f11602",
+      "title": "Chapter 4",
+      "location": {
+        "_id": "643599d047eb967304f115dd",
+        "dateTime": "2023-04-11T17:33:04.743Z",
+        "lat": 43.87142962389218,
+        "lng": 18.49611361639408,
+        "zoom": 6
+      }
+    }
+  ],
+  "actors": [
+    {
+      "_id": "64359a3047eb967304f11655",
+      "name": "Character 1",
+      "avatar": {
+        "_id": "64359a2747eb967304f11654",
+        "timeCreated": "2023-04-11T17:34:31.348Z",
+        "width": 1247,
+        "height": 1440,
+        "url": "https://loco-us.s3.us-west-1.amazonaws.com/066933b0-6c3d-448e-b6f0-f86e24f6d6c5.png",
+        "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-066933b0-6c3d-448e-b6f0-f86e24f6d6c5.png",
+        "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-066933b0-6c3d-448e-b6f0-f86e24f6d6c5.png",
+        "remote": "066933b0-6c3d-448e-b6f0-f86e24f6d6c5.png",
+        "thumbRemote": "thumb-066933b0-6c3d-448e-b6f0-f86e24f6d6c5.png",
+        "miniThumbRemote": "mini-thumb-066933b0-6c3d-448e-b6f0-f86e24f6d6c5.png",
+        "type": "IMAGE",
+        "size": 212820,
+        "__v": 0
+      }
+    }
+  ],
+  "pathPoints": [],
+  "achievements": [],
+  "presetTeamNames": [],
+  "presetTeamAvatars": [],
+  "__v": 0,
+  "timeCreated": "2023-04-12T08:44:00.973Z"
+}

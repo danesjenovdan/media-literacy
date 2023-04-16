@@ -3,6 +3,63 @@ import 'package:media_literacy_app/models/story.dart';
 import 'package:media_literacy_app/state/app_state.dart';
 import 'package:progressive_image/progressive_image.dart';
 import 'package:provider/provider.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+
+class YoutubePlayerWithThumbnail extends StatefulWidget {
+  final String youtubeId;
+  final String youtubeThumbUrl;
+
+  const YoutubePlayerWithThumbnail({Key? key, required this.youtubeId, required this.youtubeThumbUrl}) : super(key: key);
+
+  @override
+  State<YoutubePlayerWithThumbnail> createState() => _YoutubePlayerWithThumbnailState();
+}
+
+class _YoutubePlayerWithThumbnailState extends State<YoutubePlayerWithThumbnail> {
+  bool showThumbnail = true;
+  YoutubePlayerController? _controller;
+
+  @override
+  void initState() {
+    _controller = YoutubePlayerController(
+      initialVideoId: widget.youtubeId,
+      flags: const YoutubePlayerFlags(mute: false, autoPlay: true),
+    );
+
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (showThumbnail) {
+      return GestureDetector(
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            Image.network(widget.youtubeThumbUrl, fit: BoxFit.cover),
+            const Center(
+              child: Icon(
+                Icons.play_arrow,
+                color: Colors.white,
+                size: 100,
+                shadows: [Shadow(color: Colors.black, blurRadius: 25)],
+              ),
+            ),
+          ],
+        ),
+        onTap: () {
+          setState(() {
+            showThumbnail = false;
+          });
+        },
+      );
+    }
+    return YoutubePlayer(
+      controller: _controller!,
+      showVideoProgressIndicator: true,
+    );
+  }
+}
 
 Actor getActor(Message message) {
   var actors = message.thread!.chat!.story!.actors;
@@ -10,6 +67,9 @@ Actor getActor(Message message) {
 }
 
 Widget buildMessage(BuildContext context, DisplayedMessage displayedMessage) {
+  if (displayedMessage.message == null) {
+    return Text('NO MESSAGE');
+  }
   var message = displayedMessage.message!;
 
   if (message.type.startsWith('ACTION')) {
@@ -54,6 +114,41 @@ Widget buildMessage(BuildContext context, DisplayedMessage displayedMessage) {
               width: message.image!.width.toDouble(),
               height: message.image!.height.toDouble(),
             ),
+          ),
+        ),
+      );
+    }
+
+    if (message.type == 'YOUTUBE') {
+      return Container(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Theme.of(context).primaryColorLight,
+            borderRadius: BorderRadius.circular(8),
+          ),
+          clipBehavior: Clip.hardEdge,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              AspectRatio(
+                aspectRatio: 16 / 9,
+                child: YoutubePlayerWithThumbnail(
+                  youtubeId: message.youtubeId,
+                  youtubeThumbUrl: message.youtubeThumbUrl,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                child: Text(
+                  message.youtubeTitle,
+                  style: const TextStyle(
+                    fontSize: 16,
+                    height: 1.3,
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       );
@@ -149,6 +244,8 @@ Widget buildResponse(BuildContext context, AppState appState, List<DisplayedMess
     );
   }
 
+  if (lastMessage.response.type == 'QUIZ') {}
+
   print('UNIMPLEMENTED RESPONSE: id="${lastMessage.id}" type="${lastMessage.response.type}"');
   return Text('UNIMPLEMENTED RESPONSE: id="${lastMessage.id}" type="${lastMessage.response.type}"');
 }
@@ -156,8 +253,13 @@ Widget buildResponse(BuildContext context, AppState appState, List<DisplayedMess
 Future advanceMessages(AppState appState, List<DisplayedMessage> displayedMessages) {
   if (displayedMessages.isEmpty) {
     return Future.microtask(() {
-      var firstMessage = appState.selectedChat!.threads.first.messages.first;
-      appState.addDisplayedMessage(DisplayedMessage.fromMessage(firstMessage));
+      var threads = appState.selectedChat!.threads;
+      if (threads.isNotEmpty && threads.first.messages.isNotEmpty) {
+        var firstMessage = threads.first.messages.first;
+        appState.addDisplayedMessage(DisplayedMessage.fromMessage(firstMessage));
+      } else {
+        appState.addDisplayedMessage(DisplayedMessage.fromResponse('', '', 'No messages!'));
+      }
     });
   }
 

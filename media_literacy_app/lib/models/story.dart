@@ -100,6 +100,9 @@ class Message {
   final String text;
   final String actor;
   final RemoteImageDefinition? image;
+  final String youtubeId;
+  final String youtubeThumbUrl;
+  final String youtubeTitle;
   final MessageResponse response;
 
   Thread? thread;
@@ -110,6 +113,9 @@ class Message {
         text = json['text'] ?? '',
         actor = json['actor'] ?? '',
         image = json['file'] != null ? RemoteImageDefinition.fromJson(json['file']) : null,
+        youtubeId = json['youtubeId'] ?? '',
+        youtubeThumbUrl = json['youtubeThumbUrl'] ?? '',
+        youtubeTitle = json['youtubeTitle'] ?? '',
         response = MessageResponse.fromJson(json['response']) {
     response.message = this;
   }
