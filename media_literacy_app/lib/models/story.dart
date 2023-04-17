@@ -166,6 +166,7 @@ class MessageResponseOption {
 enum DisplayedMessageType {
   message,
   response,
+  system,
 }
 
 class DisplayedMessage {
@@ -183,4 +184,9 @@ class DisplayedMessage {
         text = null;
 
   DisplayedMessage.fromResponse(this.threadId, this.messageId, this.text) : type = DisplayedMessageType.response;
+
+  DisplayedMessage.system({required String this.text})
+      : type = DisplayedMessageType.system,
+        threadId = '',
+        messageId = '';
 }

@@ -35,30 +35,27 @@ class AppState extends ChangeNotifier {
   String? selectedStoryId;
   Story? selectedStory;
 
-  selectStory(String storyId, BuildContext context) async {
+  selectStory(String storyId, BuildContext context) {
     selectedStoryId = storyId;
-    selectedStory = null;
+    selectedStory = stories[storyId];
     notifyListeners();
+
+    for (var actor in selectedStory!.actors) {
+      var url = actor.avatar.url;
+      precacheImage(NetworkImage(url), context);
+    }
 
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => const ChatSelectScreen(),
       ),
     );
-
-    if (stories[storyId] == null) {
-      String data = await DefaultAssetBundle.of(context).loadString("assets/stories/story-$storyId.json");
-      stories[storyId] = Story.fromJson(jsonDecode(data));
-    }
-
-    selectedStory = stories[storyId];
-    notifyListeners();
   }
 
   String? selectedChatId;
   Chat? selectedChat;
 
-  selectChat(String chatId, BuildContext context) async {
+  selectChat(String chatId, BuildContext context) {
     selectedChatId = chatId;
     selectedChat = selectedStory!.chats.firstWhere((chat) => chat.id == chatId);
     notifyListeners();
