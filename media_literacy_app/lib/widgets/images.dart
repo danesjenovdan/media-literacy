@@ -5,8 +5,9 @@ import 'package:transparent_image/transparent_image.dart';
 
 class RemoteProgressiveImageLoader extends StatelessWidget {
   final RemoteImageDefinition image;
+  final BoxFit fit;
 
-  const RemoteProgressiveImageLoader(this.image, {Key? key}) : super(key: key);
+  const RemoteProgressiveImageLoader(this.image, {Key? key, this.fit = BoxFit.fill}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +19,7 @@ class RemoteProgressiveImageLoader extends StatelessWidget {
       image: NetworkImage(image.url),
       width: image.width.toDouble(),
       height: image.height.toDouble(),
+      fit: fit,
     );
   }
 }

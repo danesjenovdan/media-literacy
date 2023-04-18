@@ -4,6 +4,7 @@ import 'package:media_literacy_app/models/story.dart';
 import 'package:media_literacy_app/state/app_state.dart';
 import 'package:media_literacy_app/widgets/images.dart';
 import 'package:media_literacy_app/widgets/messages.dart';
+import 'package:media_literacy_app/widgets/responses.dart';
 import 'package:provider/provider.dart';
 import 'package:styled_widget/styled_widget.dart';
 
@@ -16,40 +17,43 @@ Widget buildMessage(BuildContext context, DisplayedMessage displayedMessage) {
     return const Text('TODO: UNIMPLEMENTED RESPONSE MESSAGE');
   }
 
-  // -> displayedMessage.type == DisplayedMessageType.message
-
-  if (displayedMessage.message == null) {
-    return const Text('ERROR: DISPLAYED MESSAGE DOES NOT HAVE A MESSAGE');
-  }
-
-  var message = displayedMessage.message!;
-
-  if (message.type.startsWith('ACTION')) {
-    if (message.type == 'ACTION_QUEST_END') {
-      var nextChatId = message.actionOptions!.triggerChatId;
-      var nextChat = message.thread!.chat!.story!.chats.firstWhereOrNull((chat) => chat.id == nextChatId);
-
-      if (nextChat == null) {
-        return Text('ERROR: ACTION HAS INVALID TRIGGER CHAT ID! id="${message.id}" type="${message.type}"');
-      }
-
-      return Column(
-        children: [const Text('Quest end'), Text('Next quest: ${nextChat.title}')],
-      );
+  if (displayedMessage.type == DisplayedMessageType.message) {
+    if (displayedMessage.message == null) {
+      return const Text('ERROR: DISPLAYED MESSAGE DOES NOT HAVE A MESSAGE');
     }
 
-    return Text('TODO: UNIMPLEMENTED ACTION MESSAGE: id="${message.id}" type="${message.type}"');
+    var message = displayedMessage.message!;
+
+    if (message.type.startsWith('ACTION')) {
+      if (message.type == 'ACTION_QUEST_END') {
+        var nextChatId = message.actionOptions!.triggerChatId;
+        var nextChat = message.thread!.chat!.story!.chats.firstWhereOrNull((chat) => chat.id == nextChatId);
+
+        if (nextChat == null) {
+          return Text('ERROR: ACTION HAS INVALID TRIGGER CHAT ID! id="${message.id}" type="${message.type}"');
+        }
+
+        return Column(
+          children: [const Text('Quest end'), Text('Next quest: ${nextChat.title}')],
+        );
+      }
+
+      return Text('TODO: UNIMPLEMENTED ACTION MESSAGE: id="${message.id}" type="${message.type}"');
+    }
+
+    if (message.actor.isEmpty) {
+      return Text('ERROR: MESSAGE HAS NO ACTOR! id="${message.id}" type="${message.type}"');
+    }
+
+    if (message.actor == 'NARRATOR') {
+      return NarratorMessage(message);
+    }
+
+    return IncomingMessage(message);
   }
 
-  if (message.actor.isEmpty) {
-    return Text('ERROR: MESSAGE HAS NO ACTOR! id="${message.id}" type="${message.type}"');
-  }
-
-  if (message.actor == 'NARRATOR') {
-    return NarratorMessage(message);
-  }
-
-  return IncomingMessage(message);
+  print('ERROR: INVALID TYPE displayedMessage.type="${displayedMessage.type}"');
+  throw ArgumentError.value(displayedMessage.type);
 }
 
 Widget buildResponse(BuildContext context, AppState appState, DisplayedState displayedState) {
@@ -67,74 +71,15 @@ Widget buildResponse(BuildContext context, AppState appState, DisplayedState dis
   }
 
   if (lastMessage.response.type == 'CONFIRMATION') {
-    return ElevatedButton(
-      onPressed: () {
-        var lastMessageIndex = lastThread.messages.indexWhere((m) => m.id == lastMessage.id);
-        if ((lastMessageIndex + 1) < lastThread.messages.length) {
-          var message = lastThread.messages[lastMessageIndex + 1];
-          appState.addDisplayedMessage(DisplayedMessage.fromMessage(message));
-        }
-      },
-      child: Text(lastMessage.response.text),
-    );
+    return ConfirmationResponse(message: lastMessage);
   }
 
   if (lastMessage.response.type == 'QUIZ') {
-    return Column(
-      children: [
-        ...lastMessage.response.options.map(
-          (option) => ElevatedButton(
-            onPressed: () {
-              if (option.isCorrect) {
-                var lastMessageIndex = lastThread.messages.indexWhere((m) => m.id == lastMessage.id);
-                if ((lastMessageIndex + 1) < lastThread.messages.length) {
-                  var message = lastThread.messages[lastMessageIndex + 1];
-                  appState.addDisplayedMessage(DisplayedMessage.fromMessage(message));
-                }
-              }
-            },
-            child: Text(option.buttonText),
-          ),
-        ),
-      ],
-    );
+    return QuizResponse(message: lastMessage);
   }
 
   if (lastMessage.response.type == 'PHOTO_QUIZ') {
-    var columns = 2;
-    var rows = (lastMessage.response.photoOptions.length / columns).ceil();
-
-    List<Widget> widgets = [];
-    for (var col = 0; col < columns; col++) {
-      List<Widget> children = [];
-      for (var row = 0; row < rows; row++) {
-        var option = lastMessage.response.photoOptions[col * columns + row];
-        children.add(RemoteProgressiveImageLoader(option.photo!).constrained(width: 50, height: 50));
-      }
-      widgets.add(Row(children: children));
-    }
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      // mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        // ...lastMessage.response.photoOptions.map(
-        //   (option) => ElevatedButton(
-        //     onPressed: () {
-        //       // if (option.isCorrect) {
-        //       //   var lastMessageIndex = lastThread.messages.indexWhere((m) => m.id == lastMessage.id);
-        //       //   if ((lastMessageIndex + 1) < lastThread.messages.length) {
-        //       //     var message = lastThread.messages[lastMessageIndex + 1];
-        //       //     appState.addDisplayedMessage(DisplayedMessage.fromMessage(message));
-        //       //   }
-        //       // }
-        //     },
-        //     child: RemoteProgressiveImageLoader(option.photo!).constrained(width: 50, height: 50),
-        //   ),
-        // ),
-        ...widgets,
-      ],
-    );
+    return PhotoQuizResponse(message: lastMessage);
   }
 
   if (lastMessage.response.type == 'OPTIONS') {
@@ -165,9 +110,10 @@ Widget buildResponse(BuildContext context, AppState appState, DisplayedState dis
   return Text('UNIMPLEMENTED RESPONSE: id="${lastMessage.id}" type="${lastMessage.response.type}"');
 }
 
-Future advanceMessages(AppState appState, DisplayedState displayedState) {
+Future? queueNextMessage(AppState appState, DisplayedState displayedState) {
   var displayedMessages = displayedState.messageList;
 
+  // if no displayed messages, show first message in first thread
   if (displayedMessages.isEmpty) {
     return Future.microtask(() {
       var threads = appState.selectedChat!.threads;
@@ -180,6 +126,7 @@ Future advanceMessages(AppState appState, DisplayedState displayedState) {
     });
   }
 
+  // if last displayed message
   var last = displayedMessages.last;
   if (last.type == DisplayedMessageType.message) {
     var lastMessage = last.message!;
@@ -187,7 +134,7 @@ Future advanceMessages(AppState appState, DisplayedState displayedState) {
 
     if (lastMessage.type.startsWith('ACTION')) {
       // TODO:
-      return Future.value(null);
+      return null;
     }
 
     if (lastMessage.response.type == 'NO_RESPONSE') {
@@ -201,7 +148,7 @@ Future advanceMessages(AppState appState, DisplayedState displayedState) {
     }
   }
 
-  return Future.value(null);
+  return null;
 }
 
 class ChatScreen extends StatefulWidget {
@@ -229,7 +176,7 @@ class _ChatScreenState extends State<ChatScreen> {
     var appState = context.watch<AppState>();
 
     var displayedState = appState.getDisplayedState();
-    next ??= advanceMessages(appState, displayedState).whenComplete(() => next = null);
+    next ??= queueNextMessage(appState, displayedState)?.whenComplete(() => next = null);
 
     var messageListView = ListView.builder(
       controller: _scrollController,
@@ -251,7 +198,7 @@ class _ChatScreenState extends State<ChatScreen> {
       body: Column(
         children: [
           Expanded(child: messageListView),
-          responseView,
+          ChatResponse(child: responseView),
         ],
       ),
     );
