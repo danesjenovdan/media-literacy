@@ -103,6 +103,7 @@ class Message {
   final String youtubeId;
   final String youtubeThumbUrl;
   final String youtubeTitle;
+  final MessageActionOptions? actionOptions;
   final MessageResponse response;
 
   Thread? thread;
@@ -116,6 +117,7 @@ class Message {
         youtubeId = json['youtubeId'] ?? '',
         youtubeThumbUrl = json['youtubeThumbUrl'] ?? '',
         youtubeTitle = json['youtubeTitle'] ?? '',
+        actionOptions = json['actionOptions'] != null ? MessageActionOptions.fromJson(json['actionOptions']) : null,
         response = MessageResponse.fromJson(json['response']) {
     response.message = this;
   }
@@ -125,11 +127,21 @@ class Message {
   }
 }
 
+class MessageActionOptions {
+  final String id;
+  final String triggerChatId;
+
+  MessageActionOptions.fromJson(Map<String, dynamic> json)
+      : id = json['_id'],
+        triggerChatId = json['triggerChatId'] ?? '';
+}
+
 class MessageResponse {
   final String id;
   final String type;
   final String text;
   final List<MessageResponseOption> options;
+  final List<MessageResponseOption> photoOptions;
 
   Message? message;
 
@@ -137,7 +149,8 @@ class MessageResponse {
       : id = json['_id'],
         type = json['type'],
         text = json['confirmText'] ?? '',
-        options = MessageResponseOption.fromJsonList(json['options']) {
+        options = MessageResponseOption.fromJsonList(json['options']),
+        photoOptions = MessageResponseOption.fromJsonList(json['photoOptions']) {
     for (var option in options) {
       option.response = this;
     }
@@ -149,6 +162,8 @@ class MessageResponseOption {
   final String text;
   final String buttonText;
   final String thread;
+  final RemoteImageDefinition? photo;
+  final bool isCorrect;
 
   MessageResponse? response;
 
@@ -156,7 +171,9 @@ class MessageResponseOption {
       : id = json['_id'],
         text = json['text'] ?? '',
         buttonText = json['buttonText'] ?? '',
-        thread = json['thread'] ?? '';
+        thread = json['thread'] ?? '',
+        photo = json['photo'] != null ? RemoteImageDefinition.fromJson(json['photo']) : null,
+        isCorrect = json['isCorrect'] ?? false;
 
   static List<MessageResponseOption> fromJsonList(List<dynamic> json) {
     return json.map((j) => MessageResponseOption.fromJson(j)).toList();

@@ -511,6 +511,293 @@
               "response": {
                 "isNumber": false,
                 "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6437c1fa47eb967304091e8e",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6437c1fa47eb967304091e8f",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "6437c1fa47eb967304091e90",
+                  "dateTime": "2023-04-13T08:48:58.102Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-04-13T08:48:58.102Z",
+              "_id": "6437c1fa47eb967304091e8d",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Example of text without avatar. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. 👍",
+              "actor": "NARRATOR"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6437c1de47eb967304091d53",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6437c1de47eb967304091d54",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "NO_RESPONSE",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "6437c1de47eb967304091d55",
+                  "dateTime": "2023-04-13T08:48:30.142Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-04-13T08:48:30.143Z",
+              "_id": "6437c1de47eb967304091d52",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Now a visual quiz",
+              "actor": "64359a3047eb967304f11655"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6437c22f47eb9673040922df",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "6437c22f47eb9673040922e2",
+                    "buttonText": "Correct option",
+                    "isCorrect": true,
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6437c22f47eb9673040922e1",
+                    "buttonText": "Wrong option",
+                    "isCorrect": false,
+                    "penaltySeconds": 10,
+                    "hideResponseToChat": false
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "6437c22f47eb9673040922e3",
+                    "thread": "643599d047eb967304f115e1"
+                  }
+                ],
+                "photoOptions": [
+                  {
+                    "_id": "6437c22f47eb9673040922e7",
+                    "photo": {
+                      "_id": "6437c20947eb9673040922d9",
+                      "uploadClientId": "98396744-b09d-4fc3-9728-9456c9658086",
+                      "originalFileName": "Frame 45.jpg",
+                      "timeCreated": "2023-04-13T08:49:13.737Z",
+                      "width": 540,
+                      "height": 317,
+                      "url": "https://loco-us.s3.us-west-1.amazonaws.com/212e51d9-97d0-4a69-877b-9c8d1d27e6c3.jpg",
+                      "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-212e51d9-97d0-4a69-877b-9c8d1d27e6c3.jpg",
+                      "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-212e51d9-97d0-4a69-877b-9c8d1d27e6c3.jpg",
+                      "remote": "212e51d9-97d0-4a69-877b-9c8d1d27e6c3.jpg",
+                      "thumbRemote": "thumb-212e51d9-97d0-4a69-877b-9c8d1d27e6c3.jpg",
+                      "miniThumbRemote": "mini-thumb-212e51d9-97d0-4a69-877b-9c8d1d27e6c3.jpg",
+                      "type": "IMAGE",
+                      "size": 157187,
+                      "__v": 0
+                    },
+                    "isCorrect": true
+                  },
+                  {
+                    "_id": "6437c22f47eb9673040922e6",
+                    "photo": {
+                      "_id": "6437c21047eb9673040922da",
+                      "uploadClientId": "84f885f3-52a0-4f2e-bff0-a84a02e5efc6",
+                      "originalFileName": "Frame 46.jpg",
+                      "timeCreated": "2023-04-13T08:49:20.481Z",
+                      "width": 540,
+                      "height": 317,
+                      "url": "https://loco-us.s3.us-west-1.amazonaws.com/a9378447-2e90-495b-9a79-62e42c0d7c13.jpg",
+                      "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-a9378447-2e90-495b-9a79-62e42c0d7c13.jpg",
+                      "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-a9378447-2e90-495b-9a79-62e42c0d7c13.jpg",
+                      "remote": "a9378447-2e90-495b-9a79-62e42c0d7c13.jpg",
+                      "thumbRemote": "thumb-a9378447-2e90-495b-9a79-62e42c0d7c13.jpg",
+                      "miniThumbRemote": "mini-thumb-a9378447-2e90-495b-9a79-62e42c0d7c13.jpg",
+                      "type": "IMAGE",
+                      "size": 152550,
+                      "__v": 0
+                    }
+                  },
+                  {
+                    "_id": "6437c22f47eb9673040922e5",
+                    "photo": {
+                      "_id": "6437c21747eb9673040922db",
+                      "uploadClientId": "6fc536fd-c144-4cf2-987e-b1b4e5a5fa41",
+                      "originalFileName": "Frame 47.jpg",
+                      "timeCreated": "2023-04-13T08:49:27.073Z",
+                      "width": 540,
+                      "height": 317,
+                      "url": "https://loco-us.s3.us-west-1.amazonaws.com/0c19ddd4-83d7-4db4-9dd7-ad46ac06979c.jpg",
+                      "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-0c19ddd4-83d7-4db4-9dd7-ad46ac06979c.jpg",
+                      "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-0c19ddd4-83d7-4db4-9dd7-ad46ac06979c.jpg",
+                      "remote": "0c19ddd4-83d7-4db4-9dd7-ad46ac06979c.jpg",
+                      "thumbRemote": "thumb-0c19ddd4-83d7-4db4-9dd7-ad46ac06979c.jpg",
+                      "miniThumbRemote": "mini-thumb-0c19ddd4-83d7-4db4-9dd7-ad46ac06979c.jpg",
+                      "type": "IMAGE",
+                      "size": 155568,
+                      "__v": 0
+                    }
+                  },
+                  {
+                    "_id": "6437c22f47eb9673040922e4",
+                    "photo": {
+                      "_id": "6437c21d47eb9673040922dc",
+                      "uploadClientId": "f978e101-44de-47f3-9d8d-608afb25b0ce",
+                      "originalFileName": "Frame 48.jpg",
+                      "timeCreated": "2023-04-13T08:49:33.898Z",
+                      "width": 540,
+                      "height": 317,
+                      "url": "https://loco-us.s3.us-west-1.amazonaws.com/497bcf02-f199-47cd-b50a-444c4bc8a638.jpg",
+                      "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-497bcf02-f199-47cd-b50a-444c4bc8a638.jpg",
+                      "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-497bcf02-f199-47cd-b50a-444c4bc8a638.jpg",
+                      "remote": "497bcf02-f199-47cd-b50a-444c4bc8a638.jpg",
+                      "thumbRemote": "thumb-497bcf02-f199-47cd-b50a-444c4bc8a638.jpg",
+                      "miniThumbRemote": "mini-thumb-497bcf02-f199-47cd-b50a-444c4bc8a638.jpg",
+                      "type": "IMAGE",
+                      "size": 137586,
+                      "__v": 0
+                    }
+                  }
+                ],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6437c22f47eb9673040922e0",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "PHOTO_QUIZ",
+                "confirmText": "Select correct image",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "6437c22f47eb9673040922e8",
+                  "dateTime": "2023-04-13T08:49:51.320Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-04-13T08:49:51.320Z",
+              "_id": "6437c22f47eb9673040922de",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "",
+              "actor": "NARRATOR"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6437c23e47eb967304092639",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6437c23e47eb96730409263a",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "6437c23e47eb96730409263b",
+                  "dateTime": "2023-04-13T08:50:06.252Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-04-13T08:50:06.252Z",
+              "_id": "6437c23e47eb967304092638",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Correct!",
+              "actor": "64359a3047eb967304f11655"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
                 "preventVoting": false,
                 "hideResponseToChat": false,
                 "hasTimeLimit": false,
@@ -659,5 +946,5 @@
   "presetTeamNames": [],
   "presetTeamAvatars": [],
   "__v": 0,
-  "timeCreated": "2023-04-12T08:44:00.973Z"
+  "timeCreated": "2023-04-13T08:50:12.355Z"
 }
