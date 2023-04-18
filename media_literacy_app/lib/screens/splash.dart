@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:media_literacy_app/state/app_state.dart';
 import 'package:media_literacy_app/screens/story_select.dart';
+import 'package:media_literacy_app/state/app_state.dart';
 import 'package:provider/provider.dart';
+import 'package:styled_widget/styled_widget.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -13,12 +14,22 @@ class SplashScreen extends StatelessWidget {
     return FutureBuilder(
       future: appState.initAppState(),
       builder: (context, snapshot) {
-        Widget widget = Container();
+        List<Widget> widgets = [
+          Text(
+            appState.appTitle,
+            style: TextStyle(
+              fontSize: 28,
+              color: Theme.of(context).primaryColor,
+              decoration: TextDecoration.none,
+            ),
+          ),
+        ];
         if (snapshot.hasError) {
-          widget = const Text('Error :(');
+          widgets.add(const Text('Error loading :(').textAlignment(TextAlign.center));
         } else if (!snapshot.hasData) {
-          widget = const CircularProgressIndicator();
+          widgets.add(const CircularProgressIndicator().padding(top: 28));
         } else {
+          widgets.add(const CircularProgressIndicator(value: 1).padding(top: 28));
           Future.microtask(
             () => Navigator.of(context).pushReplacement(
               MaterialPageRoute(
@@ -34,7 +45,7 @@ class SplashScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [widget],
+            children: widgets,
           ),
         );
       },
