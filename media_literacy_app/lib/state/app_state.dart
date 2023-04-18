@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:media_literacy_app/models/story.dart';
 import 'package:media_literacy_app/screens/chat_select.dart';
 import 'package:media_literacy_app/screens/chat.dart';
+import 'package:flutter_image/flutter_image.dart';
 
 class AppState extends ChangeNotifier {
   String appTitle = 'Media Literacy App';
@@ -41,8 +42,8 @@ class AppState extends ChangeNotifier {
     notifyListeners();
 
     for (var actor in selectedStory!.actors) {
-      var url = actor.avatar.url;
-      precacheImage(NetworkImage(url), context);
+      precacheImage(NetworkImageWithRetry(actor.avatar.miniThumbUrl), context);
+      precacheImage(NetworkImageWithRetry(actor.avatar.url), context);
     }
 
     Navigator.of(context).push(
@@ -81,9 +82,16 @@ class AppState extends ChangeNotifier {
     }
     notifyListeners();
   }
+
+  void addPoints(int amount) {
+    var state = getDisplayedState();
+    state.points += amount;
+    notifyListeners();
+  }
 }
 
 class DisplayedState {
+  int points = 0;
   List<DisplayedMessage> messageList = [];
   List<String> threadStack = [];
 }

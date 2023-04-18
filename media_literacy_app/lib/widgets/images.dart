@@ -1,3 +1,4 @@
+import 'package:flutter_image/flutter_image.dart';
 import 'package:flutter/material.dart';
 import 'package:media_literacy_app/models/story.dart';
 import 'package:progressive_image/progressive_image.dart';
@@ -15,8 +16,8 @@ class RemoteProgressiveImageLoader extends StatelessWidget {
       placeholderBuilder: (context) {
         return const Center(child: CircularProgressIndicator());
       },
-      thumbnail: NetworkImage(image.miniThumbUrl),
-      image: NetworkImage(image.url),
+      thumbnail: NetworkImageWithRetry(image.miniThumbUrl),
+      image: NetworkImageWithRetry(image.url),
       width: image.width.toDouble(),
       height: image.height.toDouble(),
       fit: fit,
@@ -32,9 +33,9 @@ class FadeInImageLoader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FadeInImage.memoryNetwork(
-      placeholder: kTransparentImage,
-      image: imageUrl,
+    return FadeInImage(
+      placeholder: MemoryImage(kTransparentImage),
+      image: NetworkImageWithRetry(imageUrl),
       fit: fit,
     );
   }

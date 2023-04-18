@@ -2,7 +2,6 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:media_literacy_app/models/story.dart';
 import 'package:media_literacy_app/state/app_state.dart';
-import 'package:media_literacy_app/widgets/images.dart';
 import 'package:media_literacy_app/widgets/messages.dart';
 import 'package:media_literacy_app/widgets/responses.dart';
 import 'package:provider/provider.dart';
@@ -14,7 +13,7 @@ Widget buildMessage(BuildContext context, DisplayedMessage displayedMessage) {
   }
 
   if (displayedMessage.type == DisplayedMessageType.response) {
-    return const Text('TODO: UNIMPLEMENTED RESPONSE MESSAGE');
+    return OutgoingMessage(text: displayedMessage.text, image: displayedMessage.image);
   }
 
   if (displayedMessage.type == DisplayedMessageType.message) {
@@ -64,7 +63,6 @@ Widget buildResponse(BuildContext context, AppState appState, DisplayedState dis
   }
 
   var lastMessage = displayedMessages.last.message!;
-  var lastThread = lastMessage.thread!;
 
   if (lastMessage.response.type == 'NO_RESPONSE') {
     return const SizedBox.shrink();
@@ -83,27 +81,7 @@ Widget buildResponse(BuildContext context, AppState appState, DisplayedState dis
   }
 
   if (lastMessage.response.type == 'OPTIONS') {
-    return Column(
-      children: [
-        ...lastMessage.response.options.map((option) => ElevatedButton(
-            onPressed: () {
-              if (lastThread.id == option.thread) {
-                var lastMessageIndex = lastThread.messages.indexWhere((m) => m.id == lastMessage.id);
-                if ((lastMessageIndex + 1) < lastThread.messages.length) {
-                  var message = lastThread.messages[lastMessageIndex + 1];
-                  appState.addDisplayedMessage(DisplayedMessage.fromMessage(message));
-                }
-              } else {
-                var newThread = lastMessage.thread!.chat!.threads.firstWhereOrNull((thread) => thread.id == option.thread);
-                if (newThread != null) {
-                  var message = newThread.messages.first;
-                  appState.addDisplayedMessage(DisplayedMessage.fromMessage(message));
-                }
-              }
-            },
-            child: Text(option.buttonText)))
-      ],
-    );
+    return OptionsResponse(message: lastMessage);
   }
 
   print('UNIMPLEMENTED RESPONSE: id="${lastMessage.id}" type="${lastMessage.response.type}"');
@@ -181,7 +159,8 @@ class _ChatScreenState extends State<ChatScreen> {
     var messageListView = ListView.builder(
       controller: _scrollController,
       itemCount: displayedState.messageList.length,
-      itemBuilder: (context, index) => buildMessage(context, displayedState.messageList[index]),
+      itemBuilder: (context, index) =>
+          Styled.widget(child: buildMessage(context, displayedState.messageList[index])).padding(top: index == 0 ? 8 : 0),
     );
 
     var responseView = buildResponse(context, appState, displayedState);
@@ -194,6 +173,7 @@ class _ChatScreenState extends State<ChatScreen> {
       appBar: AppBar(
         title: Text(appState.selectedChat!.title),
         centerTitle: true,
+        actions: [const Center(child: PointsCircle()).padding(right: 16)],
       ),
       body: Column(
         children: [
@@ -202,5 +182,28 @@ class _ChatScreenState extends State<ChatScreen> {
         ],
       ),
     );
+  }
+}
+
+class PointsCircle extends StatelessWidget {
+  const PointsCircle({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    var appState = context.watch<AppState>();
+
+    var displayedState = appState.getDisplayedState();
+
+    return SizedBox(
+      width: 48,
+      height: 48,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text('POINTS').fontSize(10).center().padding(top: 6),
+          Text('${displayedState.points}').fontSize(16).center(),
+        ],
+      ),
+    ).decorated(shape: BoxShape.circle, border: Border.all(color: Colors.white, width: 1));
   }
 }

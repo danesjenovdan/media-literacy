@@ -191,6 +191,7 @@ class DisplayedMessage {
   final String threadId;
   final String messageId;
   final String? text;
+  final RemoteImageDefinition? image;
 
   Message? message;
 
@@ -198,12 +199,20 @@ class DisplayedMessage {
       : type = DisplayedMessageType.message,
         threadId = message!.thread!.id,
         messageId = message.id,
-        text = null;
+        text = null,
+        image = null;
 
-  DisplayedMessage.fromResponse(this.threadId, this.messageId, this.text) : type = DisplayedMessageType.response;
+  DisplayedMessage.fromResponse(this.threadId, this.messageId, this.text)
+      : type = DisplayedMessageType.response,
+        image = null;
+
+  DisplayedMessage.fromResponseImage(this.threadId, this.messageId, this.image)
+      : type = DisplayedMessageType.response,
+        text = null;
 
   DisplayedMessage.system({required String this.text})
       : type = DisplayedMessageType.system,
         threadId = '',
-        messageId = '';
+        messageId = '',
+        image = null;
 }
