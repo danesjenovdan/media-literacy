@@ -1,11 +1,14 @@
 import 'dart:convert';
-
+// import 'dart:io';
+import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:media_literacy_app/models/story.dart';
 import 'package:media_literacy_app/screens/chat_select.dart';
 import 'package:media_literacy_app/screens/chat.dart';
 import 'package:flutter_image/flutter_image.dart';
+import 'package:archive/archive_io.dart';
+// import 'package:path_provider/path_provider.dart';
 
 class AppState extends ChangeNotifier {
   String appTitle = 'Media Literacy App';
@@ -23,9 +26,34 @@ class AppState extends ChangeNotifier {
       return regex.firstMatch(key)?.group(1) ?? '';
     }).where((key) => key.isNotEmpty);
 
+    // var tempDir = await getTemporaryDirectory();
+
     for (var storyId in storyIds) {
-      String data = await rootBundle.loadString("assets/stories/story-$storyId.json");
-      stories[storyId] = Story.fromJson(jsonDecode(data));
+      if (storyId == "643599d047eb967304f115db") {
+        var response = await http.get(Uri.parse("https://api.locogames.live/v1/story/$storyId/bundleInfo"));
+        if (response.statusCode == 200) {
+          var jsonData = jsonDecode(response.body);
+          var zipResponse = await http.get(Uri.parse(jsonData["data"]["bundle"]["url"]));
+          if (zipResponse.statusCode == 200) {
+            final archive = ZipDecoder().decodeBytes(zipResponse.bodyBytes);
+            for (final file in archive) {
+              if (file.isFile && file.name.endsWith(".json")) {
+                // var storyFile = File("${tempDir.path}/story-${file.name}");
+                // await storyFile.create(recursive: true);
+                // storyFile.writeAsBytesSync(file.content);
+                stories[storyId] = Story.fromJson(jsonDecode(utf8.decode(file.content)));
+              }
+            }
+          } else {
+            throw Exception("Failed to load zip");
+          }
+        } else {
+          throw Exception("Failed to load story");
+        }
+      } else {
+        String data = await rootBundle.loadString("assets/stories/story-$storyId.json");
+        stories[storyId] = Story.fromJson(jsonDecode(data));
+      }
     }
 
     stories = Map.fromEntries(stories.entries.toList()..sort((e1, e2) => e1.value.name.compareTo(e2.value.name)));

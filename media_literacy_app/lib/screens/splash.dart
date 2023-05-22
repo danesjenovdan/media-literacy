@@ -25,7 +25,8 @@ class SplashScreen extends StatelessWidget {
           ),
         ];
         if (snapshot.hasError) {
-          widgets.add(const Text('Error loading :(').textAlignment(TextAlign.center));
+          var errorString = snapshot.error.toString();
+          widgets.add(Text('Error: $errorString').fontSize(12).textAlignment(TextAlign.center));
         } else if (!snapshot.hasData) {
           widgets.add(const CircularProgressIndicator().padding(top: 28));
         } else {

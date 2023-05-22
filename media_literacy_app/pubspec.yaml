@@ -18,6 +18,10 @@ dependencies:
   styled_widget: ^0.4.1
   transparent_image: ^2.0.1
   youtube_player_flutter: ^8.1.2
+  http: ^0.13.6
+  # flutter_archive: ^5.0.0
+  path_provider: ^2.0.15
+  archive: ^3.3.7
 
 dev_dependencies:
   flutter_test:
