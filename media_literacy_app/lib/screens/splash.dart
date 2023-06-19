@@ -46,10 +46,10 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
           Text(
             appState.appTitle,
             style: GoogleFonts.quicksand(
-              textStyle: const TextStyle(
+              textStyle: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
-                color: Color(0xFF333333),
+                color: AppColors.text,
                 decoration: TextDecoration.none,
               ),
             ),
@@ -57,10 +57,10 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
           Text(
             appState.appSubtitle,
             style: GoogleFonts.quicksand(
-              textStyle: const TextStyle(
+              textStyle: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.normal,
-                color: Color(0xFF333333),
+                color: AppColors.text,
                 decoration: TextDecoration.none,
               ),
             ),

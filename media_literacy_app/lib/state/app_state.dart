@@ -10,6 +10,15 @@ import 'package:flutter_image/flutter_image.dart';
 import 'package:archive/archive_io.dart';
 // import 'package:path_provider/path_provider.dart';
 
+class AppColors {
+  static Color text = const Color(0xFF333333);
+
+  static Color selectStoryBackground = const Color(0xFFE8EEF3);
+  static Color selectStoryAppBarBackground = const Color(0xFFFFE3D2);
+
+  static Color selectChatBackground = const Color(0xFF9CD9D3);
+}
+
 class AppState extends ChangeNotifier {
   String appTitle = 'Mislimetar';
   String appSubtitle = 'Medijska pismenost';

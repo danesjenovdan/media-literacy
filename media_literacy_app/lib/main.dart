@@ -20,6 +20,7 @@ class MediaLiteracyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => AppState(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,
           pageTransitionsTheme: const PageTransitionsTheme(builders: {

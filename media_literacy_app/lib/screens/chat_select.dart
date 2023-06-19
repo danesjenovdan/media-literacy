@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:media_literacy_app/models/story.dart';
 import 'package:media_literacy_app/state/app_state.dart';
+import 'package:media_literacy_app/widgets/custom_app_bar.dart';
+import 'package:media_literacy_app/widgets/selector_cards.dart';
 import 'package:provider/provider.dart';
+import 'package:styled_widget/styled_widget.dart';
 
 class ChatSelectScreen extends StatelessWidget {
   const ChatSelectScreen({super.key});
@@ -10,64 +14,62 @@ class ChatSelectScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var appState = context.watch<AppState>();
 
-    List<Widget> content = [
-      Container(
-        padding: const EdgeInsets.only(bottom: 16),
-        child: Text(
-          'Select chapter for story "${appState.selectedStoryId}":',
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 24,
-          ),
-        ),
-      ),
-    ];
-    if (appState.selectedStory == null) {
-      content += [const CircularProgressIndicator()];
-    } else {
-      Story story = appState.selectedStory!;
-      content += [
-        ...story.chats.map(
-          (chat) => Container(
-            padding: const EdgeInsets.only(bottom: 16),
-            child: ElevatedButton(
-              onPressed: () {
-                appState.selectChat(chat.id, context);
-              },
-              child: Text(
-                chat.title,
-                style: TextStyle(
-                  fontWeight: chat.isMainChat ? FontWeight.bold : FontWeight.normal,
-                  fontSize: 20,
-                ),
-              ),
-            ),
-          ),
-        )
-      ];
-    }
+    Story story = appState.selectedStory!;
+    String title = story.name;
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(appState.appTitle),
-        centerTitle: true,
-      ),
-      body: ListView(
-        children: [
-          Container(
-            padding: const EdgeInsets.all(16),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: content,
-                  ),
-                ),
-              ],
+      appBar: CustomAppBar(
+        height: 80,
+        backgroundColor: AppColors.selectChatBackground,
+        appBarColor: AppColors.selectStoryAppBarBackground,
+        child: Row(
+          children: [
+            IconButton(
+              onPressed: () {
+                Navigator.maybePop(context);
+              },
+              icon: const SizedBox.square(
+                dimension: 32,
+                child: Icon(Icons.arrow_back),
+              ).backgroundColor(AppColors.text).clipOval(),
+              color: Colors.white,
             ),
-          ),
-        ],
+            Text(
+              title,
+              style: GoogleFonts.quicksand(
+                textStyle: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.text,
+                ),
+              ),
+            ).padding(left: 8),
+          ],
+        ).padding(left: 16).alignment(Alignment.centerLeft),
+      ),
+      body: Container(
+        color: AppColors.selectChatBackground,
+        child: ListView(
+          children: [
+            Container(
+              padding: const EdgeInsets.only(left: 16, right: 16, top: 28),
+              child: Column(
+                children: [
+                  ...story.chats.map(
+                    (chat) => SelectorCard(
+                      title: chat.title,
+                      categoryColor: chat.isMainChat ? Colors.green : Colors.red,
+                      categoryName: chat.id,
+                      image: chat.poster,
+                    ).gestures(onTap: () {
+                      appState.selectChat(chat.id, context);
+                    }),
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
