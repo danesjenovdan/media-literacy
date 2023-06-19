@@ -11,7 +11,8 @@ import 'package:archive/archive_io.dart';
 // import 'package:path_provider/path_provider.dart';
 
 class AppState extends ChangeNotifier {
-  String appTitle = 'Media Literacy App';
+  String appTitle = 'Mislimetar';
+  String appSubtitle = 'Medijska pismenost';
 
   Map<String, Story> stories = {};
 

@@ -1,11 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:media_literacy_app/screens/story_select.dart';
 import 'package:media_literacy_app/state/app_state.dart';
 import 'package:provider/provider.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
+  @override
+  void initState() {
+    _controller = AnimationController(
+      duration: const Duration(milliseconds: 5000),
+      vsync: this,
+    )..repeat();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,22 +38,49 @@ class SplashScreen extends StatelessWidget {
       future: appState.initAppState(),
       builder: (context, snapshot) {
         List<Widget> widgets = [
+          Image.asset(
+            'assets/images/logo.png',
+            width: 111,
+            height: 111,
+          ).padding(bottom: 16),
           Text(
             appState.appTitle,
-            style: TextStyle(
-              fontSize: 28,
-              color: Theme.of(context).primaryColor,
-              decoration: TextDecoration.none,
+            style: GoogleFonts.quicksand(
+              textStyle: const TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Color(0xFF333333),
+                decoration: TextDecoration.none,
+              ),
             ),
           ),
+          Text(
+            appState.appSubtitle,
+            style: GoogleFonts.quicksand(
+              textStyle: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.normal,
+                color: Color(0xFF333333),
+                decoration: TextDecoration.none,
+              ),
+            ),
+          ).padding(top: 8),
         ];
         if (snapshot.hasError) {
           var errorString = snapshot.error.toString();
           widgets.add(Text('Error: $errorString').fontSize(12).textAlignment(TextAlign.center));
         } else if (!snapshot.hasData) {
-          widgets.add(const CircularProgressIndicator().padding(top: 28));
+          widgets.add(
+            RotationTransition(
+              turns: Tween(begin: 0.0, end: 1.0).animate(_controller),
+              child: Image.asset(
+                'assets/images/spinner.png',
+                width: 96,
+                height: 96,
+              ),
+            ),
+          );
         } else {
-          widgets.add(const CircularProgressIndicator(value: 1).padding(top: 28));
           Future.microtask(
             () => Navigator.of(context).pushReplacement(
               MaterialPageRoute(
@@ -42,7 +92,7 @@ class SplashScreen extends StatelessWidget {
 
         return Container(
           padding: const EdgeInsets.all(16),
-          color: Theme.of(context).primaryColorLight,
+          color: Colors.white,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
