@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:media_literacy_app/state/app_state.dart';
 import 'package:media_literacy_app/widgets/images.dart';
 import 'package:styled_widget/styled_widget.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
@@ -33,14 +34,16 @@ class _LazyYoutubePlayerState extends State<LazyYoutubePlayer> {
       return Stack(
         fit: StackFit.expand,
         children: [
-          FadeInImageLoader(widget.thumbUrl),
-          const Center(
-            child: Icon(
-              Icons.play_arrow,
-              color: Colors.white,
-              size: 100,
-              shadows: [Shadow(color: Colors.black, blurRadius: 25)],
-            ),
+          FadeInImageLoader(widget.thumbUrl).clipRRect(bottomLeft: 12, bottomRight: 12),
+          Center(
+            child: const SizedBox.square(
+              dimension: 48,
+              child: Icon(
+                Icons.play_arrow,
+                color: Colors.white,
+                size: 42,
+              ),
+            ).backgroundColor(AppColors.youtubeMessageBackground).clipOval(),
           ),
         ],
       ).gestures(

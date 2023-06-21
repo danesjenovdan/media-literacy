@@ -2,6 +2,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:media_literacy_app/models/story.dart';
 import 'package:media_literacy_app/state/app_state.dart';
+import 'package:media_literacy_app/widgets/custom_app_bar.dart';
 import 'package:media_literacy_app/widgets/messages.dart';
 import 'package:media_literacy_app/widgets/responses.dart';
 import 'package:provider/provider.dart';
@@ -55,37 +56,37 @@ Widget buildMessage(BuildContext context, DisplayedMessage displayedMessage) {
   throw ArgumentError.value(displayedMessage.type);
 }
 
-Widget buildResponse(BuildContext context, AppState appState, DisplayedState displayedState) {
+(Widget, bool) buildResponse(BuildContext context, AppState appState, DisplayedState displayedState) {
   var displayedMessages = displayedState.messageList;
 
   if (displayedMessages.isEmpty || displayedMessages.last.type != DisplayedMessageType.message) {
-    return const SizedBox.shrink();
+    return (const SizedBox.shrink(), false);
   }
 
   var lastMessage = displayedMessages.last.message!;
 
   if (lastMessage.response.type == 'NO_RESPONSE') {
-    return const SizedBox.shrink();
+    return (const SizedBox.shrink(), false);
   }
 
   if (lastMessage.response.type == 'CONFIRMATION') {
-    return ConfirmationResponse(message: lastMessage);
+    return (ConfirmationResponse(message: lastMessage), false);
   }
 
   if (lastMessage.response.type == 'QUIZ') {
-    return QuizResponse(message: lastMessage);
+    return (QuizResponse(message: lastMessage), true);
   }
 
   if (lastMessage.response.type == 'PHOTO_QUIZ') {
-    return PhotoQuizResponse(message: lastMessage);
+    return (PhotoQuizResponse(message: lastMessage), true);
   }
 
   if (lastMessage.response.type == 'OPTIONS') {
-    return OptionsResponse(message: lastMessage);
+    return (OptionsResponse(message: lastMessage), true);
   }
 
   print('UNIMPLEMENTED RESPONSE: id="${lastMessage.id}" type="${lastMessage.response.type}"');
-  return Text('UNIMPLEMENTED RESPONSE: id="${lastMessage.id}" type="${lastMessage.response.type}"');
+  return (Text('UNIMPLEMENTED RESPONSE: id="${lastMessage.id}" type="${lastMessage.response.type}"'), true);
 }
 
 Future? queueNextMessage(AppState appState, DisplayedState displayedState) {
@@ -160,50 +161,26 @@ class _ChatScreenState extends State<ChatScreen> {
       controller: _scrollController,
       itemCount: displayedState.messageList.length,
       itemBuilder: (context, index) =>
-          Styled.widget(child: buildMessage(context, displayedState.messageList[index])).padding(top: index == 0 ? 8 : 0),
+          Styled.widget(child: buildMessage(context, displayedState.messageList[index])).padding(top: index == 0 ? 20 : 0),
     );
 
-    var responseView = buildResponse(context, appState, displayedState);
+    var (responseView, wrapResponse) = buildResponse(context, appState, displayedState);
 
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       _scrollToEnd();
     });
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(appState.selectedChat!.title),
-        centerTitle: true,
-        actions: [const Center(child: PointsCircle()).padding(right: 16)],
-      ),
-      body: Column(
-        children: [
-          Expanded(child: messageListView),
-          ChatResponse(child: responseView),
-        ],
+      appBar: createAppBarWithBackButton(context, appState.selectedChat!.title),
+      body: Container(
+        color: AppColors.selectChatBackground,
+        child: Column(
+          children: [
+            Expanded(child: messageListView),
+            wrapResponse ? ChatResponse(child: responseView) : responseView,
+          ],
+        ),
       ),
     );
-  }
-}
-
-class PointsCircle extends StatelessWidget {
-  const PointsCircle({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    var appState = context.watch<AppState>();
-
-    var displayedState = appState.getDisplayedState();
-
-    return SizedBox(
-      width: 48,
-      height: 48,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text('POINTS').fontSize(10).center().padding(top: 6),
-          Text('${displayedState.points}').fontSize(16).center(),
-        ],
-      ),
-    ).decorated(shape: BoxShape.circle, border: Border.all(color: Colors.white, width: 1));
   }
 }

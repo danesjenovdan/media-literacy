@@ -1,6 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:media_literacy_app/models/story.dart';
+import 'package:media_literacy_app/state/app_state.dart';
 import 'package:media_literacy_app/widgets/images.dart';
 import 'package:media_literacy_app/widgets/lazy_youtube_player.dart';
 import 'package:styled_widget/styled_widget.dart';
@@ -12,15 +13,9 @@ var systemTextStyle = TextStyle(
   color: Colors.grey.shade700,
 );
 
-var messageTextStyle = const TextStyle(
-  fontSize: 16,
-  height: 1.3,
-);
-
-var messageAuthorTextStyle = TextStyle(
-  fontSize: 14,
-  fontWeight: FontWeight.w500,
-  color: Colors.grey.shade800,
+var youtubeMessageTextStyle = const TextStyle(
+  fontSize: 12,
+  color: Colors.white,
 );
 
 class SystemMessage extends StatelessWidget {
@@ -41,12 +36,7 @@ class MessageAvatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RemoteProgressiveImageLoader(image)
-        .clipOval()
-        .padding(all: 2)
-        .constrained(width: 48, height: 48)
-        .decorated(shape: BoxShape.circle, border: Border.all(color: Theme.of(context).primaryColorLight, width: 2))
-        .padding(right: 16);
+    return RemoteProgressiveImageLoader(image).backgroundColor(Colors.red).clipOval().constrained(width: 32, height: 32).padding(right: 14);
   }
 }
 
@@ -58,8 +48,8 @@ class MessageBubble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var bgColor = isOutgoing ? Colors.green.shade200 : Theme.of(context).primaryColorLight;
-    return Styled.widget(child: child).backgroundColor(bgColor).clipRRect(all: 8);
+    var bgColor = isOutgoing ? AppColors.chatMessageOutgoingBackground : AppColors.chatMessageIncomingBackground;
+    return Styled.widget(child: child).backgroundColor(bgColor).clipRRect(all: 12);
   }
 }
 
@@ -80,23 +70,23 @@ class NarratorMessage extends StatelessWidget {
       if (message.text.isEmpty) {
         return const SizedBox.shrink();
       }
-      content = Text(message.text).textStyle(messageTextStyle);
+      content = Text(message.text).textStyle(AppTextStyles.message);
     } else if (message.type == 'IMAGE') {
       content = AspectRatio(
         aspectRatio: message.image!.width / message.image!.height,
         child: RemoteProgressiveImageLoader(message.image!),
-      ).backgroundColor(Theme.of(context).primaryColorLight).clipRRect(all: 8);
+      ).backgroundColor(AppColors.chatMessageIncomingBackground).clipRRect(all: 12);
     } else if (message.type == 'YOUTUBE') {
       content = Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AspectRatio(
-            aspectRatio: 16 / 9,
+            aspectRatio: 2,
             child: LazyYoutubePlayer(message.youtubeId, message.youtubeThumbUrl),
           ),
-          Text(message.youtubeTitle).textStyle(messageTextStyle).padding(vertical: 8, horizontal: 12),
+          Text(message.youtubeTitle).textStyle(youtubeMessageTextStyle).padding(vertical: 14, horizontal: 12),
         ],
-      ).backgroundColor(Theme.of(context).primaryColorLight).clipRRect(all: 8);
+      ).backgroundColor(AppColors.youtubeMessageBackground).clipRRect(all: 12);
     } else {
       return Text('UNIMPLEMENTED NARRATOR MESSAGE: id="${message.id}" type="${message.type}"');
     }
@@ -122,7 +112,7 @@ class IncomingMessage extends StatelessWidget {
       if (message.text.isEmpty) {
         return const SizedBox.shrink();
       }
-      content = Text(message.text).textStyle(messageTextStyle).padding(vertical: 8, horizontal: 12);
+      content = Text(message.text).textStyle(AppTextStyles.message).padding(vertical: 8, horizontal: 12);
     } else if (message.type == 'IMAGE') {
       content = AspectRatio(
         aspectRatio: message.image!.width / message.image!.height,
@@ -140,7 +130,7 @@ class IncomingMessage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(actor.name).textStyle(messageAuthorTextStyle).padding(left: 4, bottom: 4),
+              Text(actor.name).textStyle(AppTextStyles.messageAuthor).padding(bottom: 6),
               MessageBubble(child: content),
             ],
           ),
@@ -163,7 +153,7 @@ class OutgoingMessage extends StatelessWidget {
 
     Widget content;
     if (text != null) {
-      content = Text(text!).textStyle(messageTextStyle).padding(vertical: 8, horizontal: 12);
+      content = Text(text!).textStyle(AppTextStyles.message).padding(vertical: 8, horizontal: 12);
     } else if (image != null) {
       content = content = AspectRatio(
         aspectRatio: image!.width / image!.height,

@@ -1,5 +1,6 @@
 import 'dart:convert';
 // import 'dart:io';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -17,6 +18,46 @@ class AppColors {
   static Color selectStoryAppBarBackground = const Color(0xFFFFE3D2);
 
   static Color selectChatBackground = const Color(0xFF9CD9D3);
+
+  static Color youtubeMessageBackground = const Color(0xFFEA4335);
+
+  static Color chatMessageIncomingBackground = const Color(0xFFE9EFFF);
+  static Color chatMessageOutgoingBackground = const Color(0xFF1DD882);
+
+  static Color chatResponseBackground = const Color(0xFFFFE3D2);
+  static Color chatResponseOptionBackground = const Color(0xFF333333);
+}
+
+class AppTextStyles {
+  static TextStyle messageAuthor = GoogleFonts.quicksand(
+    textStyle: TextStyle(
+      fontSize: 15,
+      fontWeight: FontWeight.bold,
+      color: AppColors.text,
+    ),
+  );
+
+  static TextStyle message = GoogleFonts.quicksand(
+    textStyle: TextStyle(
+      fontSize: 14,
+      color: AppColors.text,
+    ),
+  );
+
+  static TextStyle responseConfirmation = GoogleFonts.quicksand(
+    textStyle: const TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.bold,
+      color: Colors.white,
+    ),
+  );
+
+  static TextStyle responseOption = GoogleFonts.quicksand(
+    textStyle: const TextStyle(
+      fontSize: 12,
+      color: Colors.white,
+    ),
+  );
 }
 
 class AppState extends ChangeNotifier {

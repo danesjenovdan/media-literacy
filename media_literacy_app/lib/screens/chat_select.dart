@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:media_literacy_app/models/story.dart';
 import 'package:media_literacy_app/state/app_state.dart';
 import 'package:media_literacy_app/widgets/custom_app_bar.dart';
@@ -15,38 +14,9 @@ class ChatSelectScreen extends StatelessWidget {
     var appState = context.watch<AppState>();
 
     Story story = appState.selectedStory!;
-    String title = story.name;
 
     return Scaffold(
-      appBar: CustomAppBar(
-        height: 80,
-        backgroundColor: AppColors.selectChatBackground,
-        appBarColor: AppColors.selectStoryAppBarBackground,
-        child: Row(
-          children: [
-            IconButton(
-              onPressed: () {
-                Navigator.maybePop(context);
-              },
-              icon: const SizedBox.square(
-                dimension: 32,
-                child: Icon(Icons.arrow_back),
-              ).backgroundColor(AppColors.text).clipOval(),
-              color: Colors.white,
-            ),
-            Text(
-              title,
-              style: GoogleFonts.quicksand(
-                textStyle: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.text,
-                ),
-              ),
-            ).padding(left: 8),
-          ],
-        ).padding(left: 16).alignment(Alignment.centerLeft),
-      ),
+      appBar: createAppBarWithBackButton(context, story.name),
       body: Container(
         color: AppColors.selectChatBackground,
         child: ListView(
