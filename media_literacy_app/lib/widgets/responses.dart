@@ -1,7 +1,9 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:media_literacy_app/models/story.dart';
 import 'package:media_literacy_app/state/app_state.dart';
+import 'package:media_literacy_app/widgets/dialog.dart';
 import 'package:media_literacy_app/widgets/images.dart';
 import 'package:provider/provider.dart';
 import 'package:styled_widget/styled_widget.dart';
@@ -58,7 +60,22 @@ class OptionsResponse extends StatelessWidget {
 
   const OptionsResponse({super.key, required this.message});
 
-  void _onTapOption(AppState appState, MessageResponseOption option) {
+  void _onTapOption(BuildContext context, AppState appState, MessageResponseOption option) {
+    var isCorrect = option.isCorrect || option.hideResponseToChat;
+
+    if (!isCorrect) {
+      showCupertinoDialog<bool>(
+        context: context,
+        barrierDismissible: true,
+        builder: (context) {
+          return CustomDialog(
+            text: option.text,
+          );
+        },
+      );
+      return;
+    }
+
     appState.addDisplayedMessage(DisplayedMessage.fromResponse(message.thread!.id, message.id, option.buttonText));
 
     if (message.thread!.id == option.thread) {
@@ -76,7 +93,7 @@ class OptionsResponse extends StatelessWidget {
     }
   }
 
-  Widget _buildOption(AppState appState, MessageResponseOption option) {
+  Widget _buildOption(BuildContext context, AppState appState, MessageResponseOption option) {
     return Text(option.buttonText)
         .textStyle(AppTextStyles.responseOption)
         .padding(all: 12)
@@ -84,7 +101,7 @@ class OptionsResponse extends StatelessWidget {
         .constrained(width: double.infinity)
         .clipRRect(all: 12)
         .padding(bottom: 4)
-        .gestures(onTap: () => _onTapOption(appState, option));
+        .gestures(onTap: () => _onTapOption(context, appState, option));
   }
 
   @override
@@ -93,7 +110,7 @@ class OptionsResponse extends StatelessWidget {
 
     return Column(
       children: [
-        ...message.response.options.map((option) => _buildOption(appState, option)),
+        ...message.response.options.map((option) => _buildOption(context, appState, option)),
       ],
     );
   }

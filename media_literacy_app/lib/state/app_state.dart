@@ -29,6 +29,8 @@ class AppColors {
 
   static Color chatSelectCircle = const Color(0xFF9CD9D3);
   static Color chapterSelectCircle = const Color(0xFFFFE3D2);
+
+  static Color popupBackground = const Color(0xFFF6675B);
 }
 
 class AppTextStyles {
@@ -63,6 +65,13 @@ class AppTextStyles {
   );
 
   static TextStyle responseOption = GoogleFonts.quicksand(
+    textStyle: const TextStyle(
+      fontSize: 12,
+      color: Colors.white,
+    ),
+  );
+
+  static TextStyle popup = GoogleFonts.quicksand(
     textStyle: const TextStyle(
       fontSize: 12,
       color: Colors.white,

@@ -172,6 +172,7 @@ class MessageResponseOption {
   final String thread;
   final RemoteImageDefinition? photo;
   final bool isCorrect;
+  final bool hideResponseToChat;
 
   MessageResponse? response;
 
@@ -181,7 +182,8 @@ class MessageResponseOption {
         buttonText = json['buttonText'] ?? '',
         thread = json['thread'] ?? '',
         photo = json['photo'] != null ? RemoteImageDefinition.fromJson(json['photo']) : null,
-        isCorrect = json['isCorrect'] ?? false;
+        isCorrect = json['isCorrect'] ?? false,
+        hideResponseToChat = json['hideResponseToChat'] ?? false;
 
   static List<MessageResponseOption> fromJsonList(List<dynamic> json) {
     return json.map((j) => MessageResponseOption.fromJson(j)).toList();
