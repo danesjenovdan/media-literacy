@@ -29,7 +29,7 @@ class ChatSelectScreen extends StatelessWidget {
                     (chat) => SelectorCard(
                       title: chat.title,
                       categoryColor: chat.isMainChat ? Colors.green : Colors.red,
-                      categoryName: chat.id,
+                      categoryName: chat.description,
                       image: chat.poster,
                     ).gestures(onTap: () {
                       appState.selectChat(chat.id, context);

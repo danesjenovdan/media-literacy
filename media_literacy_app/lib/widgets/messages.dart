@@ -13,11 +13,6 @@ var systemTextStyle = TextStyle(
   color: Colors.grey.shade700,
 );
 
-var youtubeMessageTextStyle = const TextStyle(
-  fontSize: 12,
-  color: Colors.white,
-);
-
 class SystemMessage extends StatelessWidget {
   final String text;
 
@@ -84,7 +79,7 @@ class NarratorMessage extends StatelessWidget {
             aspectRatio: 2,
             child: LazyYoutubePlayer(message.youtubeId, message.youtubeThumbUrl),
           ),
-          Text(message.youtubeTitle).textStyle(youtubeMessageTextStyle).padding(vertical: 14, horizontal: 12),
+          Text(message.youtubeTitle).textStyle(AppTextStyles.youtubeMessage).padding(vertical: 8, horizontal: 12),
         ],
       ).backgroundColor(AppColors.youtubeMessageBackground).clipRRect(all: 12);
     } else {

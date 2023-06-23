@@ -44,6 +44,13 @@ class AppTextStyles {
     ),
   );
 
+  static TextStyle youtubeMessage = GoogleFonts.quicksand(
+    textStyle: const TextStyle(
+      fontSize: 12,
+      color: Colors.white,
+    ),
+  );
+
   static TextStyle responseConfirmation = GoogleFonts.quicksand(
     textStyle: const TextStyle(
       fontSize: 16,

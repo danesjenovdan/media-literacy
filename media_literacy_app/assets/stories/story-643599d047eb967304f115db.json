@@ -1,1 +1,2806 @@
-{"isTranslation":false,"isMaster":false,"childStories":[],"geo":[18.49611361639408,43.87142962389218],"hasTimeLimit":false,"deleted":false,"public":false,"featured":false,"status":"NOT_PUBLISHED","translations":[],"duration":{"_id":"643599d047eb967304f115de","hours":0,"minutes":45,"seconds":0},"threads":[],"chats":[{"isLocked":false,"isHidden":false,"isLocationLocked":false,"isPreview":false,"actors":[],"threads":[{"nextStoryThreadMessageIndex":0,"awaitingResponse":false,"messages":[{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":true,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"64359a0b47eb967304f1160a","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"64359a0b47eb967304f1160b","hours":0,"minutes":0,"seconds":0},"type":"CONFIRMATION","confirmText":"Continue","location":{"_id":"64359a0b47eb967304f1160c","dateTime":"2023-04-11T17:34:03.215Z","radius":40,"label":"I'm here!"}},"seenBy":[],"deliveredTo":[],"date":"2023-04-11T17:34:03.215Z","_id":"64359a0b47eb967304f11609","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"Kritičko mišljenje je važno","actor":"64359a3047eb967304f11655","file":null},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":true,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"64359a4847eb967304f116f9","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"64359a4847eb967304f116fa","hours":0,"minutes":0,"seconds":0},"type":"CONFIRMATION","confirmText":"Continue","location":{"_id":"64359a4847eb967304f116fb","dateTime":"2023-04-11T17:35:04.159Z","radius":40,"label":"I'm here!"}},"seenBy":[],"deliveredTo":[],"date":"2023-04-11T17:35:04.159Z","_id":"64359a4847eb967304f116f8","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"Pitanja igraju ključnu ulogu u njegovanju vještina kritičkog mišljenja i produbljivanja znanja, kao i u medijskoj pismenosti. Ona usmjeravaju naš način razmišljanja, potiču raspravu i aktivno učenje","actor":"64359a3047eb967304f11655","file":null},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":false,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"64359a5847eb967304f1174f","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"64359a5847eb967304f11750","hours":0,"minutes":0,"seconds":0},"location":{"_id":"64359a5847eb967304f11751","dateTime":"2023-04-11T17:35:20.984Z","radius":40,"label":"I'm here!"},"type":"CONFIRMATION","confirmText":"Continue"},"seenBy":[],"deliveredTo":[],"date":"2023-04-11T17:35:20.985Z","_id":"64359a5847eb967304f1174e","type":"IMAGE","pauseBefore":0,"timeWriting":0,"actor":"NARRATOR","file":{"timeCreated":"2023-04-11T17:35:13.016Z","_id":"64359a5147eb967304f1174c","width":540,"height":317,"url":"https://loco-us.s3.us-west-1.amazonaws.com/146125ad-d05c-4fed-a1db-e03b16ded34a.jpg","thumbUrl":"https://loco-us.s3.us-west-1.amazonaws.com/thumb-146125ad-d05c-4fed-a1db-e03b16ded34a.jpg","miniThumbUrl":"https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-146125ad-d05c-4fed-a1db-e03b16ded34a.jpg","remote":"146125ad-d05c-4fed-a1db-e03b16ded34a.jpg","thumbRemote":"thumb-146125ad-d05c-4fed-a1db-e03b16ded34a.jpg","miniThumbRemote":"mini-thumb-146125ad-d05c-4fed-a1db-e03b16ded34a.jpg","type":"IMAGE","size":397867,"__v":0}},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":true,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"6436683347eb967304f35315","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"6436683347eb967304f35316","hours":0,"minutes":0,"seconds":0},"type":"NO_RESPONSE","confirmText":"Continue","location":{"_id":"6436683347eb967304f35317","dateTime":"2023-04-12T08:13:39.391Z","radius":40,"label":"I'm here!"}},"seenBy":[],"deliveredTo":[],"date":"2023-04-12T08:13:39.392Z","_id":"6436683347eb967304f35314","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"This is a video","actor":"64359a3047eb967304f11655"},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":false,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"6436687147eb967304f35392","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"6436687147eb967304f35393","hours":0,"minutes":0,"seconds":0},"location":{"_id":"6436687147eb967304f35394","dateTime":"2023-04-12T08:14:41.986Z","radius":40,"label":"I'm here!"},"type":"CONFIRMATION","confirmText":"Continue"},"seenBy":[],"deliveredTo":[],"date":"2023-04-12T08:14:41.987Z","_id":"6436687147eb967304f35391","type":"YOUTUBE","pauseBefore":0,"timeWriting":0,"actor":"NARRATOR","youtubeId":"EjEzYIv0RSU","youtubeThumbUrl":"https://i.ytimg.com/vi/EjEzYIv0RSU/mqdefault.jpg","youtubeTitle":"Autonomous AI: Are We Creating Westworld?"},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":true,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"6436689647eb967304f35663","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"6436689647eb967304f35664","hours":0,"minutes":0,"seconds":0},"type":"NO_RESPONSE","confirmText":"Continue","location":{"_id":"6436689647eb967304f35665","dateTime":"2023-04-12T08:15:18.037Z","radius":40,"label":"I'm here!"}},"seenBy":[],"deliveredTo":[],"date":"2023-04-12T08:15:18.037Z","_id":"6436689647eb967304f35662","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"This is a quiz","actor":"64359a3047eb967304f11655"},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":false,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"643668c947eb967304f357e4","options":[{"votes":[],"_id":"643668c947eb967304f357e9","buttonText":"Correct answer","isCorrect":true,"hideResponseToChat":false},{"votes":[],"_id":"643668c947eb967304f357e8","buttonText":"Wrong answer 1","isCorrect":false,"penaltySeconds":10,"hideResponseToChat":false},{"votes":[],"_id":"643668c947eb967304f357e7","buttonText":"Wrong answer 2","text":""},{"votes":[],"_id":"643668c947eb967304f357e6","buttonText":"Wrong answer 3","text":""}],"inputOptions":[{"_id":"643668c947eb967304f357ea","thread":"643599d047eb967304f115e1"}],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"643668c947eb967304f357e5","hours":0,"minutes":0,"seconds":0},"type":"QUIZ","confirmText":"Answer question","timeOverThread":"NEW_THREAD","answerButtonText":"Answer","location":{"_id":"643668c947eb967304f357eb","dateTime":"2023-04-12T08:16:09.351Z","radius":40,"label":"I'm here!","lat":43.87142962389218,"lng":18.49611361639408}},"seenBy":[],"deliveredTo":[],"date":"2023-04-12T08:16:09.352Z","_id":"643668c947eb967304f357e3","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"","actor":"64359a3047eb967304f11655"},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":true,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"643668d747eb967304f358ca","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"643668d747eb967304f358cb","hours":0,"minutes":0,"seconds":0},"type":"CONFIRMATION","confirmText":"Continue","location":{"_id":"643668d747eb967304f358cc","dateTime":"2023-04-12T08:16:23.420Z","radius":40,"label":"I'm here!"}},"seenBy":[],"deliveredTo":[],"date":"2023-04-12T08:16:23.420Z","_id":"643668d747eb967304f358c9","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"Ok moving on.","actor":"64359a3047eb967304f11655"},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":true,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"643668ed47eb967304f35997","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"643668ed47eb967304f35998","hours":0,"minutes":0,"seconds":0},"type":"CONFIRMATION","confirmText":"Continue","location":{"_id":"643668ed47eb967304f35999","dateTime":"2023-04-12T08:16:45.945Z","radius":40,"label":"I'm here!"}},"seenBy":[],"deliveredTo":[],"date":"2023-04-12T08:16:45.945Z","_id":"643668ed47eb967304f35996","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"Chapter ends. New one is suggested.","actor":"64359a3047eb967304f11655"},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":true,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"6437c1fa47eb967304091e8e","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"6437c1fa47eb967304091e8f","hours":0,"minutes":0,"seconds":0},"type":"CONFIRMATION","confirmText":"Continue","location":{"_id":"6437c1fa47eb967304091e90","dateTime":"2023-04-13T08:48:58.102Z","radius":40,"label":"I'm here!"}},"seenBy":[],"deliveredTo":[],"date":"2023-04-13T08:48:58.102Z","_id":"6437c1fa47eb967304091e8d","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"Example of text without avatar. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. 👍","actor":"NARRATOR"},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":true,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"6437c1de47eb967304091d53","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"6437c1de47eb967304091d54","hours":0,"minutes":0,"seconds":0},"type":"NO_RESPONSE","confirmText":"Continue","location":{"_id":"6437c1de47eb967304091d55","dateTime":"2023-04-13T08:48:30.142Z","radius":40,"label":"I'm here!"}},"seenBy":[],"deliveredTo":[],"date":"2023-04-13T08:48:30.143Z","_id":"6437c1de47eb967304091d52","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"Now a visual quiz","actor":"64359a3047eb967304f11655"},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":false,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"6437c22f47eb9673040922df","options":[{"votes":[],"_id":"6437c22f47eb9673040922e2","buttonText":"Correct option","isCorrect":true,"hideResponseToChat":false},{"votes":[],"_id":"6437c22f47eb9673040922e1","buttonText":"Wrong option","isCorrect":false,"penaltySeconds":10,"hideResponseToChat":false}],"inputOptions":[{"_id":"6437c22f47eb9673040922e3","thread":"643599d047eb967304f115e1"}],"photoOptions":[{"_id":"6437c22f47eb9673040922e7","photo":{"timeCreated":"2023-04-13T08:49:13.737Z","_id":"6437c20947eb9673040922d9","uploadClientId":"98396744-b09d-4fc3-9728-9456c9658086","originalFileName":"Frame 45.jpg","width":540,"height":317,"url":"https://loco-us.s3.us-west-1.amazonaws.com/212e51d9-97d0-4a69-877b-9c8d1d27e6c3.jpg","thumbUrl":"https://loco-us.s3.us-west-1.amazonaws.com/thumb-212e51d9-97d0-4a69-877b-9c8d1d27e6c3.jpg","miniThumbUrl":"https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-212e51d9-97d0-4a69-877b-9c8d1d27e6c3.jpg","remote":"212e51d9-97d0-4a69-877b-9c8d1d27e6c3.jpg","thumbRemote":"thumb-212e51d9-97d0-4a69-877b-9c8d1d27e6c3.jpg","miniThumbRemote":"mini-thumb-212e51d9-97d0-4a69-877b-9c8d1d27e6c3.jpg","type":"IMAGE","size":157187,"__v":0},"isCorrect":true},{"_id":"6437c22f47eb9673040922e6","photo":{"timeCreated":"2023-04-13T08:49:20.481Z","_id":"6437c21047eb9673040922da","uploadClientId":"84f885f3-52a0-4f2e-bff0-a84a02e5efc6","originalFileName":"Frame 46.jpg","width":540,"height":317,"url":"https://loco-us.s3.us-west-1.amazonaws.com/a9378447-2e90-495b-9a79-62e42c0d7c13.jpg","thumbUrl":"https://loco-us.s3.us-west-1.amazonaws.com/thumb-a9378447-2e90-495b-9a79-62e42c0d7c13.jpg","miniThumbUrl":"https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-a9378447-2e90-495b-9a79-62e42c0d7c13.jpg","remote":"a9378447-2e90-495b-9a79-62e42c0d7c13.jpg","thumbRemote":"thumb-a9378447-2e90-495b-9a79-62e42c0d7c13.jpg","miniThumbRemote":"mini-thumb-a9378447-2e90-495b-9a79-62e42c0d7c13.jpg","type":"IMAGE","size":152550,"__v":0}},{"_id":"6437c22f47eb9673040922e5","photo":{"timeCreated":"2023-04-13T08:49:27.073Z","_id":"6437c21747eb9673040922db","uploadClientId":"6fc536fd-c144-4cf2-987e-b1b4e5a5fa41","originalFileName":"Frame 47.jpg","width":540,"height":317,"url":"https://loco-us.s3.us-west-1.amazonaws.com/0c19ddd4-83d7-4db4-9dd7-ad46ac06979c.jpg","thumbUrl":"https://loco-us.s3.us-west-1.amazonaws.com/thumb-0c19ddd4-83d7-4db4-9dd7-ad46ac06979c.jpg","miniThumbUrl":"https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-0c19ddd4-83d7-4db4-9dd7-ad46ac06979c.jpg","remote":"0c19ddd4-83d7-4db4-9dd7-ad46ac06979c.jpg","thumbRemote":"thumb-0c19ddd4-83d7-4db4-9dd7-ad46ac06979c.jpg","miniThumbRemote":"mini-thumb-0c19ddd4-83d7-4db4-9dd7-ad46ac06979c.jpg","type":"IMAGE","size":155568,"__v":0}},{"_id":"6437c22f47eb9673040922e4","photo":{"timeCreated":"2023-04-13T08:49:33.898Z","_id":"6437c21d47eb9673040922dc","uploadClientId":"f978e101-44de-47f3-9d8d-608afb25b0ce","originalFileName":"Frame 48.jpg","width":540,"height":317,"url":"https://loco-us.s3.us-west-1.amazonaws.com/497bcf02-f199-47cd-b50a-444c4bc8a638.jpg","thumbUrl":"https://loco-us.s3.us-west-1.amazonaws.com/thumb-497bcf02-f199-47cd-b50a-444c4bc8a638.jpg","miniThumbUrl":"https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-497bcf02-f199-47cd-b50a-444c4bc8a638.jpg","remote":"497bcf02-f199-47cd-b50a-444c4bc8a638.jpg","thumbRemote":"thumb-497bcf02-f199-47cd-b50a-444c4bc8a638.jpg","miniThumbRemote":"mini-thumb-497bcf02-f199-47cd-b50a-444c4bc8a638.jpg","type":"IMAGE","size":137586,"__v":0}}],"comparePhotos":[],"timeLimit":{"_id":"6437c22f47eb9673040922e0","hours":0,"minutes":0,"seconds":0},"type":"PHOTO_QUIZ","confirmText":"Select correct image","timeOverThread":"NEW_THREAD","answerButtonText":"Answer","location":{"_id":"6437c22f47eb9673040922e8","dateTime":"2023-04-13T08:49:51.320Z","radius":40,"label":"I'm here!","lat":43.87142962389218,"lng":18.49611361639408}},"seenBy":[],"deliveredTo":[],"date":"2023-04-13T08:49:51.320Z","_id":"6437c22f47eb9673040922de","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"","actor":"NARRATOR"},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":true,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"6437c23e47eb967304092639","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"6437c23e47eb96730409263a","hours":0,"minutes":0,"seconds":0},"type":"CONFIRMATION","confirmText":"Continue","location":{"_id":"6437c23e47eb96730409263b","dateTime":"2023-04-13T08:50:06.252Z","radius":40,"label":"I'm here!"}},"seenBy":[],"deliveredTo":[],"date":"2023-04-13T08:50:06.252Z","_id":"6437c23e47eb967304092638","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"Correct!","actor":"64359a3047eb967304f11655"},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":false,"hideResponseToChat":false,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"643668f647eb967304f35a76","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"type":"NO_RESPONSE"},"seenBy":[],"deliveredTo":[],"date":"2023-04-12T08:16:54.971Z","_id":"643668f647eb967304f35a77","type":"ACTION_QUEST_END","pauseBefore":0,"timeWriting":0,"actionOptions":{"_id":"643668f647eb967304f35a78","triggerChatId":"643599dc47eb967304f115f4"}}],"writingStatusList":[],"_id":"643599d047eb967304f115e1","name":"Main thread"}],"_id":"643599d047eb967304f115df","isMainChat":true,"title":"Kritičko mišljenje i medijska i informacijska pismenost","location":{"_id":"643599d047eb967304f115e0","dateTime":"2023-04-11T17:33:04.744Z","lat":43.87142962389218,"lng":18.49611361639408,"zoom":6}},{"isLocked":false,"isHidden":false,"isLocationLocked":false,"isPreview":false,"actors":[],"threads":[{"nextStoryThreadMessageIndex":0,"awaitingResponse":false,"messages":[{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":true,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"644138a7998e695e03acc9ba","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"644138a7998e695e03acc9bb","hours":0,"minutes":0,"seconds":0},"type":"CONFIRMATION","confirmText":"Continue","location":{"_id":"644138a7998e695e03acc9bc","dateTime":"2023-04-20T13:05:43.135Z","radius":40,"label":"I'm here!"}},"seenBy":[],"deliveredTo":[],"date":"2023-04-20T13:05:43.135Z","_id":"644138a7998e695e03acc9b9","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"adadfasfasd","actor":"64359a3047eb967304f11655"},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":false,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"644649cf998e695e031652a6","options":[{"votes":[],"_id":"644649cf998e695e031652a9","buttonText":"Yes simple thread","text":"Yes","thread":"644649cf998e695e03165389","hideResponseToChat":false},{"votes":[],"_id":"644649cf998e695e031652a8","buttonText":"Continue","text":"Continue","thread":"643599dc47eb967304f115f3","hideResponseToChat":false}],"inputOptions":[{"_id":"644649cf998e695e031652aa","thread":"643599dc47eb967304f115f3"}],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"644649cf998e695e031652a7","hours":0,"minutes":0,"seconds":0},"type":"OPTIONS","confirmText":"Continue","timeOverThread":"NEW_THREAD","answerButtonText":"Answer","location":{"_id":"644649cf998e695e031652ab","dateTime":"2023-04-24T09:20:15.916Z","radius":40,"label":"I'm here!","lat":43.87142962389218,"lng":18.49611361639408}},"seenBy":[],"deliveredTo":[],"date":"2023-04-24T09:20:15.916Z","_id":"644649cf998e695e031652a5","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"Thread?","actor":"64359a3047eb967304f11655"},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":true,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"644649ea998e695e03165769","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"644649ea998e695e0316576a","hours":0,"minutes":0,"seconds":0},"type":"CONFIRMATION","confirmText":"Ok","location":{"_id":"644649ea998e695e0316576b","dateTime":"2023-04-24T09:20:42.315Z","radius":40,"label":"I'm here!"}},"seenBy":[],"deliveredTo":[],"date":"2023-04-24T09:20:42.315Z","_id":"644649ea998e695e03165768","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"Story continues on main.","actor":"64359a3047eb967304f11655"},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":false,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"64464a6b998e695e03165f02","options":[{"votes":[],"_id":"64464a6b998e695e03165f05","buttonText":"Yes","text":"This way looks way more fun!","thread":"64464a6b998e695e0316600f"},{"votes":[],"_id":"64464a6b998e695e03165f04","buttonText":"No","text":"That way looks way more fun!","thread":"643599dc47eb967304f115f3"}],"inputOptions":[{"_id":"64464a6b998e695e03165f06","thread":"643599dc47eb967304f115f3"}],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"64464a6b998e695e03165f03","hours":0,"minutes":0,"seconds":0},"type":"OPTIONS","confirmText":"Continue","timeOverThread":"NEW_THREAD","answerButtonText":"Answer","location":{"_id":"64464a6b998e695e03165f07","dateTime":"2023-04-24T09:22:51.839Z","radius":40,"label":"I'm here!","lat":43.87142962389218,"lng":18.49611361639408}},"seenBy":[],"deliveredTo":[],"date":"2023-04-24T09:22:51.840Z","_id":"64464a6b998e695e03165f01","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"Nov thread","actor":"64359a3047eb967304f11655"},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":true,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"64464bfe998e695e03167344","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"64464bfe998e695e03167345","hours":0,"minutes":0,"seconds":0},"type":"NO_RESPONSE","confirmText":"Continue","location":{"_id":"64464bfe998e695e03167346","dateTime":"2023-04-24T09:29:34.955Z","radius":40,"label":"I'm here!"}},"seenBy":[],"deliveredTo":[],"date":"2023-04-24T09:29:34.955Z","_id":"64464bfe998e695e03167343","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"Continues on main","actor":"64359a3047eb967304f11655"}],"writingStatusList":[],"_id":"643599dc47eb967304f115f3","name":"Main thread"},{"nextStoryThreadMessageIndex":0,"awaitingResponse":false,"messages":[{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":true,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"644649d7998e695e03165462","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"644649d7998e695e03165463","hours":0,"minutes":0,"seconds":0},"type":"CONFIRMATION","confirmText":"Continue","location":{"_id":"644649d7998e695e03165464","dateTime":"2023-04-24T09:20:23.924Z","radius":40,"label":"I'm here!"}},"seenBy":[],"deliveredTo":[],"date":"2023-04-24T09:20:23.924Z","_id":"644649d7998e695e03165461","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"To je thread.","actor":"64359a3047eb967304f11655"},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":false,"hideResponseToChat":false,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"644649e2998e695e031655e1","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"type":"NO_RESPONSE"},"seenBy":[],"deliveredTo":[],"date":"2023-04-24T09:20:34.963Z","_id":"644649e2998e695e031655e2","type":"ACTION_MAIN_THREAD_BACK"}],"writingStatusList":[],"_id":"644649cf998e695e03165389","name":"Yes simple thread","generatedForMessageId":"644649cf998e695e031652a5","generatedForOptionId":"644649cf998e695e031652a9"},{"nextStoryThreadMessageIndex":0,"awaitingResponse":false,"messages":[{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":false,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"64464b00998e695e031668f3","options":[{"votes":[],"_id":"64464b00998e695e031668f6","buttonText":"Yes subthread","text":"This way looks way more fun!","thread":"64464b01998e695e03166a1e","hideResponseToChat":false},{"votes":[],"_id":"64464b00998e695e031668f5","buttonText":"No","text":"That way looks way more fun!","thread":"64464a6b998e695e0316600f","hideResponseToChat":false}],"inputOptions":[{"_id":"64464b00998e695e031668f7","thread":"64464a6b998e695e0316600f"}],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"64464b00998e695e031668f4","hours":0,"minutes":0,"seconds":0},"type":"OPTIONS","confirmText":"Continue","timeOverThread":"NEW_THREAD","answerButtonText":"Answer","location":{"_id":"64464b00998e695e031668f8","dateTime":"2023-04-24T09:25:20.922Z","radius":40,"label":"I'm here!","lat":43.87142962389218,"lng":18.49611361639408}},"seenBy":[],"deliveredTo":[],"date":"2023-04-24T09:25:20.922Z","_id":"64464b00998e695e031668f2","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"Od tukaj še en nov thread","actor":"64359a3047eb967304f11655"},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":true,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"64464bf6998e695e03166f89","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"64464bf6998e695e03166f8a","hours":0,"minutes":0,"seconds":0},"type":"CONFIRMATION","confirmText":"Ok back to main","location":{"_id":"64464bf6998e695e03166f8b","dateTime":"2023-04-24T09:29:26.799Z","radius":40,"label":"I'm here!"}},"seenBy":[],"deliveredTo":[],"date":"2023-04-24T09:29:26.799Z","_id":"64464bf6998e695e03166f88","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"Back to previous continues (not main)","actor":"64359a3047eb967304f11655"},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":false,"hideResponseToChat":false,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"64464bf9998e695e03167162","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"type":"NO_RESPONSE"},"seenBy":[],"deliveredTo":[],"date":"2023-04-24T09:29:29.504Z","_id":"64464bf9998e695e03167163","type":"ACTION_MAIN_THREAD_BACK"}],"writingStatusList":[],"_id":"64464a6b998e695e0316600f","name":"Nov thread","generatedForMessageId":"64464a6b998e695e03165f01","generatedForOptionId":"64464a6b998e695e03165f05"},{"nextStoryThreadMessageIndex":0,"awaitingResponse":false,"messages":[{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":true,"hideResponseToChat":true,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"64464c13998e695e03167aad","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"timeLimit":{"_id":"64464c13998e695e03167aae","hours":0,"minutes":0,"seconds":0},"type":"CONFIRMATION","confirmText":"ok","location":{"_id":"64464c13998e695e03167aaf","dateTime":"2023-04-24T09:29:55.724Z","radius":40,"label":"I'm here!"}},"seenBy":[],"deliveredTo":[],"date":"2023-04-24T09:29:55.724Z","_id":"64464c13998e695e03167aac","type":"TEXT","pauseBefore":0,"timeWriting":0,"text":"Subthread. Let's go back 1 thread.","actor":"64359a3047eb967304f11655"},{"isConfirmation":false,"showConfirmationResult":false,"isCorrect":false,"hasAudio":false,"response":{"isNumber":false,"required":false,"preventVoting":false,"hideResponseToChat":false,"hasTimeLimit":false,"timeOverLeadsToThread":false,"hasImageRecognition":false,"penaltySeconds":0,"assisted":false,"_id":"64464c16998e695e03167cb8","options":[],"inputOptions":[],"photoOptions":[],"comparePhotos":[],"type":"NO_RESPONSE"},"seenBy":[],"deliveredTo":[],"date":"2023-04-24T09:29:58.510Z","_id":"64464c16998e695e03167cb9","type":"ACTION_THREAD_BACK"}],"writingStatusList":[],"_id":"64464b01998e695e03166a1e","name":"Subthread","generatedForMessageId":"64464b00998e695e031668f2","generatedForOptionId":"64464b00998e695e031668f6"}],"_id":"643599dc47eb967304f115f4","title":"Chapter 2","location":{"_id":"643599d047eb967304f115dd","dateTime":"2023-04-11T17:33:04.743Z","lat":43.87142962389218,"lng":18.49611361639408,"zoom":6}},{"isLocked":false,"isHidden":false,"isLocationLocked":false,"isPreview":false,"actors":[],"threads":[{"nextStoryThreadMessageIndex":0,"awaitingResponse":false,"messages":[],"writingStatusList":[],"_id":"643599e147eb967304f115fa","name":"Main thread"}],"_id":"643599e147eb967304f115fb","title":"Chapter 3","location":{"_id":"643599d047eb967304f115dd","dateTime":"2023-04-11T17:33:04.743Z","lat":43.87142962389218,"lng":18.49611361639408,"zoom":6}},{"isLocked":false,"isHidden":false,"isLocationLocked":false,"isPreview":false,"actors":[],"threads":[{"nextStoryThreadMessageIndex":0,"awaitingResponse":false,"messages":[],"writingStatusList":[],"_id":"643599e647eb967304f11601","name":"Main thread"}],"_id":"643599e647eb967304f11602","title":"Chapter 4","location":{"_id":"643599d047eb967304f115dd","dateTime":"2023-04-11T17:33:04.743Z","lat":43.87142962389218,"lng":18.49611361639408,"zoom":6}}],"actors":[{"_id":"64359a3047eb967304f11655","name":"Character 1","avatar":{"timeCreated":"2023-04-11T17:34:31.348Z","_id":"64359a2747eb967304f11654","width":1247,"height":1440,"url":"https://loco-us.s3.us-west-1.amazonaws.com/066933b0-6c3d-448e-b6f0-f86e24f6d6c5.png","thumbUrl":"https://loco-us.s3.us-west-1.amazonaws.com/thumb-066933b0-6c3d-448e-b6f0-f86e24f6d6c5.png","miniThumbUrl":"https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-066933b0-6c3d-448e-b6f0-f86e24f6d6c5.png","remote":"066933b0-6c3d-448e-b6f0-f86e24f6d6c5.png","thumbRemote":"thumb-066933b0-6c3d-448e-b6f0-f86e24f6d6c5.png","miniThumbRemote":"mini-thumb-066933b0-6c3d-448e-b6f0-f86e24f6d6c5.png","type":"IMAGE","size":212820,"__v":0}}],"pathPoints":[],"achievements":[],"presetTeamNames":[],"presetTeamAvatars":[],"_id":"643599d047eb967304f115db","name":"Media Literacy project","options":{"showAvatars":true,"selfGuided":false,"isForSale":false,"nextoTour":false,"_id":"643599d047eb967304f115dc","location":{"_id":"643599d047eb967304f115dd","dateTime":"2023-04-11T17:33:04.743Z","lat":43.87142962389218,"lng":18.49611361639408,"zoom":6}},"team":"643599b047eb967304f10aff","__v":5,"timeCreated":"2023-04-24T09:30:29.585Z"}
+{
+  "isTranslation": false,
+  "isMaster": false,
+  "childStories": [],
+  "geo": [18.49611361639408, 43.87142962389218],
+  "hasTimeLimit": false,
+  "deleted": false,
+  "public": false,
+  "featured": false,
+  "status": "PUBLISHED",
+  "translations": [],
+  "duration": {
+    "_id": "643599d047eb967304f115de",
+    "hours": 0,
+    "minutes": 45,
+    "seconds": 0
+  },
+  "threads": [],
+  "chats": [
+    {
+      "isLocked": false,
+      "isHidden": false,
+      "isLocationLocked": false,
+      "isPreview": false,
+      "actors": [],
+      "threads": [
+        {
+          "nextStoryThreadMessageIndex": 0,
+          "awaitingResponse": false,
+          "messages": [
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64804d0711622f51d8db85a7",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64804d0711622f51d8db85a8",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "64804d0711622f51d8db85a9",
+                  "dateTime": "2023-06-07T09:25:27.880Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-07T09:25:27.881Z",
+              "_id": "6480597a11622f51d8df03c8",
+              "type": "YOUTUBE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "NARRATOR",
+              "youtubeId": "Y0ArhoEn428",
+              "youtubeThumbUrl": "https://i.ytimg.com/vi/Y0ArhoEn428/mqdefault.jpg",
+              "youtubeTitle": "Istine i laži o “neširenju NATO-a na istok”",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64804e5311622f51d8dbb27e",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64804e5311622f51d8dbb281",
+                    "buttonText": "Medijska pismenost je sposobnost osoba da kritički pristupe, analiziraju i proizvode informacije.",
+                    "text": "Tačno, bravo.",
+                    "thread": "6480597a11622f51d8df03b8",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64804e7611622f51d8dbb668",
+                    "buttonText": "Medijska pismenost je sposobnost adekvatnog korištenja moderne tehnologije.",
+                    "text": "To ipak nije medijska pimenost. Hajde da pokušamo ponovo, razmisli još jednom.",
+                    "thread": "6480597a11622f51d8df03b8",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6480550f11622f51d8dd3f75",
+                    "buttonText": "Medijska pismenost je sposobnost novinara/ki da pišu pravopisno i gramatički ispravne članke",
+                    "text": "To ipak nije medijska pimenost. Hajde da pokušamo ponovo, razmisli još jednom.",
+                    "thread": "6480597a11622f51d8df03b8",
+                    "hideResponseToChat": false
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64804e5311622f51d8dbb282",
+                    "thread": "643599e647eb967304f11601"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64804e5311622f51d8dbb27f",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64804e5311622f51d8dbb283",
+                  "dateTime": "2023-06-07T09:30:59.027Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-07T09:30:59.027Z",
+              "_id": "6480597a11622f51d8df03bf",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta je medijska pismenost?",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64804f2f11622f51d8dbba4b",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64804f2f11622f51d8dbba4c",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "64804f2f11622f51d8dbba4d",
+                  "dateTime": "2023-06-07T09:34:39.202Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-07T09:34:39.203Z",
+              "_id": "6480597a11622f51d8df03ba",
+              "type": "YOUTUBE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "NARRATOR",
+              "youtubeId": "Wow8cnsVYKY",
+              "youtubeThumbUrl": "https://i.ytimg.com/vi/Wow8cnsVYKY/mqdefault.jpg",
+              "youtubeTitle": "Šta su činjenice, a šta dezinformacije o navodima da Evropi prijeti radioaktivni oblak iz Ukrajine?",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64806cc011622f51d8e729f9",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64806cc011622f51d8e729fd",
+                    "buttonText": "Poznavanje tehnologija je važno za razvijanje i jedne i druge.",
+                    "text": "Bravo, to je tačan odgovor.",
+                    "thread": "6480597a11622f51d8df03b8",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64806cc011622f51d8e729fc",
+                    "buttonText": "I za jednu i za drugu je važno da znamo razliku između hardvera i softvera",
+                    "text": "Da li je ovo prava sličnost koju tražimo? Promisli još jednom.",
+                    "thread": "6480597a11622f51d8df03b8",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64806cc011622f51d8e729fb",
+                    "buttonText": "Nema sličnosti.",
+                    "text": "Misliš da nemaju niti jednu sličnost? Razmisli još jednom, probaj pronaći barem jednu.",
+                    "hideResponseToChat": false,
+                    "thread": "6480597a11622f51d8df03b8"
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64806cc011622f51d8e729fe",
+                    "thread": "6480597a11622f51d8df03b8"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64806cc011622f51d8e729fa",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64806cc011622f51d8e729ff",
+                  "dateTime": "2023-06-07T11:40:48.038Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-07T11:40:48.038Z",
+              "_id": "64806cc011622f51d8e729f8",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Koje su sličnosti između medijske i digitalne pismenosti?",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64806f5d11622f51d8e75ed2",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64806f5d11622f51d8e75ed3",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "64806f5d11622f51d8e75ed4",
+                  "dateTime": "2023-06-07T11:51:57.765Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-07T11:51:57.765Z",
+              "_id": "64806f5d11622f51d8e75ed1",
+              "type": "YOUTUBE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "NARRATOR",
+              "youtubeId": "10JH_hWYYbE",
+              "youtubeThumbUrl": "https://i.ytimg.com/vi/10JH_hWYYbE/mqdefault.jpg",
+              "youtubeTitle": "Eksploatacija tragedija: Klik važniji od dostojanstva žrtava",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64806faf11622f51d8e763d7",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64806faf11622f51d8e763db",
+                    "buttonText": "Obrazloži zašto je važna medijska pismenost.",
+                    "text": "Ovo je drugi sprat intelekta. Pokušaj ponovo.",
+                    "thread": "6480597a11622f51d8df03b8",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64806faf11622f51d8e763da",
+                    "buttonText": "Zamisli svijet bez interneta. Kako bi on izgledao?",
+                    "text": "Bravo, to je tačan odgovor.",
+                    "thread": "6480597a11622f51d8df03b8",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64806faf11622f51d8e763d9",
+                    "buttonText": "Šta je medijska pismenost?",
+                    "text": "Ovo je prvi sprat intelekta. Pokušaj ponovo.",
+                    "thread": "6480597a11622f51d8df03b8",
+                    "hideResponseToChat": false
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64806faf11622f51d8e763dc",
+                    "thread": "6480597a11622f51d8df03b8"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64806faf11622f51d8e763d8",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64806faf11622f51d8e763dd",
+                  "dateTime": "2023-06-07T11:53:19.789Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-07T11:53:19.789Z",
+              "_id": "64806faf11622f51d8e763d6",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Koje od ponuđenih pitanja je na 3. nivou intelekta:",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "648071f011622f51d8e77ed1",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "648071f011622f51d8e77ed2",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "648071f011622f51d8e77ed3",
+                  "dateTime": "2023-06-07T12:02:56.040Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "NO_RESPONSE",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-07T12:02:56.040Z",
+              "_id": "648071f011622f51d8e77ed0",
+              "type": "IMAGE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "64359a3047eb967304f11655",
+              "isInterstitial": false,
+              "file": {
+                "timeCreated": "2023-06-07T12:02:41.328Z",
+                "_id": "648071e111622f51d8e77ece",
+                "width": 352,
+                "height": 178,
+                "url": "https://loco-us.s3.us-west-1.amazonaws.com/d4bdd3ab-19a4-4308-8ad9-c1ee7f4aaf6f.png",
+                "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-d4bdd3ab-19a4-4308-8ad9-c1ee7f4aaf6f.png",
+                "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-d4bdd3ab-19a4-4308-8ad9-c1ee7f4aaf6f.png",
+                "remote": "d4bdd3ab-19a4-4308-8ad9-c1ee7f4aaf6f.png",
+                "thumbRemote": "thumb-d4bdd3ab-19a4-4308-8ad9-c1ee7f4aaf6f.png",
+                "miniThumbRemote": "mini-thumb-d4bdd3ab-19a4-4308-8ad9-c1ee7f4aaf6f.png",
+                "type": "IMAGE",
+                "size": 17709,
+                "__v": 0
+              },
+              "interstitialPanDirection": "FROM_LEFT"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6480727711622f51d8e787f0",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6480727711622f51d8e787f1",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "6480727711622f51d8e787f2",
+                  "dateTime": "2023-06-07T12:05:11.228Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "NO_RESPONSE",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-07T12:05:11.228Z",
+              "_id": "6480727711622f51d8e787ef",
+              "type": "IMAGE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "64359a3047eb967304f11655",
+              "file": {
+                "timeCreated": "2023-06-07T12:05:02.702Z",
+                "_id": "6480726e11622f51d8e787ed",
+                "width": 753,
+                "height": 245,
+                "url": "https://loco-us.s3.us-west-1.amazonaws.com/d3c55542-5486-4f3e-a3f4-e2a2a1a62a5a.png",
+                "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-d3c55542-5486-4f3e-a3f4-e2a2a1a62a5a.png",
+                "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-d3c55542-5486-4f3e-a3f4-e2a2a1a62a5a.png",
+                "remote": "d3c55542-5486-4f3e-a3f4-e2a2a1a62a5a.png",
+                "thumbRemote": "thumb-d3c55542-5486-4f3e-a3f4-e2a2a1a62a5a.png",
+                "miniThumbRemote": "mini-thumb-d3c55542-5486-4f3e-a3f4-e2a2a1a62a5a.png",
+                "type": "IMAGE",
+                "size": 41125,
+                "__v": 0
+              }
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6480729211622f51d8e79994",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6480729211622f51d8e79995",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi",
+                "location": {
+                  "_id": "6480729211622f51d8e79996",
+                  "dateTime": "2023-06-07T12:05:38.563Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-07T12:05:38.563Z",
+              "_id": "6480729211622f51d8e79993",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Ovo je kraj prvog nivoa. Bravo 👍👍👍.  Klikni \"nastavi\" da pređeš na drugi.",
+              "actor": "64359a3047eb967304f11655"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": false,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6480737811622f51d8e8027e",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "type": "NO_RESPONSE"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-07T12:09:28.992Z",
+              "_id": "6480737811622f51d8e8027f",
+              "type": "ACHIEVEMENT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "achievementId": "6480736e11622f51d8e8027c"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": false,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "648072bc11622f51d8e7ab4a",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "type": "NO_RESPONSE"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-07T12:06:20.066Z",
+              "_id": "648072bc11622f51d8e7ab4b",
+              "type": "ACTION_QUEST_END",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actionOptions": {
+                "_id": "648072bc11622f51d8e7ab4c",
+                "triggerChatId": "643599dc47eb967304f115f4"
+              }
+            }
+          ],
+          "writingStatusList": [],
+          "_id": "6480597a11622f51d8df03b8",
+          "name": "Main thread"
+        }
+      ],
+      "_id": "643599d047eb967304f115df",
+      "isMainChat": true,
+      "title": "Kritičko mišljenje i medijska i informacijska pismenost",
+      "location": {
+        "_id": "643599d047eb967304f115e0",
+        "dateTime": "2023-04-11T17:33:04.744Z",
+        "lat": 43.87142962389218,
+        "lng": 18.49611361639408,
+        "zoom": 6
+      },
+      "description": "Module 1",
+      "poster": {
+        "timeCreated": "2023-06-21T14:53:41.372Z",
+        "_id": "64930ef511622f51d8ae07b4",
+        "width": 184,
+        "height": 184,
+        "url": "https://loco-us.s3.us-west-1.amazonaws.com/e2b7161b-d513-47f2-b9ce-09115972ba4c.png",
+        "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-e2b7161b-d513-47f2-b9ce-09115972ba4c.png",
+        "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-e2b7161b-d513-47f2-b9ce-09115972ba4c.png",
+        "remote": "e2b7161b-d513-47f2-b9ce-09115972ba4c.png",
+        "thumbRemote": "thumb-e2b7161b-d513-47f2-b9ce-09115972ba4c.png",
+        "miniThumbRemote": "mini-thumb-e2b7161b-d513-47f2-b9ce-09115972ba4c.png",
+        "type": "IMAGE",
+        "size": 14489,
+        "__v": 0
+      }
+    },
+    {
+      "isLocked": false,
+      "isHidden": false,
+      "isLocationLocked": false,
+      "isPreview": false,
+      "actors": [],
+      "threads": [
+        {
+          "nextStoryThreadMessageIndex": 0,
+          "awaitingResponse": false,
+          "messages": [
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6480af2c11622f51d8f4b7b5",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6480af2c11622f51d8f4b7b6",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "6480af2c11622f51d8f4b7b7",
+                  "dateTime": "2023-06-07T16:24:12.772Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "NO_RESPONSE",
+                "confirmText": "Continue"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-07T16:24:12.772Z",
+              "_id": "6480af2c11622f51d8f4b7b4",
+              "type": "YOUTUBE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "NARRATOR",
+              "youtubeId": "Y0ArhoEn428",
+              "youtubeThumbUrl": "https://i.ytimg.com/vi/Y0ArhoEn428/mqdefault.jpg",
+              "youtubeTitle": "Istine i laži o “neširenju NATO-a na istok”",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64832e6511622f51d8379a10",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64832e6511622f51d8379a16",
+                    "buttonText": "Može biti izvor informacija.",
+                    "text": "Bravo, to je jedna od sličnosti.",
+                    "thread": "643599dc47eb967304f115f3"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64832e6511622f51d8379a15",
+                    "buttonText": "Postoji jasno definisana struktura uređivanja. ",
+                    "text": "To ipak nije zajednična karakteristika.",
+                    "thread": "643599dc47eb967304f115f3",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64832e6511622f51d8379a14",
+                    "buttonText": "Informacije se objavljuju stalno i u svako doba dana.",
+                    "text": "To ipak nije zajednična karakteristika.",
+                    "thread": "643599dc47eb967304f115f3",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64832e6511622f51d8379a13",
+                    "buttonText": "Može biti kredibilan i nekredibilan izvor. ",
+                    "text": "Bravo, to je jedna od sličnosti.",
+                    "thread": "643599dc47eb967304f115f3"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64832e6511622f51d8379a12",
+                    "buttonText": "Bilo ko može da objavi bilo šta. ",
+                    "text": "To ipak nije zajednična karakteristika.",
+                    "hideResponseToChat": false,
+                    "thread": "643599dc47eb967304f115f3"
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64832e6511622f51d8379a17",
+                    "thread": "643599dc47eb967304f115f3"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64832e6511622f51d8379a11",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64832e6511622f51d8379a18",
+                  "dateTime": "2023-06-09T13:51:33.867Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T13:51:33.868Z",
+              "_id": "64832e6511622f51d8379a0f",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta su sličnosti novina i društvenih mreža?\n",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64832f1f11622f51d837b5ef",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64832f1f11622f51d837b5f5",
+                    "buttonText": "Može biti izvor informacija.",
+                    "text": "To ipak nije razlika, pokušaj ponovo.",
+                    "thread": "643599dc47eb967304f115f3",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64832f1f11622f51d837b5f4",
+                    "buttonText": "Postoji jasno definisana struktura uređivanja.",
+                    "text": "Tačno tako. ",
+                    "thread": "643599dc47eb967304f115f3",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64832f1f11622f51d837b5f2",
+                    "buttonText": "Informacije se objavljuju stalno i u svako doba dana.",
+                    "text": "Tako je!",
+                    "thread": "643599dc47eb967304f115f3",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64832f1f11622f51d837b5f1",
+                    "buttonText": "Može biti kredibilan i nekredibilan izvor. ",
+                    "text": "To ipak nije razlika, pokušaj ponovo.",
+                    "hideResponseToChat": false,
+                    "thread": "643599dc47eb967304f115f3"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64832f1f11622f51d837b5f3",
+                    "buttonText": "Bilo ko može da objavi bilo šta. ",
+                    "text": "Bravo, to je razlika.",
+                    "thread": "643599dc47eb967304f115f3",
+                    "hideResponseToChat": false
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64832f1f11622f51d837b5f6",
+                    "thread": "643599dc47eb967304f115f3"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64832f1f11622f51d837b5f0",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64832f1f11622f51d837b5f7",
+                  "dateTime": "2023-06-09T13:54:39.282Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T13:54:39.282Z",
+              "_id": "64832f1f11622f51d837b5ee",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta su razlike novina i društvenih mreža?",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64832f7911622f51d837bb55",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64832f7911622f51d837bb56",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "64832f7911622f51d837bb57",
+                  "dateTime": "2023-06-09T13:56:09.491Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T13:56:09.491Z",
+              "_id": "64832f7911622f51d837bb54",
+              "type": "YOUTUBE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "NARRATOR",
+              "youtubeId": "10JH_hWYYbE",
+              "youtubeThumbUrl": "https://i.ytimg.com/vi/10JH_hWYYbE/mqdefault.jpg",
+              "youtubeTitle": "Eksploatacija tragedija: Klik važniji od dostojanstva žrtava",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6483310711622f51d837c202",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "6483310711622f51d837c208",
+                    "buttonText": "Radio.",
+                    "text": "To ipak nije pojam, pokušaj ponovo.",
+                    "thread": "643599dc47eb967304f115f3",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6483310711622f51d837c207",
+                    "buttonText": "Štampani mediji.",
+                    "text": "Bravo, \"štampani mediji\" su pojam o kojem je riječ.",
+                    "thread": "643599dc47eb967304f115f3",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6483310711622f51d837c206",
+                    "buttonText": "Štampani mediji su svi oni koji informacije prenose u pisanoj formi putem neke vrste fizičkog objekta.",
+                    "text": "To ipak nije pojam, pokušaj ponovo.",
+                    "hideResponseToChat": false,
+                    "thread": "643599dc47eb967304f115f3"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6483310711622f51d837c205",
+                    "buttonText": "Dnevne novine.",
+                    "text": "To ipak nije pojam, pokušaj ponovo.",
+                    "hideResponseToChat": false,
+                    "thread": "643599dc47eb967304f115f3"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6483310711622f51d837c204",
+                    "buttonText": "Štampani mediji izgubili su na zastupljenosti nakon masovne pojave novih medija. ",
+                    "text": "To ipak nije pojam, pokušaj ponovo.",
+                    "hideResponseToChat": false,
+                    "thread": "643599dc47eb967304f115f3"
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "6483310711622f51d837c209",
+                    "thread": "643599dc47eb967304f115f3"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6483310711622f51d837c203",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "6483310711622f51d837c20a",
+                  "dateTime": "2023-06-09T14:02:47.388Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:02:47.388Z",
+              "_id": "6483310711622f51d837c201",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta je od informacija koje ste čuli u videu je pojam?",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6483325c11622f51d837ce8a",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "6483325c11622f51d837ce90",
+                    "buttonText": "Radio.",
+                    "text": "Liči li ti ovo na definiciju? Pokušaj ponovo. ",
+                    "thread": "643599dc47eb967304f115f3",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6483325c11622f51d837ce8f",
+                    "buttonText": "Štampani mediji.",
+                    "text": "Liči li ti ovo na definiciju? Pokušaj ponovo. ",
+                    "thread": "643599dc47eb967304f115f3",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6483325c11622f51d837ce8e",
+                    "buttonText": "Štampani mediji su svi oni koji informacije prenose u pisanoj formi putem neke vrste fizičkog objekta.",
+                    "text": "Bravo, to je definicija štampanih medija. ",
+                    "thread": "643599dc47eb967304f115f3"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6483325c11622f51d837ce8d",
+                    "buttonText": "Dnevne novine.",
+                    "text": "Liči li ti ovo na definiciju? Pokušaj ponovo. ",
+                    "hideResponseToChat": false,
+                    "thread": "643599dc47eb967304f115f3"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6483325c11622f51d837ce8c",
+                    "buttonText": "Štampani mediji izgubili su na zastupljenosti nakon masovne pojave novih medija. ",
+                    "text": "Liči li ti ovo na definiciju? Pokušaj ponovo. ",
+                    "hideResponseToChat": false,
+                    "thread": "643599dc47eb967304f115f3"
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "6483325c11622f51d837ce91",
+                    "thread": "643599dc47eb967304f115f3"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6483325c11622f51d837ce8b",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "6483325c11622f51d837ce92",
+                  "dateTime": "2023-06-09T14:08:28.375Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:08:28.376Z",
+              "_id": "6483325c11622f51d837ce89",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta je od informacija koje ste čuli u videu je definicija?\n",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6483350711622f51d837d0e8",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "6483350711622f51d837d0ee",
+                    "buttonText": "Radio.",
+                    "text": "To ipak nije primjer. Pokušaj ponovo.",
+                    "thread": "643599dc47eb967304f115f3",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6483350711622f51d837d0ed",
+                    "buttonText": "Štampani mediji.",
+                    "text": "Već smo rekli da je ovo pojam. Pokušaj ponovo.",
+                    "thread": "643599dc47eb967304f115f3",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6483350711622f51d837d0ec",
+                    "buttonText": "Štampani mediji su svi oni koji informacije prenose u pisanoj formi putem neke vrste fizičkog objekta.",
+                    "text": "Već smo rekli da je ovo definicija. Pokušaj ponovo",
+                    "hideResponseToChat": false,
+                    "thread": "643599dc47eb967304f115f3"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6483350711622f51d837d0eb",
+                    "buttonText": "Dnevne novine.",
+                    "text": "Bravo, dnevne novine su pravi primjer štampanog medija.",
+                    "thread": "643599dc47eb967304f115f3"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6483350711622f51d837d0ea",
+                    "buttonText": "Štampani mediji izgubili su na zastupljenosti nakon masovne pojave novih medija. ",
+                    "text": "Da li ovo liči na primjer nečega? Razmisli još jednom. ",
+                    "hideResponseToChat": false,
+                    "thread": "643599dc47eb967304f115f3"
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "6483350711622f51d837d0ef",
+                    "thread": "643599dc47eb967304f115f3"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6483350711622f51d837d0e9",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "6483350711622f51d837d0f0",
+                  "dateTime": "2023-06-09T14:19:51.168Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:19:51.168Z",
+              "_id": "6483350711622f51d837d0e7",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta je od informacija koje ste čuli u videu je primjer štampanog medija?",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "648335f611622f51d837d53d",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "648335f611622f51d837d543",
+                    "buttonText": "Radio.",
+                    "text": "Bravo, radio nije štampani medij.",
+                    "thread": "643599dc47eb967304f115f3"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "648335f611622f51d837d542",
+                    "buttonText": "Štampani mediji.",
+                    "text": "Ima li ti smisla ovaj odgovor? Razmisli još jednom.",
+                    "thread": "643599dc47eb967304f115f3",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "648335f611622f51d837d541",
+                    "buttonText": "Štampani mediji su svi oni koji informacije prenose u pisanoj formi putem neke vrste fizičkog objekta.",
+                    "text": "To ipak nije tačno, probaj ponovo.",
+                    "hideResponseToChat": false,
+                    "thread": "643599dc47eb967304f115f3"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "648335f611622f51d837d540",
+                    "buttonText": "Dnevne novine.",
+                    "text": "Rekli smo da dnevne novinu JESU primjer.  Šta nije?",
+                    "hideResponseToChat": false,
+                    "thread": "643599dc47eb967304f115f3"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "648335f611622f51d837d53f",
+                    "buttonText": "Štampani mediji izgubili su na zastupljenosti nakon masovne pojave novih medija. ",
+                    "text": "To ipak nije tačno, probaj ponovo.",
+                    "hideResponseToChat": false,
+                    "thread": "643599dc47eb967304f115f3"
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "648335f611622f51d837d544",
+                    "thread": "643599dc47eb967304f115f3"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "648335f611622f51d837d53e",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "648335f611622f51d837d545",
+                  "dateTime": "2023-06-09T14:23:50.735Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:23:50.736Z",
+              "_id": "648335f611622f51d837d53c",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta je od informacija koje ste čuli u videu nije primjer štampanog medija?",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "648336fd11622f51d837da8f",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "648336fd11622f51d837da95",
+                    "buttonText": "Radio.",
+                    "text": "Već smo rekli šta je radio, probaj ponovo.",
+                    "thread": "643599dc47eb967304f115f3",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "648336fd11622f51d837da94",
+                    "buttonText": "Štampani mediji.",
+                    "text": "Nope. Probaj opet.",
+                    "thread": "643599dc47eb967304f115f3"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "648336fd11622f51d837da93",
+                    "buttonText": "Štampani mediji su svi oni koji informacije prenose u pisanoj formi putem neke vrste fizičkog objekta.",
+                    "text": "Ne pratiš. Probaj opet.",
+                    "thread": "643599dc47eb967304f115f3"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "648336fd11622f51d837da92",
+                    "buttonText": "Dnevne novine.",
+                    "text": "Ne pratiš. Probaj opet.",
+                    "thread": "643599dc47eb967304f115f3"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "648336fd11622f51d837da91",
+                    "buttonText": "Štampani mediji izgubili su na zastupljenosti nakon masovne pojave novih medija. ",
+                    "text": "Bravo, ovako izgleda činjenica.",
+                    "hideResponseToChat": false,
+                    "thread": "643599dc47eb967304f115f3"
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "648336fd11622f51d837da96",
+                    "thread": "643599dc47eb967304f115f3"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "648336fd11622f51d837da90",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "648336fd11622f51d837da97",
+                  "dateTime": "2023-06-09T14:28:13.180Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:28:13.181Z",
+              "_id": "648336fd11622f51d837da8e",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta je od informacija koje ste čuli u videu je činjenica?",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6483373111622f51d837df54",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6483373111622f51d837df55",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "6483373111622f51d837df56",
+                  "dateTime": "2023-06-09T14:29:05.070Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi."
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:29:05.070Z",
+              "_id": "6483373111622f51d837df53",
+              "type": "YOUTUBE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "NARRATOR",
+              "youtubeId": "Wow8cnsVYKY",
+              "youtubeThumbUrl": "https://i.ytimg.com/vi/Wow8cnsVYKY/mqdefault.jpg",
+              "youtubeTitle": "Šta su činjenice, a šta dezinformacije o navodima da Evropi prijeti radioaktivni oblak iz Ukrajine?",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6483387111622f51d837e38d",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "6483387111622f51d837e393",
+                    "buttonText": "Imena i uloge zaposlenih.",
+                    "text": "Tačno, trebali bi znati imena svih zaposlenih na nekom mediju. ",
+                    "thread": "643599dc47eb967304f115f3",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6483387111622f51d837e392",
+                    "buttonText": "Sva mjesta na kojima su zaposleni/e ranije radili/e.",
+                    "text": "Nije bitno gdje su uposlenici nekog medija ranije radili. Šta jeste bitno?",
+                    "thread": "643599dc47eb967304f115f3"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6483387111622f51d837e391",
+                    "buttonText": "Profili na društvenim mrežama urednica/ka.",
+                    "text": "Zašto su profili na društvenim mrežama bitni? Ipak nisu.",
+                    "thread": "643599dc47eb967304f115f3"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6483387111622f51d837e390",
+                    "buttonText": "Lične adrese stanovanja zaposlenih. ",
+                    "text": "Trebaju li ičije adrese biti javno objavljene? Razmisli još jednom.",
+                    "thread": "643599dc47eb967304f115f3"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6483387111622f51d837e38f",
+                    "buttonText": "Imena vlasnica/ka. ",
+                    "text": "Tačno, trebalo bi da znamo ko je vlasnik svakog medija.",
+                    "hideResponseToChat": false,
+                    "thread": "643599dc47eb967304f115f3"
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "6483387111622f51d837e394",
+                    "thread": "643599dc47eb967304f115f3"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6483387111622f51d837e38e",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "6483387111622f51d837e395",
+                  "dateTime": "2023-06-09T14:34:25.536Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:34:25.536Z",
+              "_id": "6483387111622f51d837e38c",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta bi od navedenog trebao da sadrži impresum?\n",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "648338c211622f51d837e5d2",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "648338c211622f51d837e5d3",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "648338c211622f51d837e5d4",
+                  "dateTime": "2023-06-09T14:35:46.941Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:35:46.942Z",
+              "_id": "648338c211622f51d837e5d1",
+              "type": "IMAGE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "64359a3047eb967304f11655",
+              "file": {
+                "timeCreated": "2023-06-09T14:35:37.455Z",
+                "_id": "648338b911622f51d837e5cf",
+                "width": 477,
+                "height": 177,
+                "url": "https://loco-us.s3.us-west-1.amazonaws.com/f2993460-3478-4380-9a78-8561c6942314.png",
+                "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-f2993460-3478-4380-9a78-8561c6942314.png",
+                "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-f2993460-3478-4380-9a78-8561c6942314.png",
+                "remote": "f2993460-3478-4380-9a78-8561c6942314.png",
+                "thumbRemote": "thumb-f2993460-3478-4380-9a78-8561c6942314.png",
+                "miniThumbRemote": "mini-thumb-f2993460-3478-4380-9a78-8561c6942314.png",
+                "type": "IMAGE",
+                "size": 20216,
+                "__v": 0
+              }
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "648338d111622f51d837e7c2",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "648338d111622f51d837e7c3",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "648338d111622f51d837e7c4",
+                  "dateTime": "2023-06-09T14:36:01.963Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:36:01.964Z",
+              "_id": "648338d111622f51d837e7c1",
+              "type": "IMAGE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "64359a3047eb967304f11655",
+              "file": {
+                "timeCreated": "2023-06-09T14:35:54.574Z",
+                "_id": "648338ca11622f51d837e7bf",
+                "width": 469,
+                "height": 168,
+                "url": "https://loco-us.s3.us-west-1.amazonaws.com/2196ebff-3e40-44ab-878c-fce0deb5be17.png",
+                "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-2196ebff-3e40-44ab-878c-fce0deb5be17.png",
+                "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-2196ebff-3e40-44ab-878c-fce0deb5be17.png",
+                "remote": "2196ebff-3e40-44ab-878c-fce0deb5be17.png",
+                "thumbRemote": "thumb-2196ebff-3e40-44ab-878c-fce0deb5be17.png",
+                "miniThumbRemote": "mini-thumb-2196ebff-3e40-44ab-878c-fce0deb5be17.png",
+                "type": "IMAGE",
+                "size": 19222,
+                "__v": 0
+              }
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": false,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6483391011622f51d837f41c",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "type": "NO_RESPONSE"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:37:04.490Z",
+              "_id": "6483391011622f51d837f41d",
+              "type": "ACHIEVEMENT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "achievementId": "6483390d11622f51d837f41a"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": false,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6483392511622f51d837f624",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "type": "NO_RESPONSE"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:37:25.678Z",
+              "_id": "6483392511622f51d837f625",
+              "type": "ACTION_QUEST_END",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actionOptions": {
+                "_id": "6483392511622f51d837f626",
+                "triggerChatId": "643599e147eb967304f115fb"
+              }
+            }
+          ],
+          "writingStatusList": [],
+          "_id": "643599dc47eb967304f115f3",
+          "name": "Main thread"
+        }
+      ],
+      "_id": "643599dc47eb967304f115f4",
+      "title": "Šta (ni)je medij i društvene mreže - Organizacija i analiziranje informacija",
+      "location": {
+        "_id": "643599d047eb967304f115dd",
+        "dateTime": "2023-04-11T17:33:04.743Z",
+        "lat": 43.87142962389218,
+        "lng": 18.49611361639408,
+        "zoom": 6
+      }
+    },
+    {
+      "isLocked": false,
+      "isHidden": false,
+      "isLocationLocked": false,
+      "isPreview": false,
+      "actors": [],
+      "threads": [
+        {
+          "nextStoryThreadMessageIndex": 0,
+          "awaitingResponse": false,
+          "messages": [
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6483397e11622f51d837fbff",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6483397e11622f51d837fc00",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "6483397e11622f51d837fc01",
+                  "dateTime": "2023-06-09T14:38:54.915Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:38:54.915Z",
+              "_id": "6483397e11622f51d837fbfe",
+              "type": "YOUTUBE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "NARRATOR",
+              "youtubeId": "Y0ArhoEn428",
+              "youtubeThumbUrl": "https://i.ytimg.com/vi/Y0ArhoEn428/mqdefault.jpg",
+              "youtubeTitle": "Istine i laži o “neširenju NATO-a na istok”",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "648339bb11622f51d83825c1",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "648339bb11622f51d83825c2",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "648339bb11622f51d83825c3",
+                  "dateTime": "2023-06-09T14:39:55.869Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Pokaži pitanje"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:39:55.870Z",
+              "_id": "648339bb11622f51d83825c0",
+              "type": "IMAGE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "64359a3047eb967304f11655",
+              "isInterstitial": false,
+              "file": {
+                "timeCreated": "2023-06-09T14:39:47.260Z",
+                "_id": "648339b311622f51d83825be",
+                "width": 813,
+                "height": 411,
+                "url": "https://loco-us.s3.us-west-1.amazonaws.com/1635ccc7-d837-42fd-a7b7-03175a85c07e.png",
+                "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-1635ccc7-d837-42fd-a7b7-03175a85c07e.png",
+                "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-1635ccc7-d837-42fd-a7b7-03175a85c07e.png",
+                "remote": "1635ccc7-d837-42fd-a7b7-03175a85c07e.png",
+                "thumbRemote": "thumb-1635ccc7-d837-42fd-a7b7-03175a85c07e.png",
+                "miniThumbRemote": "mini-thumb-1635ccc7-d837-42fd-a7b7-03175a85c07e.png",
+                "type": "IMAGE",
+                "size": 59130,
+                "__v": 0
+              }
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64833a2a11622f51d8382805",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64833a2a11622f51d8382809",
+                    "buttonText": "Kad je usvojena odluka o nošenju uniformi?",
+                    "text": "Ipak imamo ovu informaciju. Koju nemamo?",
+                    "thread": "6483397211622f51d837fbfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64833a2a11622f51d8382808",
+                    "buttonText": " Ko je usvojio odluku o nošenju uniformi? ",
+                    "text": "Tačno, znamo i kada i zašto i gdje je ovo usvojeno, ali ne znamo ko je donio odluku  - škola, ministarstvo, skupština....",
+                    "thread": "6483397211622f51d837fbfb"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64833a2a11622f51d8382807",
+                    "buttonText": "Zašto je odluka o nošenju uniformi usvojena?",
+                    "text": "Ipak imamo ovu informaciju. Koju nemamo?",
+                    "thread": "6483397211622f51d837fbfb"
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64833a2a11622f51d838280a",
+                    "thread": "6483397211622f51d837fbfb"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64833a2a11622f51d8382806",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64833a2a11622f51d838280b",
+                  "dateTime": "2023-06-09T14:41:46.645Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:41:46.645Z",
+              "_id": "64833a2a11622f51d8382804",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Na koje pitanje članak ne odgovara?",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64833b6311622f51d8382e18",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64833b6311622f51d8382e19",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "64833b6311622f51d8382e1a",
+                  "dateTime": "2023-06-09T14:46:59.661Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:46:59.661Z",
+              "_id": "64833b6311622f51d8382e17",
+              "type": "YOUTUBE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "NARRATOR",
+              "youtubeId": "10JH_hWYYbE",
+              "youtubeThumbUrl": "https://i.ytimg.com/vi/10JH_hWYYbE/mqdefault.jpg",
+              "youtubeTitle": "Eksploatacija tragedija: Klik važniji od dostojanstva žrtava",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64833d6d11622f51d8385c06",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64833d6d11622f51d8385c09",
+                    "buttonText": "Činjenica ",
+                    "text": "Postoji li dokaz za ovo? Razmisli ponovo.",
+                    "thread": "6483397211622f51d837fbfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64833d6d11622f51d8385c08",
+                    "buttonText": "Mišljenje",
+                    "text": "Tačno, ovo je mišljenje.",
+                    "thread": "6483397211622f51d837fbfb",
+                    "hideResponseToChat": true
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64833d6d11622f51d8385c0a",
+                    "thread": "6483397211622f51d837fbfb"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64833d6d11622f51d8385c07",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64833d6d11622f51d8385c0b",
+                  "dateTime": "2023-06-09T14:55:41.071Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:55:41.071Z",
+              "_id": "64833d6d11622f51d8385c05",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Instagram je najbolja društvena mreža.",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64833dd311622f51d8385f0a",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64833dd311622f51d8385f0d",
+                    "buttonText": "Činjenica",
+                    "text": "Bravo, ovo je činjenica, ne može neko misliti da nema, ako podaci kažu da ima.",
+                    "thread": "6483397211622f51d837fbfb"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64833dd311622f51d8385f0c",
+                    "buttonText": "Mišljenje",
+                    "text": "Je li ovo mišljenje ili ima konkretan i dokaziv podatak? Probaj ponovo.",
+                    "thread": "6483397211622f51d837fbfb",
+                    "hideResponseToChat": false
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64833dd311622f51d8385f0e",
+                    "thread": "6483397211622f51d837fbfb"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64833dd311622f51d8385f0b",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64833dd311622f51d8385f0f",
+                  "dateTime": "2023-06-09T14:57:23.529Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:57:23.529Z",
+              "_id": "64833dd311622f51d8385f09",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Prema statistici iz 2021. godine u Bosni i Hercegovini je 1.100.000 korisnika/ca Instagrama.",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64833e1111622f51d8386226",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64833e1111622f51d8386229",
+                    "buttonText": "Činjenica",
+                    "text": "Hmm da li je baš činjenica? Probaj opet.",
+                    "thread": "6483397211622f51d837fbfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64833e1111622f51d8386228",
+                    "buttonText": "Mišljenje",
+                    "text": "Tačno, ovo je samo mišljenje oko kojeg se možemo složiti ili ne.",
+                    "thread": "6483397211622f51d837fbfb",
+                    "hideResponseToChat": false
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64833e1111622f51d838622a",
+                    "thread": "6483397211622f51d837fbfb"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64833e1111622f51d8386227",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64833e1111622f51d838622b",
+                  "dateTime": "2023-06-09T14:58:25.037Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:58:25.037Z",
+              "_id": "64833e1111622f51d8386225",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Učenici/e u školi uče samo bitne stvari koje su potrebne za život.",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64833e5a11622f51d838655a",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64833e5a11622f51d838655d",
+                    "buttonText": "Činjenica",
+                    "text": "Tačno, ovo je činjenica.",
+                    "thread": "6483397211622f51d837fbfb",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64833e5a11622f51d838655c",
+                    "buttonText": "Mišljenje",
+                    "text": "Hmm, može li neko misliti da ovo nije ovako? Probaj opet.",
+                    "thread": "6483397211622f51d837fbfb",
+                    "hideResponseToChat": false
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64833e5a11622f51d838655e",
+                    "thread": "6483397211622f51d837fbfb"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64833e5a11622f51d838655b",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64833e5a11622f51d838655f",
+                  "dateTime": "2023-06-09T14:59:38.086Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T14:59:38.086Z",
+              "_id": "64833e5a11622f51d8386559",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "U školi je nastavno gradivo podijeljeno po nastavnim predmetima.",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64833f1511622f51d8386cfc",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64833f1511622f51d8386cff",
+                    "buttonText": "Činjenica",
+                    "text": "Tačno, ovo je činjenica.",
+                    "thread": "6483397211622f51d837fbfb"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64833f1511622f51d8386cfe",
+                    "buttonText": "Mišljenje",
+                    "text": "Ipak nije. Ajmo ponovo.",
+                    "thread": "6483397211622f51d837fbfb",
+                    "hideResponseToChat": false
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64833f1511622f51d8386d00",
+                    "thread": "6483397211622f51d837fbfb"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64833f1511622f51d8386cfd",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64833f1511622f51d8386d01",
+                  "dateTime": "2023-06-09T15:02:45.610Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T15:02:45.610Z",
+              "_id": "64833f1511622f51d8386cfb",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Na Netflixu je dostupna serija Stranger Things.",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64833f5d11622f51d8387f7c",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64833f5d11622f51d8387f7f",
+                    "buttonText": "Činjenica",
+                    "text": "Ja recimo mislim da nije. Dakle, ovo nije činjenica.",
+                    "thread": "6483397211622f51d837fbfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64833f5d11622f51d8387f7e",
+                    "buttonText": "Mišljenje",
+                    "text": "Tačno, svako može misliti da je neka druga serija najbolja, to nije činjenica.",
+                    "thread": "6483397211622f51d837fbfb"
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64833f5d11622f51d8387f80",
+                    "thread": "6483397211622f51d837fbfb"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64833f5d11622f51d8387f7d",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64833f5d11622f51d8387f81",
+                  "dateTime": "2023-06-09T15:03:57.951Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T15:03:57.951Z",
+              "_id": "64833f5d11622f51d8387f7b",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Stranger Things je najbolja serija na Netflix-u.",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64833f8f11622f51d83882f9",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64833f8f11622f51d83882fa",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "64833f8f11622f51d83882fb",
+                  "dateTime": "2023-06-09T15:04:47.294Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T15:04:47.294Z",
+              "_id": "64833f8f11622f51d83882f8",
+              "type": "IMAGE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "64359a3047eb967304f11655",
+              "file": {
+                "timeCreated": "2023-06-09T15:04:34.552Z",
+                "_id": "64833f8211622f51d83882f6",
+                "width": 747,
+                "height": 291,
+                "url": "https://loco-us.s3.us-west-1.amazonaws.com/c46b8630-1230-428d-b5da-c8f5d690c6b8.png",
+                "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-c46b8630-1230-428d-b5da-c8f5d690c6b8.png",
+                "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-c46b8630-1230-428d-b5da-c8f5d690c6b8.png",
+                "remote": "c46b8630-1230-428d-b5da-c8f5d690c6b8.png",
+                "thumbRemote": "thumb-c46b8630-1230-428d-b5da-c8f5d690c6b8.png",
+                "miniThumbRemote": "mini-thumb-c46b8630-1230-428d-b5da-c8f5d690c6b8.png",
+                "type": "IMAGE",
+                "size": 26252,
+                "__v": 0
+              }
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64833fa911622f51d8388a0f",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64833fa911622f51d8388a10",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "64833fa911622f51d8388a11",
+                  "dateTime": "2023-06-09T15:05:13.771Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Dalje"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T15:05:13.771Z",
+              "_id": "64833fa911622f51d8388a0e",
+              "type": "IMAGE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "64359a3047eb967304f11655",
+              "file": {
+                "timeCreated": "2023-06-09T15:05:22.502Z",
+                "_id": "64833fb211622f51d8388d19",
+                "width": 761,
+                "height": 169,
+                "url": "https://loco-us.s3.us-west-1.amazonaws.com/fd263f61-e56d-4082-91f0-6388b65074f5.png",
+                "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-fd263f61-e56d-4082-91f0-6388b65074f5.png",
+                "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-fd263f61-e56d-4082-91f0-6388b65074f5.png",
+                "remote": "fd263f61-e56d-4082-91f0-6388b65074f5.png",
+                "thumbRemote": "thumb-fd263f61-e56d-4082-91f0-6388b65074f5.png",
+                "miniThumbRemote": "mini-thumb-fd263f61-e56d-4082-91f0-6388b65074f5.png",
+                "type": "IMAGE",
+                "size": 32258,
+                "__v": 0
+              }
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": false,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6483400711622f51d838962a",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "type": "NO_RESPONSE"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T15:06:47.239Z",
+              "_id": "6483400711622f51d838962b",
+              "type": "ACHIEVEMENT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "achievementId": "64833ff911622f51d8389628"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": false,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6483400f11622f51d838993b",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "type": "NO_RESPONSE"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-09T15:06:55.533Z",
+              "_id": "6483400f11622f51d838993c",
+              "type": "ACTION_QUEST_END",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actionOptions": {
+                "_id": "6483400f11622f51d838993d",
+                "triggerChatId": "643599e647eb967304f11602"
+              }
+            }
+          ],
+          "writingStatusList": [],
+          "_id": "6483397211622f51d837fbfb",
+          "name": "Main thread"
+        }
+      ],
+      "_id": "643599e147eb967304f115fb",
+      "title": "Činjenice, mišljenja i dezinformacije",
+      "location": {
+        "_id": "643599d047eb967304f115dd",
+        "dateTime": "2023-04-11T17:33:04.743Z",
+        "lat": 43.87142962389218,
+        "lng": 18.49611361639408,
+        "zoom": 6
+      },
+      "description": ""
+    },
+    {
+      "isLocked": false,
+      "isHidden": false,
+      "isLocationLocked": false,
+      "isPreview": false,
+      "actors": [],
+      "threads": [],
+      "_id": "643599e647eb967304f11602",
+      "title": "Teorije zavjere",
+      "location": {
+        "_id": "643599d047eb967304f115dd",
+        "dateTime": "2023-04-11T17:33:04.743Z",
+        "lat": 43.87142962389218,
+        "lng": 18.49611361639408,
+        "zoom": 6
+      }
+    }
+  ],
+  "actors": [
+    {
+      "_id": "64359a3047eb967304f11655",
+      "name": "Adna",
+      "avatar": {
+        "timeCreated": "2023-04-11T17:34:31.348Z",
+        "_id": "64359a2747eb967304f11654",
+        "width": 1247,
+        "height": 1440,
+        "url": "https://loco-us.s3.us-west-1.amazonaws.com/066933b0-6c3d-448e-b6f0-f86e24f6d6c5.png",
+        "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-066933b0-6c3d-448e-b6f0-f86e24f6d6c5.png",
+        "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-066933b0-6c3d-448e-b6f0-f86e24f6d6c5.png",
+        "remote": "066933b0-6c3d-448e-b6f0-f86e24f6d6c5.png",
+        "thumbRemote": "thumb-066933b0-6c3d-448e-b6f0-f86e24f6d6c5.png",
+        "miniThumbRemote": "mini-thumb-066933b0-6c3d-448e-b6f0-f86e24f6d6c5.png",
+        "type": "IMAGE",
+        "size": 212820,
+        "__v": 0
+      }
+    }
+  ],
+  "pathPoints": [],
+  "achievements": [
+    {
+      "unlocked": false,
+      "_id": "6480736e11622f51d8e8027c",
+      "name": "Prvi nivo",
+      "text": "Level 1",
+      "thumb": {
+        "timeCreated": "2023-06-07T12:08:31.273Z",
+        "_id": "6480733f11622f51d8e7e432",
+        "width": 1023,
+        "height": 806,
+        "url": "https://loco-us.s3.us-west-1.amazonaws.com/61220fa2-75c6-4b61-863e-aa5de824fbf3.png",
+        "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-61220fa2-75c6-4b61-863e-aa5de824fbf3.png",
+        "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-61220fa2-75c6-4b61-863e-aa5de824fbf3.png",
+        "remote": "61220fa2-75c6-4b61-863e-aa5de824fbf3.png",
+        "thumbRemote": "thumb-61220fa2-75c6-4b61-863e-aa5de824fbf3.png",
+        "miniThumbRemote": "mini-thumb-61220fa2-75c6-4b61-863e-aa5de824fbf3.png",
+        "type": "IMAGE",
+        "size": 969235,
+        "__v": 0
+      },
+      "file": "6480735611622f51d8e7e433"
+    },
+    {
+      "unlocked": false,
+      "_id": "6483390d11622f51d837f41a",
+      "name": "Drugi nivo",
+      "thumb": {
+        "timeCreated": "2023-06-09T14:36:37.880Z",
+        "_id": "648338f511622f51d837f418",
+        "width": 595,
+        "height": 349,
+        "url": "https://loco-us.s3.us-west-1.amazonaws.com/86532eb2-d8a5-43f0-b2db-07c3dc04c560.png",
+        "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-86532eb2-d8a5-43f0-b2db-07c3dc04c560.png",
+        "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-86532eb2-d8a5-43f0-b2db-07c3dc04c560.png",
+        "remote": "86532eb2-d8a5-43f0-b2db-07c3dc04c560.png",
+        "thumbRemote": "thumb-86532eb2-d8a5-43f0-b2db-07c3dc04c560.png",
+        "miniThumbRemote": "mini-thumb-86532eb2-d8a5-43f0-b2db-07c3dc04c560.png",
+        "type": "IMAGE",
+        "size": 94688,
+        "__v": 0
+      },
+      "file": "6483390411622f51d837f419"
+    },
+    {
+      "unlocked": false,
+      "_id": "64833ff911622f51d8389628",
+      "name": "Treći nivo",
+      "thumb": {
+        "timeCreated": "2023-06-09T15:06:12.987Z",
+        "_id": "64833fe411622f51d8389626",
+        "width": 225,
+        "height": 225,
+        "url": "https://loco-us.s3.us-west-1.amazonaws.com/73e546ea-b5c2-4508-8ae0-6f17a7004413.png",
+        "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-73e546ea-b5c2-4508-8ae0-6f17a7004413.png",
+        "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-73e546ea-b5c2-4508-8ae0-6f17a7004413.png",
+        "remote": "73e546ea-b5c2-4508-8ae0-6f17a7004413.png",
+        "thumbRemote": "thumb-73e546ea-b5c2-4508-8ae0-6f17a7004413.png",
+        "miniThumbRemote": "mini-thumb-73e546ea-b5c2-4508-8ae0-6f17a7004413.png",
+        "type": "IMAGE",
+        "size": 3445,
+        "__v": 0
+      },
+      "file": "64833ff011622f51d8389627"
+    }
+  ],
+  "presetTeamNames": [],
+  "presetTeamAvatars": [],
+  "_id": "643599d047eb967304f115db",
+  "name": "Mislimetar",
+  "options": {
+    "showAvatars": true,
+    "selfGuided": false,
+    "isForSale": false,
+    "nextoTour": false,
+    "_id": "643599d047eb967304f115dc",
+    "location": {
+      "_id": "643599d047eb967304f115dd",
+      "dateTime": "2023-04-11T17:33:04.743Z",
+      "lat": 43.87142962389218,
+      "lng": 18.49611361639408,
+      "zoom": 6
+    }
+  },
+  "team": "643599b047eb967304f10aff",
+  "__v": 22,
+  "description": "This is story subtitle.",
+  "poster": {
+    "timeCreated": "2023-06-21T14:54:39.967Z",
+    "_id": "64930f2f11622f51d8ae0d54",
+    "width": 750,
+    "height": 462,
+    "url": "https://loco-us.s3.us-west-1.amazonaws.com/f0c74f7b-4ac0-403e-8bc2-c561aa52e7e4.jpg",
+    "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-f0c74f7b-4ac0-403e-8bc2-c561aa52e7e4.jpg",
+    "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-f0c74f7b-4ac0-403e-8bc2-c561aa52e7e4.jpg",
+    "remote": "f0c74f7b-4ac0-403e-8bc2-c561aa52e7e4.jpg",
+    "thumbRemote": "thumb-f0c74f7b-4ac0-403e-8bc2-c561aa52e7e4.jpg",
+    "miniThumbRemote": "mini-thumb-f0c74f7b-4ac0-403e-8bc2-c561aa52e7e4.jpg",
+    "type": "IMAGE",
+    "size": 576206,
+    "__v": 0
+  },
+  "timeCreated": "2023-06-21T14:54:50.154Z"
+}

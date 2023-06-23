@@ -27,7 +27,7 @@ class StorySelectScreen extends StatelessWidget {
                         ? SelectorCard(
                             title: story.name,
                             categoryColor: Colors.green,
-                            categoryName: story.id,
+                            categoryName: story.description,
                             image: story.poster,
                           ).gestures(onTap: () {
                             appState.selectStory(story.id, context);
@@ -35,7 +35,7 @@ class StorySelectScreen extends StatelessWidget {
                         : SelectorCard(
                             title: story.name,
                             categoryColor: Colors.red,
-                            categoryName: story.id,
+                            categoryName: story.description,
                             // image: story.poster,
                           ).gestures(onTap: () {
                             appState.selectStory(story.id, context);

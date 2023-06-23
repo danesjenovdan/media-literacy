@@ -1,6 +1,7 @@
 class Story {
   final String id;
   final String name;
+  final String description;
   final List<Actor> actors;
   final List<Chat> chats;
   final RemoteImageDefinition? poster;
@@ -8,6 +9,7 @@ class Story {
   Story.fromJson(Map<String, dynamic> json)
       : id = json['_id'],
         name = json['name'],
+        description = json['description'] ?? '',
         actors = Actor.fromJsonList(json['actors']),
         chats = Chat.fromJsonList(json['chats']),
         poster = json['poster'] != null ? RemoteImageDefinition.fromJson(json['poster']) : null {
@@ -55,6 +57,7 @@ class RemoteImageDefinition {
 class Chat {
   final String id;
   final String title;
+  final String description;
   final bool isMainChat;
   final List<Thread> threads;
   final RemoteImageDefinition? poster;
@@ -64,6 +67,7 @@ class Chat {
   Chat.fromJson(Map<String, dynamic> json)
       : id = json['_id'],
         title = json['title'],
+        description = json['description'] ?? '',
         isMainChat = json['isMainChat'] ?? false,
         threads = Thread.fromJsonList(json['threads']),
         poster = json['poster'] != null ? RemoteImageDefinition.fromJson(json['poster']) : null {
