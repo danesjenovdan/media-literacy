@@ -14,6 +14,7 @@ class StorySelectScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: createAppBar(context, appState.appTitle),
+      extendBodyBehindAppBar: true,
       body: Container(
         color: AppColors.selectStoryBackground,
         child: ListView(
@@ -23,23 +24,14 @@ class StorySelectScreen extends StatelessWidget {
               child: Column(
                 children: [
                   ...appState.stories.values.map(
-                    (story) => story.id == '643599d047eb967304f115db'
-                        ? SelectorCard(
-                            title: story.name,
-                            categoryColor: Colors.green,
-                            categoryName: story.description,
-                            image: story.poster,
-                          ).gestures(onTap: () {
-                            appState.selectStory(story.id, context);
-                          })
-                        : SelectorCard(
-                            title: story.name,
-                            categoryColor: Colors.red,
-                            categoryName: story.description,
-                            // image: story.poster,
-                          ).gestures(onTap: () {
-                            appState.selectStory(story.id, context);
-                          }),
+                    (story) => SelectorCard(
+                      title: story.name,
+                      categoryColor: AppColors.chatSelectCircle,
+                      categoryName: story.description,
+                      image: story.poster,
+                    ).gestures(onTap: () {
+                      appState.selectStory(story.id, context);
+                    }),
                   ),
                 ],
               ),

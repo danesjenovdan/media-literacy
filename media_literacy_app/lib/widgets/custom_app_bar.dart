@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:media_literacy_app/state/app_state.dart';
+import 'package:provider/provider.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double height;
-  final Color backgroundColor;
   final Color appBarColor;
   final Widget child;
 
   const CustomAppBar({
     super.key,
     required this.height,
-    required this.backgroundColor,
     required this.appBarColor,
     required this.child,
   });
@@ -26,23 +25,21 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       color: Colors.black,
       child: SafeArea(
         child: Container(
-          color: backgroundColor,
-          child: Container(
-            height: preferredSize.height,
-            color: appBarColor,
-            alignment: Alignment.centerLeft,
-            child: child,
-          ).clipRRect(bottomLeft: 40),
+          height: preferredSize.height,
+          color: appBarColor,
+          alignment: Alignment.centerLeft,
+          child: child,
         ),
       ),
-    );
+    ).clipRRect(bottomLeft: 40);
   }
 }
 
 CustomAppBar createAppBar(BuildContext context, String title) {
+  var appState = context.watch<AppState>();
+
   return CustomAppBar(
     height: 80,
-    backgroundColor: AppColors.selectStoryBackground,
     appBarColor: AppColors.selectStoryAppBarBackground,
     child: Row(
       children: [
@@ -58,6 +55,11 @@ CustomAppBar createAppBar(BuildContext context, String title) {
             ),
           ).padding(left: 4),
         ),
+        ElevatedButton(
+            onPressed: () {
+              appState.resetDisplayedMessages();
+            },
+            child: const Text('reset progress')),
       ],
     ).padding(left: 16),
   );
@@ -66,7 +68,6 @@ CustomAppBar createAppBar(BuildContext context, String title) {
 CustomAppBar createAppBarWithBackButton(BuildContext context, String title) {
   return CustomAppBar(
     height: 80,
-    backgroundColor: AppColors.selectChatBackground,
     appBarColor: AppColors.selectStoryAppBarBackground,
     child: Row(
       children: [

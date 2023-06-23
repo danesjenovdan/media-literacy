@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+// import 'package:flutter/services.dart';
 import 'package:media_literacy_app/models/story.dart';
 import 'package:media_literacy_app/screens/chat_select.dart';
 import 'package:media_literacy_app/screens/chat.dart';
@@ -26,6 +26,9 @@ class AppColors {
 
   static Color chatResponseBackground = const Color(0xFFFFE3D2);
   static Color chatResponseOptionBackground = const Color(0xFF333333);
+
+  static Color chatSelectCircle = const Color(0xFF9CD9D3);
+  static Color chapterSelectCircle = const Color(0xFFFFE3D2);
 }
 
 class AppTextStyles {
@@ -76,42 +79,46 @@ class AppState extends ChangeNotifier {
   // list of already displayed messages for each chat id
   Map<String, DisplayedState> displayedChatMessages = {};
 
-  Future<bool> initAppState() async {
-    final Map<String, dynamic> assets = jsonDecode(await rootBundle.loadString('AssetManifest.json'));
+  Future<List<String>> loadRemoteStoryList() async {
+    var url = "https://api.locogames.live/v1/team/643599b047eb967304f10aff/locale/sr/stories/translations";
+    var response = await http.get(Uri.parse(url));
+    if (response.statusCode == 200) {
+      var jsonData = jsonDecode(response.body);
+      List<dynamic> stories = jsonData["data"] ?? [];
+      return stories.map((story) => story["_id"] as String).toList();
+    } else {
+      throw Exception("Failed to load stories");
+    }
+  }
 
-    var storyIds = assets.keys.where((String key) => key.contains('stories/') && key.endsWith('.json')).map((key) {
-      var regex = RegExp(r'story-([0-9a-f]+)\.json$');
-      return regex.firstMatch(key)?.group(1) ?? '';
-    }).where((key) => key.isNotEmpty);
-
-    // var tempDir = await getTemporaryDirectory();
-
-    for (var storyId in storyIds) {
-      if (storyId == "643599d047eb967304f115db") {
-        var response = await http.get(Uri.parse("https://api.locogames.live/v1/story/$storyId/bundleInfo"));
-        if (response.statusCode == 200) {
-          var jsonData = jsonDecode(response.body);
-          var zipResponse = await http.get(Uri.parse(jsonData["data"]["bundle"]["url"]));
-          if (zipResponse.statusCode == 200) {
-            final archive = ZipDecoder().decodeBytes(zipResponse.bodyBytes);
-            for (final file in archive) {
-              if (file.isFile && file.name.endsWith(".json")) {
-                // var storyFile = File("${tempDir.path}/story-${file.name}");
-                // await storyFile.create(recursive: true);
-                // storyFile.writeAsBytesSync(file.content);
-                stories[storyId] = Story.fromJson(jsonDecode(utf8.decode(file.content)));
-              }
-            }
-          } else {
-            throw Exception("Failed to load zip");
+  Future<Story> loadRemoteStory(String storyId) async {
+    var url = "https://api.locogames.live/v1/story/$storyId/bundleInfo";
+    var response = await http.get(Uri.parse(url));
+    if (response.statusCode == 200) {
+      var jsonData = jsonDecode(response.body);
+      var zipResponse = await http.get(Uri.parse(jsonData["data"]["bundle"]["url"]));
+      if (zipResponse.statusCode == 200) {
+        final archive = ZipDecoder().decodeBytes(zipResponse.bodyBytes);
+        for (final file in archive) {
+          if (file.isFile && file.name.endsWith(".json")) {
+            return Story.fromJson(jsonDecode(utf8.decode(file.content)));
           }
-        } else {
-          throw Exception("Failed to load story");
         }
+        throw Exception("Failed to find story json");
       } else {
-        String data = await rootBundle.loadString("assets/stories/story-$storyId.json");
-        stories[storyId] = Story.fromJson(jsonDecode(data));
+        throw Exception("Failed to load zip");
       }
+    } else {
+      throw Exception("Failed to load story");
+    }
+  }
+
+  Future<bool> initAppState() async {
+    stories = {};
+
+    var storyIds = await loadRemoteStoryList();
+    for (var storyId in storyIds) {
+      stories[storyId] = await loadRemoteStory(storyId);
     }
 
     stories = Map.fromEntries(stories.entries.toList()..sort((e1, e2) => e1.value.name.compareTo(e2.value.name)));
@@ -174,6 +181,11 @@ class AppState extends ChangeNotifier {
     state.points += amount;
     notifyListeners();
   }
+
+  void resetDisplayedMessages() {
+    displayedChatMessages = {};
+    notifyListeners();
+  }
 }
 
 class DisplayedState {
@@ -181,3 +193,15 @@ class DisplayedState {
   List<DisplayedMessage> messageList = [];
   List<String> threadStack = [];
 }
+
+// final Map<String, dynamic> assets = jsonDecode(await rootBundle.loadString('AssetManifest.json'));
+
+// var storyIds = assets.keys.where((String key) => key.contains('stories/') && key.endsWith('.json')).map((key) {
+//   var regex = RegExp(r'story-([0-9a-f]+)\.json$');
+//   return regex.firstMatch(key)?.group(1) ?? '';
+// }).where((key) => key.isNotEmpty);
+
+// for (var storyId in storyIds) {
+//     String data = await rootBundle.loadString("assets/stories/story-$storyId.json");
+//     stories[storyId] = Story.fromJson(jsonDecode(data));
+// }

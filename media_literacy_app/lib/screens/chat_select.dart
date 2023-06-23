@@ -17,6 +17,7 @@ class ChatSelectScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: createAppBarWithBackButton(context, story.name),
+      extendBodyBehindAppBar: true,
       body: Container(
         color: AppColors.selectChatBackground,
         child: ListView(
@@ -28,7 +29,7 @@ class ChatSelectScreen extends StatelessWidget {
                   ...story.chats.map(
                     (chat) => SelectorCard(
                       title: chat.title,
-                      categoryColor: chat.isMainChat ? Colors.green : Colors.red,
+                      categoryColor: AppColors.chapterSelectCircle,
                       categoryName: chat.description,
                       image: chat.poster,
                     ).gestures(onTap: () {

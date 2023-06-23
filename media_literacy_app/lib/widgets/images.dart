@@ -2,6 +2,7 @@ import 'package:flutter_image/flutter_image.dart';
 import 'package:flutter/material.dart';
 import 'package:media_literacy_app/models/story.dart';
 import 'package:progressive_image/progressive_image.dart';
+import 'package:styled_widget/styled_widget.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class RemoteProgressiveImageLoader extends StatelessWidget {
@@ -20,8 +21,7 @@ class RemoteProgressiveImageLoader extends StatelessWidget {
       image: NetworkImageWithRetry(image.url),
       width: image.width.toDouble(),
       height: image.height.toDouble(),
-      fit: fit,
-    );
+    ).fittedBox(fit: fit).clipRect();
   }
 }
 
@@ -36,7 +36,6 @@ class FadeInImageLoader extends StatelessWidget {
     return FadeInImage(
       placeholder: MemoryImage(kTransparentImage),
       image: NetworkImageWithRetry(imageUrl),
-      fit: fit,
-    );
+    ).fittedBox(fit: fit).clipRect();
   }
 }

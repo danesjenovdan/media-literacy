@@ -454,7 +454,7 @@
               "type": "IMAGE",
               "pauseBefore": 0,
               "timeWriting": 0,
-              "actor": "64359a3047eb967304f11655",
+              "actor": "NARRATOR",
               "isInterstitial": false,
               "file": {
                 "timeCreated": "2023-06-07T12:02:41.328Z",
@@ -515,7 +515,7 @@
               "type": "IMAGE",
               "pauseBefore": 0,
               "timeWriting": 0,
-              "actor": "64359a3047eb967304f11655",
+              "actor": "NARRATOR",
               "file": {
                 "timeCreated": "2023-06-07T12:05:02.702Z",
                 "_id": "6480726e11622f51d8e787ed",
@@ -1926,7 +1926,7 @@
                     "votes": [],
                     "_id": "64833a2a11622f51d8382809",
                     "buttonText": "Kad je usvojena odluka o nošenju uniformi?",
-                    "text": "Ipak imamo ovu informaciju. Koju nemamo?",
+                    "text": "Misliš da u članku nije odgovoreno na to pitanje? Sjeti se članka i razmisli opet!",
                     "thread": "6483397211622f51d837fbfb",
                     "hideResponseToChat": false
                   },
@@ -1934,15 +1934,17 @@
                     "votes": [],
                     "_id": "64833a2a11622f51d8382808",
                     "buttonText": " Ko je usvojio odluku o nošenju uniformi? ",
-                    "text": "Tačno, znamo i kada i zašto i gdje je ovo usvojeno, ali ne znamo ko je donio odluku  - škola, ministarstvo, skupština....",
-                    "thread": "6483397211622f51d837fbfb"
+                    "text": "",
+                    "thread": "6483397211622f51d837fbfb",
+                    "hideResponseToChat": true
                   },
                   {
                     "votes": [],
                     "_id": "64833a2a11622f51d8382807",
                     "buttonText": "Zašto je odluka o nošenju uniformi usvojena?",
-                    "text": "Ipak imamo ovu informaciju. Koju nemamo?",
-                    "thread": "6483397211622f51d837fbfb"
+                    "text": "Misliš da u članku nije odgovoreno na to pitanje? Sjeti se članka i razmisli opet!",
+                    "thread": "6483397211622f51d837fbfb",
+                    "hideResponseToChat": false
                   }
                 ],
                 "inputOptions": [
@@ -2125,7 +2127,8 @@
                     "_id": "64833dd311622f51d8385f0d",
                     "buttonText": "Činjenica",
                     "text": "Bravo, ovo je činjenica, ne može neko misliti da nema, ako podaci kažu da ima.",
-                    "thread": "6483397211622f51d837fbfb"
+                    "thread": "6483397211622f51d837fbfb",
+                    "hideResponseToChat": true
                   },
                   {
                     "votes": [],
@@ -2205,7 +2208,7 @@
                     "buttonText": "Mišljenje",
                     "text": "Tačno, ovo je samo mišljenje oko kojeg se možemo složiti ili ne.",
                     "thread": "6483397211622f51d837fbfb",
-                    "hideResponseToChat": false
+                    "hideResponseToChat": true
                   }
                 ],
                 "inputOptions": [
@@ -2666,9 +2669,2299 @@
       "isLocationLocked": false,
       "isPreview": false,
       "actors": [],
-      "threads": [],
+      "threads": [
+        {
+          "nextStoryThreadMessageIndex": 0,
+          "awaitingResponse": false,
+          "messages": [
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64934dfc11622f51d8b8c6a5",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64934dfc11622f51d8b8c6a6",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "64934dfc11622f51d8b8c6a7",
+                  "dateTime": "2023-06-21T19:22:36.885Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-21T19:22:36.885Z",
+              "_id": "64934dfc11622f51d8b8c6a4",
+              "type": "YOUTUBE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "NARRATOR",
+              "youtubeId": "HXbsqttkNu0",
+              "youtubeThumbUrl": "https://i.ytimg.com/vi/HXbsqttkNu0/mqdefault.jpg",
+              "youtubeTitle": "Svjetska zdravstvena organizacija nije “upozorila” da bebe vakcinisanih majki imaju srčane probleme",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64934ee511622f51d8b8d2ce",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64934ee511622f51d8b8d2d4",
+                    "buttonText": "Vozač Mercedesa",
+                    "text": "",
+                    "thread": "64934dba11622f51d8b8b785",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64934ee511622f51d8b8d2d3",
+                    "buttonText": "Ljekari koji su pružali prvu pomoć ",
+                    "text": "",
+                    "thread": "64934dba11622f51d8b8b785",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64934ee511622f51d8b8d2d2",
+                    "buttonText": "Dodi Fayed, Dianin ljubavnik  ",
+                    "text": "",
+                    "thread": "64934dba11622f51d8b8b785",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64934ee511622f51d8b8d2d1",
+                    "buttonText": "Kraljevska porodica",
+                    "text": "",
+                    "thread": "64934dba11622f51d8b8b785",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64934ee511622f51d8b8d2d0",
+                    "buttonText": "Britanska tajna služba",
+                    "text": "",
+                    "thread": "64934dba11622f51d8b8b785",
+                    "hideResponseToChat": true
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64934ee511622f51d8b8d2d5",
+                    "thread": "64934dba11622f51d8b8b785"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64934ee511622f51d8b8d2cf",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64934ee511622f51d8b8d2d6",
+                  "dateTime": "2023-06-21T19:26:29.187Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-21T19:26:29.187Z",
+              "_id": "64934ee511622f51d8b8d2cd",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Ko bi sve bio dio “zavjereničke grupe” u teoriji zavjere o Dianinoj smrti: (više odgovora je tačno)",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "649442be11622f51d8d1d209",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "649442be11622f51d8d1d20d",
+                    "buttonText": "Dokazu koji podržava teoriju zavjere ",
+                    "text": "Razmisli još jednom!",
+                    "thread": "649442be11622f51d8d1d41d",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "649442be11622f51d8d1d20c",
+                    "buttonText": "Postojanju tajnog zapleta ",
+                    "text": "",
+                    "thread": "649442be11622f51d8d1d41e",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "649442be11622f51d8d1d20b",
+                    "buttonText": "Tezi da “slučajnosti ne postoje”",
+                    "text": "Razmisli još jednom!",
+                    "hideResponseToChat": false
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "649442be11622f51d8d1d20e",
+                    "thread": "64934dba11622f51d8b8b785"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "649442be11622f51d8d1d20a",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "649442be11622f51d8d1d20f",
+                  "dateTime": "2023-06-22T12:46:54.088Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T12:46:54.088Z",
+              "_id": "649442be11622f51d8d1d208",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Prema teoriji o planiranom smaknuću Diane Spencer, kraljevska porodica željela je stati u kraj njenom “neadekvatnom” ponašanju kako bi sačuvali reputaciju. Kojem bi elementu najbolje odgovarala ova teza:",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "649442fc11622f51d8d1d627",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "649442fc11622f51d8d1d62b",
+                    "buttonText": "Vozač Mercedesa bio je povezan s britanskom tajnom službom ",
+                    "text": "",
+                    "thread": "64934dba11622f51d8b8b785",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "649442fc11622f51d8d1d62a",
+                    "buttonText": "Diana je u vrijeme udesa bila trudna – krunski dokaz namjera kraljevske porodice ",
+                    "text": "Razmisli još jednom!",
+                    "thread": "64934dba11622f51d8b8b785",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "649442fc11622f51d8d1d629",
+                    "buttonText": "Ljekari su prekršili protokol i nisu prevezli Dianu u prvu najbližu bolnicu ",
+                    "text": "Razmisli još jednom!",
+                    "hideResponseToChat": false,
+                    "thread": "64934dba11622f51d8b8b785"
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "649442fc11622f51d8d1d62c",
+                    "thread": "64934dba11622f51d8b8b785"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "649442fc11622f51d8d1d628",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "649442fc11622f51d8d1d62d",
+                  "dateTime": "2023-06-22T12:47:56.894Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T12:47:56.894Z",
+              "_id": "649442fc11622f51d8d1d626",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta je “dokaz” u ovoj teoriji zavjere koji je prividno čini tačnom?",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6494446011622f51d8d2663d",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6494446011622f51d8d2663e",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "6494446011622f51d8d2663f",
+                  "dateTime": "2023-06-22T12:53:52.640Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T12:53:52.640Z",
+              "_id": "6494446011622f51d8d2663c",
+              "type": "IMAGE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "64359a3047eb967304f11655",
+              "file": {
+                "timeCreated": "2023-06-22T12:53:40.972Z",
+                "_id": "6494445411622f51d8d2663a",
+                "width": 865,
+                "height": 398,
+                "url": "https://loco-us.s3.us-west-1.amazonaws.com/b88ce3b2-da39-4e07-b575-34c4991f728f.png",
+                "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-b88ce3b2-da39-4e07-b575-34c4991f728f.png",
+                "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-b88ce3b2-da39-4e07-b575-34c4991f728f.png",
+                "remote": "b88ce3b2-da39-4e07-b575-34c4991f728f.png",
+                "thumbRemote": "thumb-b88ce3b2-da39-4e07-b575-34c4991f728f.png",
+                "miniThumbRemote": "mini-thumb-b88ce3b2-da39-4e07-b575-34c4991f728f.png",
+                "type": "IMAGE",
+                "size": 41670,
+                "__v": 0
+              }
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": false,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6494520511622f51d8d577f4",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "type": "NO_RESPONSE"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:52:05.239Z",
+              "_id": "6494520511622f51d8d577f5",
+              "type": "ACHIEVEMENT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "achievementId": "6494520411622f51d8d577f2"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": false,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "649479ff11622f51d8da68fe",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "type": "NO_RESPONSE"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T16:42:39.156Z",
+              "_id": "649479ff11622f51d8da68ff",
+              "type": "ACTION_QUEST_END",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actionOptions": {
+                "_id": "649479ff11622f51d8da6900",
+                "triggerChatId": "64934fda11622f51d8b8df8a"
+              }
+            }
+          ],
+          "writingStatusList": [],
+          "_id": "64934dba11622f51d8b8b785",
+          "name": "Main thread"
+        }
+      ],
       "_id": "643599e647eb967304f11602",
       "title": "Teorije zavjere",
+      "location": {
+        "_id": "643599d047eb967304f115dd",
+        "dateTime": "2023-04-11T17:33:04.743Z",
+        "lat": 43.87142962389218,
+        "lng": 18.49611361639408,
+        "zoom": 6
+      }
+    },
+    {
+      "isLocked": false,
+      "isHidden": false,
+      "isLocationLocked": false,
+      "isPreview": false,
+      "actors": [],
+      "threads": [
+        {
+          "nextStoryThreadMessageIndex": 0,
+          "awaitingResponse": false,
+          "messages": [
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "649444dd11622f51d8d27023",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "649444dd11622f51d8d27024",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "649444dd11622f51d8d27025",
+                  "dateTime": "2023-06-22T12:55:57.637Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T12:55:57.638Z",
+              "_id": "649444dd11622f51d8d27022",
+              "type": "YOUTUBE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "64359a3047eb967304f11655",
+              "youtubeId": "oMZ_tT4mhgA",
+              "youtubeThumbUrl": "https://i.ytimg.com/vi/oMZ_tT4mhgA/mqdefault.jpg",
+              "youtubeTitle": "“Rasvjetljavanje” predizbornih manipulacija u našem novom serijalu",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6494454911622f51d8d278d0",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "6494454911622f51d8d278d7",
+                    "buttonText": "Neinformisane odluke na izborima",
+                    "text": "",
+                    "thread": "64934fda11622f51d8b8df89",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6494454911622f51d8d278d6",
+                    "buttonText": "Podjele u društvu ",
+                    "text": "",
+                    "thread": "64934fda11622f51d8b8df89",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6494454911622f51d8d278d5",
+                    "buttonText": "Nezaposlenost ",
+                    "text": "",
+                    "hideResponseToChat": false,
+                    "thread": "64934fda11622f51d8b8df89"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6494454911622f51d8d278d4",
+                    "buttonText": "Sklonost nasilju i ekstremizmu",
+                    "text": "",
+                    "hideResponseToChat": true,
+                    "thread": "64934fda11622f51d8b8df89"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6494454911622f51d8d278d3",
+                    "buttonText": "Političari/ke koji/e podržavaju “zavjerološke” narative",
+                    "text": "",
+                    "hideResponseToChat": false,
+                    "thread": "64934fda11622f51d8b8df89"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6494454911622f51d8d278d2",
+                    "buttonText": "Nepovjerenje u institucije ",
+                    "text": "",
+                    "hideResponseToChat": true,
+                    "thread": "64934fda11622f51d8b8df89"
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "6494454911622f51d8d278d8",
+                    "thread": "64934fda11622f51d8b8df89"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6494454911622f51d8d278d1",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "6494454911622f51d8d278d9",
+                  "dateTime": "2023-06-22T12:57:45.666Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T12:57:45.666Z",
+              "_id": "6494454911622f51d8d278cf",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta bi bile negativne posljedice vjerovanja u teoriju zavjere prema kojoj mi ne biramo naše lidere/ke, već ih na pozicije stavljaju strani moćnici? (Odaberi tačne odgovore):",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6494462011622f51d8d27d54",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "6494462011622f51d8d27d5b",
+                    "buttonText": "Neinformisane odluke na izborima",
+                    "text": "",
+                    "thread": "64934fda11622f51d8b8df89",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6494462011622f51d8d27d5a",
+                    "buttonText": "Podjele u društvu",
+                    "text": "",
+                    "thread": "64934fda11622f51d8b8df89",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6494462011622f51d8d27d59",
+                    "buttonText": "Nezaposlenost ",
+                    "text": "",
+                    "thread": "64934fda11622f51d8b8df89",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6494462011622f51d8d27d58",
+                    "buttonText": "Sklonost nasilju i ekstremizmu ",
+                    "text": "",
+                    "hideResponseToChat": false,
+                    "thread": "64934fda11622f51d8b8df89"
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6494462011622f51d8d27d57",
+                    "buttonText": "Nepovjerenje u institucije ",
+                    "text": "",
+                    "thread": "64934fda11622f51d8b8df89",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6494462011622f51d8d27d56",
+                    "buttonText": "Političari/ke koji/e podržavaju “zavjerološke” narative ",
+                    "text": "",
+                    "thread": "64934fda11622f51d8b8df89",
+                    "hideResponseToChat": true
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "6494462011622f51d8d27d5c",
+                    "thread": "64934fda11622f51d8b8df89"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6494462011622f51d8d27d55",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "6494462011622f51d8d27d5d",
+                  "dateTime": "2023-06-22T13:01:20.624Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:01:20.624Z",
+              "_id": "6494462011622f51d8d27d53",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta bi bile negativne posljedice vjerovanja u teoriju zavjere prema kojoj mi ne biramo naše lidere/ke, već ih na pozicije stavljaju strani moćnici? (Odaberi tačne odgovore):",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6494472b11622f51d8d28f88",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6494472b11622f51d8d28f89",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "6494472b11622f51d8d28f8a",
+                  "dateTime": "2023-06-22T13:05:47.965Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:05:47.966Z",
+              "_id": "6494472b11622f51d8d28f87",
+              "type": "IMAGE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "64359a3047eb967304f11655",
+              "file": {
+                "timeCreated": "2023-06-22T13:05:39.389Z",
+                "_id": "6494472311622f51d8d28f85",
+                "width": 862,
+                "height": 362,
+                "url": "https://loco-us.s3.us-west-1.amazonaws.com/ab8fc1ea-2a0c-4ca5-aa25-1c99b1aeeef1.png",
+                "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-ab8fc1ea-2a0c-4ca5-aa25-1c99b1aeeef1.png",
+                "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-ab8fc1ea-2a0c-4ca5-aa25-1c99b1aeeef1.png",
+                "remote": "ab8fc1ea-2a0c-4ca5-aa25-1c99b1aeeef1.png",
+                "thumbRemote": "thumb-ab8fc1ea-2a0c-4ca5-aa25-1c99b1aeeef1.png",
+                "miniThumbRemote": "mini-thumb-ab8fc1ea-2a0c-4ca5-aa25-1c99b1aeeef1.png",
+                "type": "IMAGE",
+                "size": 38412,
+                "__v": 0
+              }
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": false,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6494523d11622f51d8d582b3",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "type": "NO_RESPONSE"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:53:01.313Z",
+              "_id": "6494523d11622f51d8d582b4",
+              "type": "ACHIEVEMENT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "achievementId": "6494523b11622f51d8d582b1"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": false,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64947a1d11622f51d8da6fd1",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "type": "NO_RESPONSE"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T16:43:09.361Z",
+              "_id": "64947a1d11622f51d8da6fd2",
+              "type": "ACTION_QUEST_END",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actionOptions": {
+                "_id": "64947a1d11622f51d8da6fd3",
+                "triggerChatId": "649446ce11622f51d8d28dfc"
+              }
+            }
+          ],
+          "writingStatusList": [],
+          "_id": "64934fda11622f51d8b8df89",
+          "name": "Main thread"
+        }
+      ],
+      "_id": "64934fda11622f51d8b8df8a",
+      "title": "Uzroci i posljedice",
+      "location": {
+        "_id": "643599d047eb967304f115dd",
+        "dateTime": "2023-04-11T17:33:04.743Z",
+        "lat": 43.87142962389218,
+        "lng": 18.49611361639408,
+        "zoom": 6
+      }
+    },
+    {
+      "isLocked": false,
+      "isHidden": false,
+      "isLocationLocked": false,
+      "isPreview": false,
+      "actors": [],
+      "threads": [
+        {
+          "nextStoryThreadMessageIndex": 0,
+          "awaitingResponse": false,
+          "messages": [
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6494474a11622f51d8d3be21",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6494474a11622f51d8d3be22",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "6494474a11622f51d8d3be23",
+                  "dateTime": "2023-06-22T13:06:18.613Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:06:18.614Z",
+              "_id": "6494474a11622f51d8d3be20",
+              "type": "YOUTUBE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "64359a3047eb967304f11655",
+              "youtubeId": "oMZ_tT4mhgA",
+              "youtubeThumbUrl": "https://i.ytimg.com/vi/oMZ_tT4mhgA/mqdefault.jpg",
+              "youtubeTitle": "“Rasvjetljavanje” predizbornih manipulacija u našem novom serijalu",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "649448a511622f51d8d43b36",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "649448a511622f51d8d43b37",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "NO_RESPONSE",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "649448a511622f51d8d43b38",
+                  "dateTime": "2023-06-22T13:12:05.721Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:12:05.722Z",
+              "_id": "649448a511622f51d8d43b35",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "U prethodnom videu osobe su iznijele 6 iskaza koji dolaze iz različitih perspektiva. Svaka izjava vezana je za po jednu od perspektiva koje nalazimo u kreativnoj tehnici za rješavanje problema koja se zove Šest Šešira. Ova tehnika omogućava suradnju i promišljanje iz različitih perspektiva. ",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "649448bc11622f51d8d444df",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "649448bc11622f51d8d444e0",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "NO_RESPONSE",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "649448bc11622f51d8d444e1",
+                  "dateTime": "2023-06-22T13:12:28.658Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:12:28.658Z",
+              "_id": "649448bc11622f51d8d444de",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Svaki šešeir ima svoju ulogu. ",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "649448ca11622f51d8d44c06",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "649448ca11622f51d8d44c07",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "NO_RESPONSE",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "649448ca11622f51d8d44c08",
+                  "dateTime": "2023-06-22T13:12:42.893Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:12:42.893Z",
+              "_id": "649448ca11622f51d8d44c05",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Plavi šešir predstavlja proces\nBijeli šešir predstavlja činjenice\nCrveni šešir predstavlja osjećaji\nŽuti šešir predstavlja prednosti i koristi\nCrni šešir predstavlja probleme i prepreke\nZeleni šešir predstavlja kreativna rješenja\n",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "649448d711622f51d8d45039",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "649448d711622f51d8d4503a",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "NO_RESPONSE",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "649448d711622f51d8d4503b",
+                  "dateTime": "2023-06-22T13:12:55.499Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:12:55.499Z",
+              "_id": "649448d711622f51d8d45038",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "U nastavku pokušaj prepoznati koja izjava odgovara kojem šeširu.",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6494495a11622f51d8d45480",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "6494495a11622f51d8d45487",
+                    "buttonText": "Plavi – proces",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6494495a11622f51d8d45486",
+                    "buttonText": "Bijeli – činjenice",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6494495a11622f51d8d45485",
+                    "buttonText": "Crveni – osjećaji",
+                    "text": "",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6494495a11622f51d8d45484",
+                    "buttonText": "Žuti – prednosti i koristi",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6494495a11622f51d8d45483",
+                    "buttonText": "Crni – problemi i prepreke",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "6494495a11622f51d8d45482",
+                    "buttonText": "Zeleni – kreativna rješenja",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "6494495a11622f51d8d45488",
+                    "thread": "649446ce11622f51d8d28dfb"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "6494495a11622f51d8d45481",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "6494495a11622f51d8d45489",
+                  "dateTime": "2023-06-22T13:15:06.498Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:15:06.498Z",
+              "_id": "6494495a11622f51d8d4547f",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Jako je teško odrediti kome vjerovati kada sve o čemu smo čuli uzmemo u obzir. Količina lažnih informacija koje pronalazimo može nas činiti prestrašenim i nesigurnim. ",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64944a3311622f51d8d460b8",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64944a3311622f51d8d460bc",
+                    "buttonText": "Plavi – proces",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944a3311622f51d8d460bb",
+                    "buttonText": "Bijeli – činjenice",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944a3311622f51d8d460ba",
+                    "buttonText": "Crveni – osjećaji",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944a8011622f51d8d466f2",
+                    "buttonText": "Žuti – prednosti i koristi",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944a8011622f51d8d466f1",
+                    "buttonText": "Crni – problemi i prepreke",
+                    "text": "",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944a8011622f51d8d466f0",
+                    "buttonText": "Zeleni – kreativna rješenja",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64944a3311622f51d8d460bd",
+                    "thread": "649446ce11622f51d8d28dfb"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64944a3311622f51d8d460b9",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64944a3311622f51d8d460be",
+                  "dateTime": "2023-06-22T13:18:43.443Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:18:43.444Z",
+              "_id": "64944a3311622f51d8d460b7",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Dijeljenje lažnih vijesti dodatno doprinosi ovom problemu. ",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64944b2211622f51d8d47434",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64944b2211622f51d8d4743b",
+                    "buttonText": "Plavi – proces",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944b2211622f51d8d4743a",
+                    "buttonText": "Bijeli – činjenice",
+                    "text": "",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944b2211622f51d8d47439",
+                    "buttonText": "Crveni – osjećaji",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944b2211622f51d8d47438",
+                    "buttonText": "Žuti – prednosti i koristi",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944b2211622f51d8d47437",
+                    "buttonText": "Crni – problemi i prepreke",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944b2211622f51d8d47436",
+                    "buttonText": "Zeleni – kreativna rješenja",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64944b2211622f51d8d4743c",
+                    "thread": "649446ce11622f51d8d28dfb"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64944b2211622f51d8d47435",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64944b2211622f51d8d4743d",
+                  "dateTime": "2023-06-22T13:22:42.886Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:22:42.886Z",
+              "_id": "64944b2211622f51d8d47433",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Više od pedeset medija nalazi se na “Red Flag” listi medija koju je kreiralo Raskrinkavanje.ba ",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64944bd511622f51d8d479aa",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64944bd511622f51d8d479b1",
+                    "buttonText": "Plavi – proces",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944bd511622f51d8d479b0",
+                    "buttonText": "Bijeli – činjenice",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944bd511622f51d8d479af",
+                    "buttonText": "Crveni – osjećaji",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944bd511622f51d8d479ae",
+                    "buttonText": "Žuti – prednosti i koristi",
+                    "text": "",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944bd511622f51d8d479ad",
+                    "buttonText": "Crni – problemi i prepreke",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944bd511622f51d8d479ac",
+                    "buttonText": "Zeleni – kreativna rješenja",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64944bd511622f51d8d479b2",
+                    "thread": "649446ce11622f51d8d28dfb"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64944bd511622f51d8d479ab",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64944bd511622f51d8d479b3",
+                  "dateTime": "2023-06-22T13:25:41.447Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:25:41.447Z",
+              "_id": "64944bd511622f51d8d479a9",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Problemi poput vjerovanja u teorije zavjere i lažne vijesti potiču nas da kritički promišljamo i istražujemo koristeći se relevantnim dokazima i metodama.",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64944d4c11622f51d8d495a6",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64944d4c11622f51d8d495ad",
+                    "buttonText": "Plavi – proces ",
+                    "text": "",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944d4c11622f51d8d495ac",
+                    "buttonText": "Bijeli – činjenice",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944d4c11622f51d8d495ab",
+                    "buttonText": "Crveni – osjećaji",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944d4c11622f51d8d495aa",
+                    "buttonText": "Žuti – prednosti i koristi",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944d4c11622f51d8d495a9",
+                    "buttonText": "Crni – problemi i prepreke",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944d4c11622f51d8d495a8",
+                    "buttonText": "Zeleni – kreativna rješenja",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64944d4c11622f51d8d495ae",
+                    "thread": "649446ce11622f51d8d28dfb"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64944d4c11622f51d8d495a7",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64944d4c11622f51d8d495af",
+                  "dateTime": "2023-06-22T13:31:56.046Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:31:56.046Z",
+              "_id": "64944d4c11622f51d8d495a5",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Da bismo napravili napredak u rješavanju problema nekredibilnih medija, možemo predložiti donošenje zakona o registraciji i vlasništvu online medija i obavezujućem impresumu.",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64944df211622f51d8d4a2be",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64944df211622f51d8d4a2c5",
+                    "buttonText": "Plavi – proces",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944df211622f51d8d4a2c4",
+                    "buttonText": "Bijeli – činjenice",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944df211622f51d8d4a2c3",
+                    "buttonText": "Crveni – osjećaji",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944df211622f51d8d4a2c2",
+                    "buttonText": "Žuti – prednosti i koristi",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944df211622f51d8d4a2c1",
+                    "buttonText": "Crni – problemi i prepreke",
+                    "text": "To nije odgovarajući šešir. Pokušaj opet",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944df211622f51d8d4a2c0",
+                    "buttonText": "Zeleni – kreativna rješenja",
+                    "text": "",
+                    "thread": "649446ce11622f51d8d28dfb",
+                    "hideResponseToChat": true
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64944df211622f51d8d4a2c6",
+                    "thread": "649446ce11622f51d8d28dfb"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64944df211622f51d8d4a2bf",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64944df211622f51d8d4a2c7",
+                  "dateTime": "2023-06-22T13:34:42.235Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:34:42.235Z",
+              "_id": "64944df211622f51d8d4a2bd",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Jedno od mogućih rješenja je i to da koristimo umjetnu inteligenciju, poput ChatGPT-a, kao raskrinkavača nekredibilnih medija. ",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64944e4d11622f51d8d4b00f",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64944e4d11622f51d8d4b010",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "64944e4d11622f51d8d4b011",
+                  "dateTime": "2023-06-22T13:36:13.301Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:36:13.302Z",
+              "_id": "64944e4d11622f51d8d4b00e",
+              "type": "IMAGE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "64359a3047eb967304f11655",
+              "file": {
+                "timeCreated": "2023-06-22T13:36:02.174Z",
+                "_id": "64944e4211622f51d8d4b00c",
+                "width": 831,
+                "height": 492,
+                "url": "https://loco-us.s3.us-west-1.amazonaws.com/f269dd47-4ebf-4393-8d29-613e9f78498f.png",
+                "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-f269dd47-4ebf-4393-8d29-613e9f78498f.png",
+                "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-f269dd47-4ebf-4393-8d29-613e9f78498f.png",
+                "remote": "f269dd47-4ebf-4393-8d29-613e9f78498f.png",
+                "thumbRemote": "thumb-f269dd47-4ebf-4393-8d29-613e9f78498f.png",
+                "miniThumbRemote": "mini-thumb-f269dd47-4ebf-4393-8d29-613e9f78498f.png",
+                "type": "IMAGE",
+                "size": 54874,
+                "__v": 0
+              }
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": false,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "6494527211622f51d8d58da4",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "type": "NO_RESPONSE"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:53:54.214Z",
+              "_id": "6494527211622f51d8d58da5",
+              "type": "ACHIEVEMENT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "achievementId": "6494527111622f51d8d58da2"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": false,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64947a2f11622f51d8da76a4",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "type": "NO_RESPONSE"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T16:43:27.279Z",
+              "_id": "64947a2f11622f51d8da76a5",
+              "type": "ACTION_QUEST_END",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actionOptions": {
+                "_id": "64947a2f11622f51d8da76a6",
+                "triggerChatId": "64944e9111622f51d8d4bb97"
+              }
+            }
+          ],
+          "writingStatusList": [],
+          "_id": "649446ce11622f51d8d28dfb",
+          "name": "Main thread"
+        }
+      ],
+      "_id": "649446ce11622f51d8d28dfc",
+      "title": "Rješavanje problema sa drugim perspektivama",
+      "location": {
+        "_id": "643599d047eb967304f115dd",
+        "dateTime": "2023-04-11T17:33:04.743Z",
+        "lat": 43.87142962389218,
+        "lng": 18.49611361639408,
+        "zoom": 6
+      }
+    },
+    {
+      "isLocked": false,
+      "isHidden": false,
+      "isLocationLocked": false,
+      "isPreview": false,
+      "actors": [],
+      "threads": [
+        {
+          "nextStoryThreadMessageIndex": 0,
+          "awaitingResponse": false,
+          "messages": [
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64944ea511622f51d8d4bb9f",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64944ea511622f51d8d4bba0",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "64944ea511622f51d8d4bba1",
+                  "dateTime": "2023-06-22T13:37:41.113Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:37:41.115Z",
+              "_id": "64944ea511622f51d8d4bb9e",
+              "type": "YOUTUBE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "64359a3047eb967304f11655",
+              "youtubeId": "oMZ_tT4mhgA",
+              "youtubeThumbUrl": "https://i.ytimg.com/vi/oMZ_tT4mhgA/mqdefault.jpg",
+              "youtubeTitle": "“Rasvjetljavanje” predizbornih manipulacija u našem novom serijalu"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64944f0711622f51d8d4c764",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64944f0711622f51d8d4c769",
+                    "buttonText": "Ima sigurno.",
+                    "text": "",
+                    "thread": "64944e9111622f51d8d4bb96",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944f0711622f51d8d4c768",
+                    "buttonText": "Ma kakvi.",
+                    "text": "",
+                    "thread": "64944e9111622f51d8d4bb96",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944f0711622f51d8d4c767",
+                    "buttonText": "Ne znam, previše sam zbunjen/a.",
+                    "text": "",
+                    "thread": "64944e9111622f51d8d4bb96",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944f0711622f51d8d4c766",
+                    "buttonText": "I don’t care.",
+                    "text": "",
+                    "thread": "64944e9111622f51d8d4bb96",
+                    "hideResponseToChat": true
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64944f0711622f51d8d4c76a",
+                    "thread": "64944e9111622f51d8d4bb96"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64944f0711622f51d8d4c765",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64944f0711622f51d8d4c76b",
+                  "dateTime": "2023-06-22T13:39:19.051Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:39:19.051Z",
+              "_id": "64944f0711622f51d8d4c763",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta ti misliš ima li smisla vjerovati ikakvim informacijama?",
+              "actor": "64359a3047eb967304f11655"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64944f2311622f51d8d4cd6c",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64944f2311622f51d8d4cd6d",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi",
+                "location": {
+                  "_id": "64944f2311622f51d8d4cd6e",
+                  "dateTime": "2023-06-22T13:39:47.784Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:39:47.784Z",
+              "_id": "64944f2311622f51d8d4cd6b",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Na ovo pitanje nema tačnog ili netačnog odgovora. Smisao u vjerovanju informacija možemo pronaći samo ako kritički razmišljamo i razvijamo svoju medijsku pismenost. To je jedini način da se snađemo u moru informacija koje dolaze do nas i probamo napraviti prave prosudbe, nakon što smo dobro promislili i istražili ono što vidimo, čujemo, čitamo ili slušamo. ",
+              "actor": "64359a3047eb967304f11655"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64944f3f11622f51d8d4d991",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64944f3f11622f51d8d4d992",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "64944f3f11622f51d8d4d993",
+                  "dateTime": "2023-06-22T13:40:15.926Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:40:15.927Z",
+              "_id": "64944f3f11622f51d8d4d990",
+              "type": "YOUTUBE",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actor": "64359a3047eb967304f11655",
+              "youtubeId": "oMZ_tT4mhgA",
+              "youtubeThumbUrl": "https://i.ytimg.com/vi/oMZ_tT4mhgA/mqdefault.jpg",
+              "youtubeTitle": "“Rasvjetljavanje” predizbornih manipulacija u našem novom serijalu"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64944f8111622f51d8d4e5e6",
+                "options": [
+                  {
+                    "votes": [],
+                    "_id": "64944f8111622f51d8d4e5ea",
+                    "buttonText": "Zeleno",
+                    "text": "",
+                    "thread": "64944e9111622f51d8d4bb96",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944f8111622f51d8d4e5e9",
+                    "buttonText": "Žuto",
+                    "text": "",
+                    "thread": "64944e9111622f51d8d4bb96",
+                    "hideResponseToChat": true
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64944f8111622f51d8d4e5e8",
+                    "buttonText": "Crveno",
+                    "text": "",
+                    "thread": "64944e9111622f51d8d4bb96",
+                    "hideResponseToChat": true
+                  }
+                ],
+                "inputOptions": [
+                  {
+                    "_id": "64944f8111622f51d8d4e5eb",
+                    "thread": "64944e9111622f51d8d4bb96"
+                  }
+                ],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64944f8111622f51d8d4e5e7",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "OPTIONS",
+                "confirmText": "Continue",
+                "timeOverThread": "NEW_THREAD",
+                "answerButtonText": "Answer",
+                "location": {
+                  "_id": "64944f8111622f51d8d4e5ec",
+                  "dateTime": "2023-06-22T13:41:21.889Z",
+                  "radius": 40,
+                  "label": "I'm here!",
+                  "lat": 43.87142962389218,
+                  "lng": 18.49611361639408
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:41:21.889Z",
+              "_id": "64944f8111622f51d8d4e5e5",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta misliš na kojoj si ti razini mišljenja bio?",
+              "actor": "64359a3047eb967304f11655"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64944f9311622f51d8d4ec34",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64944f9311622f51d8d4ec35",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi",
+                "location": {
+                  "_id": "64944f9311622f51d8d4ec36",
+                  "dateTime": "2023-06-22T13:41:39.396Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:41:39.396Z",
+              "_id": "64944f9311622f51d8d4ec33",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Hvala ti jer si koristeći Mislimetar razvijao/la svoje kritičko mišljenje i medijsku pismenost. ",
+              "actor": "64359a3047eb967304f11655"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": false,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "649452c211622f51d8d598c7",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "type": "NO_RESPONSE"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:55:14.888Z",
+              "_id": "649452c211622f51d8d598c8",
+              "type": "ACHIEVEMENT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "achievementId": "649452c111622f51d8d598c5"
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": false,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "649452cd11622f51d8d59e67",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "type": "NO_RESPONSE"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-22T13:55:25.991Z",
+              "_id": "649452cd11622f51d8d59e68",
+              "type": "ACTION_QUEST_END",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "actionOptions": { "_id": "649452cd11622f51d8d59e69" }
+            }
+          ],
+          "writingStatusList": [],
+          "_id": "64944e9111622f51d8d4bb96",
+          "name": "Main thread"
+        }
+      ],
+      "_id": "64944e9111622f51d8d4bb97",
+      "title": "Debate i diskusije",
       "location": {
         "_id": "643599d047eb967304f115dd",
         "dateTime": "2023-04-11T17:33:04.743Z",
@@ -2764,6 +5057,90 @@
         "__v": 0
       },
       "file": "64833ff011622f51d8389627"
+    },
+    {
+      "unlocked": false,
+      "_id": "6494520411622f51d8d577f2",
+      "name": "Četvrti nivo",
+      "thumb": {
+        "timeCreated": "2023-06-22T13:51:40.578Z",
+        "_id": "649451ec11622f51d8d577f0",
+        "width": 1280,
+        "height": 720,
+        "url": "https://loco-us.s3.us-west-1.amazonaws.com/7fdd1401-17d3-4b7c-a43e-b273e02af44e.jpg",
+        "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-7fdd1401-17d3-4b7c-a43e-b273e02af44e.jpg",
+        "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-7fdd1401-17d3-4b7c-a43e-b273e02af44e.jpg",
+        "remote": "7fdd1401-17d3-4b7c-a43e-b273e02af44e.jpg",
+        "thumbRemote": "thumb-7fdd1401-17d3-4b7c-a43e-b273e02af44e.jpg",
+        "miniThumbRemote": "mini-thumb-7fdd1401-17d3-4b7c-a43e-b273e02af44e.jpg",
+        "type": "IMAGE",
+        "size": 418738,
+        "__v": 0
+      },
+      "file": "649451fa11622f51d8d577f1"
+    },
+    {
+      "unlocked": false,
+      "_id": "6494523b11622f51d8d582b1",
+      "name": "Peti nivo",
+      "thumb": {
+        "timeCreated": "2023-06-22T13:52:39.249Z",
+        "_id": "6494522711622f51d8d582af",
+        "width": 1280,
+        "height": 720,
+        "url": "https://loco-us.s3.us-west-1.amazonaws.com/b8dbe72c-18f0-4bed-87bc-555d91c566e2.jpg",
+        "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-b8dbe72c-18f0-4bed-87bc-555d91c566e2.jpg",
+        "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-b8dbe72c-18f0-4bed-87bc-555d91c566e2.jpg",
+        "remote": "b8dbe72c-18f0-4bed-87bc-555d91c566e2.jpg",
+        "thumbRemote": "thumb-b8dbe72c-18f0-4bed-87bc-555d91c566e2.jpg",
+        "miniThumbRemote": "mini-thumb-b8dbe72c-18f0-4bed-87bc-555d91c566e2.jpg",
+        "type": "IMAGE",
+        "size": 333098,
+        "__v": 0
+      },
+      "file": "6494523211622f51d8d582b0"
+    },
+    {
+      "unlocked": false,
+      "_id": "6494527111622f51d8d58da2",
+      "name": "Šesti nivo",
+      "thumb": {
+        "timeCreated": "2023-06-22T13:53:32.869Z",
+        "_id": "6494525c11622f51d8d58da0",
+        "width": 1280,
+        "height": 720,
+        "url": "https://loco-us.s3.us-west-1.amazonaws.com/1aaa1285-a41b-44b8-babb-57a0f1c6dffe.jpg",
+        "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-1aaa1285-a41b-44b8-babb-57a0f1c6dffe.jpg",
+        "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-1aaa1285-a41b-44b8-babb-57a0f1c6dffe.jpg",
+        "remote": "1aaa1285-a41b-44b8-babb-57a0f1c6dffe.jpg",
+        "thumbRemote": "thumb-1aaa1285-a41b-44b8-babb-57a0f1c6dffe.jpg",
+        "miniThumbRemote": "mini-thumb-1aaa1285-a41b-44b8-babb-57a0f1c6dffe.jpg",
+        "type": "IMAGE",
+        "size": 371886,
+        "__v": 0
+      },
+      "file": "6494526811622f51d8d58da1"
+    },
+    {
+      "unlocked": false,
+      "_id": "649452c111622f51d8d598c5",
+      "name": "Sedmi nivo",
+      "thumb": {
+        "timeCreated": "2023-06-22T13:54:44.305Z",
+        "_id": "649452a411622f51d8d598c3",
+        "width": 1177,
+        "height": 762,
+        "url": "https://loco-us.s3.us-west-1.amazonaws.com/c5f68d6e-2e7b-445a-9850-0646fb4cbb0f.png",
+        "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-c5f68d6e-2e7b-445a-9850-0646fb4cbb0f.png",
+        "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-c5f68d6e-2e7b-445a-9850-0646fb4cbb0f.png",
+        "remote": "c5f68d6e-2e7b-445a-9850-0646fb4cbb0f.png",
+        "thumbRemote": "thumb-c5f68d6e-2e7b-445a-9850-0646fb4cbb0f.png",
+        "miniThumbRemote": "mini-thumb-c5f68d6e-2e7b-445a-9850-0646fb4cbb0f.png",
+        "type": "IMAGE",
+        "size": 322555,
+        "__v": 0
+      },
+      "file": "649452b411622f51d8d598c4"
     }
   ],
   "presetTeamNames": [],
@@ -2785,7 +5162,7 @@
     }
   },
   "team": "643599b047eb967304f10aff",
-  "__v": 22,
+  "__v": 26,
   "description": "This is story subtitle.",
   "poster": {
     "timeCreated": "2023-06-21T14:54:39.967Z",
@@ -2802,5 +5179,5 @@
     "size": 576206,
     "__v": 0
   },
-  "timeCreated": "2023-06-21T14:54:50.154Z"
+  "timeCreated": "2023-06-23T09:48:05.200Z"
 }

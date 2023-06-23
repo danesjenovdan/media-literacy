@@ -34,7 +34,15 @@ Widget buildMessage(BuildContext context, DisplayedMessage displayedMessage) {
         }
 
         return Column(
-          children: [const Text('Quest end'), Text('Next quest: ${nextChat.title}')],
+          children: [
+            // const Text('Quest end'),
+            Text('Next quest: ${nextChat.title}'),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.maybePop(context);
+                },
+                child: const Text('Finish quest!'))
+          ],
         );
       }
 
@@ -172,6 +180,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
     return Scaffold(
       appBar: createAppBarWithBackButton(context, appState.selectedChat!.title),
+      extendBodyBehindAppBar: true,
       body: Container(
         color: AppColors.selectChatBackground,
         child: Column(
