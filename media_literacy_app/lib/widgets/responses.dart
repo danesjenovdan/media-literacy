@@ -131,7 +131,7 @@ abstract class BaseQuizResponseState<T extends QuizResponse> extends State<T> {
   void _onTapOption(AppState appState, MessageResponseOption option) {
     if (option.isCorrect) {
       var points = quizMaxPoints - (disabledOptions.length * quizWrongAnswerPoints);
-      appState.addPoints(points);
+      // appState.addPoints(points);
       if (option.photo != null) {
         appState.addDisplayedMessage(DisplayedMessage.fromResponseImage(widget.message.thread!.id, widget.message.id, option.photo));
       } else {

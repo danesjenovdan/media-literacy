@@ -119,8 +119,15 @@ Future? queueNextMessage(AppState appState, DisplayedState displayedState) {
     var lastMessage = last.message!;
     var lastThread = lastMessage.thread!;
 
+    if (lastMessage.type == 'ACTION_QUEST_END') {
+      return Future.microtask(() {
+        appState.setCompleted();
+      });
+    }
+
     if (lastMessage.type.startsWith('ACTION')) {
       // TODO:
+      print(lastMessage.type);
       return null;
     }
 

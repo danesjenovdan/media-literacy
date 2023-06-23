@@ -31,6 +31,11 @@ class AppColors {
   static Color chapterSelectCircle = const Color(0xFFFFE3D2);
 
   static Color popupBackground = const Color(0xFFF6675B);
+
+  static Color checkIncompleteBackground = const Color(0xFF747474);
+  static Color checkCompleteBackground = const Color(0xFF9DFFCE);
+  static Color checkIncomplete = const Color(0xFFFFFFFF);
+  static Color checkComplete = const Color(0xFF125933);
 }
 
 class AppTextStyles {
@@ -138,7 +143,7 @@ class AppState extends ChangeNotifier {
   String? selectedStoryId;
   Story? selectedStory;
 
-  selectStory(String storyId, BuildContext context) {
+  void selectStory(String storyId, BuildContext context) {
     selectedStoryId = storyId;
     selectedStory = stories[storyId];
     notifyListeners();
@@ -158,7 +163,7 @@ class AppState extends ChangeNotifier {
   String? selectedChatId;
   Chat? selectedChat;
 
-  selectChat(String chatId, BuildContext context) {
+  void selectChat(String chatId, BuildContext context) {
     selectedChatId = chatId;
     selectedChat = selectedStory!.chats.firstWhere((chat) => chat.id == chatId);
     notifyListeners();
@@ -174,7 +179,7 @@ class AppState extends ChangeNotifier {
     return displayedChatMessages.putIfAbsent(selectedChatId!, () => DisplayedState());
   }
 
-  addDisplayedMessage(DisplayedMessage displayedMessage) {
+  void addDisplayedMessage(DisplayedMessage displayedMessage) {
     var state = getDisplayedState();
     state.messageList.add(displayedMessage);
     if (displayedMessage.type == DisplayedMessageType.message) {
@@ -185,10 +190,18 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  void addPoints(int amount) {
+  void setCompleted() {
     var state = getDisplayedState();
-    state.points += amount;
+    if (state.completed) {
+      return;
+    }
+    state.completed = true;
     notifyListeners();
+  }
+
+  bool isChatCompleted(chatId) {
+    var state = displayedChatMessages[chatId];
+    return state?.completed ?? false;
   }
 
   void resetDisplayedMessages() {
@@ -198,9 +211,9 @@ class AppState extends ChangeNotifier {
 }
 
 class DisplayedState {
-  int points = 0;
   List<DisplayedMessage> messageList = [];
   List<String> threadStack = [];
+  bool completed = false;
 }
 
 // final Map<String, dynamic> assets = jsonDecode(await rootBundle.loadString('AssetManifest.json'));

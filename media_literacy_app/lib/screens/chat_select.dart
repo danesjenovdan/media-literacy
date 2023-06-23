@@ -32,6 +32,8 @@ class ChatSelectScreen extends StatelessWidget {
                       categoryColor: AppColors.chapterSelectCircle,
                       categoryName: chat.description,
                       image: chat.poster,
+                      showCheck: true,
+                      checkComplete: appState.isChatCompleted(chat.id),
                     ).gestures(onTap: () {
                       appState.selectChat(chat.id, context);
                     }),
