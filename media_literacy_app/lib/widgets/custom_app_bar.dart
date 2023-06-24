@@ -70,7 +70,7 @@ CustomAppBar createAppBarWithBackButton(BuildContext context, String title) {
           },
         ),
         Expanded(
-          child: Text(title).textStyle(AppTextStyles.appBarSmallTitle).padding(left: 4),
+          child: Text(title).textStyle(AppTextStyles.appBarSmallTitle).padding(left: 4, right: 8),
         ),
       ],
     ).padding(left: 8), // IconButton already has an implicit padding of 8

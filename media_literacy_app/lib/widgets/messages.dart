@@ -13,7 +13,7 @@ class SystemMessage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text)
+    return Text(text.trim())
         .textAlignment(TextAlign.center)
         .textStyle(AppTextStyles.systemMessage)
         .padding(horizontal: 16, vertical: 8)
@@ -62,7 +62,7 @@ class NarratorMessage extends StatelessWidget {
       if (message.text.isEmpty) {
         return const SizedBox.shrink();
       }
-      content = Text(message.text).textStyle(AppTextStyles.message);
+      content = Text(message.text.trim()).textStyle(AppTextStyles.message);
     } else if (message.type == 'IMAGE') {
       content = AspectRatio(
         aspectRatio: message.image!.width / message.image!.height,
@@ -104,7 +104,7 @@ class IncomingMessage extends StatelessWidget {
       if (message.text.isEmpty) {
         return const SizedBox.shrink();
       }
-      content = Text(message.text).textStyle(AppTextStyles.message).padding(vertical: 8, horizontal: 12);
+      content = Text(message.text.trim()).textStyle(AppTextStyles.message).padding(vertical: 8, horizontal: 12);
     } else if (message.type == 'IMAGE') {
       content = AspectRatio(
         aspectRatio: message.image!.width / message.image!.height,
@@ -145,7 +145,7 @@ class OutgoingMessage extends StatelessWidget {
 
     Widget content;
     if (text != null) {
-      content = Text(text!).textStyle(AppTextStyles.message).padding(vertical: 8, horizontal: 12);
+      content = Text(text!.trim()).textStyle(AppTextStyles.message).padding(vertical: 8, horizontal: 12);
     } else if (image != null) {
       content = content = AspectRatio(
         aspectRatio: image!.width / image!.height,
