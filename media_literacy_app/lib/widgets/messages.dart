@@ -6,13 +6,6 @@ import 'package:media_literacy_app/widgets/images.dart';
 import 'package:media_literacy_app/widgets/lazy_youtube_player.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-var systemTextStyle = TextStyle(
-  fontSize: 18,
-  fontWeight: FontWeight.bold,
-  fontStyle: FontStyle.italic,
-  color: Colors.grey.shade700,
-);
-
 class SystemMessage extends StatelessWidget {
   final String text;
 
@@ -20,7 +13,11 @@ class SystemMessage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text).textAlignment(TextAlign.center).textStyle(systemTextStyle).padding(horizontal: 16, vertical: 8).alignment(Alignment.center);
+    return Text(text)
+        .textAlignment(TextAlign.center)
+        .textStyle(AppTextStyles.systemMessage)
+        .padding(horizontal: 16, vertical: 8)
+        .alignment(Alignment.center);
   }
 }
 

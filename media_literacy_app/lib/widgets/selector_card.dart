@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:media_literacy_app/models/story.dart';
 import 'package:media_literacy_app/state/app_state.dart';
 import 'package:media_literacy_app/widgets/images.dart';
@@ -30,36 +29,12 @@ class SelectorCard extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            image != null
-                ? AspectRatio(
-                    aspectRatio: 2,
-                    child: RemoteProgressiveImageLoader(
-                      image!,
-                      fit: BoxFit.cover,
-                    ))
-                : const SizedBox.shrink(),
-            Text(
-              title,
-              style: GoogleFonts.quicksand(
-                textStyle: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.text,
-                ),
-              ),
-            ).padding(all: 8),
+            image != null ? AspectRatio(aspectRatio: 2, child: RemoteProgressiveImageLoader(image!, fit: BoxFit.cover)) : const SizedBox.shrink(),
+            Text(title).textStyle(AppTextStyles.selectorCardTitle).padding(all: 8),
             Row(
               children: [
                 const SizedBox.square(dimension: 26).backgroundColor(categoryColor).clipOval(),
-                Text(
-                  categoryName,
-                  style: GoogleFonts.quicksand(
-                    textStyle: TextStyle(
-                      fontSize: 14,
-                      color: AppColors.text,
-                    ),
-                  ),
-                ).padding(left: 8),
+                Text(categoryName).textStyle(AppTextStyles.selectorCardCategory).padding(left: 8),
               ],
             ).padding(all: 8, top: 0),
           ],
@@ -79,11 +54,7 @@ class Check extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox.square(
       dimension: 26,
-      child: Icon(
-        Icons.check,
-        color: complete ? AppColors.checkComplete : AppColors.checkIncomplete,
-        size: 18,
-      ),
+      child: Icon(Icons.check, color: complete ? AppColors.checkComplete : AppColors.checkIncomplete, size: 18),
     ).backgroundColor(complete ? AppColors.checkCompleteBackground : AppColors.checkIncompleteBackground).clipOval();
   }
 }

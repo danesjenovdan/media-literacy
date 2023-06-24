@@ -1,6 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:media_literacy_app/screens/splash.dart';
 import 'package:media_literacy_app/state/app_state.dart';
-import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() {

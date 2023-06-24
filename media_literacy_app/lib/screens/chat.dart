@@ -8,7 +8,7 @@ import 'package:media_literacy_app/widgets/responses.dart';
 import 'package:provider/provider.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-Widget buildMessage(BuildContext context, DisplayedMessage displayedMessage) {
+Widget _buildMessage(BuildContext context, DisplayedMessage displayedMessage) {
   if (displayedMessage.type == DisplayedMessageType.system) {
     return SystemMessage(text: displayedMessage.text!);
   }
@@ -60,11 +60,12 @@ Widget buildMessage(BuildContext context, DisplayedMessage displayedMessage) {
     return IncomingMessage(message);
   }
 
+  // ignore: avoid_print
   print('ERROR: INVALID TYPE displayedMessage.type="${displayedMessage.type}"');
   throw ArgumentError.value(displayedMessage.type);
 }
 
-(Widget, bool) buildResponse(BuildContext context, AppState appState, DisplayedState displayedState) {
+(Widget, bool) _buildResponse(BuildContext context, AppState appState, DisplayedState displayedState) {
   var displayedMessages = displayedState.messageList;
 
   if (displayedMessages.isEmpty || displayedMessages.last.type != DisplayedMessageType.message) {
@@ -93,11 +94,12 @@ Widget buildMessage(BuildContext context, DisplayedMessage displayedMessage) {
     return (OptionsResponse(message: lastMessage), true);
   }
 
+  // ignore: avoid_print
   print('UNIMPLEMENTED RESPONSE: id="${lastMessage.id}" type="${lastMessage.response.type}"');
   return (Text('UNIMPLEMENTED RESPONSE: id="${lastMessage.id}" type="${lastMessage.response.type}"'), true);
 }
 
-Future? queueNextMessage(AppState appState, DisplayedState displayedState) {
+Future? _queueNextMessage(AppState appState, DisplayedState displayedState) {
   var displayedMessages = displayedState.messageList;
 
   // if no displayed messages, show first message in first thread
@@ -170,16 +172,16 @@ class _ChatScreenState extends State<ChatScreen> {
     var appState = context.watch<AppState>();
 
     var displayedState = appState.getDisplayedState();
-    next ??= queueNextMessage(appState, displayedState)?.whenComplete(() => next = null);
+    next ??= _queueNextMessage(appState, displayedState)?.whenComplete(() => next = null);
 
     var messageListView = ListView.builder(
       controller: _scrollController,
       itemCount: displayedState.messageList.length,
       itemBuilder: (context, index) =>
-          Styled.widget(child: buildMessage(context, displayedState.messageList[index])).padding(top: index == 0 ? 20 : 0),
+          Styled.widget(child: _buildMessage(context, displayedState.messageList[index])).padding(top: index == 0 ? 20 : 0),
     );
 
-    var (responseView, wrapResponse) = buildResponse(context, appState, displayedState);
+    var (responseView, wrapResponse) = _buildResponse(context, appState, displayedState);
 
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       _scrollToEnd();

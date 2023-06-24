@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:media_literacy_app/state/app_state.dart';
 import 'package:provider/provider.dart';
 import 'package:styled_widget/styled_widget.dart';
@@ -44,22 +43,14 @@ CustomAppBar createAppBar(BuildContext context, String title) {
     child: Row(
       children: [
         Expanded(
-          child: Text(
-            title,
-            style: GoogleFonts.quicksand(
-              textStyle: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-                color: AppColors.text,
-              ),
-            ),
-          ).padding(left: 4),
+          child: Text(title).textStyle(AppTextStyles.appBarTitle).padding(left: 4),
         ),
         ElevatedButton(
-            onPressed: () {
-              appState.resetDisplayedMessages();
-            },
-            child: const Text('reset progress')),
+          onPressed: () {
+            appState.resetDisplayedMessages();
+          },
+          child: const Text('reset progress'),
+        ),
       ],
     ).padding(left: 16),
   );
@@ -72,26 +63,14 @@ CustomAppBar createAppBarWithBackButton(BuildContext context, String title) {
     child: Row(
       children: [
         IconButton(
-          icon: const SizedBox.square(
-            dimension: 32,
-            child: Icon(Icons.arrow_back),
-          ).backgroundColor(AppColors.text).clipOval(),
+          icon: const SizedBox.square(dimension: 32, child: Icon(Icons.arrow_back)).backgroundColor(AppColors.text).clipOval(),
           color: Colors.white,
           onPressed: () {
             Navigator.maybePop(context);
           },
         ),
         Expanded(
-          child: Text(
-            title,
-            style: GoogleFonts.quicksand(
-              textStyle: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-                color: AppColors.text,
-              ),
-            ),
-          ).padding(left: 4),
+          child: Text(title).textStyle(AppTextStyles.appBarSmallTitle).padding(left: 4),
         ),
       ],
     ).padding(left: 8), // IconButton already has an implicit padding of 8

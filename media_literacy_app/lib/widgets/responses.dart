@@ -1,15 +1,12 @@
 import 'package:collection/collection.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:media_literacy_app/models/story.dart';
 import 'package:media_literacy_app/state/app_state.dart';
-import 'package:media_literacy_app/widgets/dialog.dart';
+import 'package:media_literacy_app/widgets/custom_dialog.dart';
 import 'package:media_literacy_app/widgets/images.dart';
 import 'package:provider/provider.dart';
 import 'package:styled_widget/styled_widget.dart';
-
-int quizMaxPoints = 50;
-int quizWrongAnswerPoints = 10;
 
 class ChatResponse extends StatelessWidget {
   final Widget child;
@@ -130,7 +127,7 @@ abstract class BaseQuizResponseState<T extends QuizResponse> extends State<T> {
 
   void _onTapOption(AppState appState, MessageResponseOption option) {
     if (option.isCorrect) {
-      var points = quizMaxPoints - (disabledOptions.length * quizWrongAnswerPoints);
+      // var points = quizMaxPoints - (disabledOptions.length * quizWrongAnswerPoints);
       // appState.addPoints(points);
       if (option.photo != null) {
         appState.addDisplayedMessage(DisplayedMessage.fromResponseImage(widget.message.thread!.id, widget.message.id, option.photo));
@@ -138,7 +135,7 @@ abstract class BaseQuizResponseState<T extends QuizResponse> extends State<T> {
         appState.addDisplayedMessage(DisplayedMessage.fromResponse(widget.message.thread!.id, widget.message.id, option.buttonText));
       }
 
-      appState.addDisplayedMessage(DisplayedMessage.system(text: '+$points points!'));
+      // appState.addDisplayedMessage(DisplayedMessage.system(text: '+$points points!'));
 
       var lastMessageIndex = widget.message.thread!.messages.indexWhere((m) => m.id == widget.message.id);
       if ((lastMessageIndex + 1) < widget.message.thread!.messages.length) {
@@ -174,10 +171,10 @@ class _QuizResponseState extends BaseQuizResponseState<QuizResponse> {
       alignment: Alignment.centerRight,
       children: [
         optionWidget,
-        Positioned(
-          right: 10,
-          child: Text('-$quizWrongAnswerPoints').textColor(Colors.red),
-        ),
+        // Positioned(
+        //   right: 10,
+        //   child: Text('-$quizWrongAnswerPoints').textColor(Colors.red),
+        // ),
       ],
     );
   }
@@ -222,11 +219,11 @@ class _PhotoQuizResponseState extends BaseQuizResponseState<PhotoQuizResponse> {
                 fit: BoxFit.cover,
               ),
             ).clipRRect(all: 8).opacity(0.66),
-            Positioned(
-              top: 8,
-              right: 8,
-              child: Text('-$quizWrongAnswerPoints').textColor(Colors.red).fontSize(21).fontWeight(FontWeight.bold),
-            ),
+            // Positioned(
+            //   top: 8,
+            //   right: 8,
+            //   child: Text('-$quizWrongAnswerPoints').textColor(Colors.red).fontSize(21).fontWeight(FontWeight.bold),
+            // ),
           ],
         ),
       );
