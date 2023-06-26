@@ -1,13 +1,10 @@
-import 'dart:convert';
-import 'package:archive/archive_io.dart';
 import 'package:flutter_image/flutter_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:http/http.dart' as http;
 import 'package:media_literacy_app/models/story.dart';
 import 'package:media_literacy_app/screens/chat_select.dart';
 import 'package:media_literacy_app/screens/chat.dart';
+import 'package:media_literacy_app/state/app_storage.dart';
 
 class AppColors {
   static const Color text = Color(0xFF333333);
@@ -149,80 +146,13 @@ class AppState extends ChangeNotifier {
   // list of loaded stories by story id
   Map<String, Story> stories = {};
 
-  Future<List<String>> _loadLocalStoryIDs() async {
-    Map<String, dynamic> assets = jsonDecode(await rootBundle.loadString('AssetManifest.json'));
-    var storyIdRegex = RegExp(r'stories/story-([0-9a-f]+)\.json$');
-    return assets.keys.map((key) => storyIdRegex.firstMatch(key)?.group(1) ?? '').where((key) => key.isNotEmpty).toList();
-  }
-
-  Future<List<String>> _loadRemoteStoryIDs() async {
-    var url = "https://api.locogames.live/v1/team/643599b047eb967304f10aff/locale/sr/stories/translations";
-    var response = await http.get(Uri.parse(url));
-    if (response.statusCode == 200) {
-      var jsonData = jsonDecode(response.body);
-      List<dynamic> stories = jsonData["data"] ?? [];
-      return stories.map((story) => story["_id"] as String).toList();
-    } else {
-      throw Exception("Failed to load team stories");
-    }
-  }
-
-  Future<Story> _loadLocalStory(String storyId) async {
-    String data = await rootBundle.loadString("assets/stories/story-$storyId.json");
-    return Story.fromJson(jsonDecode(data));
-  }
-
-  Future<Story> _loadRemoteStory(String storyId) async {
-    var url = "https://api.locogames.live/v1/story/$storyId/bundleInfo";
-    var response = await http.get(Uri.parse(url));
-    if (response.statusCode == 200) {
-      var jsonData = jsonDecode(response.body);
-      var zipResponse = await http.get(Uri.parse(jsonData["data"]["bundle"]["url"]));
-      if (zipResponse.statusCode == 200) {
-        var archive = ZipDecoder().decodeBytes(zipResponse.bodyBytes);
-        for (var file in archive) {
-          if (file.isFile && file.name.endsWith(".json")) {
-            return Story.fromJson(jsonDecode(utf8.decode(file.content)));
-          }
-        }
-        throw Exception("Failed to find story json in zip");
-      } else {
-        throw Exception("Failed to load story zip");
-      }
-    } else {
-      throw Exception("Failed to load story bundle");
-    }
-  }
-
-  Future _loadLocalStories() async {
-    stories = {};
-    var storyIds = await _loadLocalStoryIDs();
-    for (var storyId in storyIds) {
-      stories[storyId] = await _loadLocalStory(storyId);
-    }
-  }
-
-  Future _loadRemoteStories() async {
-    stories = {};
-    var storyIds = await _loadRemoteStoryIDs();
-    for (var storyId in storyIds) {
-      stories[storyId] = await _loadRemoteStory(storyId);
-    }
-  }
-
-  void _sortStories() {
-    stories = Map.fromEntries(stories.entries.toList()..sort((e1, e2) => e1.value.name.compareTo(e2.value.name)));
-  }
-
-  final bool _shouldLoadLocalStories = false;
-
   Future<bool> initAppState() async {
-    if (_shouldLoadLocalStories) {
-      await _loadLocalStories();
-    } else {
-      await _loadRemoteStories();
-    }
-    _sortStories();
+    AppStorage appStorage = AppStorage();
+    await appStorage.init();
+
+    stories = appStorage.stories;
+    stories = Map.fromEntries(stories.entries.toList()..sort((e1, e2) => e1.value.name.compareTo(e2.value.name)));
+
     return true;
   }
 
