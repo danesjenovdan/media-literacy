@@ -1,11 +1,11 @@
 name: media_literacy_app
-description: Media Literacy App
-publish_to: 'none'
+description: Mislimetar
+publish_to: "none"
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.5 <4.0.0'
+  sdk: ">=3.0.5 <4.0.0"
 
 dependencies:
   flutter:
@@ -28,6 +28,14 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/images/launcher_icon.png"
+  min_sdk_android: 21
 
 flutter:
   uses-material-design: true
