@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:media_literacy_app/models/story.dart';
 import 'package:media_literacy_app/screens/chat_select.dart';
 import 'package:media_literacy_app/screens/chat.dart';
+import 'package:media_literacy_app/screens/splash.dart';
 import 'package:media_literacy_app/state/app_storage.dart';
 
 class AppColors {
@@ -145,6 +146,14 @@ class AppConstants {
 class AppState extends ChangeNotifier {
   // list of loaded stories by story id
   Map<String, Story> stories = {};
+  // list of already displayed messages for each chat id
+  Map<String, DisplayedState> displayedChatMessages = {};
+
+  String? selectedStoryId;
+  Story? selectedStory;
+
+  String? selectedChatId;
+  Chat? selectedChat;
 
   Future<bool> initAppState() async {
     AppStorage appStorage = AppStorage();
@@ -156,8 +165,28 @@ class AppState extends ChangeNotifier {
     return true;
   }
 
-  String? selectedStoryId;
-  Story? selectedStory;
+  Future<bool> resetAppState(BuildContext context) async {
+    stories = {};
+    displayedChatMessages = {};
+    selectedStoryId = null;
+    selectedStory = null;
+    selectedChatId = null;
+    selectedChat = null;
+
+    var navigator = Navigator.of(context);
+    navigator.popUntil((route) => route.isFirst);
+
+    AppStorage appStorage = AppStorage();
+    await appStorage.clear();
+
+    navigator.pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => const SplashScreen(),
+      ),
+    );
+
+    return true;
+  }
 
   void selectStory(String storyId, BuildContext context) {
     selectedStoryId = storyId;
@@ -176,9 +205,6 @@ class AppState extends ChangeNotifier {
     );
   }
 
-  String? selectedChatId;
-  Chat? selectedChat;
-
   void selectChat(String chatId, BuildContext context) {
     selectedChatId = chatId;
     selectedChat = selectedStory!.chats.firstWhere((chat) => chat.id == chatId);
@@ -190,9 +216,6 @@ class AppState extends ChangeNotifier {
       ),
     );
   }
-
-  // list of already displayed messages for each chat id
-  Map<String, DisplayedState> displayedChatMessages = {};
 
   DisplayedState getDisplayedState() {
     return displayedChatMessages.putIfAbsent(selectedChatId!, () => DisplayedState());
@@ -221,11 +244,6 @@ class AppState extends ChangeNotifier {
   bool isChatCompleted(chatId) {
     var state = displayedChatMessages[chatId];
     return state?.completed ?? false;
-  }
-
-  void resetDisplayedMessages() {
-    displayedChatMessages = {};
-    notifyListeners();
   }
 }
 

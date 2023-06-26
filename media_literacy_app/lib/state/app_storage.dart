@@ -8,19 +8,20 @@ import 'package:path_provider/path_provider.dart';
 class AppStorage {
   Map<String, Story> stories = {};
 
-  Future<Directory> get _localFolder async {
+  Future<Directory> get _storiesStorageFolder async {
     final Directory folder = await getApplicationDocumentsDirectory();
-    await folder.create(recursive: true);
-    return folder;
+    final Directory storageFolder = Directory('${folder.path}/stories_storage');
+    await storageFolder.create(recursive: true);
+    return storageFolder;
   }
 
   Future<File> get _storiesFile async {
-    final Directory folder = await _localFolder;
+    final Directory folder = await _storiesStorageFolder;
     return File('${folder.path}/stories.json');
   }
 
   Future<Directory> _storyFolder(String storyId) async {
-    final Directory folder = await _localFolder;
+    final Directory folder = await _storiesStorageFolder;
     final Directory storyFolder = Directory('${folder.path}/$storyId');
     await storyFolder.create(recursive: true);
     return storyFolder;
@@ -51,6 +52,11 @@ class AppStorage {
 
   Future<File> _bundleStoryJsonFile(String storyId, Directory folder) async {
     return File('${folder.path}/story-$storyId.json');
+  }
+
+  Future<void> clear() async {
+    final Directory folder = await _storiesStorageFolder;
+    await folder.delete(recursive: true);
   }
 
   Future<void> init() async {

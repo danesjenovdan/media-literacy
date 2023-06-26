@@ -47,9 +47,9 @@ CustomAppBar createAppBar(BuildContext context, String title) {
         ),
         ElevatedButton(
           onPressed: () {
-            appState.resetDisplayedMessages();
+            appState.resetAppState(context);
           },
-          child: const Text('reset progress'),
+          child: const Text('reset + update stories'),
         ),
       ],
     ).padding(left: 16),
