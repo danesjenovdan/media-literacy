@@ -66,7 +66,7 @@ class NarratorMessage extends StatelessWidget {
     } else if (message.type == 'IMAGE') {
       content = AspectRatio(
         aspectRatio: message.image!.width / message.image!.height,
-        child: RemoteProgressiveImageLoader(message.image!),
+        child: RemoteProgressiveImageLoader(message.image!, openViewerOnTap: true),
       ).backgroundColor(AppColors.chatMessageIncomingBackground).clipRRect(all: 12);
     } else if (message.type == 'YOUTUBE') {
       content = Column(
@@ -108,7 +108,7 @@ class IncomingMessage extends StatelessWidget {
     } else if (message.type == 'IMAGE') {
       content = AspectRatio(
         aspectRatio: message.image!.width / message.image!.height,
-        child: RemoteProgressiveImageLoader(message.image!),
+        child: RemoteProgressiveImageLoader(message.image!, openViewerOnTap: true),
       );
     } else {
       return Text('TODO: UNIMPLEMENTED REGULAR MESSAGE: id="${message.id}" type="${message.type}"');
@@ -149,7 +149,7 @@ class OutgoingMessage extends StatelessWidget {
     } else if (image != null) {
       content = content = AspectRatio(
         aspectRatio: image!.width / image!.height,
-        child: RemoteProgressiveImageLoader(image!),
+        child: RemoteProgressiveImageLoader(image!, openViewerOnTap: true),
       ).constrained(maxWidth: maxWidth);
     } else {
       return const Text('TODO: UNIMPLEMENTED REGULAR MESSAGE: text and image both empty');

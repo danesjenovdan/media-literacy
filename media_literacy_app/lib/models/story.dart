@@ -43,6 +43,7 @@ class RemoteImageDefinition {
   final String id;
   final int width;
   final int height;
+  final String fileName;
   final String url;
   final String miniThumbUrl;
 
@@ -50,6 +51,7 @@ class RemoteImageDefinition {
       : id = json['_id'],
         width = json['width'],
         height = json['height'],
+        fileName = json['remote'],
         url = json['url'],
         miniThumbUrl = json['miniThumbUrl'];
 }
