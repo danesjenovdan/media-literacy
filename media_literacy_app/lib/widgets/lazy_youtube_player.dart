@@ -39,7 +39,7 @@ class _LazyYoutubePlayerState extends State<LazyYoutubePlayer> {
             child: const SizedBox.square(
               dimension: 48,
               child: Icon(Icons.play_arrow, color: Colors.white, size: 42),
-            ).backgroundColor(AppColors.youtubeMessageBackground).clipOval(),
+            ).backgroundColor(AppColors.youtubePlayButton).clipOval(),
           ),
         ],
       ).gestures(

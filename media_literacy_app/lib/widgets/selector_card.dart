@@ -43,13 +43,7 @@ class SelectorCard extends StatelessWidget {
         ).backgroundColor(Colors.white).clipRRect(all: 16),
         showCheck ? Check(complete: checkComplete).positioned(top: 12, left: 12) : const SizedBox.shrink(),
       ],
-    )
-        .boxShadow(
-          color: const Color(0x1F000000),
-          offset: const Offset(0, 8),
-          blurRadius: 16,
-        )
-        .padding(bottom: 24);
+    ).boxShadow(color: const Color(0x1F000000), offset: const Offset(0, 8), blurRadius: 16).padding(bottom: 24);
   }
 }
 

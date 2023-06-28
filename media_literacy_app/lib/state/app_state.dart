@@ -16,12 +16,12 @@ class AppColors {
 
   static const Color chatBackground = Color(0xFFFFFFFF);
 
-  static const Color youtubeMessageBackground = Color(0xFFEA4335);
+  static const Color youtubeMessageBackground = Color(0xFFECDDFF);
+  static const Color youtubePlayButton = Color(0xFFEA4335);
 
   static const Color chatMessageIncomingBackground = Color(0xFFE9EFFF);
   static const Color chatMessageOutgoingBackground = Color(0xFF1DD882);
 
-  static const Color chatResponseBackground = Color(0xFFFFE3D2);
   static const Color chatResponseOptionBackground = Color(0xFF333333);
 
   static const Color storySelectCircle = Color(0xFF9CD9D3);
@@ -97,22 +97,22 @@ class AppTextStyles {
   static final TextStyle messageAuthor = GoogleFonts.quicksand(
     textStyle: const TextStyle(
       fontSize: 15,
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.w700,
       color: AppColors.text,
     ),
   );
 
-  static final TextStyle message = GoogleFonts.quicksand(
+  static final TextStyle message = GoogleFonts.nunito(
     textStyle: const TextStyle(
-      fontSize: 14,
+      fontSize: 18,
       color: AppColors.text,
     ),
   );
 
-  static final TextStyle youtubeMessage = GoogleFonts.quicksand(
+  static final TextStyle youtubeMessage = GoogleFonts.nunito(
     textStyle: const TextStyle(
-      fontSize: 12,
-      color: Colors.white,
+      fontSize: 16,
+      color: AppColors.text,
     ),
   );
 
@@ -132,10 +132,11 @@ class AppTextStyles {
     ),
   );
 
-  static final TextStyle popup = GoogleFonts.quicksand(
+  static final TextStyle popup = GoogleFonts.nunito(
     textStyle: const TextStyle(
-      fontSize: 12,
-      color: Colors.white,
+      fontSize: 18,
+      fontWeight: FontWeight.w500,
+      color: AppColors.appBarText,
     ),
   );
 }

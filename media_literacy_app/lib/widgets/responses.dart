@@ -1,5 +1,4 @@
 import 'package:collection/collection.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:media_literacy_app/models/story.dart';
 import 'package:media_literacy_app/state/app_state.dart';
@@ -16,10 +15,9 @@ class ChatResponse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Styled.widget(child: child)
-        .padding(horizontal: 16, top: 18, bottom: 10)
-        .backgroundColor(AppColors.chatResponseBackground)
-        .constrained(width: double.infinity)
-        .clipRRect(topLeft: 12, topRight: 12);
+        .padding(horizontal: 16, top: 16, bottom: 20)
+        .backgroundColor(AppColors.chatBackground)
+        .constrained(width: double.infinity);
   }
 }
 
@@ -52,7 +50,7 @@ class ConfirmationResponse extends StatelessWidget {
         .backgroundColor(AppColors.chatResponseOptionBackground)
         .constrained(width: double.infinity, minHeight: 64)
         .clipRRect(all: 12)
-        .padding(horizontal: 16, top: 18, bottom: 14)
+        .padding(bottom: 5)
         .gestures(onTap: () => _onTap(appState));
   }
 }
@@ -66,9 +64,10 @@ class OptionsResponse extends StatelessWidget {
     var isCorrect = option.isCorrect || option.hideResponseToChat;
 
     if (!isCorrect) {
-      showCupertinoDialog<bool>(
+      showDialog(
         context: context,
         barrierDismissible: true,
+        barrierColor: AppColors.text.withAlpha(200),
         builder: (context) {
           return CustomDialog(
             text: option.text,
@@ -103,7 +102,7 @@ class OptionsResponse extends StatelessWidget {
         .padding(vertical: 10, horizontal: 8)
         .backgroundColor(AppColors.chatResponseOptionBackground)
         .constrained(width: double.infinity, minHeight: 64)
-        .clipRRect(all: 8)
+        .clipRRect(all: 12)
         .padding(bottom: 5)
         .gestures(onTap: () => _onTapOption(context, appState, option));
   }
@@ -168,7 +167,7 @@ class _QuizResponseState extends BaseQuizResponseState<QuizResponse> {
         .padding(vertical: 10, horizontal: 8)
         .backgroundColor(isDisabled ? Colors.grey : AppColors.chatResponseOptionBackground)
         .constrained(width: double.infinity, minHeight: 64)
-        .clipRRect(all: 8)
+        .clipRRect(all: 12)
         .padding(bottom: 5);
 
     if (!disabledOptions.contains(option.id)) {

@@ -64,38 +64,38 @@ Widget _buildMessage(BuildContext context, DisplayedMessage displayedMessage) {
   throw ArgumentError.value(displayedMessage.type);
 }
 
-(Widget, bool) _buildResponse(BuildContext context, AppState appState, DisplayedState displayedState) {
+Widget _buildResponse(BuildContext context, AppState appState, DisplayedState displayedState) {
   var displayedMessages = displayedState.messageList;
 
   if (displayedMessages.isEmpty || displayedMessages.last.type != DisplayedMessageType.message) {
-    return (const SizedBox.shrink(), false);
+    return const SizedBox.shrink();
   }
 
   var lastMessage = displayedMessages.last.message!;
 
   if (lastMessage.response.type == 'NO_RESPONSE') {
-    return (const SizedBox.shrink(), false);
+    return const SizedBox.shrink();
   }
 
   if (lastMessage.response.type == 'CONFIRMATION') {
-    return (ConfirmationResponse(message: lastMessage), false);
+    return ConfirmationResponse(message: lastMessage);
   }
 
   if (lastMessage.response.type == 'QUIZ') {
-    return (QuizResponse(message: lastMessage), true);
+    return QuizResponse(message: lastMessage);
   }
 
   if (lastMessage.response.type == 'PHOTO_QUIZ') {
-    return (PhotoQuizResponse(message: lastMessage), true);
+    return PhotoQuizResponse(message: lastMessage);
   }
 
   if (lastMessage.response.type == 'OPTIONS') {
-    return (OptionsResponse(message: lastMessage), true);
+    return OptionsResponse(message: lastMessage);
   }
 
   // ignore: avoid_print
   print('UNIMPLEMENTED RESPONSE: id="${lastMessage.id}" type="${lastMessage.response.type}"');
-  return (Text('UNIMPLEMENTED RESPONSE: id="${lastMessage.id}" type="${lastMessage.response.type}"'), true);
+  return Text('UNIMPLEMENTED RESPONSE: id="${lastMessage.id}" type="${lastMessage.response.type}"');
 }
 
 Future? _queueNextMessage(AppState appState, DisplayedState displayedState) {
@@ -180,7 +180,7 @@ class _ChatScreenState extends State<ChatScreen> {
           Styled.widget(child: _buildMessage(context, displayedState.messageList[index])).padding(top: index == 0 ? 20 : 0),
     );
 
-    var (responseView, wrapResponse) = _buildResponse(context, appState, displayedState);
+    var responseView = _buildResponse(context, appState, displayedState);
 
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       _scrollToEnd();
@@ -194,7 +194,7 @@ class _ChatScreenState extends State<ChatScreen> {
         child: Column(
           children: [
             Expanded(child: messageListView),
-            wrapResponse ? ChatResponse(child: responseView) : responseView,
+            ChatResponse(child: responseView),
           ],
         ),
       ),
