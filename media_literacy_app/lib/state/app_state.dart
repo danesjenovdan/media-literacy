@@ -115,17 +115,18 @@ class AppTextStyles {
     ),
   );
 
-  static final TextStyle responseConfirmation = GoogleFonts.quicksand(
+  static final TextStyle responseConfirmation = GoogleFonts.nunito(
     textStyle: const TextStyle(
-      fontSize: 16,
-      fontWeight: FontWeight.bold,
+      fontSize: 18,
+      fontWeight: FontWeight.w600,
       color: Colors.white,
     ),
   );
 
-  static final TextStyle responseOption = GoogleFonts.quicksand(
+  static final TextStyle responseOption = GoogleFonts.nunito(
     textStyle: const TextStyle(
-      fontSize: 12,
+      fontSize: 16,
+      fontWeight: FontWeight.w600,
       color: Colors.white,
     ),
   );

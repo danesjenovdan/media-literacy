@@ -26,24 +26,23 @@ Widget _buildMessage(BuildContext context, DisplayedMessage displayedMessage) {
 
     if (message.type.startsWith('ACTION')) {
       if (message.type == 'ACTION_QUEST_END') {
-        var nextChatId = message.actionOptions!.triggerChatId;
-        var nextChat = message.thread!.chat!.story!.chats.firstWhereOrNull((chat) => chat.id == nextChatId);
+        // var nextChatId = message.actionOptions!.triggerChatId;
+        // var nextChat = message.thread!.chat!.story!.chats.firstWhereOrNull((chat) => chat.id == nextChatId);
 
-        if (nextChat == null) {
-          return Text('ERROR: ACTION HAS INVALID TRIGGER CHAT ID! id="${message.id}" type="${message.type}"');
-        }
+        // if (nextChat == null) {
+        //   return Text('ERROR: ACTION HAS INVALID TRIGGER CHAT ID! id="${message.id}" type="${message.type}"');
+        // }
 
-        return Column(
-          children: [
-            // const Text('Quest end'),
-            Text('Next quest: ${nextChat.title}'),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.maybePop(context);
-                },
-                child: const Text('Finish quest!'))
-          ],
-        );
+        return const Text("Modul završen")
+            .textStyle(AppTextStyles.responseConfirmation)
+            .textAlignment(TextAlign.center)
+            .alignment(Alignment.center)
+            .padding(all: 12)
+            .backgroundColor(AppColors.chatResponseOptionBackground)
+            .constrained(width: double.infinity, minHeight: 64)
+            .clipRRect(all: 12)
+            .padding(horizontal: 16, top: 18, bottom: 14)
+            .gestures(onTap: () => Navigator.of(context).maybePop());
       }
 
       return Text('TODO: UNIMPLEMENTED ACTION MESSAGE: id="${message.id}" type="${message.type}"');

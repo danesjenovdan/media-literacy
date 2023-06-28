@@ -40,12 +40,17 @@ class ConfirmationResponse extends StatelessWidget {
   Widget build(BuildContext context) {
     var appState = context.watch<AppState>();
 
-    return Text(message.response.text)
-        .textStyle(AppTextStyles.responseConfirmation)
-        .textAlignment(TextAlign.center)
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(message.response.text).textStyle(AppTextStyles.responseConfirmation).textAlignment(TextAlign.center),
+        const Icon(Icons.arrow_forward_rounded, size: 22, color: Colors.white).padding(left: 12),
+      ],
+    )
+        .alignment(Alignment.center)
         .padding(all: 12)
         .backgroundColor(AppColors.chatResponseOptionBackground)
-        .constrained(width: double.infinity)
+        .constrained(width: double.infinity, minHeight: 64)
         .clipRRect(all: 12)
         .padding(horizontal: 16, top: 18, bottom: 14)
         .gestures(onTap: () => _onTap(appState));
@@ -93,11 +98,13 @@ class OptionsResponse extends StatelessWidget {
   Widget _buildOption(BuildContext context, AppState appState, MessageResponseOption option) {
     return Text(option.buttonText)
         .textStyle(AppTextStyles.responseOption)
-        .padding(all: 12)
+        .textAlignment(TextAlign.center)
+        .alignment(Alignment.center)
+        .padding(vertical: 10, horizontal: 8)
         .backgroundColor(AppColors.chatResponseOptionBackground)
-        .constrained(width: double.infinity)
-        .clipRRect(all: 12)
-        .padding(bottom: 4)
+        .constrained(width: double.infinity, minHeight: 64)
+        .clipRRect(all: 8)
+        .padding(bottom: 5)
         .gestures(onTap: () => _onTapOption(context, appState, option));
   }
 
@@ -156,11 +163,13 @@ class _QuizResponseState extends BaseQuizResponseState<QuizResponse> {
 
     var optionWidget = Text(option.buttonText)
         .textStyle(AppTextStyles.responseOption)
-        .padding(all: 12)
+        .textAlignment(TextAlign.center)
+        .alignment(Alignment.center)
+        .padding(vertical: 10, horizontal: 8)
         .backgroundColor(isDisabled ? Colors.grey : AppColors.chatResponseOptionBackground)
-        .constrained(width: double.infinity)
-        .clipRRect(all: 12)
-        .padding(bottom: 4);
+        .constrained(width: double.infinity, minHeight: 64)
+        .clipRRect(all: 8)
+        .padding(bottom: 5);
 
     if (!disabledOptions.contains(option.id)) {
       return optionWidget.gestures(onTap: () => _onTapOption(appState, option));
