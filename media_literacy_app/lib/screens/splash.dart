@@ -36,24 +36,45 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     return FutureBuilder(
       future: appState.initAppState(),
       builder: (context, snapshot) {
-        List<Widget> widgets = [
-          Image.asset('assets/images/logo.png', width: 111, height: 111).padding(bottom: 16),
-          const Text(AppConstants.title).textStyle(AppTextStyles.splashTitle),
-          const Text(AppConstants.subtitle).textStyle(AppTextStyles.splashSubtitle).padding(top: 8),
-        ];
-        if (snapshot.hasError) {
-          var errorString = snapshot.error.toString();
-          widgets.add(
-            Text('Error: $errorString').fontSize(12).textAlignment(TextAlign.center).padding(top: 16),
-          );
-        } else if (!snapshot.hasData) {
+        var showSpinner = !snapshot.hasData && !snapshot.hasError;
+        var showError = snapshot.hasError;
+
+        List<Widget> widgets = [];
+
+        if (showSpinner) {
           widgets.add(
             RotationTransition(
               turns: Tween(begin: 0.0, end: 1.0).animate(_controller),
               child: Image.asset('assets/images/spinner.png', width: 96, height: 96),
             ),
           );
-        } else {
+        } else if (!showError) {
+          widgets.add(
+            const SizedBox.square(dimension: 96),
+          );
+        }
+
+        widgets.addAll([
+          Image.asset('assets/images/logo.png', width: 215, height: 215).padding(bottom: 12),
+          const Text(AppConstants.title).textStyle(AppTextStyles.splashTitle),
+          const Text(AppConstants.subtitle).textStyle(AppTextStyles.splashSubtitle),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset('assets/images/logo-zastone.png', width: 127, height: 24).padding(right: 16),
+              Image.asset('assets/images/logo-stepbystep.png', width: 31, height: 36),
+            ],
+          ).padding(top: 85),
+        ]);
+
+        if (showError) {
+          var errorString = snapshot.error.toString();
+          widgets.add(
+            Text('Error: $errorString').fontSize(12).textAlignment(TextAlign.center).padding(top: 16),
+          );
+        }
+
+        if (!showError && !showSpinner) {
           Future.microtask(
             () => Navigator.of(context).pushReplacement(
               MaterialPageRoute(
@@ -68,7 +89,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
           children: [
             Positioned.fill(
               child: Opacity(
-                opacity: 0.1,
+                opacity: 0.06,
                 child: Image.asset('assets/images/grid-bg.png', scale: 2, repeat: ImageRepeat.repeat),
               ),
             ),
@@ -78,7 +99,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
               children: widgets,
             ).padding(all: 16),
           ],
-        ).backgroundColor(Colors.white).safeArea().backgroundColor(Colors.black);
+        ).backgroundColor(Colors.white);
       },
     );
   }

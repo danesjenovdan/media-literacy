@@ -35,19 +35,19 @@ class AppColors {
 }
 
 class AppTextStyles {
-  static final TextStyle splashTitle = GoogleFonts.quicksand(
+  static final TextStyle splashTitle = GoogleFonts.nunito(
     textStyle: const TextStyle(
-      fontSize: 22,
-      fontWeight: FontWeight.bold,
+      fontSize: 30,
+      fontWeight: FontWeight.w800,
       color: AppColors.text,
       decoration: TextDecoration.none,
     ),
   );
 
-  static final TextStyle splashSubtitle = GoogleFonts.quicksand(
+  static final TextStyle splashSubtitle = GoogleFonts.nunito(
     textStyle: const TextStyle(
       fontSize: 16,
-      fontWeight: FontWeight.normal,
+      fontWeight: FontWeight.w400,
       color: AppColors.text,
       decoration: TextDecoration.none,
     ),
