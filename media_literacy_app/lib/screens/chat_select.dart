@@ -18,11 +18,11 @@ class ChatSelectScreen extends StatelessWidget {
       appBar: createAppBarWithBackButton(context, story.name),
       extendBodyBehindAppBar: true,
       body: Container(
-        color: AppColors.selectChatBackground,
+        color: AppColors.selectStoryBackground,
         child: ListView(
           children: [
             Container(
-              padding: const EdgeInsets.only(left: 16, right: 16, top: 28),
+              padding: const EdgeInsets.only(left: 16, right: 16, top: 24),
               child: Column(
                 children: [
                   ...story.chats.map(

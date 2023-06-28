@@ -1,4 +1,3 @@
-import 'package:flutter_image/flutter_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:media_literacy_app/models/story.dart';
@@ -8,12 +7,14 @@ import 'package:media_literacy_app/screens/splash.dart';
 import 'package:media_literacy_app/state/app_storage.dart';
 
 class AppColors {
+  static const Color appBarText = Color(0xFF191D21);
   static const Color text = Color(0xFF333333);
+  static const Color categoryText = Color(0xFF656F77);
 
-  static const Color selectStoryBackground = Color(0xFFE8EEF3);
-  static const Color selectStoryAppBarBackground = Color(0xFFFFE3D2);
+  static const Color selectStoryBackground = Color(0xFFFFFFFF);
+  static const Color selectStoryAppBarBackground = Color(0xFFD0F1EB);
 
-  static const Color selectChatBackground = Color(0xFF9CD9D3);
+  static const Color chatBackground = Color(0xFFFFFFFF);
 
   static const Color youtubeMessageBackground = Color(0xFFEA4335);
 
@@ -28,9 +29,9 @@ class AppColors {
 
   static const Color popupBackground = Color(0xFFF6675B);
 
-  static const Color checkIncompleteBackground = Color(0xFF747474);
+  static const Color checkIncompleteBackground = Color(0xFFD9D9D9);
   static const Color checkCompleteBackground = Color(0xFF9DFFCE);
-  static const Color checkIncomplete = Color(0xFFFFFFFF);
+  static const Color checkIncomplete = Color(0xFFD9D9D9);
   static const Color checkComplete = Color(0xFF125933);
 }
 
@@ -53,34 +54,34 @@ class AppTextStyles {
     ),
   );
 
-  static final TextStyle appBarTitle = GoogleFonts.quicksand(
+  static final TextStyle appBarTitle = GoogleFonts.nunito(
     textStyle: const TextStyle(
-      fontSize: 22,
-      fontWeight: FontWeight.bold,
+      fontSize: 24,
+      fontWeight: FontWeight.w800,
+      color: AppColors.appBarText,
+    ),
+  );
+
+  static final TextStyle appBarSmallTitle = GoogleFonts.nunito(
+    textStyle: const TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w800,
+      color: AppColors.appBarText,
+    ),
+  );
+
+  static final TextStyle selectorCardTitle = GoogleFonts.nunito(
+    textStyle: const TextStyle(
+      fontSize: 24,
+      fontWeight: FontWeight.w800,
       color: AppColors.text,
     ),
   );
 
-  static final TextStyle appBarSmallTitle = GoogleFonts.quicksand(
-    textStyle: const TextStyle(
-      fontSize: 15,
-      fontWeight: FontWeight.bold,
-      color: AppColors.text,
-    ),
-  );
-
-  static final TextStyle selectorCardTitle = GoogleFonts.quicksand(
-    textStyle: const TextStyle(
-      fontSize: 15,
-      fontWeight: FontWeight.bold,
-      color: AppColors.text,
-    ),
-  );
-
-  static final TextStyle selectorCardCategory = GoogleFonts.quicksand(
+  static final TextStyle selectorCardCategory = GoogleFonts.nunito(
     textStyle: const TextStyle(
       fontSize: 14,
-      color: AppColors.text,
+      color: AppColors.categoryText,
     ),
   );
 
@@ -187,6 +188,17 @@ class AppState extends ChangeNotifier {
     );
 
     return true;
+  }
+
+  void resetChatState(BuildContext context) {
+    if (selectedChatId != null) {
+      displayedChatMessages[selectedChatId!] = DisplayedState();
+    } else if (selectedStoryId != null) {
+      for (var chat in selectedStory!.chats) {
+        displayedChatMessages[chat.id] = DisplayedState();
+      }
+    }
+    notifyListeners();
   }
 
   void selectStory(String storyId, BuildContext context) {

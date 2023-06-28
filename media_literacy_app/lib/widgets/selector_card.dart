@@ -30,18 +30,26 @@ class SelectorCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             image != null ? AspectRatio(aspectRatio: 2, child: RemoteProgressiveImageLoader(image!, fit: BoxFit.cover)) : const SizedBox.shrink(),
-            Text(title).textStyle(AppTextStyles.selectorCardTitle).padding(all: 8),
-            Row(
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox.square(dimension: 26).backgroundColor(categoryColor).clipOval(),
-                Text(categoryName).textStyle(AppTextStyles.selectorCardCategory).padding(left: 8),
+                categoryName.isNotEmpty
+                    ? Text(categoryName).textStyle(AppTextStyles.selectorCardCategory).padding(bottom: 4)
+                    : const SizedBox.shrink(),
+                Text(title).textStyle(AppTextStyles.selectorCardTitle),
               ],
-            ).padding(all: 8, top: 0),
+            ).padding(all: 16),
           ],
-        ).backgroundColor(Colors.white).clipRRect(all: 12).padding(bottom: 12),
-        showCheck ? Check(complete: checkComplete).positioned(top: 8, right: 8) : const SizedBox.shrink(),
+        ).backgroundColor(Colors.white).clipRRect(all: 16),
+        showCheck ? Check(complete: checkComplete).positioned(top: 12, left: 12) : const SizedBox.shrink(),
       ],
-    );
+    )
+        .boxShadow(
+          color: const Color(0x1F000000),
+          offset: const Offset(0, 8),
+          blurRadius: 16,
+        )
+        .padding(bottom: 24);
   }
 }
 
@@ -53,8 +61,8 @@ class Check extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox.square(
-      dimension: 26,
-      child: Icon(Icons.check, color: complete ? AppColors.checkComplete : AppColors.checkIncomplete, size: 18),
+      dimension: 28,
+      child: Icon(Icons.check, color: complete ? AppColors.checkComplete : AppColors.checkIncomplete, size: 20),
     ).backgroundColor(complete ? AppColors.checkCompleteBackground : AppColors.checkIncompleteBackground).clipOval();
   }
 }

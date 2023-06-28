@@ -21,16 +21,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black,
-      child: SafeArea(
-        child: Container(
-          height: preferredSize.height,
-          color: appBarColor,
-          alignment: Alignment.centerLeft,
-          child: child,
-        ),
-      ),
-    ).clipRRect(bottomLeft: 40);
+      color: appBarColor,
+      child: Container(
+        height: preferredSize.height,
+        alignment: Alignment.centerLeft,
+        child: child,
+      ).safeArea(),
+    ).clipRRect(bottomLeft: 20, bottomRight: 20).boxShadow(color: const Color(0x1F000000), blurRadius: 16);
   }
 }
 
@@ -43,36 +40,46 @@ CustomAppBar createAppBar(BuildContext context, String title) {
     child: Row(
       children: [
         Expanded(
-          child: Text(title).textStyle(AppTextStyles.appBarTitle).padding(left: 4),
+          child: Text(title).textStyle(AppTextStyles.appBarTitle).padding(left: 2),
         ),
-        ElevatedButton(
-          onPressed: () {
-            appState.resetAppState(context);
-          },
-          child: const Text('reset + update stories'),
-        ),
+        SizedBox.square(
+          dimension: 48,
+          child: const Text("reset + update").textAlignment(TextAlign.center).alignment(Alignment.center),
+        ).backgroundColor(const Color(0xFFFF00FF)).clipOval().gestures(onTap: () => appState.resetAppState(context)),
       ],
-    ).padding(left: 16),
+    ).padding(left: 16, right: 16),
   );
 }
 
 CustomAppBar createAppBarWithBackButton(BuildContext context, String title) {
+  var appState = context.watch<AppState>();
+
   return CustomAppBar(
     height: 80,
     appBarColor: AppColors.selectStoryAppBarBackground,
     child: Row(
       children: [
-        IconButton(
-          icon: const SizedBox.square(dimension: 32, child: Icon(Icons.arrow_back)).backgroundColor(AppColors.text).clipOval(),
-          color: Colors.white,
-          onPressed: () {
-            Navigator.maybePop(context);
-          },
-        ),
+        SizedBox.square(
+          dimension: 24,
+          child: const Icon(
+            Icons.arrow_back_ios,
+            size: 14,
+          ).padding(left: 5),
+        )
+            .decorated(
+              border: Border.all(color: AppColors.appBarText, width: 2),
+              borderRadius: BorderRadius.circular(100),
+            )
+            .padding(right: 32)
+            .gestures(onTap: () => Navigator.maybePop(context)),
         Expanded(
           child: Text(title).textStyle(AppTextStyles.appBarSmallTitle).padding(left: 4, right: 8),
         ),
+        SizedBox.square(
+          dimension: 48,
+          child: const Text("reset").textAlignment(TextAlign.center).alignment(Alignment.center),
+        ).backgroundColor(const Color(0xFFFF00FF)).clipOval().gestures(onTap: () => appState.resetChatState(context)),
       ],
-    ).padding(left: 8), // IconButton already has an implicit padding of 8
+    ).padding(left: 16, right: 16),
   );
 }

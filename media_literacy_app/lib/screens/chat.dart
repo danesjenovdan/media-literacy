@@ -190,7 +190,7 @@ class _ChatScreenState extends State<ChatScreen> {
       appBar: createAppBarWithBackButton(context, appState.selectedChat!.title),
       extendBodyBehindAppBar: true,
       body: Container(
-        color: AppColors.selectChatBackground,
+        color: AppColors.chatBackground,
         child: Column(
           children: [
             Expanded(child: messageListView),
