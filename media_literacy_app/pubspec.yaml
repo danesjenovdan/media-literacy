@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  collection: ^1.17.0
+  collection: ^1.17.1
   cupertino_icons: ^1.0.2
   flutter_image: ^4.1.5
   progressive_image: ^2.0.0

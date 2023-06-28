@@ -1,3 +1,5 @@
+import 'dart:io';
+
 class Story {
   final String id;
   final String name;
@@ -6,7 +8,9 @@ class Story {
   final List<Chat> chats;
   final RemoteImageDefinition? poster;
 
-  Story.fromJson(Map<String, dynamic> json)
+  final Directory bundleFolder;
+
+  Story.fromJson(Map<String, dynamic> json, this.bundleFolder)
       : id = json['_id'],
         name = json['name'],
         description = json['description'] ?? '',
@@ -14,11 +18,12 @@ class Story {
         chats = Chat.fromJsonList(json['chats']),
         poster = json['poster'] != null ? RemoteImageDefinition.fromJson(json['poster']) : null {
     for (var actor in actors) {
-      actor.story = this;
+      actor.setStory(this);
     }
     for (var chat in chats) {
-      chat.story = this;
+      chat.setStory(this);
     }
+    poster?.setStory(this);
   }
 }
 
@@ -27,7 +32,8 @@ class Actor {
   final String name;
   final RemoteImageDefinition avatar;
 
-  Story? story;
+  Story? _story;
+  Story? get story => _story;
 
   Actor.fromJson(Map<String, dynamic> json)
       : id = json['_id'],
@@ -36,6 +42,11 @@ class Actor {
 
   static List<Actor> fromJsonList(List<dynamic> json) {
     return json.map((j) => Actor.fromJson(j)).toList();
+  }
+
+  void setStory(Story story) {
+    _story = story;
+    avatar.setStory(story);
   }
 }
 
@@ -47,6 +58,9 @@ class RemoteImageDefinition {
   final String url;
   final String miniThumbUrl;
 
+  Story? _story;
+  Story? get story => _story;
+
   RemoteImageDefinition.fromJson(Map<String, dynamic> json)
       : id = json['_id'],
         width = json['width'],
@@ -54,6 +68,10 @@ class RemoteImageDefinition {
         fileName = json['remote'],
         url = json['url'],
         miniThumbUrl = json['miniThumbUrl'];
+
+  void setStory(Story story) {
+    _story = story;
+  }
 }
 
 class Chat {
@@ -64,7 +82,8 @@ class Chat {
   final List<Thread> threads;
   final RemoteImageDefinition? poster;
 
-  Story? story;
+  Story? _story;
+  Story? get story => _story;
 
   Chat.fromJson(Map<String, dynamic> json)
       : id = json['_id'],
@@ -80,6 +99,14 @@ class Chat {
 
   static List<Chat> fromJsonList(List<dynamic> json) {
     return json.map((j) => Chat.fromJson(j)).toList();
+  }
+
+  void setStory(Story story) {
+    _story = story;
+    for (var thread in threads) {
+      thread.setStory(story);
+    }
+    poster?.setStory(story);
   }
 }
 
@@ -101,6 +128,12 @@ class Thread {
 
   static List<Thread> fromJsonList(List<dynamic> json) {
     return json.map((j) => Thread.fromJson(j)).toList();
+  }
+
+  void setStory(Story story) {
+    for (var message in messages) {
+      message.setStory(story);
+    }
   }
 }
 
@@ -135,6 +168,12 @@ class Message {
   static List<Message> fromJsonList(List<dynamic> json) {
     return json.map((j) => Message.fromJson(j)).toList();
   }
+
+  void setStory(Story story) {
+    image?.setStory(story);
+    actionOptions?.setStory(story);
+    response.setStory(story);
+  }
 }
 
 class MessageActionOptions {
@@ -144,6 +183,8 @@ class MessageActionOptions {
   MessageActionOptions.fromJson(Map<String, dynamic> json)
       : id = json['_id'],
         triggerChatId = json['triggerChatId'] ?? '';
+
+  void setStory(Story story) {}
 }
 
 class MessageResponse {
@@ -163,6 +204,15 @@ class MessageResponse {
         photoOptions = MessageResponseOption.fromJsonList(json['photoOptions']) {
     for (var option in options) {
       option.response = this;
+    }
+  }
+
+  void setStory(Story story) {
+    for (var option in options) {
+      option.setStory(story);
+    }
+    for (var photoOption in photoOptions) {
+      photoOption.setStory(story);
     }
   }
 }
@@ -189,6 +239,10 @@ class MessageResponseOption {
 
   static List<MessageResponseOption> fromJsonList(List<dynamic> json) {
     return json.map((j) => MessageResponseOption.fromJson(j)).toList();
+  }
+
+  void setStory(Story story) {
+    photo?.setStory(story);
   }
 }
 

@@ -46,7 +46,7 @@ class MessageBubble extends StatelessWidget {
 }
 
 Actor? getActor(Message message) {
-  var actors = message.thread!.chat!.story!.actors;
+  List<Actor> actors = message.thread!.chat!.story!.actors;
   return actors.firstWhereOrNull((actor) => actor.id == message.actor);
 }
 

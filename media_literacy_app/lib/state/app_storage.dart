@@ -101,7 +101,7 @@ class AppStorage {
     File jsonFile = await _bundleStoryJsonFile(storyId, bundleFolder);
 
     if (await jsonFile.exists()) {
-      return Story.fromJson(jsonDecode(await jsonFile.readAsString()));
+      return Story.fromJson(jsonDecode(await jsonFile.readAsString()), bundleFolder);
     }
 
     throw Exception("Failed to load story json");

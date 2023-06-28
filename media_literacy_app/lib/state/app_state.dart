@@ -194,10 +194,10 @@ class AppState extends ChangeNotifier {
     selectedStory = stories[storyId];
     notifyListeners();
 
-    for (var actor in selectedStory!.actors) {
-      precacheImage(NetworkImageWithRetry(actor.avatar.miniThumbUrl), context);
-      precacheImage(NetworkImageWithRetry(actor.avatar.url), context);
-    }
+    // for (var actor in selectedStory!.actors) {
+    //   precacheImage(NetworkImageWithRetry(actor.avatar.miniThumbUrl), context);
+    //   precacheImage(NetworkImageWithRetry(actor.avatar.url), context);
+    // }
 
     Navigator.of(context).push(
       MaterialPageRoute(

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:easy_image_viewer/easy_image_viewer.dart';
 import 'package:flutter_image/flutter_image.dart';
 import 'package:flutter/material.dart';
@@ -15,24 +17,45 @@ class RemoteProgressiveImageLoader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var thumbImageProvider = NetworkImageWithRetry(image.miniThumbUrl);
-    var fullSizeImageProvider = NetworkImageWithRetry(image.url);
+    Widget? imageWidget;
+    ImageProvider? fullSizeImageProvider;
 
-    var imageWidget = ProgressiveImage.custom(
-      placeholderBuilder: (context) {
-        return const Center(child: CircularProgressIndicator());
-      },
-      thumbnail: thumbImageProvider,
-      image: fullSizeImageProvider,
-      width: image.width.toDouble(),
-      height: image.height.toDouble(),
-    ).fittedBox(fit: fit).clipRect();
+    // try loading image from bundle first
+    if (image.story?.bundleFolder != null) {
+      String bundlePath = image.story!.bundleFolder.path;
+      File imageFile = File("$bundlePath/${image.fileName}");
+      if (imageFile.existsSync()) {
+        imageWidget = Image.file(
+          imageFile,
+          width: image.width.toDouble(),
+          height: image.height.toDouble(),
+        );
+        fullSizeImageProvider = (imageWidget as Image).image;
+      }
+    }
+
+    // if image not found in bundle, load from network
+    if (imageWidget == null && fullSizeImageProvider == null) {
+      var thumbImageProvider = NetworkImageWithRetry(image.miniThumbUrl);
+      fullSizeImageProvider = NetworkImageWithRetry(image.url);
+      imageWidget = ProgressiveImage.custom(
+        placeholderBuilder: (context) {
+          return const Center(child: CircularProgressIndicator());
+        },
+        thumbnail: thumbImageProvider,
+        image: fullSizeImageProvider,
+        width: image.width.toDouble(),
+        height: image.height.toDouble(),
+      );
+    }
+
+    imageWidget = imageWidget!.fittedBox(fit: fit).clipRect();
 
     if (openViewerOnTap) {
       imageWidget = imageWidget.gestures(onTap: () {
         showImageViewer(
           context,
-          fullSizeImageProvider,
+          fullSizeImageProvider!,
           doubleTapZoomable: true,
         );
       });
