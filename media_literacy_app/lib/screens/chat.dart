@@ -64,8 +64,8 @@ Widget _buildMessage(BuildContext context, DisplayedMessage displayedMessage) {
   throw ArgumentError.value(displayedMessage.type);
 }
 
-Widget _buildResponse(BuildContext context, AppState appState, DisplayedState displayedState) {
-  var displayedMessages = displayedState.messageList;
+Widget _buildResponse(BuildContext context, AppState appState, DisplayedState displayedChatState) {
+  var displayedMessages = displayedChatState.messageList;
 
   if (displayedMessages.isEmpty || displayedMessages.last.type != DisplayedMessageType.message) {
     return const SizedBox.shrink();
@@ -98,8 +98,8 @@ Widget _buildResponse(BuildContext context, AppState appState, DisplayedState di
   return Text('UNIMPLEMENTED RESPONSE: id="${lastMessage.id}" type="${lastMessage.response.type}"');
 }
 
-Future? _queueNextMessage(AppState appState, DisplayedState displayedState) {
-  var displayedMessages = displayedState.messageList;
+Future? _queueNextMessage(AppState appState, DisplayedState displayedChatState) {
+  var displayedMessages = displayedChatState.messageList;
 
   // if no displayed messages, show first message in first thread
   if (displayedMessages.isEmpty) {
@@ -170,17 +170,17 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     var appState = context.watch<AppState>();
 
-    var displayedState = appState.getDisplayedState();
-    next ??= _queueNextMessage(appState, displayedState)?.whenComplete(() => next = null);
+    var displayedChatState = appState.getDisplayedChatState();
+    next ??= _queueNextMessage(appState, displayedChatState)?.whenComplete(() => next = null);
 
     var messageListView = ListView.builder(
       controller: _scrollController,
-      itemCount: displayedState.messageList.length,
+      itemCount: displayedChatState.messageList.length,
       itemBuilder: (context, index) =>
-          Styled.widget(child: _buildMessage(context, displayedState.messageList[index])).padding(top: index == 0 ? 20 : 0),
+          Styled.widget(child: _buildMessage(context, displayedChatState.messageList[index])).padding(top: index == 0 ? 20 : 0),
     );
 
-    var responseView = _buildResponse(context, appState, displayedState);
+    var responseView = _buildResponse(context, appState, displayedChatState);
 
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       _scrollToEnd();

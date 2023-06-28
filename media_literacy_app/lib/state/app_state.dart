@@ -165,6 +165,8 @@ class AppState extends ChangeNotifier {
     stories = appStorage.stories;
     stories = Map.fromEntries(stories.entries.toList()..sort((e1, e2) => e1.value.name.compareTo(e2.value.name)));
 
+    displayedChatMessages = appStorage.displayedChatMessages;
+
     return true;
   }
 
@@ -199,6 +201,8 @@ class AppState extends ChangeNotifier {
         displayedChatMessages[chat.id] = DisplayedState();
       }
     }
+
+    saveDisplayedState();
     notifyListeners();
   }
 
@@ -231,27 +235,29 @@ class AppState extends ChangeNotifier {
     );
   }
 
-  DisplayedState getDisplayedState() {
+  DisplayedState getDisplayedChatState() {
     return displayedChatMessages.putIfAbsent(selectedChatId!, () => DisplayedState());
   }
 
   void addDisplayedMessage(DisplayedMessage displayedMessage) {
-    var state = getDisplayedState();
-    state.messageList.add(displayedMessage);
+    var chatState = getDisplayedChatState();
+    chatState.messageList.add(displayedMessage);
     if (displayedMessage.type == DisplayedMessageType.message) {
-      if (state.threadStack.isEmpty || displayedMessage.threadId != state.threadStack.last) {
-        state.threadStack.add(displayedMessage.threadId);
+      if (chatState.threadStack.isEmpty || displayedMessage.threadId != chatState.threadStack.last) {
+        chatState.threadStack.add(displayedMessage.threadId);
       }
     }
+    saveDisplayedState();
     notifyListeners();
   }
 
   void setCompleted() {
-    var state = getDisplayedState();
-    if (state.completed) {
+    var chatState = getDisplayedChatState();
+    if (chatState.completed) {
       return;
     }
-    state.completed = true;
+    chatState.completed = true;
+    saveDisplayedState();
     notifyListeners();
   }
 
@@ -259,10 +265,9 @@ class AppState extends ChangeNotifier {
     var state = displayedChatMessages[chatId];
     return state?.completed ?? false;
   }
-}
 
-class DisplayedState {
-  List<DisplayedMessage> messageList = [];
-  List<String> threadStack = [];
-  bool completed = false;
+  void saveDisplayedState() async {
+    AppStorage appStorage = AppStorage();
+    await appStorage.saveDisplayedState(displayedChatMessages);
+  }
 }

@@ -1,12 +1,26 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:archive/archive_io.dart';
+import 'package:collection/collection.dart';
 import 'package:http/http.dart' as http;
 import 'package:media_literacy_app/models/story.dart';
 import 'package:path_provider/path_provider.dart';
 
 class AppStorage {
   Map<String, Story> stories = {};
+  Map<String, DisplayedState> displayedChatMessages = {};
+
+  Future<Directory> get _stateStorageFolder async {
+    final Directory folder = await getApplicationDocumentsDirectory();
+    final Directory storageFolder = Directory('${folder.path}/state_storage');
+    await storageFolder.create(recursive: true);
+    return storageFolder;
+  }
+
+  Future<File> get _displayedStateFile async {
+    final Directory folder = await _stateStorageFolder;
+    return File('${folder.path}/displayedState.json');
+  }
 
   Future<Directory> get _storiesStorageFolder async {
     final Directory folder = await getApplicationDocumentsDirectory();
@@ -55,12 +69,44 @@ class AppStorage {
   }
 
   Future<void> clear() async {
-    final Directory folder = await _storiesStorageFolder;
-    await folder.delete(recursive: true);
+    final Directory stateFolder = await _stateStorageFolder;
+    await stateFolder.delete(recursive: true);
+
+    final Directory storiesFolder = await _storiesStorageFolder;
+    await storiesFolder.delete(recursive: true);
   }
 
   Future<void> init() async {
     stories = await _loadStories();
+    displayedChatMessages = await _loadDisplayedState();
+  }
+
+  Future<Map<String, DisplayedState>> _loadDisplayedState() async {
+    Map<String, DisplayedState> displayedChatMessages = {};
+    File file = await _displayedStateFile;
+    if (await file.exists()) {
+      var jsonData = jsonDecode(await file.readAsString());
+      if (jsonData is Map) {
+        jsonData.forEach((key, value) {
+          Chat? chat;
+          for (Story story in stories.values) {
+            chat = story.chats.firstWhereOrNull((c) => c.id == key);
+            if (chat != null) {
+              break;
+            }
+          }
+          if (chat != null) {
+            displayedChatMessages[key] = DisplayedState.fromJson(value, chat);
+          }
+        });
+      }
+    }
+    return displayedChatMessages;
+  }
+
+  Future<void> saveDisplayedState(Map<String, DisplayedState> displayedChatMessages) async {
+    File file = await _displayedStateFile;
+    await file.writeAsString(jsonEncode(displayedChatMessages));
   }
 
   Future<Map<String, Story>> _loadStories() async {

@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:collection/collection.dart';
 
 class Story {
   final String id;
@@ -257,20 +258,17 @@ class DisplayedMessage {
   final String threadId;
   final String messageId;
   final String? text;
-  final RemoteImageDefinition? image;
 
+  RemoteImageDefinition? image;
   Message? message;
 
   DisplayedMessage.fromMessage(this.message)
       : type = DisplayedMessageType.message,
         threadId = message!.thread!.id,
         messageId = message.id,
-        text = null,
-        image = null;
+        text = null;
 
-  DisplayedMessage.fromResponse(this.threadId, this.messageId, this.text)
-      : type = DisplayedMessageType.response,
-        image = null;
+  DisplayedMessage.fromResponse(this.threadId, this.messageId, this.text) : type = DisplayedMessageType.response;
 
   DisplayedMessage.fromResponseImage(this.threadId, this.messageId, this.image)
       : type = DisplayedMessageType.response,
@@ -279,6 +277,63 @@ class DisplayedMessage {
   DisplayedMessage.system({required String this.text})
       : type = DisplayedMessageType.system,
         threadId = '',
-        messageId = '',
-        image = null;
+        messageId = '';
+
+  DisplayedMessage.fromJson(Map<String, dynamic> json, Chat chat)
+      : type = DisplayedMessageType.values.byName(json['type']),
+        threadId = json['threadId'],
+        messageId = json['messageId'],
+        text = json['text'] {
+    if (type == DisplayedMessageType.response && json['imageId'] != null) {
+      var thread = chat.threads.firstWhereOrNull((t) => t.id == threadId);
+      if (thread != null) {
+        var message = thread.messages.firstWhereOrNull((m) => m.id == messageId);
+        if (message != null) {
+          var option = message.response.options.firstWhereOrNull((o) => o.photo?.id == json['imageId']) ??
+              message.response.photoOptions.firstWhereOrNull((o) => o.photo?.id == json['imageId']);
+          if (option != null) {
+            image = option.photo;
+          }
+        }
+      }
+    }
+    if (type == DisplayedMessageType.message) {
+      message = chat.threads.firstWhere((t) => t.id == threadId).messages.firstWhere((m) => m.id == messageId);
+    }
+  }
+
+  static List<DisplayedMessage> fromJsonList(List<dynamic> json, Chat chat) {
+    return json.map((j) => DisplayedMessage.fromJson(j, chat)).toList();
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      "type": type.name,
+      "threadId": threadId,
+      "messageId": messageId,
+      "text": text,
+      "imageId": image?.id,
+    };
+  }
+}
+
+class DisplayedState {
+  List<DisplayedMessage> messageList = [];
+  List<String> threadStack = [];
+  bool completed = false;
+
+  DisplayedState();
+
+  DisplayedState.fromJson(Map<String, dynamic> json, Chat chat)
+      : messageList = DisplayedMessage.fromJsonList(json['messageList'], chat),
+        threadStack = json['threadStack'].cast<String>(),
+        completed = json['completed'];
+
+  Map<String, dynamic> toJson() {
+    return {
+      "messageList": messageList.map((m) => m.toJson()).toList(),
+      "threadStack": threadStack,
+      "completed": completed,
+    };
+  }
 }
