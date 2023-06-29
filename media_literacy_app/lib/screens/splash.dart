@@ -78,6 +78,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
           Future.microtask(
             () => Navigator.of(context).pushReplacement(
               MaterialPageRoute(
+                settings: const RouteSettings(name: 'StorySelectScreen'),
                 builder: (context) => const StorySelectScreen(),
               ),
             ),

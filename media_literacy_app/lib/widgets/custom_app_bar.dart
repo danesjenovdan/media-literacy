@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:media_literacy_app/state/app_state.dart';
+import 'package:media_literacy_app/widgets/custom_dialog.dart';
 import 'package:provider/provider.dart';
 import 'package:styled_widget/styled_widget.dart';
 
@@ -77,8 +78,29 @@ CustomAppBar createAppBarWithBackButton(BuildContext context, String title) {
         ),
         SizedBox.square(
           dimension: 48,
-          child: const Text("reset").textAlignment(TextAlign.center).alignment(Alignment.center),
-        ).backgroundColor(const Color(0xFFFF00FF)).clipOval().gestures(onTap: () => appState.resetChatState(context)),
+          child: const Icon(Icons.replay_rounded, size: 36, color: Colors.white).rotate(angle: -45),
+        ).backgroundColor(AppColors.resetButtonBackground).clipOval().gestures(
+          onTap: () async {
+            var route = ModalRoute.of(context);
+            String? routeName = route?.settings.name;
+            if (routeName != null) {
+              var value = await showDialog(
+                context: context,
+                barrierDismissible: true,
+                barrierColor: AppColors.text.withAlpha(200),
+                builder: (context) => const CustomResetDialog(),
+              );
+              if (value is bool && value) {
+                if (routeName == "ChatScreen") {
+                  appState.resetChatState();
+                }
+                if (routeName == "ChatSelectScreen") {
+                  appState.resetStoryState();
+                }
+              }
+            }
+          },
+        ),
       ],
     ).padding(left: 16, right: 16),
   );

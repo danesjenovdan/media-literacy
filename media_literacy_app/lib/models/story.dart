@@ -338,7 +338,7 @@ class DisplayedState {
   bool completed = false;
   bool unlocked = false;
 
-  DisplayedState();
+  DisplayedState({this.unlocked = false});
 
   DisplayedState.fromJson(Map<String, dynamic> json, Chat chat)
       : messageList = DisplayedMessage.fromJsonList(json['messageList'], chat),

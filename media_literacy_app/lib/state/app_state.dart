@@ -34,6 +34,8 @@ class AppColors {
   static const Color checkCompleteBackground = Color(0xFF9DFFCE);
   static const Color checkIncomplete = Color(0xFF000000);
   static const Color checkComplete = Color(0xFF125933);
+
+  static const Color resetButtonBackground = Color(0xFF789AED);
 }
 
 class AppTextStyles {
@@ -140,6 +142,14 @@ class AppTextStyles {
       color: AppColors.appBarText,
     ),
   );
+
+  static final TextStyle popupButton = GoogleFonts.nunito(
+    textStyle: const TextStyle(
+      fontSize: 22,
+      fontWeight: FontWeight.w600,
+      color: Colors.white,
+    ),
+  );
 }
 
 class AppConstants {
@@ -187,6 +197,7 @@ class AppState extends ChangeNotifier {
 
     navigator.pushReplacement(
       MaterialPageRoute(
+        settings: const RouteSettings(name: 'SplashScreen'),
         builder: (context) => const SplashScreen(),
       ),
     );
@@ -194,15 +205,17 @@ class AppState extends ChangeNotifier {
     return true;
   }
 
-  void resetChatState(BuildContext context) {
-    if (selectedChatId != null) {
-      displayedChatMessages[selectedChatId!] = DisplayedState();
-    } else if (selectedStoryId != null) {
-      for (var chat in selectedStory!.chats) {
-        displayedChatMessages[chat.id] = DisplayedState();
-      }
-    }
+  void resetChatState() {
+    bool wasUnlocked = displayedChatMessages[selectedChatId!]?.unlocked ?? false;
+    displayedChatMessages[selectedChatId!] = DisplayedState(unlocked: wasUnlocked);
+    saveDisplayedState();
+    notifyListeners();
+  }
 
+  void resetStoryState() {
+    for (var chat in selectedStory!.chats) {
+      displayedChatMessages[chat.id] = DisplayedState();
+    }
     saveDisplayedState();
     notifyListeners();
   }
@@ -219,6 +232,7 @@ class AppState extends ChangeNotifier {
 
     Navigator.of(context).push(
       MaterialPageRoute(
+        settings: const RouteSettings(name: 'ChatSelectScreen'),
         builder: (context) => const ChatSelectScreen(),
       ),
     );
@@ -231,6 +245,7 @@ class AppState extends ChangeNotifier {
 
     Navigator.of(context).push(
       MaterialPageRoute(
+        settings: const RouteSettings(name: 'ChatScreen'),
         builder: (context) => const ChatScreen(),
       ),
     );
