@@ -6,6 +6,7 @@ import 'package:media_literacy_app/screens/chat_select.dart';
 import 'package:media_literacy_app/screens/chat.dart';
 import 'package:media_literacy_app/screens/splash.dart';
 import 'package:media_literacy_app/state/app_storage.dart';
+import 'package:media_literacy_app/widgets/custom_dialog.dart';
 
 class AppColors {
   static const Color appBarText = Color(0xFF191D21);
@@ -184,6 +185,20 @@ class AppState extends ChangeNotifier {
   }
 
   Future<bool> resetAppState(BuildContext context) async {
+    var navigator = Navigator.of(context);
+
+    var value = await showDialog(
+      context: context,
+      barrierDismissible: true,
+      barrierColor: AppColors.text.withAlpha(200),
+      builder: (context) => const CustomResetDialog(
+        text: "Completely reset progress and try downloading updated modules?",
+      ),
+    );
+    if (value is! bool || !value) {
+      return false;
+    }
+
     stories = {};
     displayedChatMessages = {};
     selectedStoryId = null;
@@ -191,12 +206,10 @@ class AppState extends ChangeNotifier {
     selectedChatId = null;
     selectedChat = null;
 
-    var navigator = Navigator.of(context);
-    navigator.popUntil((route) => route.isFirst);
-
     AppStorage appStorage = AppStorage();
     await appStorage.clear();
 
+    navigator.popUntil((route) => route.isFirst);
     navigator.pushReplacement(
       MaterialPageRoute(
         settings: const RouteSettings(name: 'SplashScreen'),

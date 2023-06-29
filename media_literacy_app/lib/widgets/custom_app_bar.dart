@@ -43,10 +43,10 @@ CustomAppBar createAppBar(BuildContext context, String title) {
         Expanded(
           child: Text(title).textStyle(AppTextStyles.appBarTitle).padding(left: 2),
         ),
-        SizedBox.square(
+        const SizedBox.square(
           dimension: 48,
-          child: const Text("reset + update").textAlignment(TextAlign.center).alignment(Alignment.center),
-        ).backgroundColor(const Color(0xFFFF00FF)).clipOval().gestures(onTap: () => appState.resetAppState(context)),
+          child: Icon(Icons.settings_backup_restore_rounded, size: 36, color: Colors.white),
+        ).backgroundColor(AppColors.resetButtonBackground).clipOval().gestures(onTap: () => appState.resetAppState(context)),
       ],
     ).padding(left: 16, right: 16),
   );
