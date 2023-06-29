@@ -60,18 +60,25 @@ CustomAppBar createAppBarWithBackButton(BuildContext context, String title) {
     appBarColor: AppColors.selectStoryAppBarBackground,
     child: Row(
       children: [
-        SizedBox.square(
-          dimension: 24,
-          child: const Icon(
-            Icons.arrow_back_ios,
-            size: 14,
-          ).padding(left: 5),
-        )
-            .decorated(
-              border: Border.all(color: AppColors.appBarText, width: 2),
-              borderRadius: BorderRadius.circular(100),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox.square(
+              dimension: 24,
+              child: const Icon(
+                Icons.arrow_back_ios,
+                size: 14,
+              ).padding(left: 5),
             )
-            .padding(right: 32)
+                .decorated(
+                  border: Border.all(color: AppColors.appBarText, width: 2),
+                  borderRadius: BorderRadius.circular(100),
+                )
+                .padding(horizontal: 16)
+                .padding(right: 16),
+          ],
+        )
+            .backgroundColor(Colors.transparent) // this is needed to force the whole column to be tapable
             .gestures(onTap: () => Navigator.maybePop(context)),
         Expanded(
           child: Text(title).textStyle(AppTextStyles.appBarSmallTitle).padding(left: 4, right: 8),
@@ -102,6 +109,6 @@ CustomAppBar createAppBarWithBackButton(BuildContext context, String title) {
           },
         ),
       ],
-    ).padding(left: 16, right: 16),
+    ).padding(left: 0, right: 16), // left padding is already in back button
   );
 }
