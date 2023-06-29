@@ -29,6 +29,7 @@ class SelectorCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      fit: StackFit.passthrough,
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,7 +49,7 @@ class SelectorCard extends StatelessWidget {
         showLock ? Lock(locked: isLocked).positioned(top: 12, left: 12) : const SizedBox.shrink(),
         (showCheck && isComplete) ? const Check(complete: true).positioned(top: 12, right: 12) : const SizedBox.shrink(),
       ],
-    ).boxShadow(color: const Color(0x1F000000), offset: const Offset(0, 8), blurRadius: 16).padding(bottom: 24);
+    ).width(double.infinity).boxShadow(color: const Color(0x1F000000), offset: const Offset(0, 8), blurRadius: 16).padding(bottom: 24);
   }
 }
 
