@@ -80,6 +80,7 @@ class Chat {
   final String title;
   final String description;
   final bool isMainChat;
+  final bool isLocked;
   final List<Thread> threads;
   final RemoteImageDefinition? poster;
 
@@ -91,6 +92,7 @@ class Chat {
         title = json['title'],
         description = json['description'] ?? '',
         isMainChat = json['isMainChat'] ?? false,
+        isLocked = json['isLocked'] ?? false,
         threads = Thread.fromJsonList(json['threads']),
         poster = json['poster'] != null ? RemoteImageDefinition.fromJson(json['poster']) : null {
     for (var thread in threads) {
@@ -174,6 +176,19 @@ class Message {
     image?.setStory(story);
     actionOptions?.setStory(story);
     response.setStory(story);
+  }
+
+  String? getActionTriggerChatId() {
+    String triggerChatId = actionOptions?.triggerChatId ?? '';
+    return triggerChatId.isNotEmpty ? triggerChatId : null;
+  }
+
+  Chat? getActionTriggerChat() {
+    String? triggerChatId = getActionTriggerChatId();
+    if (triggerChatId != null) {
+      return thread!.chat!.story!.chats.firstWhereOrNull((chat) => chat.id == triggerChatId);
+    }
+    return null;
   }
 }
 
@@ -321,19 +336,22 @@ class DisplayedState {
   List<DisplayedMessage> messageList = [];
   List<String> threadStack = [];
   bool completed = false;
+  bool unlocked = false;
 
   DisplayedState();
 
   DisplayedState.fromJson(Map<String, dynamic> json, Chat chat)
       : messageList = DisplayedMessage.fromJsonList(json['messageList'], chat),
         threadStack = json['threadStack'].cast<String>(),
-        completed = json['completed'];
+        completed = json['completed'] ?? false,
+        unlocked = json['unlocked'] ?? false;
 
   Map<String, dynamic> toJson() {
     return {
       "messageList": messageList.map((m) => m.toJson()).toList(),
       "threadStack": threadStack,
       "completed": completed,
+      "unlocked": completed,
     };
   }
 }

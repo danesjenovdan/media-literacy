@@ -10,7 +10,9 @@ class SelectorCard extends StatelessWidget {
   final String categoryName;
   final RemoteImageDefinition? image;
   final bool showCheck;
-  final bool checkComplete;
+  final bool isComplete;
+  final bool showLock;
+  final bool isLocked;
 
   const SelectorCard({
     super.key,
@@ -19,7 +21,9 @@ class SelectorCard extends StatelessWidget {
     required this.categoryName,
     this.image,
     this.showCheck = false,
-    this.checkComplete = false,
+    this.isComplete = false,
+    this.showLock = false,
+    this.isLocked = false,
   });
 
   @override
@@ -41,9 +45,24 @@ class SelectorCard extends StatelessWidget {
             ).padding(all: 16),
           ],
         ).backgroundColor(Colors.white).clipRRect(all: 16),
-        showCheck ? Check(complete: checkComplete).positioned(top: 12, left: 12) : const SizedBox.shrink(),
+        showLock ? Lock(locked: isLocked).positioned(top: 12, left: 12) : const SizedBox.shrink(),
+        (showCheck && isComplete) ? const Check(complete: true).positioned(top: 12, right: 12) : const SizedBox.shrink(),
       ],
     ).boxShadow(color: const Color(0x1F000000), offset: const Offset(0, 8), blurRadius: 16).padding(bottom: 24);
+  }
+}
+
+class Lock extends StatelessWidget {
+  final bool locked;
+
+  const Lock({super.key, required this.locked});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox.square(
+      dimension: 28,
+      child: Icon(locked ? Icons.lock_rounded : Icons.lock_open_rounded, color: AppColors.checkIncomplete, size: 18),
+    ).backgroundColor(locked ? AppColors.checkIncompleteBackground : AppColors.checkCompleteBackground).clipOval();
   }
 }
 

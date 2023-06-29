@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:media_literacy_app/models/story.dart';
@@ -29,9 +30,9 @@ class AppColors {
 
   static const Color popupBackground = Color(0xFFF6675B);
 
-  static const Color checkIncompleteBackground = Color(0xFFD9D9D9);
+  static const Color checkIncompleteBackground = Color(0xFF3F3F3F);
   static const Color checkCompleteBackground = Color(0xFF9DFFCE);
-  static const Color checkIncomplete = Color(0xFFD9D9D9);
+  static const Color checkIncomplete = Color(0xFF000000);
   static const Color checkComplete = Color(0xFF125933);
 }
 
@@ -251,7 +252,7 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  void setCompleted() {
+  void setChatCompleted() {
     var chatState = getDisplayedChatState();
     if (chatState.completed) {
       return;
@@ -264,6 +265,24 @@ class AppState extends ChangeNotifier {
   bool isChatCompleted(chatId) {
     var state = displayedChatMessages[chatId];
     return state?.completed ?? false;
+  }
+
+  void setChatUnlocked(chatId) {
+    var state = displayedChatMessages.putIfAbsent(chatId, () => DisplayedState());
+    if (state.unlocked) {
+      return;
+    }
+    state.unlocked = true;
+    saveDisplayedState();
+    notifyListeners();
+  }
+
+  bool isChatLocked(chatId) {
+    Chat? chat = selectedStory?.chats.firstWhereOrNull((chat) => chat.id == chatId);
+    bool chatLocked = chat?.isLocked ?? false;
+    var state = displayedChatMessages[chatId];
+    bool chatStateUnlocked = state?.unlocked ?? false;
+    return chatLocked && !chatStateUnlocked;
   }
 
   void saveDisplayedState() async {

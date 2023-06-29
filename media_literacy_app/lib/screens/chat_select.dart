@@ -32,9 +32,13 @@ class ChatSelectScreen extends StatelessWidget {
                       categoryName: chat.description,
                       image: chat.poster,
                       showCheck: true,
-                      checkComplete: appState.isChatCompleted(chat.id),
+                      isComplete: appState.isChatCompleted(chat.id),
+                      showLock: true,
+                      isLocked: appState.isChatLocked(chat.id),
                     ).gestures(onTap: () {
-                      appState.selectChat(chat.id, context);
+                      if (!appState.isChatLocked(chat.id)) {
+                        appState.selectChat(chat.id, context);
+                      }
                     }),
                   )
                 ],

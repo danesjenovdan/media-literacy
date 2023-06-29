@@ -1,4 +1,3 @@
-// import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:media_literacy_app/models/story.dart';
 import 'package:media_literacy_app/state/app_state.dart';
@@ -26,12 +25,13 @@ Widget _buildMessage(BuildContext context, DisplayedMessage displayedMessage) {
 
     if (message.type.startsWith('ACTION')) {
       if (message.type == 'ACTION_QUEST_END') {
-        // var nextChatId = message.actionOptions!.triggerChatId;
-        // var nextChat = message.thread!.chat!.story!.chats.firstWhereOrNull((chat) => chat.id == nextChatId);
-
-        // if (nextChat == null) {
-        //   return Text('ERROR: ACTION HAS INVALID TRIGGER CHAT ID! id="${message.id}" type="${message.type}"');
-        // }
+        String? triggerChatId = message.getActionTriggerChatId();
+        if (triggerChatId != null) {
+          Chat? nextChat = message.getActionTriggerChat();
+          if (nextChat == null) {
+            return Text('ERROR: ACTION HAS INVALID TRIGGER CHAT ID! id="${message.id}" type="${message.type}"');
+          }
+        }
 
         return const Text("Modul završen")
             .textStyle(AppTextStyles.responseConfirmation)
@@ -122,14 +122,22 @@ Future? _queueNextMessage(AppState appState, DisplayedState displayedChatState) 
 
     if (lastMessage.type == 'ACTION_QUEST_END') {
       return Future.microtask(() {
-        appState.setCompleted();
+        appState.setChatCompleted();
+
+        String? triggerChatId = lastMessage.getActionTriggerChatId();
+        if (triggerChatId != null) {
+          Chat? nextChat = lastMessage.getActionTriggerChat();
+          if (nextChat != null) {
+            appState.setChatUnlocked(triggerChatId);
+          }
+        }
       });
     }
 
     if (lastMessage.type.startsWith('ACTION')) {
       // TODO:
       print(lastMessage.type);
-      return null;
+      // return null;
     }
 
     if (lastMessage.response.type == 'NO_RESPONSE') {
