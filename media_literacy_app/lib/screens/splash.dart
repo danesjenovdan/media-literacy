@@ -46,11 +46,11 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
             RotationTransition(
               turns: Tween(begin: 0.0, end: 1.0).animate(_controller),
               child: Image.asset('assets/images/spinner.png', width: 96, height: 96),
-            ),
+            ).padding(bottom: 40),
           );
         } else if (!showError) {
           widgets.add(
-            const SizedBox.square(dimension: 96),
+            const SizedBox.square(dimension: 96).padding(bottom: 40),
           );
         }
 
@@ -58,19 +58,16 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
           Image.asset('assets/images/logo.png', width: 215, height: 215).padding(bottom: 12),
           const Text(AppConstants.title).textStyle(AppTextStyles.splashTitle),
           const Text(AppConstants.subtitle).textStyle(AppTextStyles.splashSubtitle),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset('assets/images/logo-zastone.png', width: 127, height: 24).padding(right: 16),
-              Image.asset('assets/images/logo-stepbystep.png', width: 31, height: 36),
-            ],
-          ).padding(top: 85),
         ]);
 
         if (showError) {
           var errorString = snapshot.error.toString();
           widgets.add(
             Text('Error: $errorString').fontSize(12).textAlignment(TextAlign.center).padding(top: 16),
+          );
+        } else {
+          widgets.add(
+            const SizedBox.square(dimension: 96).padding(top: 40),
           );
         }
 

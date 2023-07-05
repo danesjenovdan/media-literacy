@@ -43,10 +43,7 @@ CustomAppBar createAppBar(BuildContext context, String title) {
         Expanded(
           child: Text(title).textStyle(AppTextStyles.appBarTitle).padding(left: 2),
         ),
-        const SizedBox.square(
-          dimension: 48,
-          child: Icon(Icons.settings_backup_restore_rounded, size: 36, color: Colors.white),
-        ).backgroundColor(AppColors.resetButtonBackground).clipOval().gestures(onTap: () => appState.resetAppState(context)),
+        Image.asset('assets/images/logo.png', width: 48, height: 48).gestures(onTap: () => appState.resetAppState(context)),
       ],
     ).padding(left: 16, right: 16),
   );
@@ -83,10 +80,7 @@ CustomAppBar createAppBarWithBackButton(BuildContext context, String title) {
         Expanded(
           child: Text(title).textStyle(AppTextStyles.appBarSmallTitle).padding(left: 4, right: 8),
         ),
-        SizedBox.square(
-          dimension: 48,
-          child: const Icon(Icons.replay_rounded, size: 36, color: Colors.white).rotate(angle: -45),
-        ).backgroundColor(AppColors.resetButtonBackground).clipOval().gestures(
+        Image.asset('assets/images/logo.png', width: 48, height: 48).gestures(
           onTap: () async {
             var route = ModalRoute.of(context);
             String? routeName = route?.settings.name;

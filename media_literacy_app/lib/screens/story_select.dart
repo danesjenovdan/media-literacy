@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:media_literacy_app/state/app_state.dart';
 import 'package:media_literacy_app/widgets/custom_app_bar.dart';
-import 'package:media_literacy_app/widgets/footer_logos.dart';
 import 'package:media_literacy_app/widgets/selector_card.dart';
 import 'package:provider/provider.dart';
 import 'package:styled_widget/styled_widget.dart';
@@ -40,7 +39,6 @@ class StorySelectScreen extends StatelessWidget {
                           appState.selectStory(story.id, context);
                         }),
                       ),
-                      const FooterLogos().padding(top: 4).alignment(Alignment.bottomCenter).expanded(),
                     ],
                   ).padding(top: 28),
                 ),
