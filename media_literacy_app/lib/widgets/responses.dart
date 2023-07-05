@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:media_literacy_app/models/story.dart';
@@ -22,6 +23,71 @@ class ChatResponse extends StatelessWidget {
   }
 }
 
+class ResponseButton extends StatefulWidget {
+  final String text;
+  final bool showArrow;
+  final bool stayTapped;
+  final void Function()? onTap;
+
+  const ResponseButton({super.key, required this.text, this.showArrow = false, this.stayTapped = false, this.onTap});
+
+  @override
+  State<ResponseButton> createState() => _ResponseButtonState();
+}
+
+class _ResponseButtonState extends State<ResponseButton> {
+  bool isTapped = false;
+
+  void _resetTapped() {
+    if (widget.stayTapped) return;
+    setState(() {
+      isTapped = false;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    Widget returnWidget;
+
+    if (widget.showArrow) {
+      returnWidget = Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(widget.text)
+              .textStyle(isTapped ? AppTextStyles.responseConfirmationDown : AppTextStyles.responseConfirmation)
+              .textAlignment(TextAlign.center),
+          Icon(Icons.arrow_forward_rounded, size: 22, color: isTapped ? AppColors.text : Colors.white).padding(left: 12),
+        ],
+      );
+    } else {
+      returnWidget =
+          Text(widget.text).textStyle(isTapped ? AppTextStyles.responseOptionDown : AppTextStyles.responseOption).textAlignment(TextAlign.center);
+    }
+
+    return returnWidget
+        .alignment(Alignment.center)
+        .padding(vertical: 10, horizontal: 8)
+        .backgroundColor(isTapped ? AppColors.chatResponseOptionBackgroundDown : AppColors.chatResponseOptionBackground)
+        .constrained(width: double.infinity, minHeight: 64)
+        .gestures(
+          onTapDown: (_) {
+            setState(() {
+              isTapped = true;
+            });
+          },
+          onTapUp: (_) {
+            Timer(const Duration(milliseconds: 150), _resetTapped);
+          },
+          onTapCancel: () {
+            Timer(const Duration(milliseconds: 150), _resetTapped);
+          },
+          onTap: widget.onTap,
+        )
+        .clipRRect(all: 12)
+        .padding(bottom: 5);
+  }
+}
+
 class ConfirmationResponse extends StatelessWidget {
   final Message message;
 
@@ -39,20 +105,11 @@ class ConfirmationResponse extends StatelessWidget {
   Widget build(BuildContext context) {
     var appState = context.watch<AppState>();
 
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(message.response.text).textStyle(AppTextStyles.responseConfirmation).textAlignment(TextAlign.center),
-        const Icon(Icons.arrow_forward_rounded, size: 22, color: Colors.white).padding(left: 12),
-      ],
-    )
-        .alignment(Alignment.center)
-        .padding(all: 12)
-        .backgroundColor(AppColors.chatResponseOptionBackground)
-        .constrained(width: double.infinity, minHeight: 64)
-        .clipRRect(all: 12)
-        .padding(bottom: 5)
-        .gestures(onTap: () => _onTap(appState));
+    return ResponseButton(
+      text: message.response.text,
+      showArrow: true,
+      onTap: () => _onTap(appState),
+    );
   }
 }
 
@@ -134,26 +191,20 @@ class _OptionsResponseState extends State<OptionsResponse> {
     }
   }
 
-  Widget _buildOption(BuildContext context, AppState appState, MessageResponseOption option) {
-    return Text(option.buttonText)
-        .textStyle(AppTextStyles.responseOption)
-        .textAlignment(TextAlign.center)
-        .alignment(Alignment.center)
-        .padding(vertical: 10, horizontal: 8)
-        .backgroundColor(AppColors.chatResponseOptionBackground)
-        .constrained(width: double.infinity, minHeight: 64)
-        .clipRRect(all: 12)
-        .padding(bottom: 5)
-        .gestures(onTap: () => _onTapOption(context, appState, option));
-  }
-
   @override
   Widget build(BuildContext context) {
     var appState = context.watch<AppState>();
 
     return Column(
       children: [
-        ...widget.message.response.options.map((option) => _buildOption(context, appState, option)),
+        ...widget.message.response.options.map((option) {
+          var isCorrect = correctOptionsIds.contains(option.id);
+          return ResponseButton(
+            text: option.buttonText,
+            stayTapped: isCorrect,
+            onTap: () => _onTapOption(context, appState, option),
+          );
+        }),
       ],
     );
   }

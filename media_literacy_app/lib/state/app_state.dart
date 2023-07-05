@@ -62,6 +62,7 @@ class AppColors {
   static const Color chatMessageOutgoingBackground = Color(0xFF1DD882);
 
   static const Color chatResponseOptionBackground = Color(0xFF333333);
+  static const Color chatResponseOptionBackgroundDown = Color(0xFFFFE3D2);
 
   static const Color storySelectCircle = Color(0xFF9CD9D3);
   static const Color chatSelectCircle = Color(0xFFFFE3D2);
@@ -167,11 +168,27 @@ class AppTextStyles {
     ),
   );
 
+  static final TextStyle responseConfirmationDown = GoogleFonts.nunito(
+    textStyle: const TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.w600,
+      color: AppColors.text,
+    ),
+  );
+
   static final TextStyle responseOption = GoogleFonts.nunito(
     textStyle: const TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w600,
       color: Colors.white,
+    ),
+  );
+
+  static final TextStyle responseOptionDown = GoogleFonts.nunito(
+    textStyle: const TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w600,
+      color: AppColors.text,
     ),
   );
 
