@@ -56,41 +56,74 @@ class ConfirmationResponse extends StatelessWidget {
   }
 }
 
-class OptionsResponse extends StatelessWidget {
+class OptionsResponse extends StatefulWidget {
   final Message message;
 
   const OptionsResponse({super.key, required this.message});
 
-  void _onTapOption(BuildContext context, AppState appState, MessageResponseOption option) {
-    var isCorrect = option.isCorrect || option.hideResponseToChat;
+  @override
+  State<OptionsResponse> createState() => _OptionsResponseState();
+}
 
-    if (!isCorrect) {
-      showDialog(
-        context: context,
-        barrierDismissible: true,
-        barrierColor: AppColors.text.withAlpha(200),
-        builder: (context) {
-          return CustomDialog(
-            text: option.text,
-          );
-        },
-      );
+class _OptionsResponseState extends State<OptionsResponse> {
+  List<String> correctOptionsIds = [];
+  List<String> correctOptionsSelectedIds = [];
+
+  @override
+  void initState() {
+    correctOptionsIds = widget.message.response.options
+        .where((option) {
+          var isCorrect = option.isCorrect || option.hideResponseToChat;
+          return isCorrect;
+        })
+        .map((option) => option.id)
+        .toList();
+
+    super.initState();
+  }
+
+  void _onTapOption(BuildContext context, AppState appState, MessageResponseOption option) async {
+    var isCorrect = correctOptionsIds.contains(option.id);
+
+    await showDialog(
+      context: context,
+      barrierDismissible: true,
+      barrierColor: AppColors.text.withAlpha(200),
+      builder: (context) {
+        return CustomDialog(
+          text: option.text.isEmpty ? "<no text>" : option.text,
+        );
+      },
+    );
+
+    if (!isCorrect || correctOptionsSelectedIds.contains(option.id)) {
       return;
     }
 
-    appState.addDisplayedMessage(DisplayedMessage.fromResponse(message.thread!.id, message.id, option.buttonText));
+    correctOptionsSelectedIds.add(option.id);
 
-    if (message.thread!.id == option.thread) {
-      var lastMessageIndex = message.thread!.messages.indexWhere((m) => m.id == message.id);
-      if ((lastMessageIndex + 1) < message.thread!.messages.length) {
-        var newMessage = message.thread!.messages[lastMessageIndex + 1];
-        appState.addDisplayedMessage(DisplayedMessage.fromMessage(newMessage));
+    if (correctOptionsSelectedIds.length == correctOptionsIds.length) {
+      String text = "";
+
+      List<MessageResponseOption> correctOptions = widget.message.response.options.where((option) => correctOptionsIds.contains(option.id)).toList();
+      for (var correctOption in correctOptions) {
+        text += "- ${correctOption.buttonText}\n";
       }
-    } else {
-      var newThread = message.thread!.chat!.threads.firstWhereOrNull((thread) => thread.id == option.thread);
-      if (newThread != null) {
-        var newMessage = newThread.messages.first;
-        appState.addDisplayedMessage(DisplayedMessage.fromMessage(newMessage));
+
+      appState.addDisplayedMessage(DisplayedMessage.fromResponse(widget.message.thread!.id, widget.message.id, text));
+
+      if (widget.message.thread!.id == option.thread) {
+        var lastMessageIndex = widget.message.thread!.messages.indexWhere((m) => m.id == widget.message.id);
+        if ((lastMessageIndex + 1) < widget.message.thread!.messages.length) {
+          var newMessage = widget.message.thread!.messages[lastMessageIndex + 1];
+          appState.addDisplayedMessage(DisplayedMessage.fromMessage(newMessage));
+        }
+      } else {
+        var newThread = widget.message.thread!.chat!.threads.firstWhereOrNull((thread) => thread.id == option.thread);
+        if (newThread != null) {
+          var newMessage = newThread.messages.first;
+          appState.addDisplayedMessage(DisplayedMessage.fromMessage(newMessage));
+        }
       }
     }
   }
@@ -114,7 +147,7 @@ class OptionsResponse extends StatelessWidget {
 
     return Column(
       children: [
-        ...message.response.options.map((option) => _buildOption(context, appState, option)),
+        ...widget.message.response.options.map((option) => _buildOption(context, appState, option)),
       ],
     );
   }
