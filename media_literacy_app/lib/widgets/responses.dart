@@ -15,7 +15,8 @@ class ChatResponse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Styled.widget(child: child)
-        .padding(horizontal: 16, top: 16, bottom: 20)
+        .padding(horizontal: 16, top: 16, bottom: 11)
+        .safeArea(top: false, left: false, right: false)
         .backgroundColor(AppColors.chatBackground)
         .constrained(width: double.infinity);
   }

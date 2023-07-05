@@ -34,7 +34,7 @@ class FooterLogos extends StatelessWidget {
             ),
           ],
         ),
-      ),
+      ).safeArea(top: false, left: false, right: false),
     ).clipRRect(topLeft: 20, topRight: 20).boxShadow(color: const Color(0x1F000000), blurRadius: 16);
   }
 }

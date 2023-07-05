@@ -29,6 +29,7 @@ class ChatSelectScreen extends StatelessWidget {
                 maxHeight: double.infinity,
               ),
               child: SafeArea(
+                bottom: false,
                 child: IntrinsicHeight(
                   child: Column(
                     children: [
