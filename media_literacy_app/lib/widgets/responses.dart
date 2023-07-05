@@ -100,7 +100,9 @@ class _OptionsResponseState extends State<OptionsResponse> {
       return;
     }
 
-    correctOptionsSelectedIds.add(option.id);
+    setState(() {
+      correctOptionsSelectedIds.add(option.id);
+    });
 
     if (correctOptionsSelectedIds.length == correctOptionsIds.length) {
       String text = "";

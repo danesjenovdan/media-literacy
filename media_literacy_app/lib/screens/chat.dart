@@ -78,19 +78,19 @@ Widget _buildResponse(BuildContext context, AppState appState, DisplayedState di
   }
 
   if (lastMessage.response.type == 'CONFIRMATION') {
-    return ConfirmationResponse(message: lastMessage);
+    return ConfirmationResponse(key: ValueKey(lastMessage.id), message: lastMessage);
   }
 
   if (lastMessage.response.type == 'QUIZ') {
-    return QuizResponse(message: lastMessage);
+    return QuizResponse(key: ValueKey(lastMessage.id), message: lastMessage);
   }
 
   if (lastMessage.response.type == 'PHOTO_QUIZ') {
-    return PhotoQuizResponse(message: lastMessage);
+    return PhotoQuizResponse(key: ValueKey(lastMessage.id), message: lastMessage);
   }
 
   if (lastMessage.response.type == 'OPTIONS') {
-    return OptionsResponse(message: lastMessage);
+    return OptionsResponse(key: ValueKey(lastMessage.id), message: lastMessage);
   }
 
   // ignore: avoid_print
