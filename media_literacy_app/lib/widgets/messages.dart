@@ -73,7 +73,7 @@ class NarratorMessage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AspectRatio(
-            aspectRatio: 2,
+            aspectRatio: 16 / 9,
             child: LazyYoutubePlayer(message.youtubeId, message.youtubeThumbUrl),
           ),
           Text(message.youtubeTitle).textStyle(AppTextStyles.youtubeMessage).padding(vertical: 8, horizontal: 12),

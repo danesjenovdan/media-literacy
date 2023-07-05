@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:media_literacy_app/screens/fullscreen_video.dart';
 import 'package:media_literacy_app/state/app_state.dart';
 import 'package:media_literacy_app/widgets/images.dart';
 import 'package:styled_widget/styled_widget.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 class LazyYoutubePlayer extends StatefulWidget {
   final String youtubeId;
@@ -16,14 +17,30 @@ class LazyYoutubePlayer extends StatefulWidget {
 
 class _LazyYoutubePlayerState extends State<LazyYoutubePlayer> {
   bool showThumbnail = true;
-  YoutubePlayerController? _controller;
+  late YoutubePlayerController _controller;
 
   @override
   void initState() {
-    _controller = YoutubePlayerController(
-      initialVideoId: widget.youtubeId,
-      flags: const YoutubePlayerFlags(mute: false, autoPlay: true),
+    _controller = YoutubePlayerController.fromVideoId(
+      videoId: widget.youtubeId,
+      autoPlay: true,
+      params: const YoutubePlayerParams(
+        showFullscreenButton: true,
+      ),
     );
+    _controller.setFullScreenListener((value) async {
+      var navigator = Navigator.of(context);
+
+      _controller.pauseVideo();
+      double currentTime = await _controller.currentTime;
+
+      navigator.push(
+        MaterialPageRoute(
+          settings: const RouteSettings(name: 'FullscreenVideoScreen'),
+          builder: (context) => FullscreenVideoScreen(youtubeId: widget.youtubeId, startAt: currentTime),
+        ),
+      );
+    });
 
     super.initState();
   }
@@ -51,8 +68,9 @@ class _LazyYoutubePlayerState extends State<LazyYoutubePlayer> {
       );
     }
     return YoutubePlayer(
-      controller: _controller!,
-      showVideoProgressIndicator: true,
+      controller: _controller,
+      backgroundColor: Colors.black,
+      enableFullScreenOnVerticalDrag: false,
     );
   }
 }
