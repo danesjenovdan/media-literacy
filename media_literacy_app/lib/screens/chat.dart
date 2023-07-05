@@ -195,7 +195,11 @@ class _ChatScreenState extends State<ChatScreen> {
     });
 
     return Scaffold(
-      appBar: createAppBarWithBackButton(context, appState.selectedChat!.title),
+      appBar: createAppBarWithBackButton(
+        context,
+        appState.selectedChat!.title,
+        onLogoPressed: () => appState.resetChatState(),
+      ),
       extendBodyBehindAppBar: true,
       body: Container(
         color: AppColors.chatBackground,

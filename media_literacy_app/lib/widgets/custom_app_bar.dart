@@ -49,9 +49,7 @@ CustomAppBar createAppBar(BuildContext context, String title) {
   );
 }
 
-CustomAppBar createAppBarWithBackButton(BuildContext context, String title) {
-  var appState = context.watch<AppState>();
-
+CustomAppBar createAppBarWithBackButton(BuildContext context, String title, {void Function()? onLogoPressed}) {
   return CustomAppBar(
     height: 80,
     appBarColor: AppColors.selectStoryAppBarBackground,
@@ -82,6 +80,9 @@ CustomAppBar createAppBarWithBackButton(BuildContext context, String title) {
         ),
         Image.asset('assets/images/logo.png', width: 48, height: 48).gestures(
           onTap: () async {
+            if (onLogoPressed == null) {
+              return;
+            }
             var route = ModalRoute.of(context);
             String? routeName = route?.settings.name;
             if (routeName != null) {
@@ -92,12 +93,7 @@ CustomAppBar createAppBarWithBackButton(BuildContext context, String title) {
                 builder: (context) => const CustomResetDialog(),
               );
               if (value is bool && value) {
-                if (routeName == "ChatScreen") {
-                  appState.resetChatState();
-                }
-                if (routeName == "ChatSelectScreen") {
-                  appState.resetStoryState();
-                }
+                onLogoPressed();
               }
             }
           },

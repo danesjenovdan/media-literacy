@@ -2,6 +2,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:media_literacy_app/models/story.dart';
+import 'package:media_literacy_app/screens/about_screen.dart';
 import 'package:media_literacy_app/screens/chat_select.dart';
 import 'package:media_literacy_app/screens/chat.dart';
 import 'package:media_literacy_app/screens/splash.dart';
@@ -91,7 +92,7 @@ class AppTextStyles {
     ),
   );
 
-  static final TextStyle systemMessage = GoogleFonts.quicksand(
+  static final TextStyle systemMessage = GoogleFonts.nunito(
     textStyle: const TextStyle(
       fontSize: 18,
       fontWeight: FontWeight.bold,
@@ -240,17 +241,24 @@ class AppState extends ChangeNotifier {
     selectedStory = stories[storyId];
     notifyListeners();
 
-    // for (var actor in selectedStory!.actors) {
-    //   precacheImage(NetworkImageWithRetry(actor.avatar.miniThumbUrl), context);
-    //   precacheImage(NetworkImageWithRetry(actor.avatar.url), context);
-    // }
+    var navigator = Navigator.of(context);
 
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        settings: const RouteSettings(name: 'ChatSelectScreen'),
-        builder: (context) => const ChatSelectScreen(),
-      ),
-    );
+    // if this is the about story, show the about screen
+    if (storyId == "6495a84511622f51d8e2abbf") {
+      navigator.push(
+        MaterialPageRoute(
+          settings: const RouteSettings(name: 'AboutScreen'),
+          builder: (context) => const AboutScreen(),
+        ),
+      );
+    } else {
+      navigator.push(
+        MaterialPageRoute(
+          settings: const RouteSettings(name: 'ChatSelectScreen'),
+          builder: (context) => const ChatSelectScreen(),
+        ),
+      );
+    }
   }
 
   void selectChat(String chatId, BuildContext context) {
