@@ -351,7 +351,7 @@ class DisplayedState {
       "messageList": messageList.map((m) => m.toJson()).toList(),
       "threadStack": threadStack,
       "completed": completed,
-      "unlocked": completed,
+      "unlocked": unlocked,
     };
   }
 }
