@@ -109,7 +109,11 @@ class _OptionsResponseState extends State<OptionsResponse> {
 
       List<MessageResponseOption> correctOptions = widget.message.response.options.where((option) => correctOptionsIds.contains(option.id)).toList();
       for (var correctOption in correctOptions) {
-        text += "- ${correctOption.buttonText}\n";
+        if (correctOptionsIds.length > 1) {
+          text += "- ${correctOption.buttonText}\n";
+        } else {
+          text += correctOption.buttonText;
+        }
       }
 
       appState.addDisplayedMessage(DisplayedMessage.fromResponse(widget.message.thread!.id, widget.message.id, text));
