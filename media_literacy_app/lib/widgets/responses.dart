@@ -140,36 +140,47 @@ class _OptionsResponseState extends State<OptionsResponse> {
   }
 
   void _onTapOption(BuildContext context, AppState appState, MessageResponseOption option) async {
-    var isCorrect = correctOptionsIds.contains(option.id);
+    if (correctOptionsIds.isNotEmpty) {
+      var isCorrect = correctOptionsIds.contains(option.id);
 
-    await showDialog(
-      context: context,
-      barrierDismissible: true,
-      barrierColor: AppColors.text.withAlpha(200),
-      builder: (context) {
-        return CustomDialog(
-          text: option.text.isEmpty ? "<no text>" : option.text,
+      if ((isCorrect && correctOptionsIds.length == 1 && option.text.isEmpty)) {
+        // dont show dialog for single correct option without text
+      } else {
+        await showDialog(
+          context: context,
+          barrierDismissible: true,
+          barrierColor: AppColors.text.withAlpha(200),
+          builder: (context) {
+            return CustomDialog(
+              text: option.text.isEmpty ? "<no text>" : option.text,
+            );
+          },
         );
-      },
-    );
+      }
 
-    if (!isCorrect || correctOptionsSelectedIds.contains(option.id)) {
-      return;
+      if (!isCorrect || correctOptionsSelectedIds.contains(option.id)) {
+        return;
+      }
+
+      setState(() {
+        correctOptionsSelectedIds.add(option.id);
+      });
     }
-
-    setState(() {
-      correctOptionsSelectedIds.add(option.id);
-    });
 
     if (correctOptionsSelectedIds.length == correctOptionsIds.length) {
       String text = "";
 
-      List<MessageResponseOption> correctOptions = widget.message.response.options.where((option) => correctOptionsIds.contains(option.id)).toList();
-      for (var correctOption in correctOptions) {
-        if (correctOptionsIds.length > 1) {
-          text += "- ${correctOption.buttonText}\n";
-        } else {
-          text += correctOption.buttonText;
+      if (correctOptionsIds.isEmpty) {
+        text = option.buttonText;
+      } else {
+        List<MessageResponseOption> correctOptions =
+            widget.message.response.options.where((option) => correctOptionsIds.contains(option.id)).toList();
+        for (var correctOption in correctOptions) {
+          if (correctOptionsIds.length > 1) {
+            text += "- ${correctOption.buttonText}\n";
+          } else {
+            text += correctOption.buttonText;
+          }
         }
       }
 
