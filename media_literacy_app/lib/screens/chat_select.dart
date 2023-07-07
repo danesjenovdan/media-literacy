@@ -16,11 +16,7 @@ class ChatSelectScreen extends StatelessWidget {
     Story story = appState.selectedStory!;
 
     return Scaffold(
-      appBar: createAppBarWithBackButton(
-        context,
-        story.name,
-        onLogoPressed: () => appState.resetStoryState(),
-      ),
+      appBar: createAppBarWithBackButton(context, story.name),
       extendBodyBehindAppBar: true,
       body: Container(
         width: double.infinity,

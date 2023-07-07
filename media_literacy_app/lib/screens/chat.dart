@@ -198,7 +198,7 @@ class _ChatScreenState extends State<ChatScreen> {
       appBar: createAppBarWithBackButton(
         context,
         appState.selectedChat!.title,
-        onLogoPressed: () => appState.resetChatState(),
+        onLogoTap: () => appState.resetChatState(),
       ),
       extendBodyBehindAppBar: true,
       body: Container(

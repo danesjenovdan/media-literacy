@@ -91,6 +91,54 @@
                 "hasImageRecognition": false,
                 "penaltySeconds": 0,
                 "assisted": false,
+                "_id": "64a6abc211622f51d8109de1",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64a6abc211622f51d8109de2",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "location": {
+                  "_id": "64a6abc211622f51d8109de3",
+                  "dateTime": "2023-07-06T11:55:46.841Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-07-06T11:55:46.842Z",
+              "_id": "64a6abc211622f51d8109de0",
+              "type": "SNAPCHAT_AR",
+              "hasCustomArThumb": false,
+              "pauseBefore": 500,
+              "timeWriting": 2000,
+              "actor": "64359a3047eb967304f11655",
+              "arUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdrenebO6QsjzrZmlJ96rfl8MRcHnl6ihbmbkOFf_a5Vn_vWQ/viewform?usp=sf_link",
+              "title": "Pitanje",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": false,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
                 "_id": "64804e5311622f51d8dbb27e",
                 "options": [
                   {
@@ -427,6 +475,52 @@
                 "hasImageRecognition": false,
                 "penaltySeconds": 0,
                 "assisted": false,
+                "_id": "649e7be211622f51d83ac245",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "649e7be211622f51d83ac246",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Sumiraj",
+                "location": {
+                  "_id": "649e7be211622f51d83ac247",
+                  "dateTime": "2023-06-30T06:53:22.931Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-30T06:53:22.932Z",
+              "_id": "649e7be211622f51d83ac244",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta smo naučili u ovom modulu?",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
                 "_id": "649ae1e411622f51d866c017",
                 "options": [],
                 "inputOptions": [],
@@ -651,6 +745,52 @@
                 "isNumber": false,
                 "required": false,
                 "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "649e78b811622f51d83ab194",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "649e78b811622f51d83ab195",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "NO_RESPONSE",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "649e78b811622f51d83ab196",
+                  "dateTime": "2023-06-30T06:39:52.184Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-30T06:39:52.184Z",
+              "_id": "649e78b811622f51d83ab193",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Čestitam! Prvi modul uspješno završen.",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
                 "hideResponseToChat": false,
                 "hasTimeLimit": false,
                 "timeOverLeadsToThread": false,
@@ -716,7 +856,7 @@
                 "hasImageRecognition": false,
                 "penaltySeconds": 0,
                 "assisted": false,
-                "_id": "649d49c911622f51d82de189",
+                "_id": "64a48db211622f51d8e7e764",
                 "options": [],
                 "inputOptions": [],
                 "photoOptions": [],
@@ -725,47 +865,13 @@
               },
               "seenBy": [],
               "deliveredTo": [],
-              "date": "2023-06-29T09:07:21.555Z",
-              "_id": "649d49c911622f51d82de18a",
-              "type": "ACTION",
-              "pauseBefore": 0,
-              "timeWriting": 0,
-              "actionOptions": {
-                "_id": "649d49c911622f51d82de18b",
-                "triggerChatId": "643599dc47eb967304f115f4"
-              }
-            },
-            {
-              "isConfirmation": false,
-              "showConfirmationResult": false,
-              "isCorrect": false,
-              "hasAudio": false,
-              "response": {
-                "isNumber": false,
-                "required": false,
-                "preventVoting": false,
-                "hideResponseToChat": false,
-                "hasTimeLimit": false,
-                "timeOverLeadsToThread": false,
-                "hasImageRecognition": false,
-                "penaltySeconds": 0,
-                "assisted": false,
-                "_id": "649bf88611622f51d8e0192d",
-                "options": [],
-                "inputOptions": [],
-                "photoOptions": [],
-                "comparePhotos": [],
-                "type": "NO_RESPONSE"
-              },
-              "seenBy": [],
-              "deliveredTo": [],
-              "date": "2023-06-28T09:08:22.569Z",
-              "_id": "649bf88611622f51d8e0192e",
+              "date": "2023-07-04T21:22:58.603Z",
+              "_id": "64a48db211622f51d8e7e765",
               "type": "ACTION_QUEST_END",
               "pauseBefore": 0,
               "timeWriting": 0,
               "actionOptions": {
-                "_id": "649bf88611622f51d8e0192f",
+                "_id": "64a48db211622f51d8e7e766",
                 "triggerChatId": "643599dc47eb967304f115f4"
               }
             }
@@ -845,8 +951,8 @@
                   "radius": 40,
                   "label": "I'm here!"
                 },
-                "type": "NO_RESPONSE",
-                "confirmText": "Continue"
+                "type": "CONFIRMATION",
+                "confirmText": "Nastavi"
               },
               "seenBy": [],
               "deliveredTo": [],
@@ -1614,7 +1720,7 @@
                   "label": "I'm here!"
                 },
                 "type": "CONFIRMATION",
-                "confirmText": "Nastavi."
+                "confirmText": "Nastavi"
               },
               "seenBy": [],
               "deliveredTo": [],
@@ -1722,6 +1828,52 @@
               "pauseBefore": 0,
               "timeWriting": 0,
               "text": "Šta bi od navedenog trebalo da sadrži impresum? (Odaberi tačne odgovore)",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64a48e7811622f51d8e8093a",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64a48e7811622f51d8e8093b",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Sumiraj",
+                "location": {
+                  "_id": "64a48e7811622f51d8e8093c",
+                  "dateTime": "2023-07-04T21:26:16.915Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-07-04T21:26:16.916Z",
+              "_id": "64a48e7811622f51d8e80939",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta smo naučili u ovom modulu?",
               "actor": "64359a3047eb967304f11655",
               "file": null
             },
@@ -1885,6 +2037,52 @@
                 "isNumber": false,
                 "required": false,
                 "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "649e7c3811622f51d83ad9a6",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "649e7c3811622f51d83ad9a7",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "NO_RESPONSE",
+                "confirmText": "Continue",
+                "location": {
+                  "_id": "649e7c3811622f51d83ad9a8",
+                  "dateTime": "2023-06-30T06:54:48.723Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-06-30T06:54:48.723Z",
+              "_id": "649e7c3811622f51d83ad9a5",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Čestitam! Drugi modul uspješno završen.",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
                 "hideResponseToChat": false,
                 "hasTimeLimit": false,
                 "timeOverLeadsToThread": false,
@@ -1950,7 +2148,7 @@
                 "hasImageRecognition": false,
                 "penaltySeconds": 0,
                 "assisted": false,
-                "_id": "649d4a4011622f51d82dfa0d",
+                "_id": "64a48ebc11622f51d8e83210",
                 "options": [],
                 "inputOptions": [],
                 "photoOptions": [],
@@ -1959,47 +2157,13 @@
               },
               "seenBy": [],
               "deliveredTo": [],
-              "date": "2023-06-29T09:09:20.971Z",
-              "_id": "649d4a4011622f51d82dfa0e",
-              "type": "ACTION",
-              "pauseBefore": 0,
-              "timeWriting": 0,
-              "actionOptions": {
-                "_id": "649d4a4011622f51d82dfa0f",
-                "triggerChatId": "643599e147eb967304f115fb"
-              }
-            },
-            {
-              "isConfirmation": false,
-              "showConfirmationResult": false,
-              "isCorrect": false,
-              "hasAudio": false,
-              "response": {
-                "isNumber": false,
-                "required": false,
-                "preventVoting": false,
-                "hideResponseToChat": false,
-                "hasTimeLimit": false,
-                "timeOverLeadsToThread": false,
-                "hasImageRecognition": false,
-                "penaltySeconds": 0,
-                "assisted": false,
-                "_id": "649bfb2d11622f51d8e0ce3e",
-                "options": [],
-                "inputOptions": [],
-                "photoOptions": [],
-                "comparePhotos": [],
-                "type": "NO_RESPONSE"
-              },
-              "seenBy": [],
-              "deliveredTo": [],
-              "date": "2023-06-28T09:19:41.207Z",
-              "_id": "649bfb2d11622f51d8e0ce3f",
+              "date": "2023-07-04T21:27:24.747Z",
+              "_id": "64a48ebc11622f51d8e83211",
               "type": "ACTION_QUEST_END",
               "pauseBefore": 0,
               "timeWriting": 0,
               "actionOptions": {
-                "_id": "649bfb2d11622f51d8e0ce40",
+                "_id": "64a48ebc11622f51d8e83212",
                 "triggerChatId": "643599e147eb967304f115fb"
               }
             }
@@ -2139,18 +2303,18 @@
               "actor": "NARRATOR",
               "isInterstitial": false,
               "file": {
-                "timeCreated": "2023-06-09T14:39:47.260Z",
-                "_id": "648339b311622f51d83825be",
-                "width": 813,
-                "height": 411,
-                "url": "https://loco-us.s3.us-west-1.amazonaws.com/1635ccc7-d837-42fd-a7b7-03175a85c07e.png",
-                "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-1635ccc7-d837-42fd-a7b7-03175a85c07e.png",
-                "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-1635ccc7-d837-42fd-a7b7-03175a85c07e.png",
-                "remote": "1635ccc7-d837-42fd-a7b7-03175a85c07e.png",
-                "thumbRemote": "thumb-1635ccc7-d837-42fd-a7b7-03175a85c07e.png",
-                "miniThumbRemote": "mini-thumb-1635ccc7-d837-42fd-a7b7-03175a85c07e.png",
+                "timeCreated": "2023-07-04T21:53:06.691Z",
+                "_id": "64a494c211622f51d8e9493b",
+                "width": 790,
+                "height": 686,
+                "url": "https://loco-us.s3.us-west-1.amazonaws.com/bff850c0-87f2-44b9-8893-92e68bb67657.png",
+                "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-bff850c0-87f2-44b9-8893-92e68bb67657.png",
+                "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-bff850c0-87f2-44b9-8893-92e68bb67657.png",
+                "remote": "bff850c0-87f2-44b9-8893-92e68bb67657.png",
+                "thumbRemote": "thumb-bff850c0-87f2-44b9-8893-92e68bb67657.png",
+                "miniThumbRemote": "mini-thumb-bff850c0-87f2-44b9-8893-92e68bb67657.png",
                 "type": "IMAGE",
-                "size": 59130,
+                "size": 208690,
                 "__v": 0
               }
             },
@@ -2729,6 +2893,52 @@
                 "hasImageRecognition": false,
                 "penaltySeconds": 0,
                 "assisted": false,
+                "_id": "64a4902911622f51d8e8695f",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64a4902911622f51d8e86960",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Sumiraj",
+                "location": {
+                  "_id": "64a4902911622f51d8e86961",
+                  "dateTime": "2023-07-04T21:33:29.142Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-07-04T21:33:29.142Z",
+              "_id": "64a4902911622f51d8e8695e",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta smo naučili u ovom modulu?",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
                 "_id": "649bfca511622f51d8e1455c",
                 "options": [],
                 "inputOptions": [],
@@ -2756,7 +2966,7 @@
               "type": "TEXT",
               "pauseBefore": 0,
               "timeWriting": 0,
-              "text": "Svaki sadržaj objavljen s namjerom da informiše trebalo bi da ponudi odgovore na pet zlatnih novinarskih pitanja – 5W. \n\nTa pitanja su: \nko (who),\nšta (what),\ngdje (where),\nkad (when) i zašto (why).\n",
+              "text": "Svaki sadržaj objavljen s namjerom da informiše trebalo bi da ponudi odgovore na pet zlatnih novinarskih pitanja – 5W. \n\nTa pitanja su: \nko (who),\nšta (what),\ngdje (where),\nkad (when) i zašto (why).",
               "actor": "64359a3047eb967304f11655",
               "file": null
             },
@@ -2880,7 +3090,7 @@
                 "hasImageRecognition": false,
                 "penaltySeconds": 0,
                 "assisted": false,
-                "_id": "649d4a5711622f51d82e2c13",
+                "_id": "64a48ed611622f51d8e84093",
                 "options": [],
                 "inputOptions": [],
                 "photoOptions": [],
@@ -2889,47 +3099,13 @@
               },
               "seenBy": [],
               "deliveredTo": [],
-              "date": "2023-06-29T09:09:43.741Z",
-              "_id": "649d4a5711622f51d82e2c14",
-              "type": "ACTION",
-              "pauseBefore": 0,
-              "timeWriting": 0,
-              "actionOptions": {
-                "_id": "649d4a5711622f51d82e2c15",
-                "triggerChatId": "643599e647eb967304f11602"
-              }
-            },
-            {
-              "isConfirmation": false,
-              "showConfirmationResult": false,
-              "isCorrect": false,
-              "hasAudio": false,
-              "response": {
-                "isNumber": false,
-                "required": false,
-                "preventVoting": false,
-                "hideResponseToChat": false,
-                "hasTimeLimit": false,
-                "timeOverLeadsToThread": false,
-                "hasImageRecognition": false,
-                "penaltySeconds": 0,
-                "assisted": false,
-                "_id": "649bfd2711622f51d8e19504",
-                "options": [],
-                "inputOptions": [],
-                "photoOptions": [],
-                "comparePhotos": [],
-                "type": "NO_RESPONSE"
-              },
-              "seenBy": [],
-              "deliveredTo": [],
-              "date": "2023-06-28T09:28:07.878Z",
-              "_id": "649bfd2711622f51d8e19505",
+              "date": "2023-07-04T21:27:50.447Z",
+              "_id": "64a48ed611622f51d8e84094",
               "type": "ACTION_QUEST_END",
               "pauseBefore": 0,
               "timeWriting": 0,
               "actionOptions": {
-                "_id": "649bfd2711622f51d8e19506",
+                "_id": "64a48ed611622f51d8e84095",
                 "triggerChatId": "643599e647eb967304f11602"
               }
             }
@@ -3142,7 +3318,7 @@
                     "_id": "649442be11622f51d8d1d20d",
                     "buttonText": "Dokazu koji podržava teoriju zavjere ",
                     "text": "Razmisli još jednom!",
-                    "thread": "649442be11622f51d8d1d41d",
+                    "thread": "64934dba11622f51d8b8b785",
                     "hideResponseToChat": false
                   },
                   {
@@ -3150,7 +3326,7 @@
                     "_id": "649442be11622f51d8d1d20c",
                     "buttonText": "Postojanju tajnog zapleta ",
                     "text": "",
-                    "thread": "649442be11622f51d8d1d41e",
+                    "thread": "64934dba11622f51d8b8b785",
                     "hideResponseToChat": true
                   },
                   {
@@ -3158,7 +3334,8 @@
                     "_id": "649442be11622f51d8d1d20b",
                     "buttonText": "Tezi da “slučajnosti ne postoje”",
                     "text": "Razmisli još jednom!",
-                    "hideResponseToChat": false
+                    "hideResponseToChat": false,
+                    "thread": "64934dba11622f51d8b8b785"
                   }
                 ],
                 "inputOptions": [
@@ -3276,6 +3453,52 @@
               "pauseBefore": 0,
               "timeWriting": 0,
               "text": "Šta je “dokaz” u ovoj teoriji zavjere koji je prividno čini tačnom?",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
+                "_id": "64a4915511622f51d8e8d10c",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64a4915511622f51d8e8d10d",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Sumiraj",
+                "location": {
+                  "_id": "64a4915511622f51d8e8d10e",
+                  "dateTime": "2023-07-04T21:38:29.244Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-07-04T21:38:29.244Z",
+              "_id": "64a4915511622f51d8e8d10b",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta smo naučili u ovom modulu?",
               "actor": "64359a3047eb967304f11655",
               "file": null
             },
@@ -3445,7 +3668,7 @@
                 "hasImageRecognition": false,
                 "penaltySeconds": 0,
                 "assisted": false,
-                "_id": "649d4a8211622f51d82e53db",
+                "_id": "64a48eed11622f51d8e8487a",
                 "options": [],
                 "inputOptions": [],
                 "photoOptions": [],
@@ -3454,47 +3677,13 @@
               },
               "seenBy": [],
               "deliveredTo": [],
-              "date": "2023-06-29T09:10:26.156Z",
-              "_id": "649d4a8211622f51d82e53dc",
-              "type": "ACTION",
-              "pauseBefore": 0,
-              "timeWriting": 0,
-              "actionOptions": {
-                "_id": "649d4a8211622f51d82e53dd",
-                "triggerChatId": "64934fda11622f51d8b8df8a"
-              }
-            },
-            {
-              "isConfirmation": false,
-              "showConfirmationResult": false,
-              "isCorrect": false,
-              "hasAudio": false,
-              "response": {
-                "isNumber": false,
-                "required": false,
-                "preventVoting": false,
-                "hideResponseToChat": false,
-                "hasTimeLimit": false,
-                "timeOverLeadsToThread": false,
-                "hasImageRecognition": false,
-                "penaltySeconds": 0,
-                "assisted": false,
-                "_id": "649bfdac11622f51d8e1d7e1",
-                "options": [],
-                "inputOptions": [],
-                "photoOptions": [],
-                "comparePhotos": [],
-                "type": "NO_RESPONSE"
-              },
-              "seenBy": [],
-              "deliveredTo": [],
-              "date": "2023-06-28T09:30:20.255Z",
-              "_id": "649bfdac11622f51d8e1d7e2",
+              "date": "2023-07-04T21:28:13.796Z",
+              "_id": "64a48eed11622f51d8e8487b",
               "type": "ACTION_QUEST_END",
               "pauseBefore": 0,
               "timeWriting": 0,
               "actionOptions": {
-                "_id": "649bfdac11622f51d8e1d7e3",
+                "_id": "64a48eed11622f51d8e8487c",
                 "triggerChatId": "64934fda11622f51d8b8df8a"
               }
             }
@@ -3812,6 +4001,52 @@
                 "hasImageRecognition": false,
                 "penaltySeconds": 0,
                 "assisted": false,
+                "_id": "64a4921411622f51d8e8f404",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64a4921411622f51d8e8f405",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Sumiraj",
+                "location": {
+                  "_id": "64a4921411622f51d8e8f406",
+                  "dateTime": "2023-07-04T21:41:40.103Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-07-04T21:41:40.103Z",
+              "_id": "64a4921411622f51d8e8f403",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta smo naučili u ovom modulu?",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
                 "_id": "649bfe1111622f51d8e1ee9c",
                 "options": [],
                 "inputOptions": [],
@@ -3917,7 +4152,7 @@
                 "hasImageRecognition": false,
                 "penaltySeconds": 0,
                 "assisted": false,
-                "_id": "649d4abb11622f51d82e80af",
+                "_id": "64a48efc11622f51d8e85061",
                 "options": [],
                 "inputOptions": [],
                 "photoOptions": [],
@@ -3926,47 +4161,13 @@
               },
               "seenBy": [],
               "deliveredTo": [],
-              "date": "2023-06-29T09:11:23.310Z",
-              "_id": "649d4abb11622f51d82e80b0",
-              "type": "ACTION",
-              "pauseBefore": 0,
-              "timeWriting": 0,
-              "actionOptions": {
-                "_id": "649d4abb11622f51d82e80b1",
-                "triggerChatId": "649446ce11622f51d8d28dfc"
-              }
-            },
-            {
-              "isConfirmation": false,
-              "showConfirmationResult": false,
-              "isCorrect": false,
-              "hasAudio": false,
-              "response": {
-                "isNumber": false,
-                "required": false,
-                "preventVoting": false,
-                "hideResponseToChat": false,
-                "hasTimeLimit": false,
-                "timeOverLeadsToThread": false,
-                "hasImageRecognition": false,
-                "penaltySeconds": 0,
-                "assisted": false,
-                "_id": "649bfe2211622f51d8e202b3",
-                "options": [],
-                "inputOptions": [],
-                "photoOptions": [],
-                "comparePhotos": [],
-                "type": "NO_RESPONSE"
-              },
-              "seenBy": [],
-              "deliveredTo": [],
-              "date": "2023-06-28T09:32:18.252Z",
-              "_id": "649bfe2211622f51d8e202b4",
+              "date": "2023-07-04T21:28:28.952Z",
+              "_id": "64a48efc11622f51d8e85062",
               "type": "ACTION_QUEST_END",
               "pauseBefore": 0,
               "timeWriting": 0,
               "actionOptions": {
-                "_id": "649bfe2211622f51d8e202b5",
+                "_id": "64a48efc11622f51d8e85063",
                 "triggerChatId": "649446ce11622f51d8d28dfc"
               }
             }
@@ -4838,6 +5039,52 @@
                 "hasImageRecognition": false,
                 "penaltySeconds": 0,
                 "assisted": false,
+                "_id": "64a4923611622f51d8e90715",
+                "options": [],
+                "inputOptions": [],
+                "photoOptions": [],
+                "comparePhotos": [],
+                "timeLimit": {
+                  "_id": "64a4923611622f51d8e90716",
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 0
+                },
+                "type": "CONFIRMATION",
+                "confirmText": "Sumiraj",
+                "location": {
+                  "_id": "64a4923611622f51d8e90717",
+                  "dateTime": "2023-07-04T21:42:14.847Z",
+                  "radius": 40,
+                  "label": "I'm here!"
+                }
+              },
+              "seenBy": [],
+              "deliveredTo": [],
+              "date": "2023-07-04T21:42:14.847Z",
+              "_id": "64a4923611622f51d8e90714",
+              "type": "TEXT",
+              "pauseBefore": 0,
+              "timeWriting": 0,
+              "text": "Šta smo naučili u ovom modulu?",
+              "actor": "64359a3047eb967304f11655",
+              "file": null
+            },
+            {
+              "isConfirmation": false,
+              "showConfirmationResult": false,
+              "isCorrect": false,
+              "hasAudio": false,
+              "response": {
+                "isNumber": false,
+                "required": false,
+                "preventVoting": true,
+                "hideResponseToChat": true,
+                "hasTimeLimit": false,
+                "timeOverLeadsToThread": false,
+                "hasImageRecognition": false,
+                "penaltySeconds": 0,
+                "assisted": false,
                 "_id": "649bfe9a11622f51d8e22eb4",
                 "options": [],
                 "inputOptions": [],
@@ -4989,7 +5236,7 @@
                 "hasImageRecognition": false,
                 "penaltySeconds": 0,
                 "assisted": false,
-                "_id": "649d4ae411622f51d82e9ac3",
+                "_id": "64a48f1011622f51d8e85848",
                 "options": [],
                 "inputOptions": [],
                 "photoOptions": [],
@@ -4998,47 +5245,13 @@
               },
               "seenBy": [],
               "deliveredTo": [],
-              "date": "2023-06-29T09:12:04.552Z",
-              "_id": "649d4ae411622f51d82e9ac4",
-              "type": "ACTION",
-              "pauseBefore": 0,
-              "timeWriting": 0,
-              "actionOptions": {
-                "_id": "649d4ae411622f51d82e9ac5",
-                "triggerChatId": "64944e9111622f51d8d4bb97"
-              }
-            },
-            {
-              "isConfirmation": false,
-              "showConfirmationResult": false,
-              "isCorrect": false,
-              "hasAudio": false,
-              "response": {
-                "isNumber": false,
-                "required": false,
-                "preventVoting": false,
-                "hideResponseToChat": false,
-                "hasTimeLimit": false,
-                "timeOverLeadsToThread": false,
-                "hasImageRecognition": false,
-                "penaltySeconds": 0,
-                "assisted": false,
-                "_id": "649bfeb511622f51d8e24064",
-                "options": [],
-                "inputOptions": [],
-                "photoOptions": [],
-                "comparePhotos": [],
-                "type": "NO_RESPONSE"
-              },
-              "seenBy": [],
-              "deliveredTo": [],
-              "date": "2023-06-28T09:34:45.606Z",
-              "_id": "649bfeb511622f51d8e24065",
+              "date": "2023-07-04T21:28:48.564Z",
+              "_id": "64a48f1011622f51d8e85849",
               "type": "ACTION_QUEST_END",
               "pauseBefore": 0,
               "timeWriting": 0,
               "actionOptions": {
-                "_id": "649bfeb511622f51d8e24066",
+                "_id": "64a48f1011622f51d8e8584a",
                 "triggerChatId": "64944e9111622f51d8d4bb97"
               }
             }
@@ -5148,62 +5361,60 @@
                 "hasImageRecognition": false,
                 "penaltySeconds": 0,
                 "assisted": false,
-                "_id": "64944f0711622f51d8d4c764",
+                "_id": "64a6891311622f51d80ce700",
                 "options": [
                   {
                     "votes": [],
-                    "_id": "64944f0711622f51d8d4c769",
+                    "_id": "64a6891311622f51d80ce703",
+                    "buttonText": "Ma kakvi",
+                    "isCorrect": true,
+                    "hideResponseToChat": false
+                  },
+                  {
+                    "votes": [],
+                    "_id": "64a6891311622f51d80ce702",
                     "buttonText": "Ima sigurno.",
-                    "text": "",
-                    "thread": "64944e9111622f51d8d4bb96",
-                    "hideResponseToChat": true
+                    "isCorrect": true,
+                    "penaltySeconds": 10,
+                    "hideResponseToChat": false
                   },
                   {
                     "votes": [],
-                    "_id": "64944f0711622f51d8d4c768",
-                    "buttonText": "Ma kakvi.",
+                    "_id": "64a6892811622f51d80cf0cb",
+                    "buttonText": "I don't care.",
                     "text": "",
-                    "thread": "64944e9111622f51d8d4bb96",
-                    "hideResponseToChat": true
+                    "isCorrect": true,
+                    "hideResponseToChat": false
                   },
                   {
                     "votes": [],
-                    "_id": "64944f0711622f51d8d4c767",
+                    "_id": "64a6893711622f51d80cfbf2",
                     "buttonText": "Ne znam, previše sam zbunjen/a.",
                     "text": "",
-                    "thread": "64944e9111622f51d8d4bb96",
-                    "hideResponseToChat": true
-                  },
-                  {
-                    "votes": [],
-                    "_id": "64944f0711622f51d8d4c766",
-                    "buttonText": "I don’t care.",
-                    "text": "",
-                    "thread": "64944e9111622f51d8d4bb96",
-                    "hideResponseToChat": true
+                    "isCorrect": true
                   }
                 ],
                 "inputOptions": [
                   {
-                    "_id": "64944f0711622f51d8d4c76a",
+                    "_id": "64a6891311622f51d80ce704",
                     "thread": "64944e9111622f51d8d4bb96"
                   }
                 ],
                 "photoOptions": [],
                 "comparePhotos": [],
                 "timeLimit": {
-                  "_id": "64944f0711622f51d8d4c765",
+                  "_id": "64a6891311622f51d80ce701",
                   "hours": 0,
                   "minutes": 0,
                   "seconds": 0
                 },
-                "type": "OPTIONS",
-                "confirmText": "Continue",
+                "type": "QUIZ",
+                "confirmText": "Answer question",
                 "timeOverThread": "NEW_THREAD",
                 "answerButtonText": "Answer",
                 "location": {
-                  "_id": "64944f0711622f51d8d4c76b",
-                  "dateTime": "2023-06-22T13:39:19.051Z",
+                  "_id": "64a6891311622f51d80ce705",
+                  "dateTime": "2023-07-06T09:27:47.096Z",
                   "radius": 40,
                   "label": "I'm here!",
                   "lat": 43.87142962389218,
@@ -5212,12 +5423,12 @@
               },
               "seenBy": [],
               "deliveredTo": [],
-              "date": "2023-06-22T13:39:19.051Z",
-              "_id": "64944f0711622f51d8d4c763",
+              "date": "2023-07-06T09:27:47.096Z",
+              "_id": "64a6891311622f51d80ce6ff",
               "type": "TEXT",
               "pauseBefore": 0,
               "timeWriting": 0,
-              "text": "Šta ti misliš ima li smisla vjerovati ikakvim informacijama?",
+              "text": "Šta ti misliš ima li smisla vjerovati ikakvim informacijama?\n",
               "actor": "64359a3047eb967304f11655",
               "file": null
             },
@@ -5330,54 +5541,53 @@
                 "hasImageRecognition": false,
                 "penaltySeconds": 0,
                 "assisted": false,
-                "_id": "64944f8111622f51d8d4e5e6",
+                "_id": "64a6896711622f51d80d0e41",
                 "options": [
                   {
                     "votes": [],
-                    "_id": "64944f8111622f51d8d4e5ea",
+                    "_id": "64a6896711622f51d80d0e45",
                     "buttonText": "Zeleno",
-                    "text": "",
-                    "thread": "64944e9111622f51d8d4bb96",
-                    "hideResponseToChat": true
+                    "isCorrect": true,
+                    "hideResponseToChat": false
                   },
                   {
                     "votes": [],
-                    "_id": "64944f8111622f51d8d4e5e9",
+                    "_id": "64a6896711622f51d80d0e44",
                     "buttonText": "Žuto",
-                    "text": "",
-                    "thread": "64944e9111622f51d8d4bb96",
-                    "hideResponseToChat": true
+                    "isCorrect": true,
+                    "penaltySeconds": 10,
+                    "hideResponseToChat": false
                   },
                   {
                     "votes": [],
-                    "_id": "64944f8111622f51d8d4e5e8",
+                    "_id": "64a6896711622f51d80d0e43",
                     "buttonText": "Crveno",
                     "text": "",
-                    "thread": "64944e9111622f51d8d4bb96",
-                    "hideResponseToChat": true
+                    "isCorrect": true,
+                    "hideResponseToChat": false
                   }
                 ],
                 "inputOptions": [
                   {
-                    "_id": "64944f8111622f51d8d4e5eb",
+                    "_id": "64a6896711622f51d80d0e46",
                     "thread": "64944e9111622f51d8d4bb96"
                   }
                 ],
                 "photoOptions": [],
                 "comparePhotos": [],
                 "timeLimit": {
-                  "_id": "64944f8111622f51d8d4e5e7",
+                  "_id": "64a6896711622f51d80d0e42",
                   "hours": 0,
                   "minutes": 0,
                   "seconds": 0
                 },
-                "type": "OPTIONS",
-                "confirmText": "Continue",
+                "type": "QUIZ",
+                "confirmText": "Answer question",
                 "timeOverThread": "NEW_THREAD",
                 "answerButtonText": "Answer",
                 "location": {
-                  "_id": "64944f8111622f51d8d4e5ec",
-                  "dateTime": "2023-06-22T13:41:21.889Z",
+                  "_id": "64a6896711622f51d80d0e47",
+                  "dateTime": "2023-07-06T09:29:11.538Z",
                   "radius": 40,
                   "label": "I'm here!",
                   "lat": 43.87142962389218,
@@ -5386,8 +5596,8 @@
               },
               "seenBy": [],
               "deliveredTo": [],
-              "date": "2023-06-22T13:41:21.889Z",
-              "_id": "64944f8111622f51d8d4e5e5",
+              "date": "2023-07-06T09:29:11.538Z",
+              "_id": "64a6896711622f51d80d0e40",
               "type": "TEXT",
               "pauseBefore": 0,
               "timeWriting": 0,
@@ -5515,7 +5725,7 @@
                 "hasImageRecognition": false,
                 "penaltySeconds": 0,
                 "assisted": false,
-                "_id": "649452cd11622f51d8d59e67",
+                "_id": "64a492ca11622f51d8e9331b",
                 "options": [],
                 "inputOptions": [],
                 "photoOptions": [],
@@ -5524,12 +5734,12 @@
               },
               "seenBy": [],
               "deliveredTo": [],
-              "date": "2023-06-22T13:55:25.991Z",
-              "_id": "649452cd11622f51d8d59e68",
+              "date": "2023-07-04T21:44:42.162Z",
+              "_id": "64a492ca11622f51d8e9331c",
               "type": "ACTION_QUEST_END",
               "pauseBefore": 0,
               "timeWriting": 0,
-              "actionOptions": { "_id": "649452cd11622f51d8d59e69" }
+              "actionOptions": { "_id": "64a492ca11622f51d8e9331d" }
             }
           ],
           "writingStatusList": [],
@@ -5587,28 +5797,6 @@
   ],
   "pathPoints": [],
   "achievements": [
-    {
-      "unlocked": false,
-      "_id": "6480736e11622f51d8e8027c",
-      "name": "Prvi nivo",
-      "text": "Level 1",
-      "thumb": {
-        "timeCreated": "2023-06-07T12:08:31.273Z",
-        "_id": "6480733f11622f51d8e7e432",
-        "width": 1023,
-        "height": 806,
-        "url": "https://loco-us.s3.us-west-1.amazonaws.com/61220fa2-75c6-4b61-863e-aa5de824fbf3.png",
-        "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-61220fa2-75c6-4b61-863e-aa5de824fbf3.png",
-        "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-61220fa2-75c6-4b61-863e-aa5de824fbf3.png",
-        "remote": "61220fa2-75c6-4b61-863e-aa5de824fbf3.png",
-        "thumbRemote": "thumb-61220fa2-75c6-4b61-863e-aa5de824fbf3.png",
-        "miniThumbRemote": "mini-thumb-61220fa2-75c6-4b61-863e-aa5de824fbf3.png",
-        "type": "IMAGE",
-        "size": 969235,
-        "__v": 0
-      },
-      "file": "6480735611622f51d8e7e433"
-    },
     {
       "unlocked": false,
       "_id": "6483390d11622f51d837f41a",
@@ -5734,6 +5922,28 @@
         "__v": 0
       },
       "file": "649452b411622f51d8d598c4"
+    },
+    {
+      "unlocked": false,
+      "_id": "649e710211622f51d839a73b",
+      "name": "Prvi nivo",
+      "text": "Čestitamo! Prvi modul je uspješno završen. ",
+      "thumb": {
+        "timeCreated": "2023-06-30T06:06:28.536Z",
+        "_id": "649e70e411622f51d839a739",
+        "width": 375,
+        "height": 232,
+        "url": "https://loco-us.s3.us-west-1.amazonaws.com/4d1ab750-9c3f-4014-a385-48d69d896dcb.jpg",
+        "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-4d1ab750-9c3f-4014-a385-48d69d896dcb.jpg",
+        "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-4d1ab750-9c3f-4014-a385-48d69d896dcb.jpg",
+        "remote": "4d1ab750-9c3f-4014-a385-48d69d896dcb.jpg",
+        "thumbRemote": "thumb-4d1ab750-9c3f-4014-a385-48d69d896dcb.jpg",
+        "miniThumbRemote": "mini-thumb-4d1ab750-9c3f-4014-a385-48d69d896dcb.jpg",
+        "type": "IMAGE",
+        "size": 4749,
+        "__v": 0
+      },
+      "file": "649e70fa11622f51d839a73a"
     }
   ],
   "presetTeamNames": [],
@@ -5755,24 +5965,24 @@
     }
   },
   "team": "643599b047eb967304f10aff",
-  "__v": 58,
+  "__v": 87,
   "description": "",
   "poster": {
-    "timeCreated": "2023-06-23T14:14:01.357Z",
-    "_id": "6495a8a911622f51d8e2b078",
-    "width": 231,
-    "height": 292,
-    "url": "https://loco-us.s3.us-west-1.amazonaws.com/38061715-c61c-4329-b9f9-74ec4a88b833.png",
-    "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-38061715-c61c-4329-b9f9-74ec4a88b833.png",
-    "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-38061715-c61c-4329-b9f9-74ec4a88b833.png",
-    "remote": "38061715-c61c-4329-b9f9-74ec4a88b833.png",
-    "thumbRemote": "thumb-38061715-c61c-4329-b9f9-74ec4a88b833.png",
-    "miniThumbRemote": "mini-thumb-38061715-c61c-4329-b9f9-74ec4a88b833.png",
+    "timeCreated": "2023-07-04T21:18:42.938Z",
+    "_id": "64a48cb211622f51d8e7cece",
+    "width": 371,
+    "height": 275,
+    "url": "https://loco-us.s3.us-west-1.amazonaws.com/9b3b8922-a523-44f9-87aa-b58ff796b01a.png",
+    "thumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/thumb-9b3b8922-a523-44f9-87aa-b58ff796b01a.png",
+    "miniThumbUrl": "https://loco-us.s3.us-west-1.amazonaws.com/mini-thumb-9b3b8922-a523-44f9-87aa-b58ff796b01a.png",
+    "remote": "9b3b8922-a523-44f9-87aa-b58ff796b01a.png",
+    "thumbRemote": "thumb-9b3b8922-a523-44f9-87aa-b58ff796b01a.png",
+    "miniThumbRemote": "mini-thumb-9b3b8922-a523-44f9-87aa-b58ff796b01a.png",
     "type": "IMAGE",
-    "size": 38966,
+    "size": 44490,
     "__v": 0
   },
   "defaultLocale": "sr",
   "locale": "sr",
-  "timeCreated": "2023-06-29T09:13:20.447Z"
+  "timeCreated": "2023-07-06T12:06:45.870Z"
 }

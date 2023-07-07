@@ -15,7 +15,11 @@ class AboutScreen extends StatelessWidget {
     Story story = appState.selectedStory!;
 
     return Scaffold(
-      appBar: createAppBarWithBackButton(context, story.name),
+      appBar: createAppBarWithBackButton(
+        context,
+        story.name,
+        onLogoDoubleTap: () => appState.resetAppState(context),
+      ),
       extendBodyBehindAppBar: true,
       body: Container(
         width: double.infinity,

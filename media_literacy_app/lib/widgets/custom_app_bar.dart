@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:media_literacy_app/state/app_state.dart';
 import 'package:media_literacy_app/widgets/custom_dialog.dart';
-import 'package:provider/provider.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -32,9 +31,42 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 }
 
-CustomAppBar createAppBar(BuildContext context, String title) {
-  var appState = context.watch<AppState>();
+class ResetButton extends StatelessWidget {
+  final void Function() onTap;
 
+  const ResetButton({super.key, required this.onTap});
+
+  void _onTap(BuildContext context) async {
+    var value = await showDialog(
+      context: context,
+      barrierDismissible: true,
+      barrierColor: AppColors.text.withAlpha(200),
+      builder: (context) => const CustomResetDialog(),
+    );
+    if (value is bool && value) {
+      onTap();
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox.square(
+      dimension: 48,
+      child: const Icon(Icons.replay_rounded, size: 36, color: Colors.white).rotate(angle: -45),
+    ).backgroundColor(AppColors.resetButtonBackground).clipOval().gestures(onTap: () => _onTap(context));
+  }
+}
+
+class AppLogo extends StatelessWidget {
+  const AppLogo({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Image.asset('assets/images/logo.png', width: 48, height: 48);
+  }
+}
+
+CustomAppBar createAppBar(BuildContext context, String title) {
   return CustomAppBar(
     height: 80,
     appBarColor: AppColors.selectStoryAppBarBackground,
@@ -43,13 +75,18 @@ CustomAppBar createAppBar(BuildContext context, String title) {
         Expanded(
           child: Text(title).textStyle(AppTextStyles.appBarTitle).padding(left: 2),
         ),
-        Image.asset('assets/images/logo.png', width: 48, height: 48).gestures(onTap: () => appState.resetAppState(context)),
+        const AppLogo(),
       ],
     ).padding(left: 16, right: 16),
   );
 }
 
-CustomAppBar createAppBarWithBackButton(BuildContext context, String title, {void Function()? onLogoPressed}) {
+CustomAppBar createAppBarWithBackButton(BuildContext context, String title, {void Function()? onLogoTap, void Function()? onLogoDoubleTap}) {
+  Widget logoOrButton = onLogoTap != null ? ResetButton(onTap: onLogoTap) : const AppLogo();
+  if (onLogoDoubleTap != null) {
+    logoOrButton = logoOrButton.gestures(onDoubleTap: onLogoDoubleTap);
+  }
+
   return CustomAppBar(
     height: 80,
     appBarColor: AppColors.selectStoryAppBarBackground,
@@ -78,26 +115,7 @@ CustomAppBar createAppBarWithBackButton(BuildContext context, String title, {voi
         Expanded(
           child: Text(title).textStyle(AppTextStyles.appBarSmallTitle).padding(left: 4, right: 8),
         ),
-        Image.asset('assets/images/logo.png', width: 48, height: 48).gestures(
-          onTap: () async {
-            if (onLogoPressed == null) {
-              return;
-            }
-            var route = ModalRoute.of(context);
-            String? routeName = route?.settings.name;
-            if (routeName != null) {
-              var value = await showDialog(
-                context: context,
-                barrierDismissible: true,
-                barrierColor: AppColors.text.withAlpha(200),
-                builder: (context) => const CustomResetDialog(),
-              );
-              if (value is bool && value) {
-                onLogoPressed();
-              }
-            }
-          },
-        ),
+        logoOrButton,
       ],
     ).padding(left: 0, right: 16), // left padding is already in back button
   );
