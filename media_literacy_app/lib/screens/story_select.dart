@@ -33,13 +33,26 @@ class StorySelectScreen extends StatelessWidget {
                       ...appState.stories.values.map(
                         (story) => SelectorCard(
                           title: story.name,
-                          categoryColor: AppColors.storySelectCircle,
                           categoryName: story.description,
                           image: story.poster,
                         ).padding(horizontal: 16).gestures(onTap: () {
                           appState.selectStory(story.id, context);
                         }),
                       ),
+                      SecondarySelectorCard(
+                        color: AppColors.selectInfoBackground,
+                        title: 'Dodatne informacije',
+                        image: Image.asset('assets/images/icon-logo.png'),
+                      ).padding(horizontal: 16).gestures(onTap: () {
+                        // appState.selectStory('create', context);
+                      }),
+                      SecondarySelectorCard(
+                        color: AppColors.selectAboutBackground,
+                        title: 'Za nastavnike/ce',
+                        image: Image.asset('assets/images/icon-info.png'),
+                      ).padding(horizontal: 16).gestures(onTap: () {
+                        // appState.selectStory('create', context);
+                      }),
                     ],
                   ).padding(top: 28),
                 ),

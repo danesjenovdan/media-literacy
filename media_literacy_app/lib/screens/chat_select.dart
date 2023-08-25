@@ -36,7 +36,6 @@ class ChatSelectScreen extends StatelessWidget {
                       ...story.chats.map(
                         (chat) => SelectorCard(
                           title: chat.title,
-                          categoryColor: AppColors.chatSelectCircle,
                           categoryName: chat.description,
                           image: chat.poster,
                           showCheck: true,
