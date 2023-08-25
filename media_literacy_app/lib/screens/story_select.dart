@@ -12,6 +12,9 @@ class StorySelectScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var appState = context.watch<AppState>();
 
+    // remove the old about story
+    var stories = appState.stories.values.where((story) => story.id != "6495a84511622f51d8e2abbf");
+
     return Scaffold(
       appBar: createAppBar(context, AppConstants.title),
       extendBodyBehindAppBar: true,
@@ -30,7 +33,7 @@ class StorySelectScreen extends StatelessWidget {
                 child: IntrinsicHeight(
                   child: Column(
                     children: [
-                      ...appState.stories.values.map(
+                      ...stories.map(
                         (story) => SelectorCard(
                           title: story.name,
                           categoryName: story.description,
@@ -44,14 +47,14 @@ class StorySelectScreen extends StatelessWidget {
                         title: 'Dodatne informacije',
                         image: Image.asset('assets/images/icon-logo.png'),
                       ).padding(horizontal: 16).gestures(onTap: () {
-                        // appState.selectStory('create', context);
+                        appState.selectStory('info', context);
                       }),
                       SecondarySelectorCard(
                         color: AppColors.selectAboutBackground,
                         title: 'Za nastavnike/ce',
                         image: Image.asset('assets/images/icon-info.png'),
                       ).padding(horizontal: 16).gestures(onTap: () {
-                        // appState.selectStory('create', context);
+                        appState.selectStory('about', context);
                       }),
                     ],
                   ).padding(top: 28),

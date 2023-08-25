@@ -20,8 +20,8 @@ class FooterLogos extends StatelessWidget {
               children: [
                 Image.asset('assets/images/eu-flag.png', width: 345 / 3.5, height: 233 / 3.5).padding(right: 10),
                 const Text(
-                  'Ovu publikaciju je financirala/sufinancirala Evropska unija. Sadržaj publikacije isključiva je '
-                  'odgovornost U.G. Zašto ne/Centra za obrazovne inicijative Step by Step i ne odražavaju nužno stavove Evropske unije.',
+                  "Ovu aplikaciju je financirala Evropska unija. Sadržaj aplikacije isključiva je odgovornost U.G. Zašto ne i Centra za obrazovne "
+                  "inicijative Step by Step i ne odražava nužno stavove Evropske unije.",
                 ).fontSize(10).expanded(),
               ],
             ).padding(bottom: 16),

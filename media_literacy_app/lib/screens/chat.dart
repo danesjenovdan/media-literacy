@@ -198,6 +198,7 @@ class _ChatScreenState extends State<ChatScreen> {
       appBar: createAppBarWithBackButton(
         context,
         appState.selectedChat!.title,
+        color: AppColors.selectStoryAppBarBackground,
         onLogoTap: () => appState.resetChatState(),
       ),
       extendBodyBehindAppBar: true,

@@ -97,15 +97,23 @@ CustomAppBar createAppBar(BuildContext context, String title) {
   );
 }
 
-CustomAppBar createAppBarWithBackButton(BuildContext context, String title, {void Function()? onLogoTap, void Function()? onLogoDoubleTap}) {
-  Widget logoOrButton = onLogoTap != null ? ResetButton(onTap: onLogoTap) : const AppLogo();
+CustomAppBar createAppBarWithBackButton(
+  BuildContext context,
+  String title, {
+  required Color color,
+  Image? logo,
+  void Function()? onLogoTap,
+  void Function()? onLogoDoubleTap,
+}) {
+  Widget logoOrButton = onLogoTap != null ? ResetButton(onTap: onLogoTap) : logo ?? const AppLogo();
+  logoOrButton = logoOrButton.constrained(width: 49, height: 49);
   if (onLogoDoubleTap != null) {
     logoOrButton = logoOrButton.gestures(onDoubleTap: onLogoDoubleTap);
   }
 
   return CustomAppBar(
     height: 80,
-    appBarColor: AppColors.selectStoryAppBarBackground,
+    appBarColor: color,
     child: Row(
       children: [
         Column(

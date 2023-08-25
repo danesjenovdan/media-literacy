@@ -64,7 +64,7 @@ class AppColors {
   static const Color chatMessageOutgoingBackground = Color(0xFF1DD882);
 
   static const Color chatResponseOptionBackground = Color(0xFF333333);
-  static const Color chatResponseOptionBackgroundDown = Color(0xFFFFE3D2);
+  static const Color chatResponseOptionBackgroundDown = Color(0xFFE4C970);
 
   static const Color storySelectCircle = Color(0xFF9CD9D3);
   static const Color chatSelectCircle = Color(0xFFFFE3D2);
@@ -209,6 +209,13 @@ class AppTextStyles {
       color: Colors.white,
     ),
   );
+
+  static final TextStyle aboutParagraph = GoogleFonts.nunito(
+    textStyle: const TextStyle(
+      fontSize: 14,
+      color: AppColors.text,
+    ),
+  );
 }
 
 class AppConstants {
@@ -298,8 +305,14 @@ class AppState extends ChangeNotifier {
 
     var navigator = Navigator.of(context);
 
-    // if this is the about story, show the about screen
-    if (storyId == "6495a84511622f51d8e2abbf") {
+    if (storyId == "info") {
+      navigator.push(
+        MaterialPageRoute(
+          settings: const RouteSettings(name: 'InfoScreen'),
+          builder: (context) => const AboutScreen(),
+        ),
+      );
+    } else if (storyId == "about") {
       navigator.push(
         MaterialPageRoute(
           settings: const RouteSettings(name: 'AboutScreen'),
