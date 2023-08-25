@@ -91,7 +91,7 @@ CustomAppBar createAppBar(BuildContext context, String title) {
         Expanded(
           child: Text(title).textStyle(AppTextStyles.appBarTitle).padding(left: 2),
         ),
-        const BrainLogo(),
+        const AppLogo(),
       ],
     ).padding(left: 16, right: 16),
   );
