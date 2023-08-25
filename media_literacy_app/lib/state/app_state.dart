@@ -51,7 +51,7 @@ class AppColors {
   static const Color categoryText = Color(0xFF656F77);
 
   static const Color selectStoryBackground = Color(0xFFFFFFFF);
-  static const Color selectStoryAppBarBackground = Color(0xFFD0F1EB);
+  static const Color selectStoryAppBarBackground = Color(0xFF789AED);
 
   static const Color chatBackground = Color(0xFFFFFFFF);
 

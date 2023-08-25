@@ -66,6 +66,22 @@ class AppLogo extends StatelessWidget {
   }
 }
 
+class BrainLogo extends StatelessWidget {
+  const BrainLogo({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      fit: StackFit.passthrough,
+      alignment: Alignment.center,
+      children: [
+        const SizedBox.square(dimension: 53).backgroundColor(const Color(0xFF282A40)).clipOval(),
+        Image.asset('assets/images/logo-brain.png', width: 58, height: 39),
+      ],
+    );
+  }
+}
+
 CustomAppBar createAppBar(BuildContext context, String title) {
   return CustomAppBar(
     height: 80,
@@ -75,7 +91,7 @@ CustomAppBar createAppBar(BuildContext context, String title) {
         Expanded(
           child: Text(title).textStyle(AppTextStyles.appBarTitle).padding(left: 2),
         ),
-        const AppLogo(),
+        const BrainLogo(),
       ],
     ).padding(left: 16, right: 16),
   );
