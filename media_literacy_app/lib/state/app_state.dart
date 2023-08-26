@@ -82,7 +82,7 @@ class AppColors {
   static const Color checkIncomplete = Color(0xFF000000);
   static const Color checkComplete = Color(0xFF125933);
 
-  static const Color resetButtonBackground = Color(0xFF789AED);
+  static const Color resetButtonBackground = Color(0xFFF24646);
 
   static const Color footerBackground = Color(0xFFECDDFF);
 }
