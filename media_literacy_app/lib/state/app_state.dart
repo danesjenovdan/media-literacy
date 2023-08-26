@@ -315,7 +315,7 @@ class AppState extends ChangeNotifier {
       navigator.push(
         MaterialPageRoute(
           settings: const RouteSettings(name: 'InfoScreen'),
-          builder: (context) => const AboutScreen(),
+          builder: (context) => const InfoScreen(),
         ),
       );
     } else if (storyId == "about") {

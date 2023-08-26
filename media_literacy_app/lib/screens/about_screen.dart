@@ -5,19 +5,25 @@ import 'package:media_literacy_app/state/app_state.dart';
 import 'package:media_literacy_app/widgets/custom_app_bar.dart';
 import 'package:media_literacy_app/widgets/footer_logos.dart';
 import 'package:media_literacy_app/widgets/responses.dart';
+import 'package:provider/provider.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-class AboutScreen extends StatelessWidget {
-  const AboutScreen({super.key});
+class TextScreen extends StatelessWidget {
+  final String title;
+  final Color color;
+  final Image logo;
+  final Widget child;
+
+  const TextScreen({super.key, required this.title, required this.color, required this.logo, required this.child});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: createAppBarWithBackButton(
         context,
-        "Za nastavnike/ce",
-        color: AppColors.selectAboutBackground,
-        logo: Image.asset('assets/images/icon-info.png'),
+        title,
+        color: color,
+        logo: logo,
       ),
       extendBodyBehindAppBar: true,
       body: Container(
@@ -35,7 +41,7 @@ class AboutScreen extends StatelessWidget {
                 child: IntrinsicHeight(
                   child: Column(
                     children: [
-                      const AboutText(),
+                      child,
                       const FooterLogos().padding(top: 4).alignment(Alignment.bottomCenter).expanded(),
                     ],
                   ).padding(top: 28),
@@ -49,134 +55,162 @@ class AboutScreen extends StatelessWidget {
   }
 }
 
+class AboutScreen extends StatelessWidget {
+  const AboutScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextScreen(
+      title: "Za nastavnike/ce",
+      color: AppColors.selectAboutBackground,
+      logo: Image.asset('assets/images/icon-info.png'),
+      child: const AboutText(),
+    );
+  }
+}
+
+class InfoScreen extends StatelessWidget {
+  const InfoScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextScreen(
+      title: "Dodatne informacije",
+      color: AppColors.selectInfoBackground,
+      logo: Image.asset('assets/images/icon-logo.png'),
+      child: const InfoText(),
+    );
+  }
+}
+
+Widget _buildHeading(String text) {
+  return Text(text)
+      .textStyle(AppTextStyles.aboutParagraph)
+      .fontWeight(FontWeight.w700)
+      .padding(all: 4)
+      .backgroundColor(AppColors.selectAboutBackground)
+      .clipRRect(all: 4)
+      .padding(bottom: 12, horizontal: 16);
+}
+
+Widget _buildParagraph(String text, {bool bold = false, bool background = false}) {
+  return _buildParagraphImpl(
+    Text(text).textStyle(AppTextStyles.aboutParagraph).fontWeight(bold ? FontWeight.w600 : FontWeight.w400),
+    background: background,
+  );
+}
+
+Widget _buildParagraphRich(List<TextSpan> spans, {bool background = false}) {
+  return _buildParagraphImpl(
+    Text.rich(
+      style: AppTextStyles.aboutParagraph,
+      TextSpan(children: spans),
+    ),
+    background: background,
+  );
+}
+
+Widget _buildParagraphImpl(Text text, {bool background = false}) {
+  Widget widget = text;
+  if (background) {
+    widget = widget.padding(vertical: 8, horizontal: 10).backgroundColor(const Color(0x80D8D3C1)).clipRRect(all: 4).padding(horizontal: 8);
+  } else {
+    widget = widget.padding(horizontal: 16);
+  }
+  return widget.width(double.infinity).padding(bottom: 12);
+}
+
+Widget _buildListItem(String number, String text, {bool bold = false}) {
+  return _buildListItemImpl(
+    number,
+    Text(text).textStyle(AppTextStyles.aboutParagraph).fontWeight(bold ? FontWeight.w600 : FontWeight.w400),
+  );
+}
+
+Widget _buildListItemRich(String number, List<TextSpan> spans) {
+  return _buildListItemImpl(
+    number,
+    Text.rich(
+      style: AppTextStyles.aboutParagraph,
+      TextSpan(children: spans),
+    ),
+  );
+}
+
+Widget _buildListItemImpl(String number, Text text) {
+  return Row(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(number)
+          .textStyle(AppTextStyles.aboutParagraph)
+          .fontWeight(FontWeight.w600)
+          .padding(vertical: 2, horizontal: 6)
+          .backgroundColor(AppColors.selectInfoBackground)
+          .clipOval()
+          .padding(right: 8),
+      Expanded(
+        child: text.padding(top: 2, bottom: 12),
+      ),
+    ],
+  ).padding(horizontal: 16);
+}
+
+Widget _buildBulletPointItem(String text, {bool bold = false, bool last = false}) {
+  return Row(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      const Text("•").textStyle(AppTextStyles.aboutParagraph).fontWeight(bold ? FontWeight.w600 : FontWeight.w400).padding(right: 8),
+      Expanded(
+        child: Text(text).textStyle(AppTextStyles.aboutParagraph).fontWeight(bold ? FontWeight.w600 : FontWeight.w400),
+      ),
+    ],
+  ).padding(horizontal: 16, bottom: last ? 12 : 0);
+}
+
+Widget _buildImage(BuildContext context, Image image, String caption) {
+  void onImageTap() {
+    showImageViewer(
+      context,
+      image.image,
+      doubleTapZoomable: true,
+      immersive: false,
+    );
+  }
+
+  return Column(
+    children: [
+      image,
+      Row(
+        children: [
+          const SizedBox.square(
+            dimension: 24,
+            child: Icon(Icons.zoom_in, size: 18, color: Colors.white),
+          ).backgroundColor(AppColors.youtubePlayButton).clipOval().padding(right: 8),
+          Text(caption).textStyle(AppTextStyles.aboutParagraph).fontWeight(FontWeight.w600),
+        ],
+      ).padding(top: 12),
+    ],
+  )
+      .padding(bottom: 12, top: 16, horizontal: 10)
+      .backgroundColor(const Color(0x80D8D3C1))
+      .clipRRect(all: 4)
+      .gestures(onTap: onImageTap)
+      .padding(horizontal: 8, bottom: 12);
+}
+
+TextSpan _buildUrlSpan(String text, String url) {
+  return TextSpan(
+    text: text,
+    style: const TextStyle(decoration: TextDecoration.underline),
+    recognizer: TapGestureRecognizer()
+      ..onTap = () {
+        AppSystemSettings.openURL(url);
+      },
+  );
+}
+
 class AboutText extends StatelessWidget {
   const AboutText({super.key});
-
-  Widget _buildHeading(String text) {
-    return Text(text)
-        .textStyle(AppTextStyles.aboutParagraph)
-        .fontWeight(FontWeight.w700)
-        .padding(all: 4)
-        .backgroundColor(AppColors.selectAboutBackground)
-        .clipRRect(all: 4)
-        .padding(bottom: 12, horizontal: 16);
-  }
-
-  Widget _buildParagraph(String text, {bool bold = false, bool background = false}) {
-    return _buildParagraphImpl(
-      Text(text).textStyle(AppTextStyles.aboutParagraph).fontWeight(bold ? FontWeight.w600 : FontWeight.w400),
-      background: background,
-    );
-  }
-
-  Widget _buildParagraphRich(List<TextSpan> spans, {bool background = false}) {
-    return _buildParagraphImpl(
-      Text.rich(
-        style: AppTextStyles.aboutParagraph,
-        TextSpan(children: spans),
-      ),
-      background: background,
-    );
-  }
-
-  Widget _buildParagraphImpl(Text text, {bool background = false}) {
-    Widget widget = text;
-    if (background) {
-      widget = widget.padding(vertical: 8, horizontal: 10).backgroundColor(const Color(0x80D8D3C1)).clipRRect(all: 4).padding(horizontal: 8);
-    } else {
-      widget = widget.padding(horizontal: 16);
-    }
-    return widget.width(double.infinity).padding(bottom: 12);
-  }
-
-  Widget _buildListItem(String number, String text, {bool bold = false}) {
-    return _buildListItemImpl(
-      number,
-      Text(text).textStyle(AppTextStyles.aboutParagraph).fontWeight(bold ? FontWeight.w600 : FontWeight.w400),
-    );
-  }
-
-  Widget _buildListItemRich(String number, List<TextSpan> spans) {
-    return _buildListItemImpl(
-      number,
-      Text.rich(
-        style: AppTextStyles.aboutParagraph,
-        TextSpan(children: spans),
-      ),
-    );
-  }
-
-  Widget _buildListItemImpl(String number, Text text) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(number)
-            .textStyle(AppTextStyles.aboutParagraph)
-            .fontWeight(FontWeight.w600)
-            .padding(vertical: 2, horizontal: 6)
-            .backgroundColor(AppColors.selectInfoBackground)
-            .clipOval()
-            .padding(right: 8),
-        Expanded(
-          child: text.padding(top: 2, bottom: 12),
-        ),
-      ],
-    ).padding(horizontal: 16);
-  }
-
-  Widget _buildBulletPointItem(String text, {bool bold = false, bool last = false}) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text("•").textStyle(AppTextStyles.aboutParagraph).fontWeight(bold ? FontWeight.w600 : FontWeight.w400).padding(right: 8),
-        Expanded(
-          child: Text(text).textStyle(AppTextStyles.aboutParagraph).fontWeight(bold ? FontWeight.w600 : FontWeight.w400),
-        ),
-      ],
-    ).padding(horizontal: 16, bottom: last ? 12 : 0);
-  }
-
-  Widget _buildImage(BuildContext context, Image image, String caption) {
-    void onImageTap() {
-      showImageViewer(
-        context,
-        image.image,
-        doubleTapZoomable: true,
-        immersive: false,
-      );
-    }
-
-    return Column(
-      children: [
-        image,
-        Row(
-          children: [
-            const SizedBox.square(
-              dimension: 24,
-              child: Icon(Icons.zoom_in, size: 18, color: Colors.white),
-            ).backgroundColor(AppColors.youtubePlayButton).clipOval().padding(right: 8),
-            Text(caption).textStyle(AppTextStyles.aboutParagraph).fontWeight(FontWeight.w600),
-          ],
-        ).padding(top: 12),
-      ],
-    )
-        .padding(bottom: 12, top: 16, horizontal: 10)
-        .backgroundColor(const Color(0x80D8D3C1))
-        .clipRRect(all: 4)
-        .gestures(onTap: onImageTap)
-        .padding(horizontal: 8, bottom: 12);
-  }
-
-  TextSpan _buildUrlSpan(String text, String url) {
-    return TextSpan(
-      text: text,
-      style: const TextStyle(decoration: TextDecoration.underline),
-      recognizer: TapGestureRecognizer()
-        ..onTap = () {
-          AppSystemSettings.openURL(url);
-        },
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -444,6 +478,335 @@ class AboutText extends StatelessWidget {
         _buildBulletPointItem(
           "Koliko su informacije koje konzumiramo vezane za lokalne probleme i zajednicu u kojoj živimo?",
           last: true,
+        ),
+      ],
+    ).padding(bottom: 16);
+  }
+}
+
+class InfoText extends StatelessWidget {
+  const InfoText({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    var appState = context.watch<AppState>();
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _buildParagraph(
+          "Dobro došle/i u sekciju “Dodatne informacije” aplikacije Mislimetar! Za preuzimanje najnovije verzije aplikacije, kliknite dugme "
+          "ispod. Preuzimanjem nove verzije poništavate vaše postojeće ostvarene rezultate.",
+          bold: true,
+        ),
+        ResponseButton(
+          text: "Preuzmi najnoviju verziju",
+          image: Image.asset("assets/images/dl-update.png"),
+          onTap: () {
+            appState.resetAppState(context);
+          },
+        ).padding(horizontal: 16, vertical: 12),
+        _buildParagraph(
+          "U ovom dijelu aplikacije možete pronaći sljedeće informacije:",
+          bold: true,
+        ),
+        _buildBulletPointItem("O Mislimetru"),
+        _buildBulletPointItem("Sadržaj aplikacije"),
+        _buildBulletPointItem("Korisni linkovi"),
+        _buildBulletPointItem("Leksikon manje poznatih pojmova", last: true),
+        _buildHeading("O Mislimetru"),
+        _buildParagraph(
+          "Mobilna aplikacija Mislimetar edukacijski je i zabavni alat namijenjen za korištenje u formalnom i neformalnom obrazovanju. Cilj je "
+          "Mislimetra podsticanje razvoja kritičkog promišljanja i medijske pismenosti kod mladih.",
+        ),
+        _buildParagraph(
+          "Aplikaciju su kreirala udruženja građana i građanki Centar za obrazovne inicijative “Step by Step” i “Zašto ne”. Za tehničku "
+          "implementaciju aplikacije zadužena je organizacija “Danes je nov dan”. Razvoj aplikacije finansirala je Evropska unija.",
+          bold: true,
+          background: true,
+        ),
+        _buildParagraph(
+          "Centar za obrazovne inicijative “Step by Step” profesionalna je nevladina organizacija osnovana s ciljem da promoviše obrazovnu "
+          "filozofiju usmjerenu na dijete i pravo svakog djeteta na kvalitetan odgoj i obrazovanje na području cijele Bosne i Hercegovine od 1996. "
+          "godine. Kroz razgranatu mrežu učitelja/ica, škola, certificiranih trenera/ica, kao i kroz saradnju s drugim lokalnim i međunarodnim "
+          "organizacijama te ministarstvima obrazovanja i pedagoškim zavodima, Centar za obrazovne inicijative “Step by Step” prepoznat je kao "
+          "jedna od vodećih organizacija u oblasti profesionalnog razvoja nastavnika/ca, unapređenja kvaliteta obrazovanja i promovisanja "
+          "vrijednosti i principa društvene pravde.",
+        ),
+        _buildParagraph(
+          "Udruženje građana i građanki “Zašto ne” organizacija je koja se bavi stvaranjem sigurnog, zdravog, aktivnog, efikasnog i odgovornog bh. "
+          "društva u cjelini kako u smislu predstavnika/ca vlasti, tako i u smislu civilnog društva i građana/ki, kroz promociju i uspostavu "
+          "mehanizama političke odgovornosti, jačanje i izgradnju građanskog aktivizma, promociju odgovornosti medija te korištenje novih medija "
+          "i tehnologija.",
+        ),
+        _buildParagraph(
+          "“Danes je nov dan” je organizacija civilnog društva sa sjedištem u Ljubljani, u Sloveniji. Njihova misija je da promovišu otvorenost "
+          "podataka, odgovornu tehnologiju i participativno donošenje odluka.",
+        ),
+        _buildHeading("Sadržaj aplikacije"),
+        _buildParagraph(
+          "Sadržaj aplikacije podijeljen je na sedam tematskih modula. Sedam modula Mislimetra su:",
+          bold: true,
+        ),
+        _buildListItem("1.", "Kritičko mišljenje i medijska i informacijska pismenost"),
+        _buildListItem("2.", "Mediji i društvene mreže: Organizacija i analiziranje informacija"),
+        _buildListItem("3.", "Svijet činjenica, mišljenja i dezinformacija"),
+        _buildListItem("4.", "Ravna zemlja, gušteri-vanzemaljci i lažno slijetanje na Mjesec: Šta su teorije zavjere?"),
+        _buildListItem("5.", "Snaga uzroka i posljedica"),
+        _buildListItem("6.", "Tehnika šest šešira: Kako riješiti problem uz različite perspektive"),
+        _buildListItem("7.", "Debate - praktična primjena kritičkog mišljenja i medijske i informacijeke pismenosti"),
+        _buildParagraph(
+          "Moduli su interaktivni i kreirani tako da obuhvataju različite segmente kritičkog mišljenja i medijske pismenosti. Sastoje se od "
+          "videosnimaka, tekstualnih objašnjenja, slika i pitanja za korisnice i korisnike. Sažetke modula Mislimetra možete pronaći u dokumentu "
+          "u nastavku.",
+        ),
+        ResponseButton(text: "Preuzmi PDF", image: Image.asset("assets/images/dl-pdf.png")).padding(horizontal: 16, vertical: 12),
+        _buildHeading("Korisni linkovi"),
+        _buildParagraphRich(
+          [
+            const TextSpan(text: "Udruženje građanki i građana “Zašto ne”: \n"),
+            _buildUrlSpan("https://zastone.ba/", "https://zastone.ba/"),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(text: "Raskrinkavanje.ba: \n"),
+            _buildUrlSpan("https://raskrinkavanje.ba/", "https://raskrinkavanje.ba/"),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(text: "Istinomjer.ba: \n"),
+            _buildUrlSpan("https://istinomjer.ba/", "https://istinomjer.ba/"),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(text: "Centar za obrazovne inicijative “Step by Step”: \n"),
+            _buildUrlSpan("https://sbs.ba/", "https://sbs.ba/"),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(text: "InŠkola - Zajednica inovativnih nastavnika/nastavnica: \n"),
+            _buildUrlSpan("https://inskola.com/", "https://inskola.com/"),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(text: "Više o medijskoj pismenosti: \n"),
+            _buildUrlSpan("https://medijskapismenost.raskrinkavanje.ba/", "https://medijskapismenost.raskrinkavanje.ba/"),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(text: "Priručnik “Fact-checking i online novinarstvo”: \n"),
+            _buildUrlSpan("https://raskrinkavanje.ba/uploads/Fact-checking%20i%20online%20novinarstvo.pdf",
+                "https://raskrinkavanje.ba/uploads/Fact-checking%20i%20online%20novinarstvo.pdf"),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(text: "Videolekcije o medijskoj pismenosti: \n"),
+            _buildUrlSpan("https://www.youtube.com/playlist?list=PLS2ByUfTwzeaU1v1ywpNu8A2NuWh2rWVf",
+                "https://www.youtube.com/playlist?list=PLS2ByUfTwzeaU1v1ywpNu8A2NuWh2rWVf"),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(text: "Kviz medijske pismenosti i provjere činjenica: \n"),
+            _buildUrlSpan("https://kviz.raskrinkavanje.ba/", "https://kviz.raskrinkavanje.ba/"),
+            const TextSpan(text: "\n"),
+            _buildUrlSpan("https://medijskapismenost.raskrinkavanje.ba/kviz/", "https://medijskapismenost.raskrinkavanje.ba/kviz/"),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(text: "Korisni nastavni resursi: \n"),
+            _buildUrlSpan("https://inskola.com/publikacije-i-prirucnici/", "https://inskola.com/publikacije-i-prirucnici/"),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(text: "Obrazovni materijali o medijskoj pismenosti: \n"),
+            _buildUrlSpan("https://www.medijskapismenost.hr/obrazovni-materijali-za-preuzimanje/",
+                "https://www.medijskapismenost.hr/obrazovni-materijali-za-preuzimanje/"),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(text: "“Step by Step” izdanja: \n"),
+            _buildUrlSpan("https://shop.inskola.com/", "https://shop.inskola.com/"),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(text: "Besjede o obrazovanju: \n"),
+            _buildUrlSpan("https://www.youtube.com/watch?v=du6znUywTGo", "https://www.youtube.com/watch?v=du6znUywTGo"),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(text: "“Step by Step” biblioteka: \n"),
+            _buildUrlSpan("https://sbsbiblioteka.librarika.com/search/catalogs", "https://sbsbiblioteka.librarika.com/search/catalogs"),
+          ],
+        ),
+        _buildHeading("Leksikon manje poznatih pojmova"),
+        _buildParagraphRich(
+          [
+            const TextSpan(
+              text: "Benigno - ",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+            const TextSpan(
+              text: "bezazleno, dobroćudno, bezopasno",
+            ),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(
+              text: "Činjenice - ",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+            const TextSpan(
+              text: "nešto što je istinito i što se može dokazati, potkrijepiti podacima",
+            ),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(
+              text: "Kohezija - ",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+            const TextSpan(
+              text: "međusobna povezanost, uravnoteženost",
+            ),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(
+              text: "Kreativno mišljenje - ",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+            const TextSpan(
+              text: "sposobnost da izađemo iz naučenih obrazaca mišljenja i sagledamo nove perspektive u rješavanju problema, stvaramo nove "
+                  "vrijednosti i produkte",
+            ),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(
+              text: "Kredibilitet - ",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+            const TextSpan(
+              text: "pouzdanost, vjerodostojnost",
+            ),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(
+              text: "Kritičko mišljenje - ",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+            const TextSpan(
+              text: "sposobnost rješavanja problema, analize, rezonovanja i logičkog zaključivanja",
+            ),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(
+              text: "Mislimetar - ",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+            const TextSpan(
+              text: "pokazuje nam koliko se naš mozak napreže kad nešto mislimo",
+            ),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(
+              text: "Mišljenje - ",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+            const TextSpan(
+              text: "vještina koja se stiče i razvija, koja zahtijeva strpljenje, mnoštvo prilika za vježbanje, podržavajuće okruženje i modelovanje",
+            ),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(
+              text: "Protagonist/kinja - ",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+            const TextSpan(
+              text: "glavni lik u književnom, filmskom ili pozorišnom djelu; aktivan/na učesnik/ca u nekom događaju; lider/ka, zagovornik/ca ili "
+                  "pristalica određenog cilja ili ideje (rječnik Merriam Webster)",
+            ),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(
+              text: "Relevantno - ",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+            const TextSpan(
+              text: "značajno, važno",
+            ),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(
+              text: "Strategije, metode i tehnike - ",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+            const TextSpan(
+              text: "načini rada i alati koji se koriste u procesu učenja i poučavanja",
+            ),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(
+              text: "Tri sprata intelekta - ",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+            const TextSpan(
+              text: "model koji je razvio Arthur Costa, jednostavna i dobro strukturirana taksonomija nižih i viših razina mišljenja",
+            ),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(
+              text: "Uredništvo medija - ",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+            const TextSpan(
+              text: "jedan/na ili više urednika/ca koji/e uređuju sadržaj nekog medija i donose odluke o njemu",
+            ),
+          ],
+        ),
+        _buildParagraphRich(
+          [
+            const TextSpan(
+              text: "Validno - ",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+            const TextSpan(
+              text: "valjano, vrijedno",
+            ),
+          ],
         ),
       ],
     ).padding(bottom: 16);
