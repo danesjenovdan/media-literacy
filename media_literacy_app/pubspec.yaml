@@ -24,6 +24,7 @@ dependencies:
   archive: ^3.3.7
   google_fonts: ^5.0.0
   easy_image_viewer: ^1.2.1
+  url_launcher: ^6.1.12
 
 dev_dependencies:
   flutter_test:
@@ -43,3 +44,4 @@ flutter:
   assets:
     - assets/stories/
     - assets/images/
+    - assets/images/about/

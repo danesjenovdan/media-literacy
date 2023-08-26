@@ -9,6 +9,7 @@ import 'package:media_literacy_app/screens/chat.dart';
 import 'package:media_literacy_app/screens/splash.dart';
 import 'package:media_literacy_app/state/app_storage.dart';
 import 'package:media_literacy_app/widgets/custom_dialog.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AppSystemSettings {
   static Future<void> setSystemChromeDefault() async {
@@ -42,6 +43,11 @@ class AppSystemSettings {
       DeviceOrientation.landscapeRight,
       DeviceOrientation.landscapeLeft,
     ]);
+  }
+
+  static void openURL(String urlString) async {
+    final url = Uri.parse(urlString);
+    await launchUrl(url, mode: LaunchMode.externalApplication);
   }
 }
 

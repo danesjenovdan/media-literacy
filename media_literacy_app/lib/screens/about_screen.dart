@@ -1,7 +1,10 @@
+import 'package:easy_image_viewer/easy_image_viewer.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:media_literacy_app/state/app_state.dart';
 import 'package:media_literacy_app/widgets/custom_app_bar.dart';
 import 'package:media_literacy_app/widgets/footer_logos.dart';
+import 'package:media_literacy_app/widgets/responses.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 class AboutScreen extends StatelessWidget {
@@ -87,18 +90,35 @@ class AboutText extends StatelessWidget {
   }
 
   Widget _buildListItem(String number, String text, {bool bold = false}) {
+    return _buildListItemImpl(
+      number,
+      Text(text).textStyle(AppTextStyles.aboutParagraph).fontWeight(bold ? FontWeight.w600 : FontWeight.w400),
+    );
+  }
+
+  Widget _buildListItemRich(String number, List<TextSpan> spans) {
+    return _buildListItemImpl(
+      number,
+      Text.rich(
+        style: AppTextStyles.aboutParagraph,
+        TextSpan(children: spans),
+      ),
+    );
+  }
+
+  Widget _buildListItemImpl(String number, Text text) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(number)
             .textStyle(AppTextStyles.aboutParagraph)
-            .fontWeight(bold ? FontWeight.w600 : FontWeight.w400)
+            .fontWeight(FontWeight.w600)
             .padding(vertical: 2, horizontal: 6)
             .backgroundColor(AppColors.selectInfoBackground)
             .clipOval()
             .padding(right: 8),
         Expanded(
-          child: Text(text).textStyle(AppTextStyles.aboutParagraph).fontWeight(bold ? FontWeight.w600 : FontWeight.w400).padding(top: 2, bottom: 12),
+          child: text.padding(top: 2, bottom: 12),
         ),
       ],
     ).padding(horizontal: 16);
@@ -116,6 +136,48 @@ class AboutText extends StatelessWidget {
     ).padding(horizontal: 16, bottom: last ? 12 : 0);
   }
 
+  Widget _buildImage(BuildContext context, Image image, String caption) {
+    void onImageTap() {
+      showImageViewer(
+        context,
+        image.image,
+        doubleTapZoomable: true,
+        immersive: false,
+      );
+    }
+
+    return Column(
+      children: [
+        image,
+        Row(
+          children: [
+            const SizedBox.square(
+              dimension: 24,
+              child: Icon(Icons.zoom_in, size: 18, color: Colors.white),
+            ).backgroundColor(AppColors.youtubePlayButton).clipOval().padding(right: 8),
+            Text(caption).textStyle(AppTextStyles.aboutParagraph).fontWeight(FontWeight.w600),
+          ],
+        ).padding(top: 12),
+      ],
+    )
+        .padding(bottom: 12, top: 16, horizontal: 10)
+        .backgroundColor(const Color(0x80D8D3C1))
+        .clipRRect(all: 4)
+        .gestures(onTap: onImageTap)
+        .padding(horizontal: 8, bottom: 12);
+  }
+
+  TextSpan _buildUrlSpan(String text, String url) {
+    return TextSpan(
+      text: text,
+      style: const TextStyle(decoration: TextDecoration.underline),
+      recognizer: TapGestureRecognizer()
+        ..onTap = () {
+          AppSystemSettings.openURL(url);
+        },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -129,15 +191,20 @@ class AboutText extends StatelessWidget {
           bold: true,
         ),
         _buildParagraph("Prijedloge za rad u učionici možete pronaći u PDF formatu, kao i u nastavku ove sekcije."),
-        const Text('TODO PDF GUMB'),
+        ResponseButton(text: "Preuzmi PDF", image: Image.asset("assets/images/dl-pdf.png")).padding(horizontal: 16, vertical: 12),
         _buildHeading("Modul 1"),
         _buildListItem(
           "1.",
           "Koristeći ovaj link sa Raskrinkavanje.ba saznajte više o pojmu medijske pismenosti:",
           bold: true,
         ),
-        _buildParagraph(
-          "https://medijskapismenost.raskrinkavanje.ba/saznajte-vise/sta-je-medijska-pismenost/",
+        _buildParagraphRich(
+          [
+            _buildUrlSpan(
+              "https://medijskapismenost.raskrinkavanje.ba/saznajte-vise/sta-je-medijska-pismenost/",
+              "https://medijskapismenost.raskrinkavanje.ba/saznajte-vise/sta-je-medijska-pismenost/",
+            ),
+          ],
           background: true,
         ),
         _buildParagraph(
@@ -161,8 +228,13 @@ class AboutText extends StatelessWidget {
           "4.",
           "Individualno ili u grupama učenika/ca, uraditi kviz o medijskoj pismenosti platforme Raskrinkavanje, dostupan na linku ispod.",
         ),
-        _buildParagraph(
-          "https://medijskapismenost.raskrinkavanje.ba/kviz/",
+        _buildParagraphRich(
+          [
+            _buildUrlSpan(
+              "https://medijskapismenost.raskrinkavanje.ba/kviz/",
+              "https://medijskapismenost.raskrinkavanje.ba/kviz/",
+            ),
+          ],
           background: true,
         ),
         _buildParagraph(
@@ -291,25 +363,51 @@ class AboutText extends StatelessWidget {
           "rasprave. On nam može pomoći u dogovaranju rasporeda korištenja ostalih šešira. Plavi šešir može poslužiti za razmatranje učinjenog "
           "na kraju rasprave.",
         ),
-        _buildParagraph(
-          "TODO: Table 1 - Prijedlog vježbe za aktivnost šest šešira.png",
-          background: true,
+        _buildImage(
+          context,
+          Image.asset("assets/images/about/Table 1 - Prijedlog vježbe za aktivnost šest šešira.png"),
+          "Preuzmi tabelu",
         ),
         _buildListItem(
           "3.",
           "Prijedlog vježbe za aktivnost šest šešira: Mladi provode mnogo vremena gledajući videa na YouTube-u",
         ),
         _buildHeading("Modul 7"),
-        _buildListItem(
+        _buildListItemRich(
           "1.",
-          "Debata je organizovan način izmjene mišljenja, odnosno dijaloška komunikacija koja se temelji na procesu argumentacije. U debati "
-              "uglavnom nastupaju dvije strane, koje imaju jednake mogućnosti predstaviti svoje argumente sa ciljem da druge uvjere u svoje stanovište, "
-              "odnosno da svoje mišljenje učine racionalno prihvatljivim za sagovornike.",
+          [
+            const TextSpan(
+              text:
+                  "Debata je organizovan način izmjene mišljenja, odnosno dijaloška komunikacija koja se temelji na procesu argumentacije. U debati "
+                  "uglavnom nastupaju dvije strane, koje imaju jednake mogućnosti predstaviti svoje ",
+            ),
+            _buildUrlSpan(
+              "argumente",
+              "https://hr.wikipedia.org/wiki/Argument",
+            ),
+            const TextSpan(
+              text: " sa ciljem da druge uvjere u svoje stanovište, odnosno da svoje mišljenje učine racionalno prihvatljivim za sagovornike.",
+            ),
+          ],
         ),
-        _buildListItem(
+        _buildListItemRich(
           "2.",
-          "U razredu sa učenicima možete povesti razgovor o nekoj od vijesti sa Raskrinkavanje.ba kao što je ova: Snimak “tornada” u Srbiji star je "
-              "nekoliko godina",
+          [
+            const TextSpan(
+              text: "U razredu sa učenicima možete povesti razgovor o nekoj od vijesti sa ",
+            ),
+            _buildUrlSpan(
+              "Raskrinkavanje.ba",
+              "https://raskrinkavanje.ba/",
+            ),
+            const TextSpan(
+              text: " kao što je ova: ",
+            ),
+            _buildUrlSpan(
+              "Snimak “tornada” u Srbiji star je nekoliko godina",
+              "https://raskrinkavanje.ba/analiza/snimak-tornada-u-srbiji-star-je-nekoliko-godina",
+            )
+          ],
         ),
         _buildListItem(
           "3.",
@@ -328,9 +426,10 @@ class AboutText extends StatelessWidget {
           "6.",
           "Za ocjenjivanje debate možete koristiti i različite kriterije i indikatore. Ovo je primjer jedne tabele kriterija koju možete koristiti:",
         ),
-        _buildParagraph(
-          "TODO: Table 2 - tabela kriterija.png",
-          background: true,
+        _buildImage(
+          context,
+          Image.asset("assets/images/about/Table 2 - tabela kriterija.png"),
+          "Preuzmi tabelu",
         ),
         _buildListItem(
           "7.",

@@ -26,10 +26,11 @@ class ChatResponse extends StatelessWidget {
 class ResponseButton extends StatefulWidget {
   final String text;
   final bool showArrow;
+  final Image? image;
   final bool stayTapped;
   final void Function()? onTap;
 
-  const ResponseButton({super.key, required this.text, this.showArrow = false, this.stayTapped = false, this.onTap});
+  const ResponseButton({super.key, required this.text, this.showArrow = false, this.image, this.stayTapped = false, this.onTap});
 
   @override
   State<ResponseButton> createState() => _ResponseButtonState();
@@ -62,6 +63,15 @@ class _ResponseButtonState extends State<ResponseButton> {
     } else {
       returnWidget =
           Text(widget.text).textStyle(isTapped ? AppTextStyles.responseOptionDown : AppTextStyles.responseOption).textAlignment(TextAlign.center);
+    }
+
+    if (widget.image != null) {
+      returnWidget = Row(
+        children: [
+          widget.image!.constrained(width: 40, height: 40).padding(left: 8),
+          returnWidget.padding(right: 48).expanded(),
+        ],
+      );
     }
 
     return returnWidget
