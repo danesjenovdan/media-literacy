@@ -225,7 +225,13 @@ class AboutText extends StatelessWidget {
           bold: true,
         ),
         _buildParagraph("Prijedloge za rad u učionici možete pronaći u PDF formatu, kao i u nastavku ove sekcije."),
-        ResponseButton(text: "Preuzmi PDF", image: Image.asset("assets/images/dl-pdf.png")).padding(horizontal: 16, vertical: 12),
+        ResponseButton(
+          text: "Preuzmi PDF",
+          image: Image.asset("assets/images/dl-pdf.png"),
+          onTap: () {
+            AppSystemSettings.openURL("https://drive.google.com/file/d/1emIt_XgKcbr0tt8lYNlbnczlDcfNn9GQ/view?usp=sharing");
+          },
+        ).padding(horizontal: 16, vertical: 12),
         _buildHeading("Modul 1"),
         _buildListItem(
           "1.",
@@ -560,7 +566,13 @@ class InfoText extends StatelessWidget {
           "videosnimaka, tekstualnih objašnjenja, slika i pitanja za korisnice i korisnike. Sažetke modula Mislimetra možete pronaći u dokumentu "
           "u nastavku.",
         ),
-        ResponseButton(text: "Preuzmi PDF", image: Image.asset("assets/images/dl-pdf.png")).padding(horizontal: 16, vertical: 12),
+        ResponseButton(
+          text: "Preuzmi PDF",
+          image: Image.asset("assets/images/dl-pdf.png"),
+          onTap: () {
+            AppSystemSettings.openURL("https://drive.google.com/file/d/1emIt_XgKcbr0tt8lYNlbnczlDcfNn9GQ/view?usp=sharing");
+          },
+        ).padding(horizontal: 16, vertical: 12),
         _buildHeading("Korisni linkovi"),
         _buildParagraphRich(
           [
