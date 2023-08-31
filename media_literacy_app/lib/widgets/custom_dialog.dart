@@ -20,7 +20,7 @@ class CustomDialog extends StatelessWidget {
             fit: StackFit.passthrough,
             clipBehavior: Clip.none,
             children: [
-              Image.asset('assets/images/popup.png', width: 102, height: 102),
+              Image.asset('assets/images/popup.png', width: 126, height: 126),
             ],
           ).padding(bottom: 16),
           Text(text).textStyle(AppTextStyles.popup).textAlignment(TextAlign.center),
@@ -58,12 +58,12 @@ class CustomResetDialog extends StatelessWidget {
             fit: StackFit.passthrough,
             clipBehavior: Clip.none,
             children: [
-              Image.asset('assets/images/popup.png', width: 102, height: 102),
+              Image.asset('assets/images/popup.png', width: 126, height: 126),
               Positioned(
-                left: (102 / 2) + (48 / 2),
+                left: (126 / 2) + (40 / 2),
                 child: SizedBox.square(
-                  dimension: 48,
-                  child: const Icon(Icons.replay_rounded, size: 36, color: Colors.white).rotate(angle: -45),
+                  dimension: 40,
+                  child: const Icon(Icons.replay_rounded, size: 30, color: Colors.white).rotate(angle: -45),
                 ).backgroundColor(AppColors.resetButtonBackground).clipOval(),
               ),
             ],

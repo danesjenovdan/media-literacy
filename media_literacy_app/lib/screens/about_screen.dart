@@ -229,7 +229,7 @@ class AboutText extends StatelessWidget {
           text: "Preuzmi PDF",
           image: Image.asset("assets/images/dl-pdf.png"),
           onTap: () {
-            AppSystemSettings.openURL("https://drive.google.com/file/d/1emIt_XgKcbr0tt8lYNlbnczlDcfNn9GQ/view?usp=sharing");
+            AppSystemSettings.openURL("https://drive.google.com/file/d/1uJrGSm8OA2f6XTI9SNMhjQRdmxc1tu3R/view");
           },
         ).padding(horizontal: 16, vertical: 12),
         _buildHeading("Modul 1"),
@@ -406,7 +406,7 @@ class AboutText extends StatelessWidget {
         _buildImage(
           context,
           Image.asset("assets/images/about/Table 1 - Prijedlog vježbe za aktivnost šest šešira.png"),
-          "Preuzmi tabelu",
+          "Povećaj tabelu",
         ),
         _buildListItem(
           "3.",
@@ -469,7 +469,7 @@ class AboutText extends StatelessWidget {
         _buildImage(
           context,
           Image.asset("assets/images/about/Table 2 - tabela kriterija.png"),
-          "Preuzmi tabelu",
+          "Povećaj tabelu",
         ),
         _buildListItem(
           "7.",
@@ -570,7 +570,7 @@ class InfoText extends StatelessWidget {
           text: "Preuzmi PDF",
           image: Image.asset("assets/images/dl-pdf.png"),
           onTap: () {
-            AppSystemSettings.openURL("https://drive.google.com/file/d/1emIt_XgKcbr0tt8lYNlbnczlDcfNn9GQ/view?usp=sharing");
+            AppSystemSettings.openURL("https://drive.google.com/file/d/1emIt_XgKcbr0tt8lYNlbnczlDcfNn9GQ/view");
           },
         ).padding(horizontal: 16, vertical: 12),
         _buildHeading("Korisni linkovi"),

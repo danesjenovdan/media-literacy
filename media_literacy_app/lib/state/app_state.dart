@@ -261,7 +261,7 @@ class AppState extends ChangeNotifier {
       barrierDismissible: true,
       barrierColor: AppColors.text.withAlpha(200),
       builder: (context) => const CustomResetDialog(
-        text: "Completely reset progress and try downloading updated modules?",
+        text: "Resetuj progres i preuzmi najnoviju verziju aplikacije?",
       ),
     );
     if (value is! bool || !value) {
