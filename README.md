@@ -17,6 +17,8 @@ The content of the application is divided into seven thematic modules. The inter
 
 **[Examples and screenshots](docs/examples.md)**
 
+**[Technical documentation](docs/technical.md)**
+
 ---
 
 <h2 align="center">
