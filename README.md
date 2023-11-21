@@ -20,7 +20,18 @@ The content of the application is divided into seven thematic modules. The inter
 ---
 
 <h2 align="center">
-  <img width="49" height="49" src="docs/assets/brain.png" alt="modules">
+  <img width="49" height="49" src="docs/assets/download.png" alt="modules">
+</h2>
+
+<p align="center">
+  <a href="https://apps.apple.com/us/app/mislimetar/id6464677217"><img height="45" src="docs/assets/badges/app-store.png" alt="Download on the App Store"></a>
+  <a href="https://play.google.com/store/apps/details?id=si.djnd.media_literacy_app"><img height="45" src="docs/assets/badges/google-play.png" alt="Get it on Google Play"></a>
+</p>
+
+---
+
+<h2 align="center">
+  <img width="49" height="49" src="docs/assets/brain.png" alt="authors">
 </h2>
 
 <sub>Created by [Step by Step](https://sbs.ba/) and [Zašto ne](https://zastone.ba/).<br>
