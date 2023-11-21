@@ -15,6 +15,8 @@
 
 The content of the application is divided into seven thematic modules. The interactive modules are designed to cover different critical thinking and media literacy segments. They consist of videos, textual explanations, pictures and questions for users.
 
+**[Examples and screenshots](docs/examples.md)**
+
 ---
 
 <h2 align="center">
