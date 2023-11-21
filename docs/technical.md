@@ -4,6 +4,18 @@
 
 ---
 
+### Development and building the app
+
+1. Set up your preferred development environment for Dart and Flutter (e.g. using [flutter docs](https://docs.flutter.dev/get-started/install)).
+2. To develop the app, open the [`media_literacy_app`](/media_literacy_app/) folder in your IDE and either:
+   - use the IDE to run the app, or
+   - run `flutter run` in the termnial
+3. To build the app run the following command in the [`media_literacy_app`](/media_literacy_app/) folder:
+   - Android: `flutter build apk` or `flutter build appbundle`
+   - iOS: `flutter build ipa`
+
+---
+
 ### App entry point
 
 **Related files:**
