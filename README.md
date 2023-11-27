@@ -19,6 +19,8 @@ The content of the application is divided into seven thematic modules. The inter
 
 **[Technical documentation](docs/technical.md)**
 
+**[Adding a new language](docs/add_language.md)**
+
 ---
 
 <h2 align="center">
